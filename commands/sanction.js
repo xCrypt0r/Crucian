@@ -1,5 +1,4 @@
 const lang = require('../data/lang.json');
-const discord = require('discord.js');
 
 module.exports.run = async (bot, message, args, tools) => {
     let reaction = lang.sanctionReaction.random();
