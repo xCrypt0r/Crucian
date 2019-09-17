@@ -1,19 +1,28 @@
-const discord = require('discord.js');
+const lang = require('../data/lang.json');
+
+function formatBomb(count) {
+    return `:bomb: ${'-'.repeat(count)} ${count}`;
+}
 
 module.exports.run = async (bot, message, args) => {
     message.delete();
 
-    if (args.length <= 1) {
+    if (args.length < 2) {
+        message.reply(lang.lackOfArguments);
+
         return;
     }
 
+    let count = Number(args.pop());
+
+    if (!Number.isInteger(count) || count < 1) {
+        message.reply(lang.invalidArguments);
+
+        return;
+    }
+
+    let content = args.join(' ');
     let tick = 1000;
-    let count = +parseInt(args.pop(), 10),
-        content = args.join(' ');
-
-    if (!Number.isInteger(count)) {
-        return;
-    }
 
     message.channel.send(formatBomb(count)).then(msg => {
         let timer = setInterval(() => {
@@ -22,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
                 msg.edit(formatBomb(count));
             } else {
                 clearInterval(timer);
-                msg.edit(`:boom:`);
+                msg.edit(':boom:');
                 setTimeout(() => {
                     msg.edit(content);
                 }, tick);
@@ -33,12 +42,8 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.config = {
     name: 'timer',
-    description: "Shade message for specific seconds",
+    description: 'Shade message for specific seconds',
     alias: ['타이머'],
     cooltime: 3000,
     isOwnerOnly: true
 };
-
-function formatBomb(count) {
-    return `:bomb: ${'-'.repeat(count)} ${count}`;
-}
