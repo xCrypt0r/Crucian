@@ -17,5 +17,8 @@
     "request": "^2.88.0",
     "weather-js": "^2.0.0",
     "ytdl-core": "^0.29.5"
+  },
+  "devDependencies": {
+    "eslint": "^6.4.0"
   }
 }

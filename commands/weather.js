@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
             .addField('바람', current.winddisplay, true)
             .addField('습도', `${current.humidity}%`, true);
 
-            message.channel.send(embed);
+        message.channel.send(embed);
     });
 };
 
