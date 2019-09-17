@@ -45,11 +45,7 @@ fs.readdir('./commands/', (err, files) => {
 });
 
 bot.on('ready', async () => {
-    let status = ['online', 'idle', 'dnd', 'offline'];
-
     console.log(`Logged in as ${bot.user.tag}`);
-
-    bot.user.setStatus(status[2]);
 });
 
 bot.on('message', async message => {
