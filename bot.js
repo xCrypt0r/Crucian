@@ -29,14 +29,16 @@ fs.readdir('./commands/', (err, files) => {
 
         bot.commands.set(handler.config.name, handler);
 
-        handler.config.alias.forEach(al => {
-            if (bot.commands.has(al)) {
-                console.error(`Bot already has ${al} handler.
-                    It'll override existing handler.`);
-            }
+        if (handler.config.alias) {
+            handler.config.alias.forEach(al => {
+                if (bot.commands.has(al)) {
+                    console.error(`Bot already has ${al} handler.
+                        It'll override existing handler.`);
+                }
 
-            bot.commands.set(al, handler);
-        });
+                bot.commands.set(al, handler);
+            });
+        }
 
         console.log(`Handler: ${file} loaded.`);
     });
