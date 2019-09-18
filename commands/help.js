@@ -29,11 +29,12 @@ module.exports.run = async (bot, message, args, tools) => {
 
         let manual_chunks = manual.chunk(5).map(chunk => chunk.join('\n\n'));
         let embedOptions = {
-            'color': '#4ae342',
-            'thumbnail': bot.user.avatarURL
+            title: ':blue_book: **도움말**',
+            color: '#4ae342',
+            thumbnail: bot.user.avatarURL
         };
 
-        tools.page(message, manual_chunks, ':blue_book: **도움말**', embedOptions);
+        tools.page(message, manual_chunks, embedOptions);
     });
 };
 

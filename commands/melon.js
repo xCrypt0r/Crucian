@@ -24,9 +24,11 @@ module.exports.run = async (bot, message, args, tools) => {
 
         let chart_chunks = chart.chunk(20).map(chunk => chunk.join('\n'));
         let today = new Date().toJSON().slice(0, 10).replace(/-/g, '');
-        let title = `:musical_note: **melon_chart_${today}**`;
+        let embedOptions = {
+            title: `:musical_note: **melon_chart_${today}**`
+        };
 
-        tools.page(message, chart_chunks, title);
+        tools.page(message, chart_chunks, embedOptions);
     });
 };
 
