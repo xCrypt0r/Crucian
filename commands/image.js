@@ -1,3 +1,4 @@
+const lang = require('../data/lang.json');
 const discord = require('discord.js');
 const request = require('request');
 
@@ -11,7 +12,14 @@ module.exports.run = async (bot, message, args, tools) => {
         },
         uri: url
     }, (err, res, body) => {
-        let images = body.match(/(?<="ou":").+?(?=")/g);
+        let images = body.match(/(?<="ou":").+?(?=")/g) || [];
+
+        if (images.length < 1) {
+            message.reply(lang.imageNotFound.random());
+
+            return;
+        }
+
         let embed = new discord.RichEmbed()
             .setColor('#ff9900')
             .setTitle(`:frame_photo: **${q}**`)
