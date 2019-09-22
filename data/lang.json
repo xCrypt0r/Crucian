@@ -2,29 +2,72 @@
   "addedToQueue": "`{0}` 이 목록에 추가댐 | 신청자: `{1}`",
   "botNotInVoiceChannel": "이미 나와있음",
   "calcResult": "`{0}`은 `{1}`임",
-  "chooseEnd": [ "`{0}`어떰?", "`{0}`하셈", "`{0}`가 좋아보임", "`{0}`가 좋을듯" ],
+  "chooseEnd": [
+    "`{0}`어떰?",
+    "`{0}`하셈",
+    "`{0}`가 좋아보임",
+    "`{0}`가 좋을듯"
+  ],
   "commandInCooldown": "**__{0}__**은 아직 사용할 수 없음",
-  "deleteEnd": [ "메시지 {0}개 삭제 끝", "{0}개 다 삭제함" ],
-  "deleteTooMuch": [ "개수를 줄이셈", "그렇게 많이는 안댐", "{0}개는 너무 많음" ],
+  "deleteEnd": [
+    "메시지 {0}개 삭제 끝",
+    "{0}개 다 삭제함"
+  ],
+  "deleteTooMuch": [
+    "개수를 줄이셈",
+    "그렇게 많이는 안댐",
+    "{0}개는 너무 많음"
+  ],
   "displayQueue": ":musical_note: 대기열",
-  "imageNotFound": [ "사진이 없는뎅", "사진이 없음" ],
+  "imageNotFound": [
+    "사진이 없는뎅",
+    "사진이 없음"
+  ],
   "invalidArguments": "인자를 제대로 입력하셈",
   "invalidCalculation": "계산할 식을 똑바로 입력하셈",
-  "invalidURL": [ "url을 똑바로 입력하셈", "url이 이상함" ],
-  "ownerOnlyCommand": "**__{0}__**는 관리자 전용 커맨드임", 
+  "invalidURL": [
+    "url을 똑바로 입력하셈",
+    "url이 이상함"
+  ],
   "lackOfArguments": "인자 수가 부족함",
-  "leaveVoiceChannel": [ "ㅂㅂ", "붕어 가봄" ],
+  "leaveVoiceChannel": [
+    "ㅂㅂ",
+    "붕어 가봄"
+  ],
   "noMusicPlaying": "재생 중인 음악이 없음",
   "notInSameVoiceChannel": "같은 채널에 있어야댐",
   "notInVoiceChannel": "음성 채팅방에 들어가셈",
-  "noWeatherResults": [ "날씨 정보가 없음", "지역을 똑바로 입력하셈" ],
+  "noWeatherResults": [
+    "날씨 정보가 없음",
+    "지역을 똑바로 입력하셈"
+  ],
   "nowPlaying": "재생 중인 노래: `{0}` | 신청자: `{1}`",
-  "questionReaction": [ "ㄴㄴ", "ㅁㄹ", "ㅇㅇ" ],
-  "sanctionReaction": [ "ㅠㅠ", "ㅈㅅ", "그만 때리셈", "붕어가 잘못함", "아픔ㅠㅠ", "안까불겠음" ],
-  "searchEnd": [ "이거?", "이거 말하는거?", "이거 맞나", "이건가" ],
+  "ownerOnlyCommand": "**__{0}__**는 관리자 전용 커맨드임",
+  "questionReaction": [
+    "ㄴㄴ",
+    "ㅁㄹ",
+    "ㅇㅇ"
+  ],
+  "sanctionReaction": [
+    "ㅠㅠ",
+    "ㅈㅅ",
+    "그만 때리셈",
+    "붕어가 잘못함",
+    "아픔ㅠㅠ",
+    "안까불겠음"
+  ],
+  "searchEnd": [
+    "이거?",
+    "이거 말하는거?",
+    "이거 맞나",
+    "이건가"
+  ],
   "selectSong": ":notes: 노래 검색 - 숫자 `1-{0}` 또는 `c`(취소)를 입력하셈",
-  "shuffleCompleted": [ "다 섞음", "셔플 완료" ],
-  "skipSuccess": "스킵했음", 
+  "shuffleCompleted": [
+    "다 섞음",
+    "셔플 완료"
+  ],
+  "skipSuccess": "스킵했음",
   "songInQueue": "`{0}. {1} | 신청자: {2}`",
   "songSelectCancelled": "노래 선택이 취소댐",
   "unplayableVideo": "재생할 수 없는 영상임"
