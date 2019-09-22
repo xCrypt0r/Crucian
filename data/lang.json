@@ -18,6 +18,7 @@
   "sanctionReaction": [ "ㅠㅠ", "ㅈㅅ", "그만 때리셈", "붕어가 잘못함", "아픔ㅠㅠ", "안까불겠음" ],
   "searchEnd": [ "이거?", "이거 말하는거?", "이거 맞나", "이건가" ],
   "selectSong": ":notes: 노래 검색 - 숫자 `1-{0}` 또는 `c`(취소)를 입력하셈",
+  "shuffleCompleted": [ "다 섞음", "셔플 완료" ],
   "skipSuccess": "스킵했음", 
   "songInQueue": "`{0}. {1} | 신청자: {2}`",
   "songSelectCancelled": "노래 선택이 취소댐",
