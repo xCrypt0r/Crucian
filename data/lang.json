@@ -14,6 +14,11 @@
   "ownerOnlyCommand": "**__{0}__**는 관리자 전용 커맨드임", 
   "lackOfArguments": "인자 수가 부족함",
   "leaveVoiceChannel": [ "ㅂㅂ", "붕어 가봄" ],
+  "noMusicPlaying": "재생 중인 음악이 없음",
+  "notInSameVoiceChannel": "같은 채널에 있어야댐",
+  "notInVoiceChannel": "음성 채팅방에 들어가셈",
+  "noWeatherResults": [ "날씨 정보가 없음", "지역을 똑바로 입력하셈" ],
+  "nowPlaying": "재생 중인 노래: `{0}` | 신청자: `{1}`",
   "questionReaction": [ "ㄴㄴ", "ㅁㄹ", "ㅇㅇ" ],
   "sanctionReaction": [ "ㅠㅠ", "ㅈㅅ", "그만 때리셈", "붕어가 잘못함", "아픔ㅠㅠ", "안까불겠음" ],
   "searchEnd": [ "이거?", "이거 말하는거?", "이거 맞나", "이건가" ],
@@ -22,9 +27,5 @@
   "skipSuccess": "스킵했음", 
   "songInQueue": "`{0}. {1} | 신청자: {2}`",
   "songSelectCancelled": "노래 선택이 취소댐",
-  "noMusicPlaying": "재생 중인 음악이 없음",
-  "notInSameVoiceChannel": "같은 채널에 있어야댐",
-  "notInVoiceChannel": "음성 채팅방에 들어가셈",
-  "noWeatherResults": [ "날씨 정보가 없음", "지역을 똑바로 입력하셈" ],
-  "nowPlaying": "재생 중인 노래: `{0}` | 신청자: `{1}`"
+  "unplayableVideo": "재생할 수 없는 영상임"
 }

@@ -52,7 +52,17 @@ module.exports.run = async (bot, message, args, tools, options) => {
         return;
     }
 
-    let info = await ytdl.getInfo(url);
+    let unplayable = false;
+    let info = await ytdl.getInfo(url).catch(err => {
+        unplayable = true;
+    });
+
+    if (unplayable) {
+        message.reply(lang.unplayableVideo);
+
+        return;
+    }
+
     let data = options.active.get(message.guild.id) || {};
 
     if (!data.connection) {

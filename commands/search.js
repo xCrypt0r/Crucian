@@ -3,6 +3,12 @@ const lang = require('../data/lang.json');
 const search = require('yt-search');
 
 module.exports.run = async (bot, message, args, tools, options) => {
+    if (args.length < 1) {
+        message.reply(lang.lackOfArguments);
+
+        return;
+    }
+
     search(args.join(' '), (err, res) => {
         if (err) {
             console.error(err);
