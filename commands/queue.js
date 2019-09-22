@@ -12,8 +12,13 @@ module.exports.run = async (bot, message, args, tools, options) => {
     let queue = fetched.queue.map((music, i) => {
         return lang.songInQueue.format(i + 1, music.songTitle, music.requester);
     });
+    let queue_chunks = queue.chunk(10).map(chunk => chunk.join('\n'));
+    let embedOptions = {
+        title: lang.displayQueue,
+        thumbnail: bot.user.avatarURL
+    };
 
-    message.channel.send(queue.join('\n'));
+    tools.page(message, queue_chunks, embedOptions);
 };
 
 module.exports.config = {
