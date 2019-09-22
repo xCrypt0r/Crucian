@@ -1,12 +1,12 @@
 {
-  "addedToQueue": "{0}이 목록에 추가댐 | 신청자: {1}",
+  "addedToQueue": "`{0}` 이 목록에 추가댐 | 신청자: `{1}`",
   "botNotInVoiceChannel": "이미 나와있음",
   "calcResult": "`{0}`은 `{1}`임",
   "chooseEnd": [ "`{0}`어떰?", "`{0}`하셈", "`{0}`가 좋아보임", "`{0}`가 좋을듯" ],
   "commandInCooldown": "**__{0}__**은 아직 사용할 수 없음",
   "deleteEnd": [ "메시지 {0}개 삭제 끝", "{0}개 다 삭제함" ],
   "deleteTooMuch": [ "개수를 줄이셈", "그렇게 많이는 안댐", "{0}개는 너무 많음" ],
-  "displayQueue": ":musical_note: 대기열 목록",
+  "displayQueue": ":musical_note: 대기열",
   "imageNotFound": [ "사진이 없는뎅", "사진이 없음" ],
   "invalidArguments": "인자를 제대로 입력하셈",
   "invalidCalculation": "계산할 식을 똑바로 입력하셈",
@@ -24,5 +24,5 @@
   "noMusicPlaying": "재생 중인 음악이 없음",
   "notInSameVoiceChannel": "같은 채널에 있어야댐",
   "notInVoiceChannel": "음성 채팅방에 들어가셈",
-  "nowPlaying": "재생 중인 노래: {0} | 신청자: {1}"
+  "nowPlaying": "재생 중인 노래: `{0}` | 신청자: `{1}`"
 }
