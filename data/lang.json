@@ -17,7 +17,10 @@
   "sanctionReaction": [ "ㅠㅠ", "ㅈㅅ", "그만 때리셈", "붕어가 잘못함", "아픔ㅠㅠ", "안까불겠음" ],
   "searchEnd": [ "이거?", "이거 말하는거?", "이거 맞나", "이건가" ],
   "selectSong": ":notes: 노래 검색 - 숫자 `1-{0}` 또는 `c`(취소)를 입력하셈",
+  "skipSuccess": "스킵했음", 
   "songSelectCancelled": "노래 선택이 취소댐",
+  "noMusicPlaying": "재생 중인 음악이 없음",
+  "notInSameVoiceChannel": "같은 채널에 있어야댐",
   "notInVoiceChannel": "음성 채팅방에 들어가셈",
   "nowPlaying": "재생 중인 노래: {0} | 신청자: {1}"
 }
