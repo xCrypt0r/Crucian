@@ -24,5 +24,6 @@
   "noMusicPlaying": "재생 중인 음악이 없음",
   "notInSameVoiceChannel": "같은 채널에 있어야댐",
   "notInVoiceChannel": "음성 채팅방에 들어가셈",
+  "noWeatherResults": [ "날씨 정보가 없음", "지역을 똑바로 입력하셈" ],
   "nowPlaying": "재생 중인 노래: `{0}` | 신청자: `{1}`"
 }
