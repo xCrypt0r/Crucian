@@ -16,6 +16,12 @@ module.exports.run = async (bot, message, args) => {
             return;
         }
 
+        if (!res[0]) {
+            message.reply(lang.noWeatherResults.random());
+
+            return;
+        }
+
         let current = res[0].current,
             location = res[0].location;
         let embed = new discord.RichEmbed()
