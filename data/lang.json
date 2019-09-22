@@ -19,6 +19,8 @@
   "sanctionReaction": [ "ㅠㅠ", "ㅈㅅ", "그만 때리셈", "붕어가 잘못함", "아픔ㅠㅠ", "안까불겠음" ],
   "searchEnd": [ "이거?", "이거 말하는거?", "이거 맞나", "이건가" ],
   "searchWhat": [ "ㅇㅇ?", "멀 검색함" ],
+  "selectSong": ":notes: 노래 검색 - 숫자 `1-{0}` 또는 `c`(취소)를 입력하셈",
+  "songSelectCancelled": "노래 선택이 취소댐",
   "messageEmpty": [ "메시지를 입력하셈", "메시지를 적으셈" ],
   "noParticipants": [ "참가자 이름을 적어야댐", "참가자 이름을 적으셈" ],
   "notInVoiceChannel": "음성 채팅방에 들어가셈",

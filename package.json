@@ -16,6 +16,7 @@
     "opusscript": "0.0.7",
     "request": "^2.88.0",
     "weather-js": "^2.0.0",
+    "yt-search": "^0.4.1",
     "ytdl-core": "^0.29.5"
   },
   "devDependencies": {
