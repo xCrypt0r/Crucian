@@ -1,4 +1,5 @@
 {
+  "addedToQueue": "{0}이 목록에 추가댐 | 신청자: {1}",
   "calcResult": "`{0}`은 `{1}`임",
   "callReaction": [ "ㅇㅇ", "ㅇㅇ?", "ㅇ.ㅇ", "ㅇㅅㅇ", "ㅇㅁㅇ" ],
   "chooseEnd": [ "`{0}`어떰?", "`{0}`하셈", "`{0}`가 좋아보임", "`{0}`가 좋을듯" ],
@@ -11,6 +12,7 @@
   "imageNotFound": [ "사진이 없는뎅", "사진이 없음" ],
   "invalidArguments": "인자를 제대로 입력하셈",
   "invalidCalculation": "계산할 식을 똑바로 입력하셈",
+  "invalidURL": [ "url을 똑바로 입력하셈", "url이 이상함" ],
   "ownerOnlyCommand": "**__{0}__**는 관리자 전용 커맨드임", 
   "lackOfArguments": "인자 수가 부족함",
   "questionReaction": [ "ㄴㄴ", "ㅁㄹ", "ㅇㅇ" ],
@@ -19,6 +21,8 @@
   "searchWhat": [ "ㅇㅇ?", "멀 검색함" ],
   "messageEmpty": [ "메시지를 입력하셈", "메시지를 적으셈" ],
   "noParticipants": [ "참가자 이름을 적어야댐", "참가자 이름을 적으셈" ],
+  "notInVoiceChannel": "음성 채팅방에 들어가셈",
+  "nowPlaying": "재생 중인 노래: {0} | 신청자: {1}",
   "toofewParticipants": [ "참가자가 너무 적음", "참가자는 2명이상어야댐" ],
   "tooFewMines": "적어도 지뢰가 1개는 있어야댐",
   "tooManyMines": ["그렇게 많이는 안댐", "지뢰가 너무 많음"],

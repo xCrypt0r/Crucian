@@ -4,7 +4,8 @@ const discord = require('discord.js');
 const tools = require('./lib/utils.js');
 const fs = require('fs');
 const bot = new discord.Client();
-let cooldown = new Set();
+const active = new Map();
+const cooldown = new Set();
 
 bot.commands = new discord.Collection();
 
@@ -75,7 +76,11 @@ bot.on('message', async message => {
                 return;
             }
 
-            handler.run(bot, message, args, tools);
+            let options = {
+                active: active
+            };
+
+            handler.run(bot, message, args, tools, options);
 
             let cooltime = handler.config.cooltime;
 
