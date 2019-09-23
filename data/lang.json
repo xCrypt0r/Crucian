@@ -73,6 +73,7 @@
     "이건가"
   ],
   "selectSong": ":notes: 노래 검색 - 숫자 `1-{0}` 또는 `c`(취소)를 입력하셈",
+  "setVolumeSuccess": "볼륨 {0}로 조절했음",
   "shuffleCompleted": [
     "다 섞음",
     "셔플 완료"
