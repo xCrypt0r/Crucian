@@ -96,3 +96,10 @@ bot.on('message', async message => {
 });
 
 bot.login(process.env.TOKEN);
+
+process.on('unhandledRejection', console.error);
+
+process.on('uncaughtException', err => {
+    console.error(err);
+    process.exit(1);
+});
