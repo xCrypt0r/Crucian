@@ -40,7 +40,9 @@ module.exports.run = async (bot, message, args, tools, options) => {
     let validate = await ytdl.validateURL(url);
 
     if (!validate) {
-        message.reply(bot.lang.invalidURL.random());
+        let searcher = require('./search.js');
+
+        searcher.run(bot, message, args, tools, options);
 
         return;
     }
