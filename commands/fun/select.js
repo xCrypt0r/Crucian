@@ -1,13 +1,11 @@
-const lang = require('../data/lang.json');
-
 module.exports.run = async (bot, message, args) => {
     if (args.length < 1) {
-        message.reply(lang.lackOfArguments);
+        message.reply(bot.lang.lackOfArguments);
 
         return;
     }
 
-    message.reply(lang.chooseEnd.random().format(args.random()));
+    message.reply(bot.lang.chooseEnd.random().format(args.random()));
 };
 
 module.exports.config = {

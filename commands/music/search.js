@@ -1,10 +1,8 @@
-const Config = require('../data/config.json');
-const lang = require('../data/lang.json');
 const search = require('yt-search');
 
 module.exports.run = async (bot, message, args, tools, options) => {
     if (args.length < 1) {
-        message.reply(lang.lackOfArguments);
+        message.reply(bot.lang.lackOfArguments);
 
         return;
     }
@@ -16,13 +14,13 @@ module.exports.run = async (bot, message, args, tools, options) => {
             return;
         }
 
-        let videos = res.videos.slice(0, Config.YOUTUBE_SEARCH_LIMIT);
+        let videos = res.videos.slice(0, bot.config.YOUTUBE_SEARCH_LIMIT);
         let videos_chunks = videos
             .map((video, i) => `\`${Number(i) + 1}. ${video.title}\``)
             .chunk(10)
             .map(chunk => chunk.join('\n'));
         let embedOptions = {
-            title: lang.selectSong.format(videos.length),
+            title: bot.lang.selectSong.format(videos.length),
             thumbnail: bot.user.avatarURL
         };
 
@@ -40,7 +38,7 @@ module.exports.run = async (bot, message, args, tools, options) => {
             let player = require('./play.js');
 
             if (collectedMessage.content === 'c') {
-                message.channel.send(lang.songSelectCancelled);
+                message.channel.send(bot.lang.songSelectCancelled);
 
                 return;
             }

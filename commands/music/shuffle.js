@@ -1,10 +1,8 @@
-const lang = require('../data/lang.json');
-
 module.exports.run = async (bot, message, args, tools, options) => {
     let fetched = options.active.get(message.guild.id);
     
     if (!fetched) {
-        message.reply(lang.noMusicPlaying);
+        message.reply(bot.lang.noMusicPlaying);
 
         return;
     }
@@ -14,7 +12,7 @@ module.exports.run = async (bot, message, args, tools, options) => {
     fetched.queue = fetched.queue.shuffle();
 
     fetched.queue.unshift(nowPlaying);
-    message.reply(lang.shuffleCompleted.random());
+    message.reply(bot.lang.shuffleCompleted.random());
 };
 
 module.exports.config = {

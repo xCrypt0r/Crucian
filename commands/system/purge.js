@@ -1,16 +1,14 @@
-const lang = require('../data/lang.json');
-
 module.exports.run = async (bot, message, args) => {
     let limit = Number(args[0]);
 
     if (!Number.isInteger(limit) || limit < 1) {
-        message.reply(lang.invalidArguments);
+        message.reply(bot.lang.invalidArguments);
 
         return;
     }
 
     if (limit > 50) {
-        message.reply(lang.deleteTooMuch.random().format(limit));
+        message.reply(bot.lang.deleteTooMuch.random().format(limit));
 
         return;
     }
@@ -22,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
             .slice(0, limit + 1);
 
         message.channel.bulkDelete(messagesToDelete).then(deletedMessages => {
-            message.reply(lang.deleteEnd.random().format(deletedMessages.size - 1));
+            message.reply(bot.lang.deleteEnd.random().format(deletedMessages.size - 1));
         }).catch(console.error);
     }).catch(console.error);
 };
