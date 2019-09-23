@@ -3,6 +3,12 @@ const discord = require('discord.js');
 const request = require('request');
 
 module.exports.run = async (bot, message, args, tools) => {
+    if (args.length < 1) {
+        message.reply(lang.lackOfArguments);
+
+        return;
+    }
+
     let q = args.join(' ');
     let url = `https://www.google.me/search?q=${encodeURI(q)}&hl=ko&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiEi8OL_eXgAhWUOnAKHbbZDWoQ_AUIDigB&biw=1313&bih=637`;
 
