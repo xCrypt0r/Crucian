@@ -1,10 +1,9 @@
-const lang = require('../data/lang.json');
 const discord = require('discord.js');
 const weather = require('weather-js');
 
 module.exports.run = async (bot, message, args) => {
     if (args.length < 1) {
-        message.reply(lang.lackOfArguments);
+        message.reply(bot.lang.lackOfArguments);
 
         return;
     }
@@ -17,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
         }
 
         if (!res[0]) {
-            message.reply(lang.noWeatherResults.random());
+            message.reply(bot.lang.noWeatherResults.random());
 
             return;
         }

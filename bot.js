@@ -1,15 +1,15 @@
-const Config = require('./data/config.json');
-const lang = require('./data/lang.json');
 const discord = require('discord.js');
 const tools = require('./lib/utils.js');
-const fs = require('fs');
+const glob = require('glob');
 const bot = new discord.Client();
 const active = new Map();
 const cooldown = new Set();
 
+bot.config = require('./data/config.json');
+bot.lang = require('./data/lang.json');
 bot.commands = new discord.Collection();
 
-fs.readdir('./commands/', (err, files) => {
+glob('**/*.js', {cwd: 'commands'}, (err, files) => {
     if (err) {
         console.error(err);
 
@@ -50,11 +50,11 @@ bot.on('ready', async () => {
 });
 
 bot.on('message', async message => {
-    if (Config.IGNORE_BOT_MESSAGES && message.author.bot) {
+    if (bot.config.IGNORE_BOT_MESSAGES && message.author.bot) {
         return;
     }
 
-    let prefix = Config.PREFIX;
+    let prefix =  bot.config.PREFIX;
 
     if (message.content.startsWith(prefix)) {
         let messageArray = message.content.split(' '),
@@ -65,13 +65,13 @@ bot.on('message', async message => {
 
         if (handler) {
             if (handler.config.isOwnerOnly && !isOwner) {
-                message.reply(lang.ownerOnlyCommand.format(handler.config.name.toUpperCase()));
+                message.reply(bot.lang.ownerOnlyCommand.format(handler.config.name.toUpperCase()));
 
                 return;
             }
 
             if (cooldown.has(handler)) {
-                message.reply(lang.commandInCooldown.format(handler.config.name.toUpperCase()));
+                message.reply(bot.lang.commandInCooldown.format(handler.config.name.toUpperCase()));
 
                 return;
             }

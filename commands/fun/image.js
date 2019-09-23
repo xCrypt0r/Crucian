@@ -1,10 +1,9 @@
-const lang = require('../data/lang.json');
 const discord = require('discord.js');
 const request = require('request');
 
 module.exports.run = async (bot, message, args, tools) => {
     if (args.length < 1) {
-        message.reply(lang.lackOfArguments);
+        message.reply(bot.lang.lackOfArguments);
 
         return;
     }
@@ -21,7 +20,7 @@ module.exports.run = async (bot, message, args, tools) => {
         let images = body.match(/(?<="ou":").+?(?=")/g) || [];
 
         if (images.length < 1) {
-            message.reply(lang.imageNotFound.random());
+            message.reply(bot.lang.imageNotFound.random());
 
             return;
         }

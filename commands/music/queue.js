@@ -1,20 +1,18 @@
-const lang = require('../data/lang.json');
-
 module.exports.run = async (bot, message, args, tools, options) => {
     let fetched = options.active.get(message.guild.id);
     
     if (!fetched) {
-        message.reply(lang.noMusicPlaying);
+        message.reply(bot.lang.noMusicPlaying);
 
         return;
     }
 
     let queue = fetched.queue.map((music, i) => {
-        return lang.songInQueue.format(i + 1, music.songTitle, music.requester);
+        return bot.lang.songInQueue.format(i + 1, music.songTitle, music.requester);
     });
     let queue_chunks = queue.chunk(10).map(chunk => chunk.join('\n'));
     let embedOptions = {
-        title: lang.displayQueue,
+        title: bot.lang.displayQueue,
         thumbnail: bot.user.avatarURL
     };
 

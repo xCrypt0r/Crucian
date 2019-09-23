@@ -1,8 +1,7 @@
-const fs = require('fs');
-const path = require('path');
+const glob = require('glob');
 
 module.exports.run = async (bot, message, args, tools) => {
-    fs.readdir(__dirname, (err, files) => {
+    glob('commands/*/*.js', (err, files) => {
         if (err) {
             console.error(err);
 
@@ -10,12 +9,11 @@ module.exports.run = async (bot, message, args, tools) => {
         }
 
         let rgx_checkJS = /\.js$/;
-        let scriptName = path.basename(__filename);
-        let handlers = files.filter(file => rgx_checkJS.test(file) && file !== scriptName);
+        let handlers = files.filter(file => rgx_checkJS.test(file));
         let manual = [];
 
         handlers.forEach((file, i) => {
-            let handler = require(`${__dirname}/${file}`);
+            let handler = require(`../../${file}`);
             let config = handler.config;
 
             manual.push([

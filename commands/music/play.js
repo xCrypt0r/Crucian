@@ -1,9 +1,8 @@
-const lang = require('../data/lang.json');
 const ytdl = require('ytdl-core');
 
 async function play(bot, options, data) {
     bot.channels.get(data.queue[0].announceChannel)
-        .send(lang.nowPlaying.format(data.queue[0].songTitle, data.queue[0].requester));
+        .send(bot.lang.nowPlaying.format(data.queue[0].songTitle, data.queue[0].requester));
     data.dispatcher = await data.connection.playStream(ytdl(data.queue[0].url, {filter: 'audioonly'}));
     data.dispatcher.guildID = data.guildID;
     data.dispatcher.once('end', () => {
@@ -32,13 +31,13 @@ function finish(bot, options, data) {
 
 module.exports.run = async (bot, message, args, tools, options) => {
     if (!message.member.voiceChannel) {
-        message.reply(lang.notInVoiceChannel);
+        message.reply(bot.lang.notInVoiceChannel);
 
         return;
     }
 
     if (args.length < 1) {
-        message.reply(lang.lackOfArguments);
+        message.reply(bot.lang.lackOfArguments);
 
         return;
     }
@@ -47,7 +46,7 @@ module.exports.run = async (bot, message, args, tools, options) => {
     let validate = await ytdl.validateURL(url);
 
     if (!validate) {
-        message.reply(lang.invalidURL.random());
+        message.reply(bot.lang.invalidURL.random());
 
         return;
     }
@@ -58,7 +57,7 @@ module.exports.run = async (bot, message, args, tools, options) => {
     });
 
     if (unplayable) {
-        message.reply(lang.unplayableVideo);
+        message.reply(bot.lang.unplayableVideo);
 
         return;
     }
@@ -84,7 +83,7 @@ module.exports.run = async (bot, message, args, tools, options) => {
     if (!data.dispatcher) {
         play(bot, options, data);
     } else {
-        message.channel.send(lang.addedToQueue.format(info.title, message.author.tag));
+        message.channel.send(bot.lang.addedToQueue.format(info.title, message.author.tag));
     }
 
     options.active.set(message.guild.id, data);

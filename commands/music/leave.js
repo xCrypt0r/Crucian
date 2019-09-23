@@ -1,14 +1,12 @@
-const lang = require('../data/lang.json');
-
 module.exports.run = async (bot, message, args) => {
     if (!message.guild.me.voiceChannel) {
-        message.reply(lang.botNotInVoiceChannel);
+        message.reply(bot.lang.botNotInVoiceChannel);
 
         return;
     }
 
     message.guild.me.voiceChannel.leave();
-    message.channel.send(lang.leaveVoiceChannel.random());
+    message.channel.send(bot.lang.leaveVoiceChannel.random());
 };
 
 module.exports.config = {

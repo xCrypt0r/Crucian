@@ -1,7 +1,5 @@
-const lang = require('../data/lang.json');
-
 module.exports.run = async (bot, message, args, tools) => {
-    let reaction = lang.sanctionReaction.random();
+    let reaction = bot.lang.sanctionReaction.random();
 
     message.channel.send(reaction);
 };

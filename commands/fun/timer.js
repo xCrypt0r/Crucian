@@ -1,5 +1,3 @@
-const lang = require('../data/lang.json');
-
 function formatBomb(count) {
     return `:bomb: ${'-'.repeat(count)} ${count}`;
 }
@@ -8,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     message.delete();
 
     if (args.length < 2) {
-        message.reply(lang.lackOfArguments);
+        message.reply(bot.lang.lackOfArguments);
 
         return;
     }
@@ -16,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     let count = Number(args.pop());
 
     if (!Number.isInteger(count) || count < 1) {
-        message.reply(lang.invalidArguments);
+        message.reply(bot.lang.invalidArguments);
 
         return;
     }

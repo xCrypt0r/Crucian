@@ -1,9 +1,8 @@
-const lang = require('../data/lang.json');
 const math = require('mathjs');
 
 module.exports.run = async (bot, message, args) => {
-    if (!args[0]) {
-        message.reply(lang.lackOfArguments);
+    if (args.length < 1) {
+        message.reply(bot.lang.lackOfArguments);
 
         return;
     }
@@ -14,12 +13,12 @@ module.exports.run = async (bot, message, args) => {
     try {
         output = math.evaluate(input);
     } catch (e) {
-        message.reply(lang.invalidCalculation);
+        message.reply(bot.lang.invalidCalculation);
 
         return;
     }
 
-    message.channel.send(lang.calcResult.format(input, output));
+    message.channel.send(bot.lang.calcResult.format(input, output));
 };
 
 module.exports.config = {
