@@ -26,6 +26,21 @@
             "error",
             "always"
         ],
-        "no-console": "off"
+        "keyword-spacing": [
+            "error", {
+                "before": true,
+                "after": true
+            }
+        ],
+        "space-before-blocks": [
+            "error", {
+                "functions": "always",
+                "keywords": "always",
+                "classes": "always"
+            }
+        ],
+        "no-console": "off",
+        "no-unused-vars": "off",
+        "require-atomic-updates": "off"
     }
 }
