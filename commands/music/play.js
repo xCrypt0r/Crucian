@@ -20,12 +20,6 @@ function finish(bot, options, data) {
         play(bot, options, fetched);
     } else {
         options.active.delete(data.guildID);
-
-        let voiceChannel = bot.guilds.get(data.guildID).me.voiceChannel;
-
-        if (voiceChannel) {
-            voiceChannel.leave();
-        }
     }
 }
 
