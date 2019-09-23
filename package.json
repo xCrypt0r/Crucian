@@ -1,13 +1,23 @@
 {
   "name": "crucian",
-  "version": "1.0.0",
-  "description": "My bot",
+  "version": "1.0.1",
+  "description": "My bot with simple structure based on discord.js",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint .",
+    "lint": "eslint --fix .",
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SoBusted/Crucian.git"
   },
   "author": "SoBusted",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SoBusted/Crucian/issues",
+    "email": "fireintheholl@naver.com"
+  },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "discord.js": "^11.5.1",
