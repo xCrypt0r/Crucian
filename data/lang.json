@@ -1,5 +1,9 @@
 {
   "addedToQueue": "`{0}` 이 목록에 추가댐 | 신청자: `{1}`",
+  "alreadyPaused": [
+    "이미 일시정지댐", 
+    "이미 멈춰져 있잖"
+  ],
   "botNotInVoiceChannel": "이미 나와있음",
   "calcResult": "`{0}`은 `{1}`임",
   "chooseEnd": [
@@ -37,17 +41,23 @@
   "noMusicPlaying": "재생 중인 음악이 없음",
   "notInSameVoiceChannel": "같은 채널에 있어야댐",
   "notInVoiceChannel": "음성 채팅방에 들어가셈",
+  "notPaused": "일시정지 안대어 있는뎅",
   "noWeatherResults": [
     "날씨 정보가 없음",
     "지역을 똑바로 입력하셈"
   ],
   "nowPlaying": "재생 중인 노래: `{0}` | 신청자: `{1}`",
   "ownerOnlyCommand": "**__{0}__**는 관리자 전용 커맨드임",
+  "pauseSuccess": [
+    "`{0}` 멈춰놓음", 
+    "`{0}` 일시정지했음"
+  ],
   "questionReaction": [
     "ㄴㄴ",
     "ㅁㄹ",
     "ㅇㅇ"
   ],
+  "resumeSuccess": "`{0}` 다시 틀었음",
   "sanctionReaction": [
     "ㅠㅠ",
     "ㅈㅅ",
