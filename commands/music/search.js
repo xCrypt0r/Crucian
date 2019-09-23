@@ -51,7 +51,7 @@ module.exports.run = async (bot, message, args, tools, options) => {
 module.exports.config = {
     name: 'search',
     description: 'Search music from youtube',
-    alias: ['s', '검색', '찾아'],
+    alias: ['검색', '찾아'],
     cooltime: 4000,
     isOwnerOnly: false
 };
