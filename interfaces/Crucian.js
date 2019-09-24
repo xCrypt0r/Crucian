@@ -23,7 +23,7 @@ class Crucian extends Client {
             let prefix =  this.config.PREFIX;
         
             if (message.content.startsWith(prefix)) {
-                let messageArray = message.content.split(' '),
+                let messageArray = message.content.trim().split(/\s+/),
                     cmd = messageArray[0].slice(prefix.length).toLowerCase(),
                     args = messageArray.slice(1),
                     handler = this.commands.get(cmd),
