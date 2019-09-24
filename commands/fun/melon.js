@@ -1,7 +1,7 @@
 const request = require('request');
 const cheerio = require('cheerio');
 
-module.exports.run = async (bot, message, args, tools) => {
+module.exports.run = async (bot, message) => {
     let url = 'https://www.melon.com/chart/';
     let headers = {
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'
@@ -28,7 +28,7 @@ module.exports.run = async (bot, message, args, tools) => {
             title: `:musical_note: **melon_chart_${today}**`
         };
 
-        tools.page(message, chart_chunks, embedOptions);
+        bot.tools.page(message, chart_chunks, embedOptions);
     });
 };
 

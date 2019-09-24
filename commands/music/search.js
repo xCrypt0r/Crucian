@@ -1,6 +1,6 @@
 const search = require('yt-search');
 
-module.exports.run = async (bot, message, args, tools, options) => {
+module.exports.run = async (bot, message, args, options) => {
     if (args.length < 1) {
         message.reply(bot.lang.lackOfArguments);
 
@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args, tools, options) => {
             thumbnail: bot.user.avatarURL
         };
 
-        tools.page(message, videos_chunks, embedOptions);
+        bot.tools.page(message, videos_chunks, embedOptions);
 
         let filter = collectedMessage => message.author === collectedMessage.author
             && (!isNaN(collectedMessage.content) 
@@ -43,7 +43,7 @@ module.exports.run = async (bot, message, args, tools, options) => {
                 return;
             }
 
-            player.run(bot, message, [videos[Number(collectedMessage.content) - 1].url], tools, options);
+            player.run(bot, message, [videos[Number(collectedMessage.content) - 1].url], options);
         });
     });
 };

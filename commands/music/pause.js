@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args, tools, options) => {
+module.exports.run = async (bot, message, args, options) => {
     let fetched = options.active.get(message.guild.id);
     
     if (!fetched) {

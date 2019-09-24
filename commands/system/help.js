@@ -1,6 +1,6 @@
 const glob = require('glob');
 
-module.exports.run = async (bot, message, args, tools) => {
+module.exports.run = async (bot, message) => {
     glob('commands/*/*.js', (err, files) => {
         if (err) {
             console.error(err);
@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args, tools) => {
             thumbnail: bot.user.avatarURL
         };
 
-        tools.page(message, manual_chunks, embedOptions);
+        bot.tools.page(message, manual_chunks, embedOptions);
     });
 };
 

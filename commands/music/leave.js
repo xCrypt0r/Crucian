@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (bot, message) => {
     if (!message.guild.me.voiceChannel) {
         message.reply(bot.lang.botNotInVoiceChannel);
 
