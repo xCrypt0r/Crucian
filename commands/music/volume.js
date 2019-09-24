@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args, options) => {
+module.exports.run = async (bot, message, args) => {
     if (args.length < 1) {
         message.reply(bot.lang.lackOfArguments);
 
@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args, options) => {
         return;
     }
 
-    let fetched = options.active.get(message.guild.id);
+    let fetched = bot.active.get(message.guild.id);
     
     if (!fetched) {
         message.reply(bot.lang.noMusicPlaying);

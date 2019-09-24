@@ -1,5 +1,5 @@
-module.exports.run = async (bot, message, args, options) => {
-    let fetched = options.active.get(message.guild.id);
+module.exports.run = async (bot, message) => {
+    let fetched = bot.active.get(message.guild.id);
     
     if (!fetched) {
         message.reply(bot.lang.noMusicPlaying);

@@ -1,6 +1,6 @@
 const search = require('yt-search');
 
-module.exports.run = async (bot, message, args, options) => {
+module.exports.run = async (bot, message, args) => {
     if (args.length < 1) {
         message.reply(bot.lang.lackOfArguments);
 
@@ -43,7 +43,7 @@ module.exports.run = async (bot, message, args, options) => {
                 return;
             }
 
-            player.run(bot, message, [videos[Number(collectedMessage.content) - 1].url], options);
+            player.run(bot, message, [videos[Number(collectedMessage.content) - 1].url]);
         });
     });
 };

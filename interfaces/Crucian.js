@@ -41,12 +41,8 @@ class Crucian extends Client {
         
                         return;
                     }
-        
-                    let options = {
-                        active: this.active
-                    };
 
-                    handler.run(this, message, args, options);
+                    handler.run(this, message, args);
         
                     let cooltime = handler.config.cooltime;
         

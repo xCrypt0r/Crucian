@@ -1,29 +1,29 @@
 const ytdl = require('ytdl-core');
 
-async function play(bot, options, data) {
+async function play(bot, data) {
     bot.channels.get(data.queue[0].announceChannel)
         .send(bot.lang.nowPlaying.format(data.queue[0].songTitle, data.queue[0].requester));
     data.dispatcher = await data.connection.playStream(ytdl(data.queue[0].url, {filter: 'audioonly'}));
     data.dispatcher.guildID = data.guildID;
     data.dispatcher.once('end', () => {
-        finish(bot, options, data);
+        finish(bot, data);
     });
 }
 
-function finish(bot, options, data) {
-    let fetched = options.active.get(data.guildID);
+function finish(bot, data) {
+    let fetched = bot.active.get(data.guildID);
 
     fetched.queue.shift();
 
     if (fetched.queue.length > 0) {
-        options.active.set(data.guildID, fetched);
-        play(bot, options, fetched);
+        bot.active.set(data.guildID, fetched);
+        play(bot, fetched);
     } else {
-        options.active.delete(data.guildID);
+        bot.active.delete(data.guildID);
     }
 }
 
-module.exports.run = async (bot, message, args, options) => {
+module.exports.run = async (bot, message, args) => {
     if (!message.member.voiceChannel) {
         message.reply(bot.lang.notInVoiceChannel);
 
@@ -42,7 +42,7 @@ module.exports.run = async (bot, message, args, options) => {
     if (!validate) {
         let searcher = require('./search.js');
 
-        searcher.run(bot, message, args, options);
+        searcher.run(bot, message, args);
 
         return;
     }
@@ -58,7 +58,7 @@ module.exports.run = async (bot, message, args, options) => {
         return;
     }
 
-    let data = options.active.get(message.guild.id) || {};
+    let data = bot.active.get(message.guild.id) || {};
 
     if (!data.connection) {
         data.connection = await message.member.voiceChannel.join();
@@ -77,12 +77,12 @@ module.exports.run = async (bot, message, args, options) => {
     });
 
     if (!data.dispatcher) {
-        play(bot, options, data);
+        play(bot, data);
     } else {
         message.channel.send(bot.lang.addedToQueue.format(info.title, message.author.tag));
     }
 
-    options.active.set(message.guild.id, data);
+    bot.active.set(message.guild.id, data);
 };
 
 module.exports.config = {

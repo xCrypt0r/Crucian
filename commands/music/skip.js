@@ -1,5 +1,5 @@
-module.exports.run = async (bot, message, args, options) => {
-    let fetched = options.active.get(message.guild.id);
+module.exports.run = async (bot, message) => {
+    let fetched = bot.active.get(message.guild.id);
 
     if (!fetched) {
         message.reply(bot.lang.noMusicPlaying);
@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args, options) => {
         return;
     }
 
-    options.active.set(message.guild.id, fetched);
+    bot.active.set(message.guild.id, fetched);
     message.channel.send(bot.lang.skipSuccess);
     fetched.dispatcher.end();
 };
