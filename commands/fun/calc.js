@@ -24,6 +24,7 @@ module.exports.run = async (bot, message, args) => {
 module.exports.config = {
     name: 'calc',
     description: 'Calculate simple math questions',
+    usage: 'calc #{formula}',
     alias: ['answer', 'calculate', 'solve', '계산', '계산기', '답', '풀어'],
     cooltime: 1000,
     isOwnerOnly: false

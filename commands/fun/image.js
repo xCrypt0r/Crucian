@@ -37,6 +37,7 @@ module.exports.run = async (bot, message, args) => {
 module.exports.config = {
     name: 'image',
     description: 'Get image from google', 
+    usage: 'image #{keyword}',
     alias: ['img', 'photo', 'picture', '그림', '사진'],
     cooltime: 2000,
     isOwnerOnly: false

@@ -26,6 +26,7 @@ module.exports.run = async (bot, message) => {
 module.exports.config = {
     name: 'pause',
     description: 'Pause currently playing music',
+    usage: 'pause',
     alias: ['stop', '멈춰', '스탑', '일시정지', '정지'],
     isOwnerOnly: false
 };

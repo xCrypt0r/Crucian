@@ -34,6 +34,7 @@ module.exports.run = async (bot, message, args) => {
 module.exports.config = {
     name: 'volume',
     description: 'Adjust speaking volume (range: 0~200)',
+    usage: 'volume #{number}',
     alias: ['볼륨', '음량'],
     isOwnerOnly: false
 };

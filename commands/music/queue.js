@@ -22,6 +22,7 @@ module.exports.run = async (bot, message) => {
 module.exports.config = {
     name: 'queue',
     description: 'Show songs in queue',
+    usage: 'queue',
     alias: ['q', '목록', '큐'],
     cooltime: 2000,
     isOwnerOnly: false

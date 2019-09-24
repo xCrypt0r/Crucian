@@ -26,6 +26,7 @@ module.exports.run = async (bot, message) => {
 module.exports.config = {
     name: 'resume',
     description: 'Resume paused music',
+    usage: 'resume',
     alias: ['다시틀어'],
     isOwnerOnly: false
 };

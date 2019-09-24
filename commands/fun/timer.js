@@ -41,6 +41,7 @@ module.exports.run = async (bot, message, args) => {
 module.exports.config = {
     name: 'timer',
     description: 'Shade message for specific seconds',
+    usage: 'timer #{message} #{seconds}',
     alias: ['타이머'],
     cooltime: 3000,
     isOwnerOnly: true

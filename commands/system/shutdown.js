@@ -5,6 +5,7 @@ module.exports.run = async (bot) => {
 module.exports.config = {
     name: 'shutdown',
     description: 'Shutdown bot',
+    usage: 'shutdown',
     alias: ['turnoff', '꺼져', '끄기'],
     isOwnerOnly: true
 };

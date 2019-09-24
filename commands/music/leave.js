@@ -12,6 +12,7 @@ module.exports.run = async (bot, message) => {
 module.exports.config = {
     name: 'leave',
     description: 'Leave voice channel',
+    usage: 'leave',
     alias: ['l', '나가'],
     isOwnerOnly: false
 };
