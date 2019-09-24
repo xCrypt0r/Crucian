@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args, tools, options) => {
+module.exports.run = async (bot, message, args, options) => {
     if (args.length < 1) {
         message.reply(bot.lang.lackOfArguments);
 

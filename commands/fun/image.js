@@ -1,7 +1,7 @@
 const discord = require('discord.js');
 const request = require('request');
 
-module.exports.run = async (bot, message, args, tools) => {
+module.exports.run = async (bot, message, args) => {
     if (args.length < 1) {
         message.reply(bot.lang.lackOfArguments);
 

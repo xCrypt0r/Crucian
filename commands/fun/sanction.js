@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args, tools) => {
+module.exports.run = async (bot, message) => {
     let reaction = bot.lang.sanctionReaction.random();
 
     message.channel.send(reaction);

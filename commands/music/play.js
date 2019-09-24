@@ -23,7 +23,7 @@ function finish(bot, options, data) {
     }
 }
 
-module.exports.run = async (bot, message, args, tools, options) => {
+module.exports.run = async (bot, message, args, options) => {
     if (!message.member.voiceChannel) {
         message.reply(bot.lang.notInVoiceChannel);
 
@@ -42,7 +42,7 @@ module.exports.run = async (bot, message, args, tools, options) => {
     if (!validate) {
         let searcher = require('./search.js');
 
-        searcher.run(bot, message, args, tools, options);
+        searcher.run(bot, message, args, options);
 
         return;
     }

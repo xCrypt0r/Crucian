@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args, tools, options) => {
+module.exports.run = async (bot, message, args, options) => {
     let fetched = options.active.get(message.guild.id);
     
     if (!fetched) {
@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args, tools, options) => {
         thumbnail: bot.user.avatarURL
     };
 
-    tools.page(message, queue_chunks, embedOptions);
+    bot.tools.page(message, queue_chunks, embedOptions);
 };
 
 module.exports.config = {
