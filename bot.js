@@ -1,3 +1,5 @@
+require('./lib/prototypes.js');
+
 const Crucian = require('./interfaces/Crucian.js');
 const bot = new Crucian();
 
