@@ -41,8 +41,9 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.config = {
     name: 'weather',
+    description: 'Informs the current weather',
+    usage: 'weather #{city}',
     alias: ['날씨'],
     cooltime: 5000,
-    description: 'Informs the current weather',
     isOwnerOnly: false
 };

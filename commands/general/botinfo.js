@@ -14,6 +14,7 @@ module.exports.run = async (bot, message) => {
 module.exports.config = {
     name: 'botinfo',
     description: 'Display bot information',
+    usage: 'botinfo',
     alias: ['봇정보', '정보'],
     isOwnerOnly: false
 };

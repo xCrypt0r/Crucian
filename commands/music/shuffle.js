@@ -18,6 +18,7 @@ module.exports.run = async (bot, message) => {
 module.exports.config = {
     name: 'shuffle',
     description: 'Shuffle songs in queue',
+    usage: 'shuffle',
     alias: ['random', 'randomize', 'sh', '랜덤', '셔플'],
     cooltime: 2000,
     isOwnerOnly: false

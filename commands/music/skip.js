@@ -21,6 +21,7 @@ module.exports.run = async (bot, message) => {
 module.exports.config = {
     name: 'skip',
     description: 'Skip the song currently playing',
+    usage: 'skip',
     alias: ['s', '넘겨', '버려', '치워'],
     isOwnerOnly: false
 };

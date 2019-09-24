@@ -87,7 +87,8 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.config = {
     name: 'play',
-    description: 'Play music with given URL',
+    description: 'Play music with given URL or keyword',
+    usage: 'play #{URL|keyword}',
     alias: ['p', '재생', '틀어'],
     cooltime: 2000,
     isOwnerOnly: false

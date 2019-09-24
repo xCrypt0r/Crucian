@@ -19,6 +19,7 @@ module.exports.run = async (bot, message) => {
             manual.push([
                 `${i + 1}. \`${config.name}\``,
                 `Description: ${config.description}`,
+                `Usage: **\`${config.usage ? bot.config.PREFIX + config.usage : 'n/a'}\`**`,
                 `Alias: ${config.alias.join(', ')}`,
                 `Cooltime: ${config.cooltime || 0}`,
                 `IsOwnerOnly: ${config.isOwnerOnly}`
@@ -39,6 +40,7 @@ module.exports.run = async (bot, message) => {
 module.exports.config = {
     name: 'help',
     description: 'Informs how to use this bot',
+    usage: 'help',
     alias: ['도움', '도움말'],
     isOwnerOnly: false
 };

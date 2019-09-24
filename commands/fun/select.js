@@ -11,6 +11,7 @@ module.exports.run = async (bot, message, args) => {
 module.exports.config = {
     name: 'select',
     description: 'Select one between multiple items',
+    usage: 'select #{option1} #{option2} #{option3} ...',
     alias: ['choice', 'choose', '골라', '뽑아', '선택'],
     cooltime: 500,
     isOwnerOnly: false

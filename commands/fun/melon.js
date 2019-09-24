@@ -34,9 +34,10 @@ module.exports.run = async (bot, message) => {
 
 module.exports.config = {
     name: 'melon',
+    description: 'Display melon Top100 chart',
+    usage: 'melon',
     alias: ['멜론'],
     cooltime: 10000,
-    description: 'Display melon Top100 chart',
     isOwnerOnly: false
 };
 

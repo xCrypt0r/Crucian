@@ -27,8 +27,9 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.config = {
     name: 'purge',
+    description: 'Purge messages',
+    usage: 'purge #{limit}',
     alias: ['clear', 'del', 'delete', 'remove', 'rm', '삭제', '지워'],
     cooltime: 5000,
-    description: 'Purge messages',
     isOwnerOnly: false
 };
