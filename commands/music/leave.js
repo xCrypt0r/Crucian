@@ -1,18 +1,26 @@
-module.exports.run = async (bot, message) => {
-    if (!message.guild.me.voiceChannel) {
-        message.reply(bot.lang.botNotInVoiceChannel);
+const Command = require('../../interfaces/Command.js');
 
-        return;
+class Leave extends Command {
+    constructor(file) {
+        super(file, {
+            name: 'leave',
+            description: 'Leave voice channel',
+            usage: 'leave',
+            aliases: ['l', '나가'],
+            isOwnerOnly: false
+        });
     }
 
-    message.guild.me.voiceChannel.leave();
-    message.channel.send(bot.lang.leaveVoiceChannel.random());
-};
+    async run(bot, message) {
+        if (!message.guild.me.voiceChannel) {
+            message.reply(bot.lang.botNotInVoiceChannel);
+    
+            return;
+        }
+    
+        message.guild.me.voiceChannel.leave();
+        message.channel.send(bot.lang.leaveVoiceChannel.random());
+    }
+}
 
-module.exports.config = {
-    name: 'leave',
-    description: 'Leave voice channel',
-    usage: 'leave',
-    alias: ['l', '나가'],
-    isOwnerOnly: false
-};
+module.exports = Leave;

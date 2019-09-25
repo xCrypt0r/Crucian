@@ -1,11 +1,19 @@
-module.exports.run = async (bot) => {
-    bot.destroy();
-};
+const Command = require('../../interfaces/Command.js');
 
-module.exports.config = {
-    name: 'shutdown',
-    description: 'Shutdown bot',
-    usage: 'shutdown',
-    alias: ['turnoff', '꺼져', '끄기'],
-    isOwnerOnly: true
-};
+class Shutdown extends Command {
+    constructor(file) {
+        super(file, {
+            name: 'shutdown',
+            description: 'Shutdown bot',
+            usage: 'shutdown',
+            aliases: ['turnoff', '꺼져', '끄기'],
+            isOwnerOnly: true
+        });
+    }
+
+    async run(bot) {
+        bot.destroy();
+    }
+}
+
+module.exports = Shutdown;
