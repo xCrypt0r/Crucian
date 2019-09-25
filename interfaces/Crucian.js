@@ -64,7 +64,7 @@ class Crucian extends Client {
     }
 
     async loadCommands() {
-        glob('**/*.js', {cwd: 'commands'}, (err, handlers) => {
+        glob('**/*.js', { cwd: 'commands' }, (err, handlers) => {
             if (err) {
                 console.error(err);
         

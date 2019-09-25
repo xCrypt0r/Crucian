@@ -32,6 +32,10 @@
                 "after": true
             }
         ],
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
         "space-before-blocks": [
             "error", {
                 "functions": "always",

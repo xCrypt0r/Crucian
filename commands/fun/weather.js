@@ -21,7 +21,7 @@ class Weather extends Command {
             return;
         }
     
-        weather.find({search: args.join(' '), degreeType: 'C'}, (err, res) => {
+        weather.find({ search: args.join(' '), degreeType: 'C' }, (err, res) => {
             if (err) {
                 console.error(err);
     
