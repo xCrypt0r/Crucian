@@ -39,6 +39,10 @@
     "ㅂㅂ",
     "붕어 가봄"
   ],
+  "messageTooLong": [
+    "메세지 길이를 좀 줄이셈",
+    "메세지가 너무 길어서 안댐"
+  ],
   "noMusicPlaying": "재생 중인 음악이 없음",
   "notInSameVoiceChannel": "같은 채널에 있어야댐",
   "notInVoiceChannel": "음성 채팅방에 들어가셈",
@@ -80,6 +84,10 @@
     "셔플 완료"
   ],
   "skipSuccess": "스킵했음",
+  "somethingWentWrong": [
+    "먼가 잘못댐",
+    "오류났음"
+  ],
   "songInQueue": "`{0}. {1} | 신청자: {2}`",
   "songSelectCancelled": "노래 선택이 취소댐",
   "unplayableVideo": "재생할 수 없는 영상임"
