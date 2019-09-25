@@ -1,46 +1,52 @@
+const Command = require('../../interfaces/Command.js');
 const glob = require('glob');
 
-module.exports.run = async (bot, message) => {
-    glob('commands/*/*.js', (err, files) => {
-        if (err) {
-            console.error(err);
-
-            return;
-        }
-
-        let rgx_checkJS = /\.js$/;
-        let handlers = files.filter(file => rgx_checkJS.test(file));
-        let manual = [];
-
-        handlers.forEach((file, i) => {
-            let handler = require(`../../${file}`);
-            let config = handler.config;
-
-            manual.push([
-                `${i + 1}. \`${config.name}\``,
-                `Description: ${config.description}`,
-                `Usage: **\`${config.usage ? bot.config.PREFIX + config.usage : 'n/a'}\`**`,
-                `Alias: ${config.alias.join(', ')}`,
-                `Cooltime: ${config.cooltime || 0}`,
-                `IsOwnerOnly: ${config.isOwnerOnly}`
-            ].join('\n'));
+class Help extends Command {
+    constructor(file) {
+        super(file, {
+            name: 'help',
+            description: 'Informs how to use this bot',
+            usage: 'help',
+            aliases: ['도움', '도움말'],
+            isOwnerOnly: false
         });
+    }
 
-        let manual_chunks = manual.chunk(5).map(chunk => chunk.join('\n\n'));
-        let embedOptions = {
-            title: ':blue_book: **도움말**',
-            color: '#4ae342',
-            thumbnail: bot.user.avatarURL
-        };
+    async run(bot, message) {
+        glob('commands/*/*.js', (err, files) => {
+            if (err) {
+                console.error(err);
+    
+                return;
+            }
 
-        bot.tools.page(message, manual_chunks, embedOptions);
-    });
-};
+            let rgx_checkJS = /\.js$/;
+            let handlers = files.filter(file => rgx_checkJS.test(file));
+            let manual = [];
+    
+            handlers.forEach((file, i) => {
+                let handler = new (require(`../../${file}`))(file);
+    
+                manual.push([
+                    `${i + 1}. \`${handler.name}\``,
+                    `**Description**: ${handler.description}`,
+                    `**Usage**: \`${handler.usage}\``,
+                    `**Alias**: ${handler.aliases.join(', ')}`,
+                    `**Cooltime**: ${handler.cooltime}`,
+                    `**IsOwnerOnly**: ${handler.isOwnerOnly}`
+                ].join('\n'));
+            });
+    
+            let manual_chunks = manual.chunk(5).map(chunk => chunk.join('\n\n'));
+            let embedOptions = {
+                title: ':blue_book: **도움말**',
+                color: '#4ae342',
+                thumbnail: bot.user.avatarURL
+            };
+    
+            bot.tools.page(message, manual_chunks, embedOptions);
+        });
+    }
+}
 
-module.exports.config = {
-    name: 'help',
-    description: 'Informs how to use this bot',
-    usage: 'help',
-    alias: ['도움', '도움말'],
-    isOwnerOnly: false
-};
+module.exports = Help;

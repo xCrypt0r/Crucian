@@ -2,8 +2,8 @@ const { Client, Collection } = require('discord.js');
 const glob = require('glob');
 
 class Crucian extends Client {
-    constructor(options) {
-        super(options || {});
+    constructor(options = {}) {
+        super(options);
 
         this.config = require('../data/config.json');
         this.lang = require('../data/lang.json');
@@ -30,21 +30,21 @@ class Crucian extends Client {
                     isOwner = message.author.id === process.env.OWNER_ID;
         
                 if (handler) {
-                    if (handler.config.isOwnerOnly && !isOwner) {
-                        message.reply(this.lang.ownerOnlyCommand.format(handler.config.name.toUpperCase()));
+                    if (handler.isOwnerOnly && !isOwner) {
+                        message.reply(this.lang.ownerOnlyCommand.format(handler.name.toUpperCase()));
         
                         return;
                     }
         
                     if (this.cooldown.has(handler)) {
-                        message.reply(this.lang.commandInCooldown.format(handler.config.name.toUpperCase()));
+                        message.reply(this.lang.commandInCooldown.format(handler.name.toUpperCase()));
         
                         return;
                     }
 
                     handler.run(this, message, args);
         
-                    let cooltime = handler.config.cooltime;
+                    let cooltime = handler.cooltime;
         
                     if (cooltime) {
                         this.cooldown.add(handler);
@@ -78,17 +78,17 @@ class Crucian extends Client {
             }
         
             handlers.forEach(file => {
-                let handler = require(`../commands/${file}`);
+                let handler = new (require(`../commands/${file}`))(file);
 
-                this.commands.set(handler.config.name, handler);
+                this.commands.set(handler.name, handler);
 
-                if (handler.config.alias) {
-                    handler.config.alias.forEach(al => {
-                        if (this.commands.has(al)) {
-                            console.error(`Bot already has ${al} handler. It'll override existing handler.`);
+                if (handler.aliases) {
+                    handler.aliases.forEach(alias => {
+                        if (this.commands.has(alias)) {
+                            console.error(`Bot already has ${alias} handler. It'll override existing handler.`);
                         }
 
-                        this.commands.set(al, handler);
+                        this.commands.set(alias, handler);
                     });
                 }
 
