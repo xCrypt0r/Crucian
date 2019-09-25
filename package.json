@@ -22,6 +22,7 @@
     "cheerio": "^1.0.0-rc.3",
     "discord.js": "^11.5.1",
     "ffmpeg-static": "^2.6.0",
+    "figlet": "^1.2.4",
     "mathjs": "^6.2.2",
     "opusscript": "0.0.7",
     "request": "^2.88.0",
