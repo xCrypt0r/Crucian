@@ -21,7 +21,7 @@ class Melon extends Command {
         };
         let instance = this;
 
-        request.get({url: url, headers: headers}, (err, res, body) => {
+        request.get({ url: url, headers: headers }, (err, res, body) => {
             let $ = cheerio.load(body);
 
             let chart = [];

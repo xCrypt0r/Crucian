@@ -78,7 +78,7 @@ class Play extends Command {
     async play(bot, data) {
         bot.channels.get(data.queue[0].announceChannel)
             .send(bot.lang.nowPlaying.format(data.queue[0].songTitle, data.queue[0].requester));
-        data.dispatcher = await data.connection.playStream(ytdl(data.queue[0].url, {filter: 'audioonly'}));
+        data.dispatcher = await data.connection.playStream(ytdl(data.queue[0].url, { filter: 'audioonly' }));
         data.dispatcher.guildID = data.guildID;
         data.dispatcher.once('end', () => {
             this.finish(bot, data);
