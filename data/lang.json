@@ -22,6 +22,7 @@
     "그렇게 많이는 안댐",
     "{0}개는 너무 많음"
   ],
+  "dequeueSuccess": "{0}번 노래 목록에서 뻄",
   "displayQueue": ":musical_note: 대기열",
   "imageNotFound": [
     "사진이 없는뎅",
