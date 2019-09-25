@@ -1,3 +1,4 @@
+require('dotenv').config();
 require('./lib/prototypes.js');
 
 const Crucian = require('./interfaces/Crucian.js');
