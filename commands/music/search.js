@@ -36,8 +36,7 @@ class Search extends Command {
                 title: bot.lang.selectSong.format(videos.length),
                 thumbnail: bot.user.avatarURL
             };
-    
-            bot.tools.page(message, videos_chunks, embedOptions);
+            let messagePromise = bot.tools.page(message, videos_chunks, embedOptions);
     
             let filter = collectedMessage => message.author === collectedMessage.author
                 && (!isNaN(collectedMessage.content) 
@@ -49,6 +48,10 @@ class Search extends Command {
             collector.videos = videos;
             collector.once('collect', collectedMessage => {
                 let player = bot.commands.get('play');
+
+                messagePromise.then(message => {
+                    message.delete();
+                });
     
                 if (collectedMessage.content === 'c') {
                     message.channel.send(bot.lang.songSelectCancelled);
@@ -57,6 +60,7 @@ class Search extends Command {
                 }
     
                 player.run(bot, message, [videos[Number(collectedMessage.content) - 1].url]);
+                collectedMessage.delete();
             });
         });
     }
