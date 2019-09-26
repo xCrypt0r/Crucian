@@ -24,6 +24,8 @@
     "ffmpeg-static": "^2.6.0",
     "figlet": "^1.2.4",
     "mathjs": "^6.2.2",
+    "moment": "^2.24.0",
+    "mysql": "^2.17.1",
     "opusscript": "0.0.7",
     "request": "^2.88.0",
     "weather-js": "^2.0.0",
