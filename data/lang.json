@@ -13,6 +13,7 @@
     "`{0}`가 좋을듯"
   ],
   "commandInCooldown": "**__{0}__**은 아직 사용할 수 없음",
+  "commandUsage": "**`{0}`**: {1}",
   "deleteEnd": [
     "메시지 {0}개 삭제 끝",
     "{0}개 다 삭제함"
@@ -44,6 +45,8 @@
     "메세지가 너무 길어서 안댐"
   ],
   "noMusicPlaying": "재생 중인 음악이 없음",
+  "noRecord": "데이터베이스에 기록이 없음",
+  "notApplicableForBot": "봇은 안댐",
   "notInSameVoiceChannel": "같은 채널에 있어야댐",
   "notInVoiceChannel": "음성 채팅방에 들어가셈",
   "notPaused": "일시정지 안대어 있는뎅",
