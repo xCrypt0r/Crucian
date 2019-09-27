@@ -43,13 +43,11 @@ class Mute extends Command {
 
         if (!mutedRole) {
             try {
-                mutedRole = await message.guild.createRole({
-                    name: 'muted',
-                    color: '0x000000',
+                mutedRole = await bot.tools.createRole(message, 'muted', {
                     permissions: []
                 });
 
-                message.guild.channels.forEach(async (channel, id) => {
+                message.guild.channels.forEach(async (channel) => {
                     await channel.overwritePermissions(mutedRole, {
                         SEND_MESSAGES: false,
                         ADD_REACTIONS: false
@@ -60,7 +58,7 @@ class Mute extends Command {
             }
         }
 
-        await message.guild.member(user).addRole(mutedRole.id);
+        bot.tools.addRole(message, user, mutedRole);
         message.channel.send(bot.lang.muteSuccess.random().format(user.username));
     }
 }
