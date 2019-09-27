@@ -61,7 +61,7 @@ class Crucian extends Client {
 
     async login(token) {
         await this.loadCommands();
-        super.login(token);
+        await super.login(token);
     }
 
     async loadCommands() {
@@ -94,6 +94,20 @@ class Crucian extends Client {
                 }
 
                 console.log(`Handler: ${file} loaded.`);
+            });
+        });
+    }
+
+    async unloadCommands() {
+        glob('**/*.js', { cwd: 'commands' }, (err, handlers) => {
+            if (err) {
+                console.error(err);
+        
+                return;
+            }
+        
+            handlers.forEach(file => {
+                delete require.cache[require.resolve(`../commands/${file}`)];
             });
         });
     }
