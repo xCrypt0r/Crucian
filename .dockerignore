@@ -1,2 +1,17 @@
 node_modules
+
+License
+README.md
+
+Procfile
+
 package-lock.json
+
+.travis.yml
+
+.gitignore
+.gitattributes
+
+*.pem
+
+*.sh
