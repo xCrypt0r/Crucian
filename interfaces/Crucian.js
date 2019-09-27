@@ -43,7 +43,10 @@ class Crucian extends Client {
                     }
 
                     handler.run(this, message, args);
-                    handler.log(message);
+
+                    if (this.config.USE_DATABASE) {
+                        handler.log(message);
+                    }
         
                     let cooltime = handler.cooltime;
         
