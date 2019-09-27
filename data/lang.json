@@ -10,6 +10,7 @@
   ],
   "botNotInVoiceChannel": "이미 나와있음",
   "calcResult": "`{0}`은 `{1}`임",
+  "cantFindRole": "그런 역할은 없음",
   "cantFindUser": "누구 말하는 거임",
   "chooseEnd": [
     "`{0}`어떰?",
@@ -116,5 +117,6 @@
     "**`{0}`** 밴풀었음 (이유: **`{1}`**)",
     "**`{0}`** 차단해제함 (이유: **`{1}`**)"
   ],
+  "unmuteSuccess": "`{0}` 채금 풀음",
   "unplayableVideo": "재생할 수 없는 영상임"
 }
