@@ -58,6 +58,10 @@
     "메세지 길이를 좀 줄이셈",
     "메세지가 너무 길어서 안댐"
   ],
+  "muteSuccess": [
+    "`{0}` 조용히 시킴",
+    "`{0}` 채금 먹임"
+  ],
   "noMusicPlaying": "재생 중인 음악이 없음",
   "noRecord": "데이터베이스에 기록이 없음",
   "notApplicableForBot": "봇은 안댐",
@@ -80,6 +84,7 @@
     "ㅇㅇ"
   ],
   "resumeSuccess": "`{0}` 다시 틀었음",
+  "roleCreated": "`{0}` 역할 만듬",
   "sanctionReaction": [
     "ㅠㅠ",
     "ㅈㅅ",
