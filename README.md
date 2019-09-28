@@ -20,6 +20,7 @@
 |weather|Informs the current weather|
 |botinfo|Give information of crucian|
 |help|Give manual of crucian's commands|
+|ping|Show latency and response times|
 |ban|Ban a user from server|
 |kick|Kick a user from server|
 |mute|Mute a user|
