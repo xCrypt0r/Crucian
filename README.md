@@ -1,10 +1,48 @@
 # Crucian
-![Language](https://img.shields.io/badge/Language-Node.js-red)
+[![Language](https://img.shields.io/badge/Language-Node.js-red)](https://nodejs.org/en/about/)
 [![MIT License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/SoBusted/Crucian/blob/master/LICENSE)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a3f21df5a2c84e789dc94b0c66ce5aac)](https://www.codacy.com/manual/fireintheholl/Crucian?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SoBusted/Crucian&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/SoBusted/Crucian.svg?branch=master)](https://travis-ci.org/SoBusted/Crucian)
 
 **Crucian** is my discord bot with simple structure based on [discord.js](https://github.com/discordjs/discord.js)
 -   Made by SoBusted
+
+## Commands
+
+| command | description |
+|:---:|:---:|
+|ascii|Make ascii art|
+|calc|Do simple calculation|
+|image|Get image from google|
+|melon|Display [melon Top100 chart](https://www.melon.com/chart/)|
+|sanction|Sanction cruican|
+|select|Select one item in given options|
+|timer|Shade message for specific seconds|
+|weather|Informs the current weather|
+|botinfo|Give information of crucian|
+|help|Give manual of crucian's commands|
+|ban|Ban a user from server|
+|kick|Kick a user from server|
+|mute|Mute a user|
+|tempmute|Mute a user for specific time|
+|unban|Unban a user|
+|unmute|Unmute a user|
+|dequeue|Delete song in queue|
+|leave|Crucian leaves current voice channel|
+|pause|Pause current music|
+|play|Play music|
+|queue|Display songs in queue|
+|resume|Resume music|
+|search|Search music in youtube|
+|shuffle|Shuffle songs in queue|
+|skip|Skip now playing music|
+|volume|Adjust volume|
+|log|Show command usage|
+|purge|Delete messages|
+|reboot|Restart crucian|
+|shutdown|Turn off crucian|
+
+**For further information, use `help` command**
 
 ## How to run
 ### Local set up
