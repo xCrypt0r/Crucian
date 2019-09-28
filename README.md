@@ -28,7 +28,7 @@
 |unmute|Unmute a user|
 |dequeue|Delete song in queue|
 |leave|Crucian leaves current voice channel|
-|melon|Display [melon Top100 chart](https://www.melon.com/chart/)|
+|melon|Display [melon](https://www.melon.com/chart/) Top100 chart|
 |pause|Pause current music|
 |play|Play music|
 |queue|Display songs in queue|
@@ -36,6 +36,7 @@
 |search|Search music in youtube|
 |shuffle|Shuffle songs in queue|
 |skip|Skip now playing music|
+|spotify|Display [spotify](https://spotifycharts.com/regional) Top200 chart|
 |volume|Adjust volume|
 |log|Show command usage|
 |purge|Delete messages|
