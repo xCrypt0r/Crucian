@@ -5,8 +5,8 @@ class Crucian extends Client {
     constructor(options = {}) {
         super(options);
 
-        this.config = require('../data/config.json');
-        this.lang = require('../data/lang.json');
+        this.config = require('../assets/json/config.json');
+        this.lang = require('../assets/json/lang.json');
         this.commands = new Collection();
         this.tools = require('../lib/utils.js');
         this.active = new Map();
