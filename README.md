@@ -14,7 +14,7 @@
 |ascii|Make ascii art|
 |calc|Do simple calculation|
 |image|Get image from google|
-|sanction|Sanction cruican|
+|sanction|Sanction crucian|
 |select|Select one item in given options|
 |timer|Shade message for specific seconds|
 |weather|Informs the current weather|
@@ -26,6 +26,7 @@
 |tempmute|Mute a user for specific time|
 |unban|Unban a user|
 |unmute|Unmute a user|
+|billboard|Display [billboard](https://www.billboard.com/charts/hot-100) Top100 chart|
 |dequeue|Delete song in queue|
 |leave|Crucian leaves current voice channel|
 |melon|Display [melon](https://www.melon.com/chart/) Top100 chart|
