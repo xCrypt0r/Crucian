@@ -7,9 +7,9 @@ class Botinfo extends Command {
     constructor(file) {
         super(file, {
             name: 'botinfo',
-            description: 'Display bot information',
+            description: 'Show bot\'s information',
             usage: 'botinfo',
-            aliases: ['봇정보', '정보'],
+            aliases: ['봇정보'],
             isOwnerOnly: false
         });
     }

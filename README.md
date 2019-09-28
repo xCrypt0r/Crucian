@@ -18,9 +18,10 @@
 |select|Select one item in given options|
 |timer|Shade message for specific seconds|
 |weather|Informs the current weather|
-|botinfo|Give information of crucian|
+|botinfo|Show crucian's information|
 |help|Give manual of crucian's commands|
 |ping|Show latency and response times|
+|userinfo|Show user's information|
 |ban|Ban a user from server|
 |kick|Kick a user from server|
 |mute|Mute a user|
