@@ -14,7 +14,6 @@
 |ascii|Make ascii art|
 |calc|Do simple calculation|
 |image|Get image from google|
-|melon|Display [melon Top100 chart](https://www.melon.com/chart/)|
 |sanction|Sanction cruican|
 |select|Select one item in given options|
 |timer|Shade message for specific seconds|
@@ -29,6 +28,7 @@
 |unmute|Unmute a user|
 |dequeue|Delete song in queue|
 |leave|Crucian leaves current voice channel|
+|melon|Display [melon Top100 chart](https://www.melon.com/chart/)|
 |pause|Pause current music|
 |play|Play music|
 |queue|Display songs in queue|
