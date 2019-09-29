@@ -8,7 +8,7 @@ class Timer extends Command {
             usage: 'timer #{message} #{seconds}',
             aliases: ['타이머'],
             cooltime: 3000,
-            isOwnerOnly: true
+            isOwnerOnly: false
         });
     }
 

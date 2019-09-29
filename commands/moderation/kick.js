@@ -8,7 +8,7 @@ class Kick extends Command {
             usage: 'kick #{mention} #{reason}',
             aliases: ['banish', 'expel', '강퇴', '추방'],
             cooltime: 5000,
-            isOwnerOnly: true
+            isOwnerOnly: false
         });
     }
 
