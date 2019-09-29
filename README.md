@@ -21,6 +21,7 @@
 |botinfo|Show crucian's information|
 |help|Give manual of crucian's commands|
 |ping|Show latency and response times|
+|serverinfo|Show server's information|
 |userinfo|Show user's information|
 |ban|Ban a user from server|
 |kick|Kick a user from server|
