@@ -1,2 +1,9 @@
 node_modules
+
+commands/test/
+
 package-lock.json
+
+*.pem
+
+*.sh
