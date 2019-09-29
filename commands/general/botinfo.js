@@ -20,7 +20,7 @@ class Botinfo extends Command {
             .setColor(0x15f153)
             .setThumbnail(bot.user.displayAvatarURL)
             .addField('Name', `${bot.user.tag}`, true)
-            .addField('Uptime', moment.duration(bot.uptime).format('D [d], H [h], m [m], s [s]'), true)
+            .addField('Uptime', moment.duration(bot.uptime).format('D [d] H [h] m [m] s [s]'), true)
             .addField('Users', bot.users.size.toLocaleString(), true)
             .addField('Servers', bot.guilds.size.toLocaleString(), true)
             .addField('Channels', bot.channels.size.toLocaleString(), true)
