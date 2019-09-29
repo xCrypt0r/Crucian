@@ -31,7 +31,7 @@ class Userinfo extends Command {
             .addField('Created At', moment.utc(user.createdAt).format('YYYY-MM-DD'), true)
             .addField('Joined At', moment.utc(member.joinedAt).format('YYYY-MM-DD'), true)
             .addField('Status', member.presence.status, true)
-            .addField('Roles', member.roles.map(role => role.name).join(', '));
+            .addField('Roles', member.roles.map(role => role.name).slice(1).join(', '));
 
         message.channel.send(embed);
     }
