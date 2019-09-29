@@ -9,7 +9,7 @@ class Tempmute extends Command {
             usage: 'tempmute #{mention} #{time}',
             aliases: [],
             cooltime: 5000,
-            isOwnerOnly: true
+            isOwnerOnly: false
         });
     }
 

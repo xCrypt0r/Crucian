@@ -8,7 +8,7 @@ class Unmute extends Command {
             usage: 'unmute #{mention}',
             aliases: ['채금해제'],
             cooltime: 5000,
-            isOwnerOnly: true
+            isOwnerOnly: false
         });
     }
 

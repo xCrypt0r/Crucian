@@ -8,7 +8,7 @@ class Unban extends Command {
             usage: 'unban #{id} #{reason}',
             aliases: ['unblock', '밴해제', '차단해제'],
             cooltime: 5000,
-            isOwnerOnly: true
+            isOwnerOnly: false
         });
     }
 

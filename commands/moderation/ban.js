@@ -8,7 +8,7 @@ class Ban extends Command {
             usage: 'ban #{mention} #{reason}',
             aliases: ['block', '밴', '차단'],
             cooltime: 5000,
-            isOwnerOnly: true
+            isOwnerOnly: false
         });
     }
 

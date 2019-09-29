@@ -8,7 +8,7 @@ class Mute extends Command {
             usage: 'mute #{mention}',
             aliases: ['bequite', 'shutup', '닥쳐', '쉿', '조용히해'],
             cooltime: 5000,
-            isOwnerOnly: true
+            isOwnerOnly: false
         });
     }
 
