@@ -4,7 +4,7 @@ class Dequeue extends Command {
     constructor(file) {
         super(file, {
             name: 'dequeue',
-            description: 'Delete song in queue with given number',
+            description: 'Delete song in queue with given number (number 0 means clear all)',
             usage: 'dequeue #{number}',
             aliases: ['dq', '빼'],
             cooltime: 2000,
@@ -28,18 +28,30 @@ class Dequeue extends Command {
             return;
         }
     
-        if (!Number.isInteger(index) || index < 1 || index > fetched.queue.length) {
+        if (!Number.isInteger(index) || index < 0 || index > fetched.queue.length) {
             message.reply(bot.lang.invalidArguments);
     
             return;
         }
+
+        switch (index) {
+            case 0: {
+                fetched.queue.splice(1);
+
+                break;
+            }
+
+            case 1: {
+                let skip = bot.commands.get('skip');
     
-        if (index === 1) {
-            let skip = bot.commands.get('skip');
-    
-            skip.run(bot, message);
-        } else {
-            fetched.queue.splice(index - 1, 1);
+                skip.run(bot, message);
+
+                break;
+            }
+
+            default: {
+                fetched.queue.splice(index - 1, 1);
+            }
         }
     
         message.reply(bot.lang.dequeueSuccess.format(index));
