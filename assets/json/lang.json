@@ -66,6 +66,10 @@
   "noMusicPlaying": "재생 중인 음악이 없음",
   "noRecord": "데이터베이스에 기록이 없음",
   "notApplicableForBot": "봇은 안댐",
+  "notInNsfwChannel": [
+    "nsfw 채널로 가셈",
+    "후방주의 채널로 가셈"
+  ],
   "notInSameVoiceChannel": "같은 채널에 있어야댐",
   "notInVoiceChannel": "음성 채팅방에 들어가셈",
   "notPaused": "일시정지 안대어 있는뎅",
@@ -89,6 +93,10 @@
     "ㅇㅇ"
   ],
   "rebootSuccess": "재부팅 완료",
+  "resultNotFound": [
+    "검색 결과가 없음",
+    "제대로 검색한 거 맞음?"
+  ],
   "resumeSuccess": "`{0}` 다시 틀었음",
   "roleCreated": "`{0}` 역할 만듬",
   "sanctionReaction": [

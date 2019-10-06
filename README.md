@@ -17,6 +17,7 @@ Click [**Here**](https://discordapp.com/api/oauth2/authorize?client_id=508679069
 |ascii|Make ascii art|
 |calc|Do simple calculation|
 |image|Get image from google|
+|reddit|Get hot post from reddit|
 |sanction|Sanction crucian|
 |select|Select one item in given options|
 |timer|Shade message for specific seconds|
