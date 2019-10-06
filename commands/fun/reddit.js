@@ -32,7 +32,7 @@ class Reddit extends Command {
         }
 
         request({
-            url: `https://www.reddit.com/r/${subreddit}/hot.json`,
+            url: `https://www.reddit.com/r/${subreddit}/new.json`,
             json: true
         }, (err, res, body) => {
             if (body.error) {
@@ -58,7 +58,6 @@ class Reddit extends Command {
             let embed = new discord.RichEmbed()
                 .setColor(0xff4301)
                 .setTitle(article.title)
-                .setImage(article.url)
                 .setURL(`https://www.reddit.com${article.permalink}`)
                 .setThumbnail(bot.user.avatarURL)
                 .addField('Subreddit', article.subreddit, true)
@@ -66,7 +65,9 @@ class Reddit extends Command {
                 .addField('Created At', moment(article.created * 1000).format('YYYY-MM-DD HH:mm:ss'), true)
                 .addField('Score', article.score, true);
 
-            message.channel.send(embed);
+            message.channel.send(embed).then(() => {
+                message.channel.send(article.url);
+            });
         });
     }
 }
