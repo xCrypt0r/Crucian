@@ -30,7 +30,7 @@ class Image extends Command {
                 return;
             }
 	
-	    let image = images.random();
+            let image = images.random();
             let embed = new discord.RichEmbed()
                 .setColor('#ff9900')
                 .setTitle(`:frame_photo: **${q}**`)
