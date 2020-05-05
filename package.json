@@ -33,7 +33,7 @@
     "request": "^2.88.0",
     "weather-js": "^2.0.0",
     "yt-search": "^0.4.1",
-    "ytdl-core": "^0.29.5"
+    "ytdl-core": "^2.1.1"
   },
   "devDependencies": {
     "dotenv": "^8.1.0",
