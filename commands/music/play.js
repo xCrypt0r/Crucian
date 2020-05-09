@@ -14,7 +14,7 @@ class Play extends Command {
     }
     
     async run(bot, message, args) {
-        if (!message.member.voiceChannel) {
+        if (!message.member.voice.channel) {
             message.reply(bot.lang.notInVoiceChannel);
     
             return;
@@ -33,15 +33,15 @@ class Play extends Command {
             let searcher = bot.commands.get('search');
     
             searcher.run(bot, message, args);
-    
+
             return;
         }
-    
+
         let unplayable = false;
         let info = await ytdl.getInfo(url).catch(err => {
             unplayable = true;
         });
-    
+
         if (unplayable) {
             message.reply(bot.lang.unplayableVideo);
     
@@ -51,7 +51,7 @@ class Play extends Command {
         let data = bot.active.get(message.guild.id) || {};
     
         if (!data.connection) {
-            data.connection = await message.member.voiceChannel.join();
+            data.connection = await message.member.voice.channel.join();
         }
     
         if (!data.queue) {
@@ -76,11 +76,11 @@ class Play extends Command {
     }
 
     async play(bot, data) {
-        bot.channels.get(data.queue[0].announceChannel)
+        bot.channels.cache.get(data.queue[0].announceChannel)
             .send(bot.lang.nowPlaying.format(data.queue[0].songTitle, data.queue[0].requester));
-        data.dispatcher = await data.connection.playStream(ytdl(data.queue[0].url, { filter: 'audioonly' }));
+        data.dispatcher = await data.connection.play(ytdl(data.queue[0].url, { filter: 'audioonly' }));
         data.dispatcher.guildID = data.guildID;
-        data.dispatcher.once('end', () => {
+        data.dispatcher.once('finish', () => {
             this.finish(bot, data);
         });
     }

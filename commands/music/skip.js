@@ -20,7 +20,7 @@ class Skip extends Command {
             return;
         }
 
-        if (message.member.voiceChannel !== message.guild.me.voiceChannel) {
+        if (message.member.voice.channel !== message.guild.me.voice.channel) {
             message.reply(bot.lang.notInSameVoiceChannel);
 
             return;

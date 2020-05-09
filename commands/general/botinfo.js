@@ -15,15 +15,15 @@ class Botinfo extends Command {
     }
 
     async run(bot, message) {
-        let embed = new discord.RichEmbed()
+        let embed = new discord.MessageEmbed()
             .setDescription('Bot Information')
             .setColor(0x15f153)
-            .setThumbnail(bot.user.displayAvatarURL)
+            .setThumbnail(bot.user.displayAvatarURL())
             .addField('Name', `${bot.user.tag}`, true)
             .addField('Uptime', moment.duration(bot.uptime).format('D [d] H [h] m [m] s [s]'), true)
-            .addField('Users', bot.users.size.toLocaleString(), true)
-            .addField('Servers', bot.guilds.size.toLocaleString(), true)
-            .addField('Channels', bot.channels.size.toLocaleString(), true)
+            .addField('Users', bot.users.cache.size.toLocaleString(), true)
+            .addField('Servers', bot.guilds.cache.size.toLocaleString(), true)
+            .addField('Channels', bot.channels.cache.size.toLocaleString(), true)
             .addField('Discord.js', `v${discord.version}`, true)
             .addField('Node', process.version, true);
 

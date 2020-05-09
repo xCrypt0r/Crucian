@@ -55,11 +55,11 @@ class Reddit extends Command {
                 return;
             }
 
-            let embed = new discord.RichEmbed()
+            let embed = new discord.MessageEmbed()
                 .setColor(0xff4301)
                 .setTitle(article.title)
                 .setURL(`https://www.reddit.com${article.permalink}`)
-                .setThumbnail(bot.user.avatarURL)
+                .setThumbnail(bot.user.avatarURL())
                 .addField('Subreddit', article.subreddit, true)
                 .addField('Author', article.author, true)
                 .addField('Created At', moment(article.created * 1000).format('YYYY-MM-DD HH:mm:ss'), true)

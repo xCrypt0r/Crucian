@@ -12,13 +12,13 @@ class Leave extends Command {
     }
 
     async run(bot, message) {
-        if (!message.guild.me.voiceChannel) {
+        if (!message.guild.me.voice.channel) {
             message.reply(bot.lang.botNotInVoiceChannel);
     
             return;
         }
     
-        message.guild.me.voiceChannel.leave();
+        message.guild.me.voice.channel.leave();
         message.channel.send(bot.lang.leaveVoiceChannel.random());
     }
 }

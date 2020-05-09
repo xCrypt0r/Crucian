@@ -31,7 +31,7 @@ class Image extends Command {
             }
 	
             let image = images.random();
-            let embed = new discord.RichEmbed()
+            let embed = new discord.MessageEmbed()
                 .setColor('#ff9900')
                 .setTitle(`:frame_photo: **${q}**`)
                 .setImage(image.url);

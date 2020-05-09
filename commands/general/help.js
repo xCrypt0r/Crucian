@@ -41,7 +41,7 @@ class Help extends Command {
             let embedOptions = {
                 title: ':blue_book: **도움말**',
                 color: '#4ae342',
-                thumbnail: bot.user.avatarURL
+                thumbnail: bot.user.avatarURL()
             };
     
             bot.tools.page(message, manual_chunks, embedOptions);

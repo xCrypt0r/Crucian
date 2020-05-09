@@ -27,7 +27,7 @@ class Purge extends Command {
             return;
         }
 
-        message.channel.fetchMessages().then(fetchedMessages => {
+        message.channel.messages.fetch().then(fetchedMessages => {
             let messagesToDelete = fetchedMessages
                 .array()
                 .filter(fetchedMessage => fetchedMessage.author.id === message.author.id)
