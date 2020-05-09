@@ -23,15 +23,18 @@ class Userinfo extends Command {
         }
 
         let member = message.guild.member(user);
-        let embed = new discord.RichEmbed()
+        let embed = new discord.MessageEmbed()
             .setTitle('User Information')
             .setColor(0xedd81c)
-            .setThumbnail(user.displayAvatarURL)
+            .setThumbnail(user.displayAvatarURL())
             .addField('Name', `${user.tag}`, true)
             .addField('Created At', moment.utc(user.createdAt).format('YYYY-MM-DD'), true)
             .addField('Joined At', moment.utc(member.joinedAt).format('YYYY-MM-DD'), true)
             .addField('Status', member.presence.status, true)
-            .addField('Roles', member.roles.map(role => role.name).slice(1).join(', '));
+            .addField('Roles', member.roles.cache.map(role => role.name)
+                .filter(roleName => !roleName.startsWith('@'))
+                .join(', ')
+            );
 
         message.channel.send(embed);
     }

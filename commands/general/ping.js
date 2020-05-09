@@ -12,7 +12,7 @@ class Ping extends Command {
     }
 
     async run(bot, message) {
-        let ping = bot.ping.toFixed(1);
+        let ping = bot.ws.ping.toFixed(1);
 
         message.reply(bot.lang.pingMessages.random().format(ping));
     }
