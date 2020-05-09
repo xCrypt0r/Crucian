@@ -47,7 +47,7 @@ class Tempmute extends Command {
             return;
         }
 
-        let mutedRole = message.guild.roles.find(role => role.name === 'muted');
+        let mutedRole = message.guild.roles.cache.find(role => role.name === 'muted');
 
         if (!mutedRole) {
             message.reply(bot.lang.cantFindRole);

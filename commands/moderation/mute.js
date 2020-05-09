@@ -47,8 +47,8 @@ class Mute extends Command {
                     permissions: []
                 });
 
-                message.guild.channels.forEach(async (channel) => {
-                    await channel.overwritePermissions(mutedRole, {
+                message.guild.channels.cache.forEach(async (channel) => {
+                    await channel.createOverwrite(mutedRole, {
                         SEND_MESSAGES: false,
                         ADD_REACTIONS: false
                     });
@@ -57,7 +57,7 @@ class Mute extends Command {
                 console.error(err);
             }
         }
-
+        
         bot.tools.addRole(message, user, mutedRole);
         message.channel.send(bot.lang.muteSuccess.random().format(user.username));
     }
