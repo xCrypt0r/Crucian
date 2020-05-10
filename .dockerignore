@@ -7,7 +7,7 @@ Procfile
 
 package-lock.json
 
-.travis.yml
+*.yml
 
 .gitignore
 .gitattributes
