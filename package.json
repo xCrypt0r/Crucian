@@ -1,6 +1,6 @@
 {
   "name": "crucian",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "My bot with simple structure based on discord.js",
   "main": "bot.js",
   "scripts": {
@@ -38,6 +38,6 @@
   },
   "devDependencies": {
     "dotenv": "^8.1.0",
-    "eslint": "^6.4.0"
+    "eslint": "^7.0.0"
   }
 }
