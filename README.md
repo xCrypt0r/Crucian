@@ -21,6 +21,7 @@ Click [**Here**](https://discordapp.com/api/oauth2/authorize?client_id=508679069
 |sanction|Sanction crucian|
 |select|Select one item in given options|
 |timer|Shade message for specific seconds|
+|translate|Translate message to another language|
 |weather|Informs the current weather|
 |botinfo|Show crucian's information|
 |help|Give manual of crucian's commands|
