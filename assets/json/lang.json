@@ -51,6 +51,7 @@
     "권한이 없음",
     "권한이 부족해서 안댐"
   ],
+  "languageNotSupported": "`{0}`는 지원되지 않는 언어임",
   "leaveVoiceChannel": [
     "ㅂㅂ",
     "붕어 가봄"

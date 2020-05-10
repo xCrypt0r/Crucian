@@ -1,6 +1,6 @@
 {
   "name": "crucian",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "My bot with simple structure based on discord.js",
   "main": "bot.js",
   "scripts": {
@@ -19,6 +19,7 @@
     "email": "fireintheholl@naver.com"
   },
   "dependencies": {
+    "@vitalets/google-translate-api": "^3.0.0",
     "cheerio": "^1.0.0-rc.3",
     "discord.js": "^12.2.0",
     "ffmpeg-static": "^2.6.0",
