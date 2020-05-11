@@ -1,3 +1,8 @@
+engines:
+  duplication:
+    exclude_paths:
+      - 'commands/**/*.js'
+
 exclude_paths:
   - '**.json'
   - '**.yml'
