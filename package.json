@@ -4,8 +4,6 @@
   "description": "My bot with simple structure based on discord.js",
   "main": "bot.js",
   "scripts": {
-    "test": "eslint .",
-    "lint": "eslint --fix .",
     "start": "node bot.js"
   },
   "repository": {
@@ -22,6 +20,7 @@
     "@vitalets/google-translate-api": "^3.0.0",
     "cheerio": "^1.0.0-rc.3",
     "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
     "ffmpeg-static": "^2.6.0",
     "figlet": "^1.2.4",
     "g-i-s": "^2.1.5",
@@ -37,7 +36,7 @@
     "ytdl-core": "^2.1.1"
   },
   "devDependencies": {
-    "dotenv": "^8.1.0",
-    "eslint": "^7.0.0"
+    "eslint": "^7.0.0",
+    "pm2": "^4.4.0"
   }
 }
