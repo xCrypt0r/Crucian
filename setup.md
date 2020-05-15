@@ -3,6 +3,8 @@
 #### For Linux
 1.  Run `git clone https://github.com/SoBusted/Crucian.git` to clone this repository
 
+1.  Run `cd Crucian` to move to Crucian folder
+
 1.  Run `sudo apt-get install nodejs npm` to install [node.js](https://nodejs.org) and [npm](https://www.npmjs.com)
 
 1.  Run `npm install` to install all dependencies listed in [package.json](https://github.com/SoBusted/Crucian/blob/master/package.json#L21)
@@ -14,6 +16,8 @@
 ### Docker set up
 #### For Linux
 1.  Run `git clone https://github.com/SoBusted/Crucian.git` to clone this repository
+
+1.  Run `cd Crucian` to move to Crucian folder
 
 1.  Run `sudo apt install docker.io` to install [docker](https://www.docker.com)
 
