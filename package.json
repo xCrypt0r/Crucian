@@ -1,12 +1,13 @@
 {
   "name": "crucian",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "My bot with simple structure based on discord.js",
   "main": "bot.js",
   "engines": {
     "node": ">=12.10.0"
   },
   "scripts": {
+    "prestart": "node lib/check-version.js",
     "start": "node bot.js"
   },
   "repository": {
