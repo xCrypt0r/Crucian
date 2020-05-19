@@ -2,13 +2,7 @@ const Command = require('../../interfaces/Command.js');
 
 class Resume extends Command {
     constructor(file) {
-        super(file, {
-            name: 'resume',
-            description: 'Resume paused music',
-            usage: 'resume',
-            aliases: ['다시틀어'],
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message) {

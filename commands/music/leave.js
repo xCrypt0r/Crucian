@@ -2,13 +2,7 @@ const Command = require('../../interfaces/Command.js');
 
 class Leave extends Command {
     constructor(file) {
-        super(file, {
-            name: 'leave',
-            description: 'Leave voice channel',
-            usage: 'leave',
-            aliases: ['l', '나가'],
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message) {

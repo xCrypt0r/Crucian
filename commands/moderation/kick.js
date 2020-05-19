@@ -2,14 +2,7 @@ const Command = require('../../interfaces/Command.js');
 
 class Kick extends Command {
     constructor(file) {
-        super(file, {
-            name: 'kick',
-            description: 'Kicks the mentioned user',
-            usage: 'kick #{mention} #{reason}',
-            aliases: ['banish', 'expel', '강퇴', '추방'],
-            cooltime: 5000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message, args) {

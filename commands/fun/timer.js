@@ -2,14 +2,7 @@ const Command = require('../../interfaces/Command.js');
 
 class Timer extends Command {
     constructor(file) {
-        super(file, {
-            name: 'timer',
-            description: 'Shade message for specific seconds',
-            usage: 'timer #{message} #{seconds}',
-            aliases: ['타이머'],
-            cooltime: 3000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message, args) {

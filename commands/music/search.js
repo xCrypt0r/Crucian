@@ -3,14 +3,7 @@ const search = require('yt-search');
 
 class Search extends Command {
     constructor(file) {
-        super(file, {
-            name: 'search',
-            description: 'Search music from youtube',
-            usage: 'search #{keyword}',
-            aliases: ['검색', '찾아'],
-            cooltime: 4000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message, args) {

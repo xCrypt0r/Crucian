@@ -3,14 +3,7 @@ const figlet = require('figlet');
 
 class Ascii extends Command {
     constructor(file) {
-        super(file, {
-            name: 'ascii',
-            description: 'Make 3D ascii art with given string',
-            usage: 'ascii #{string}',
-            aliases: ['아스키'],
-            cooltime: 1500,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message, args) {

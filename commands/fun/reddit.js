@@ -5,14 +5,7 @@ const moment = require('moment');
 
 class Reddit extends Command {
     constructor(file) {
-        super(file, {
-            name: 'reddit',
-            description: 'Get hot post from reddit',
-            usage: 'reddit #{subreddit}',
-            aliases: ['레딧'],
-            cooltime: 2000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message, args) {

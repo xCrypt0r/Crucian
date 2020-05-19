@@ -4,13 +4,7 @@ const moment = require('moment');
 
 class Serverinfo extends Command {
     constructor(file) {
-        super(file, {
-            name: 'serverinfo',
-            description: 'Show server\'s information',
-            usage: 'serverinfo',
-            aliases: ['서버정보'],
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message) {

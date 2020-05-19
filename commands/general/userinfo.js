@@ -4,13 +4,7 @@ const moment = require('moment');
 
 class Userinfo extends Command {
     constructor(file) {
-        super(file, {
-            name: 'userinfo',
-            description: 'Show user\'s information',
-            usage: 'userinfo #{mention}',
-            aliases: ['유저정보', '정보'],
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message) {

@@ -4,14 +4,7 @@ const weather = require('weather-js');
 
 class Weather extends Command {
     constructor(file) {
-        super(file, {
-            name: 'weather',
-            description: 'Informs the current weather',
-            usage: 'weather #{city}',
-            aliases: ['날씨'],
-            cooltime: 5000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message, args) {

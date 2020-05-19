@@ -2,14 +2,7 @@ const Command = require('../../interfaces/Command.js');
 
 class Unmute extends Command {
     constructor(file) {
-        super(file, {
-            name: 'unmute',
-            description: 'Unmutes the mentioned user',
-            usage: 'unmute #{mention}',
-            aliases: ['채금해제'],
-            cooltime: 5000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message, args) {

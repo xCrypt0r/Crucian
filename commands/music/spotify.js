@@ -5,14 +5,7 @@ const moment = require('moment');
 
 class Spotify extends Command {
     constructor(file) {
-        super(file, {
-            name: 'spotify',
-            description: 'Display spotify Top200 chart',
-            usage: 'spotify',
-            aliases: ['스포티파이'],
-            cooltime: 10000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message) {

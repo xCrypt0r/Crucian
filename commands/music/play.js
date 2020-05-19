@@ -3,14 +3,7 @@ const ytdl = require('ytdl-core');
 
 class Play extends Command {
     constructor(file) {
-        super(file, {
-            name: 'play',
-            description: 'Play music with given URL or keyword',
-            usage: 'play #{URL|keyword}',
-            aliases: ['p', '재생', '틀어'],
-            cooltime: 2000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
     
     async run(bot, message, args) {

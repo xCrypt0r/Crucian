@@ -2,14 +2,7 @@ const Command = require('../../interfaces/Command.js');
 
 class Ban extends Command {
     constructor(file) {
-        super(file, {
-            name: 'ban',
-            description: 'Ban user from server',
-            usage: 'ban #{mention} #{reason}',
-            aliases: ['block', '밴', '차단'],
-            cooltime: 5000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message, args) {

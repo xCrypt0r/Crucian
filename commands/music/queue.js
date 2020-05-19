@@ -2,14 +2,7 @@ const Command = require('../../interfaces/Command.js');
 
 class Queue extends Command {
     constructor(file) {
-        super(file, {
-            name: 'queue',
-            description: 'Show songs in queue',
-            usage: 'queue',
-            aliases: ['q', '목록', '큐'],
-            cooltime: 2000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message) {

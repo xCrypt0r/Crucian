@@ -2,13 +2,7 @@ const Command = require('../../interfaces/Command.js');
 
 class Reboot extends Command {
     constructor(file) {
-        super(file, {
-            name: 'reboot',
-            description: 'Reboot bot',
-            usage: 'reboot',
-            aliases: ['재부팅'],
-            isOwnerOnly: true
-        });
+        super(file);
     }
 
     async run(bot, message) {

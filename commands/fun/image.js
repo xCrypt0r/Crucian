@@ -4,14 +4,7 @@ const gis = require('g-i-s');
 
 class Image extends Command {
     constructor(file) {
-        super(file, {
-            name: 'image',
-            description: 'Get image from google', 
-            usage: 'image #{keyword}',
-            aliases: ['img', 'photo', 'picture', '그림', '사진'],
-            cooltime: 2000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message, args) {
