@@ -2,13 +2,7 @@ const Command = require('../../interfaces/Command.js');
 
 class Skip extends Command {
     constructor(file) {
-        super(file, {
-            name: 'skip',
-            description: 'Skip the song currently playing',
-            usage: 'skip',
-            aliases: ['s', '넘겨', '버려', '치워'],
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message) {

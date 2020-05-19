@@ -2,13 +2,7 @@ const Command = require('../../interfaces/Command.js');
 
 class Ping extends Command {
     constructor(file) {
-        super(file, {
-            name: 'ping',
-            description: 'Show latency and response times',
-            usage: 'ping',
-            aliases: ['pong', '퐁', '핑'],
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message) {

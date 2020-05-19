@@ -3,14 +3,7 @@ const ms = require('ms');
 
 class Tempmute extends Command {
     constructor(file) {
-        super(file, {
-            name: 'tempmute',
-            description: 'Mutes the mentioned user for given time (example: 3s, 2m, 1h)',
-            usage: 'tempmute #{mention} #{time}',
-            aliases: [],
-            cooltime: 5000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message, args) {

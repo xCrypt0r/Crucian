@@ -2,14 +2,7 @@ const Command = require('../../interfaces/Command.js');
 
 class Mute extends Command {
     constructor(file) {
-        super(file, {
-            name: 'mute',
-            description: 'Mutes the mentioned user',
-            usage: 'mute #{mention}',
-            aliases: ['bequite', 'shutup', '닥쳐', '쉿', '조용히해'],
-            cooltime: 5000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message, args) {

@@ -1,15 +1,14 @@
 const db = require('../lib/db.js');
 const moment = require('moment');
+const path = require('path');
+const commands = require('../assets/json/commands.json');
 
 class Command {
-    constructor(file, options = {}) {
+    constructor(file) {
         this.file = file;
-        this.name = options.name || file.name;
-        this.description = options.description || 'No description provided';
-        this.usage = options.usage || 'No usage provided';
-        this.aliases = options.aliases || [];
-        this.cooltime = options.cooltime || 0;
-        this.isOwnerOnly = options.isOwnerOnly;
+        this.name = path.parse(file).name;
+
+        Object.assign(this, commands[this.name]);
     }
 
     async log(message) {

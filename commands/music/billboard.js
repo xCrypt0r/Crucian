@@ -5,14 +5,7 @@ const moment = require('moment');
 
 class Billboard extends Command {
     constructor(file) {
-        super(file, {
-            name: 'billboard',
-            description: 'Display billboad Top100 chart',
-            usage: 'billboard',
-            aliases: ['bb', '빌보드'],
-            cooltime: 10000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message) {

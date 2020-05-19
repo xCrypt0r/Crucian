@@ -3,13 +3,7 @@ const glob = require('glob');
 
 class Help extends Command {
     constructor(file) {
-        super(file, {
-            name: 'help',
-            description: 'Informs how to use this bot',
-            usage: 'help',
-            aliases: ['도움', '도움말'],
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message) {
@@ -32,7 +26,7 @@ class Help extends Command {
                     `**Description**: ${handler.description}`,
                     `**Usage**: \`${handler.usage}\``,
                     `**Alias**: ${handler.aliases.join(', ')}`,
-                    `**Cooltime**: ${handler.cooltime}`,
+                    `**Cooltime**: ${handler.cooltime || 0}`,
                     `**IsOwnerOnly**: ${handler.isOwnerOnly}`
                 ].join('\n'));
             });

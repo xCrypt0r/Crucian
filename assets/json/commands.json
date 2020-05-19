@@ -1,0 +1,386 @@
+{
+    "ascii": {
+        "aliases": [
+            "아스키"
+        ],
+        "cooltime": 1500,
+        "description": "Make 3D ascii art with given string",
+        "isOwnerOnly": false,
+        "usage": "ascii #{string}"
+    },
+    "ban": {
+        "aliases": [
+            "block",
+            "밴",
+            "차단"
+        ],
+        "cooltime": 5000,
+        "description": "Ban user from server",
+        "isOwnerOnly": false,
+        "usage": "ban #{mention} #{reason}"
+    },
+    "billboard": {
+        "aliases": [
+            "bb",
+            "빌보드"
+        ],
+        "cooltime": 10000,
+        "description": "Display billboad Top100 chart",
+        "isOwnerOnly": false,
+        "usage": "billboard"
+    },
+    "botinfo": {
+        "aliases": [
+            "봇정보"
+        ],
+        "description": "Show bot's information",
+        "isOwnerOnly": false,
+        "usage": "botinfo"
+    },
+    "calc": {
+        "aliases": [
+            "answer",
+            "calculate",
+            "solve",
+            "계산",
+            "계산기",
+            "답",
+            "풀어"
+        ],
+        "cooltime": 1000,
+        "description": "Calculate simple math questions",
+        "isOwnerOnly": false,
+        "usage": "calc #{formula}"
+    },
+    "dequeue": {
+        "aliases": [
+            "dq",
+            "빼"
+        ],
+        "cooltime": 2000,
+        "description": "Delete song in queue with given number (number 0 means clear all)",
+        "isOwnerOnly": false,
+        "usage": "dequeue #{number}"
+    },
+    "help": {
+        "aliases": [
+            "도움",
+            "도움말"
+        ],
+        "description": "Informs how to use this bot",
+        "isOwnerOnly": false,
+        "usage": "help"
+    },
+    "image": {
+        "aliases": [
+            "img",
+            "photo",
+            "picture",
+            "그림",
+            "사진"
+        ],
+        "cooltime": 2000,
+        "description": "Get image from google",
+        "isOwnerOnly": false,
+        "usage": "image #{keyword}"
+    },
+    "kick": {
+        "aliases": [
+            "banish",
+            "expel",
+            "강퇴",
+            "추방"
+        ],
+        "cooltime": 5000,
+        "description": "Kicks the mentioned user",
+        "isOwnerOnly": false,
+        "usage": "kick #{mention} #{reason}"
+    },
+    "leave": {
+        "aliases": [
+            "l",
+            "나가"
+        ],
+        "description": "Leave voice channel",
+        "isOwnerOnly": false,
+        "usage": "leave"
+    },
+    "log": {
+        "aliases": [
+            "usage",
+            "로그"
+        ],
+        "cooltime": 3000,
+        "description": "Show log of given user",
+        "isOwnerOnly": false,
+        "usage": "log #{mention}"
+    },
+    "melon": {
+        "aliases": [
+            "멜론"
+        ],
+        "cooltime": 10000,
+        "description": "Display melon Top100 chart",
+        "isOwnerOnly": false,
+        "usage": "melon"
+    },
+    "mute": {
+        "aliases": [
+            "bequite",
+            "shutup",
+            "닥쳐",
+            "쉿",
+            "조용히해"
+        ],
+        "cooltime": 5000,
+        "description": "Mutes the mentioned user",
+        "isOwnerOnly": false,
+        "usage": "mute #{mention}"
+    },
+    "pause": {
+        "aliases": [
+            "stop",
+            "멈춰",
+            "스탑",
+            "일시정지",
+            "정지"
+        ],
+        "description": "Pause currently playing music",
+        "isOwnerOnly": false,
+        "usage": "pause"
+    },
+    "ping": {
+        "aliases": [
+            "pong",
+            "퐁",
+            "핑"
+        ],
+        "description": "Show latency and response times",
+        "isOwnerOnly": false,
+        "usage": "ping"
+    },
+    "play": {
+        "aliases": [
+            "p",
+            "재생",
+            "틀어"
+        ],
+        "cooltime": 2000,
+        "description": "Play music with given URL or keyword",
+        "isOwnerOnly": false,
+        "usage": "play #{URL|keyword}"
+    },
+    "purge": {
+        "aliases": [
+            "clear",
+            "del",
+            "delete",
+            "remove",
+            "rm",
+            "삭제",
+            "지워"
+        ],
+        "cooltime": 5000,
+        "description": "Purge messages",
+        "isOwnerOnly": false,
+        "usage": "purge #{limit}"
+    },
+    "queue": {
+        "aliases": [
+            "q",
+            "목록",
+            "큐"
+        ],
+        "cooltime": 2000,
+        "description": "Show songs in queue",
+        "isOwnerOnly": false,
+        "usage": "queue"
+    },
+    "reboot": {
+        "aliases": [
+            "재부팅"
+        ],
+        "description": "Reboot bot",
+        "isOwnerOnly": true,
+        "usage": "reboot"
+    },
+    "reddit": {
+        "aliases": [
+            "레딧"
+        ],
+        "cooltime": 2000,
+        "description": "Get hot post from reddit",
+        "isOwnerOnly": false,
+        "usage": "reddit #{subreddit}"
+    },
+    "resume": {
+        "aliases": [
+            "다시틀어"
+        ],
+        "description": "Resume paused music",
+        "isOwnerOnly": false,
+        "usage": "resume"
+    },
+    "sanction": {
+        "aliases": [
+            "돌았냐",
+            "뒤질래",
+            "디질래",
+            "맞을래",
+            "제재",
+            "죽을래",
+            "처벌",
+            "혼날래"
+        ],
+        "description": "Sanction bot",
+        "isOwnerOnly": false,
+        "usage": "sanction"
+    },
+    "search": {
+        "aliases": [
+            "검색",
+            "찾아"
+        ],
+        "cooltime": 4000,
+        "description": "Search music from youtube",
+        "isOwnerOnly": false,
+        "usage": "search #{keyword}"
+    },
+    "select": {
+        "aliases": [
+            "choice",
+            "choose",
+            "골라",
+            "뽑아",
+            "선택"
+        ],
+        "cooltime": 500,
+        "description": "Select one between multiple items",
+        "isOwnerOnly": false,
+        "usage": "select #{option1} #{option2} #{option3} ..."
+    },
+    "serverinfo": {
+        "aliases": [
+            "서버정보"
+        ],
+        "description": "Show server's information",
+        "isOwnerOnly": false,
+        "usage": "serverinfo"
+    },
+    "shuffle": {
+        "aliases": [
+            "random",
+            "randomize",
+            "sh",
+            "랜덤",
+            "셔플"
+        ],
+        "cooltime": 2000,
+        "description": "Shuffle songs in queue",
+        "isOwnerOnly": false,
+        "usage": "shuffle"
+    },
+    "shutdown": {
+        "aliases": [
+            "turnoff",
+            "꺼져",
+            "끄기"
+        ],
+        "description": "Shutdown bot",
+        "isOwnerOnly": true,
+        "usage": "shutdown"
+    },
+    "skip": {
+        "aliases": [
+            "s",
+            "넘겨",
+            "버려",
+            "치워"
+        ],
+        "description": "Skip the song currently playing",
+        "isOwnerOnly": false,
+        "usage": "skip"
+    },
+    "spotify": {
+        "aliases": [
+            "스포티파이"
+        ],
+        "cooltime": 10000,
+        "description": "Display spotify Top200 chart",
+        "isOwnerOnly": false,
+        "usage": "spotify"
+    },
+    "tempmute": {
+        "aliases": [],
+        "cooltime": 5000,
+        "description": "Mutes the mentioned user for given time (example: 3s, 2m, 1h)",
+        "isOwnerOnly": false,
+        "usage": "tempmute #{mention} #{time}"
+    },
+    "timer": {
+        "aliases": [
+            "타이머"
+        ],
+        "cooltime": 3000,
+        "description": "Shade message for specific seconds",
+        "isOwnerOnly": false,
+        "usage": "timer #{message} #{seconds}"
+    },
+    "translate": {
+        "aliases": [
+            "tr",
+            "번역"
+        ],
+        "description": "Translate message to another language",
+        "isOwnerOnly": false,
+        "usage": "translate #{language code} #{text}"
+    },
+    "unban": {
+        "aliases": [
+            "unblock",
+            "밴해제",
+            "차단해제"
+        ],
+        "cooltime": 5000,
+        "description": "Ban user from server",
+        "isOwnerOnly": false,
+        "usage": "unban #{id} #{reason}"
+    },
+    "unmute": {
+        "aliases": [
+            "채금해제"
+        ],
+        "cooltime": 5000,
+        "description": "Unmutes the mentioned user",
+        "isOwnerOnly": false,
+        "usage": "unmute #{mention}"
+    },
+    "userinfo": {
+        "aliases": [
+            "유저정보",
+            "정보"
+        ],
+        "description": "Show user's information",
+        "isOwnerOnly": false,
+        "usage": "userinfo #{mention}"
+    },
+    "volume": {
+        "aliases": [
+            "v",
+            "볼륨",
+            "음량"
+        ],
+        "description": "Adjust speaking volume (range: 0~200)",
+        "isOwnerOnly": false,
+        "usage": "volume #{number}"
+    },
+    "weather": {
+        "aliases": [
+            "날씨"
+        ],
+        "cooltime": 5000,
+        "description": "Informs the current weather",
+        "isOwnerOnly": false,
+        "usage": "weather #{city}"
+    }
+}

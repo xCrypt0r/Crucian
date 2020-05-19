@@ -2,14 +2,7 @@ const Command = require('../../interfaces/Command.js');
 
 class Dequeue extends Command {
     constructor(file) {
-        super(file, {
-            name: 'dequeue',
-            description: 'Delete song in queue with given number (number 0 means clear all)',
-            usage: 'dequeue #{number}',
-            aliases: ['dq', '빼'],
-            cooltime: 2000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message, args) {

@@ -5,13 +5,7 @@ require('moment-duration-format');
 
 class Botinfo extends Command {
     constructor(file) {
-        super(file, {
-            name: 'botinfo',
-            description: 'Show bot\'s information',
-            usage: 'botinfo',
-            aliases: ['봇정보'],
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message) {

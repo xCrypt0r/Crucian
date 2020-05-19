@@ -2,13 +2,7 @@ const Command = require('../../interfaces/Command.js');
 
 class Volume extends Command {
     constructor(file) {
-        super(file, {
-            name: 'volume',
-            description: 'Adjust speaking volume (range: 0~200)',
-            usage: 'volume #{number}',
-            aliases: ['v', '볼륨', '음량'],
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message, args) {

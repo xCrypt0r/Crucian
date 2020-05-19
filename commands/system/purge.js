@@ -2,14 +2,7 @@ const Command = require('../../interfaces/Command.js');
 
 class Purge extends Command {
     constructor(file) {
-        super(file, {
-            name: 'purge',
-            description: 'Purge messages',
-            usage: 'purge #{limit}',
-            aliases: ['clear', 'del', 'delete', 'remove', 'rm', '삭제', '지워'],
-            cooltime: 5000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message, args) {

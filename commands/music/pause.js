@@ -2,13 +2,7 @@ const Command = require('../../interfaces/Command.js');
 
 class Pause extends Command {
     constructor(file) {
-        super(file, {
-            name: 'pause',
-            description: 'Pause currently playing music',
-            usage: 'pause',
-            aliases: ['stop', '멈춰', '스탑', '일시정지', '정지'],
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message) {

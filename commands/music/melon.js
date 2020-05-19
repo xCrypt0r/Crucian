@@ -4,14 +4,7 @@ const cheerio = require('cheerio');
 
 class Melon extends Command {
     constructor(file) {
-        super(file, {
-            name: 'melon',
-            description: 'Display melon Top100 chart',
-            usage: 'melon',
-            aliases: ['멜론'],
-            cooltime: 10000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message) {

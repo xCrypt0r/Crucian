@@ -4,13 +4,7 @@ const translate = require('@vitalets/google-translate-api');
 
 class Translate extends Command {
     constructor(file) {
-        super(file, {
-            name: 'translate',
-            description: 'Translate message to another language',
-            usage: 'translate #{language code} #{text}',
-            aliases: ['tr', '번역'],
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message, args) {

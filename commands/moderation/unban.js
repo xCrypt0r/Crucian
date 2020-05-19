@@ -2,14 +2,7 @@ const Command = require('../../interfaces/Command.js');
 
 class Unban extends Command {
     constructor(file) {
-        super(file, {
-            name: 'unban',
-            description: 'Ban user from server',
-            usage: 'unban #{id} #{reason}',
-            aliases: ['unblock', '밴해제', '차단해제'],
-            cooltime: 5000,
-            isOwnerOnly: false
-        });
+        super(file);
     }
 
     async run(bot, message, args) {
