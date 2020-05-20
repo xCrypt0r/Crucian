@@ -14,7 +14,7 @@ class Ban extends Command {
 
         if (args.length < 1) {
             message.reply(bot.lang.lackOfArguments);
-            
+
             return;
         }
 
@@ -39,7 +39,7 @@ class Ban extends Command {
             .then(() => {
                 message.channel.send(bot.lang.banSuccess.random().format(user.username, reason));
             })
-            .catch(console.error);
+            .catch(bot.logger.error);
     }
 }
 

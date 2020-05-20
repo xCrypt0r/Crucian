@@ -14,7 +14,7 @@ class Unban extends Command {
 
         if (args.length < 1) {
             message.reply(bot.lang.lackOfArguments);
-            
+
             return;
         }
 
@@ -34,7 +34,7 @@ class Unban extends Command {
             .then(() => {
                 message.channel.send(bot.lang.unbanSuccess.random().format(bannedMember.username, reason));
             })
-            .catch(console.error);
+            .catch(bot.logger.error);
     }
 }
 
