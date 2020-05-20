@@ -14,7 +14,7 @@ class Mute extends Command {
 
         if (args.length < 1) {
             message.reply(bot.lang.lackOfArguments);
-            
+
             return;
         }
 
@@ -47,10 +47,10 @@ class Mute extends Command {
                     });
                 });
             } catch (err) {
-                console.error(err);
+                bot.logger.error(err);
             }
         }
-        
+
         bot.tools.addRole(message, user, mutedRole);
         message.channel.send(bot.lang.muteSuccess.random().format(user.username));
     }

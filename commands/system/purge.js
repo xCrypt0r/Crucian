@@ -28,8 +28,8 @@ class Purge extends Command {
 
             message.channel.bulkDelete(messagesToDelete).then(deletedMessages => {
                 message.reply(bot.lang.deleteEnd.random().format(deletedMessages.size - 1));
-            }).catch(console.error);
-        }).catch(console.error);
+            }).catch(bot.logger.error);
+        }).catch(bot.logger.error);
     }
 }
 

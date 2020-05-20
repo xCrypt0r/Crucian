@@ -9,17 +9,17 @@ class Search extends Command {
     async run(bot, message, args) {
         if (args.length < 1) {
             message.reply(bot.lang.lackOfArguments);
-    
+
             return;
         }
-    
+
         search(args.join(' '), (err, res) => {
             if (err) {
-                console.error(err);
-    
+                bot.logger.error(err);
+
                 return;
             }
-    
+
             let videos = res.videos.slice(0, bot.config.YOUTUBE_SEARCH_LIMIT);
             let videos_chunks = videos
                 .map((video, i) => `\`${Number(i) + 1}. ${video.title}\``)
@@ -30,14 +30,14 @@ class Search extends Command {
                 thumbnail: bot.user.avatarURL
             };
             let messagePromise = bot.tools.page(message, videos_chunks, embedOptions);
-    
+
             let filter = collectedMessage => message.author === collectedMessage.author
-                && (!isNaN(collectedMessage.content) 
-                && collectedMessage.content < videos.length + 1 
+                && (!isNaN(collectedMessage.content)
+                && collectedMessage.content < videos.length + 1
                 && collectedMessage.content > 0
                 || collectedMessage.content === 'c');
             let collector = message.channel.createMessageCollector(filter);
-    
+
             collector.videos = videos;
             collector.once('collect', collectedMessage => {
                 let player = bot.commands.get('play');
@@ -45,13 +45,13 @@ class Search extends Command {
                 messagePromise.then(message => {
                     message.delete();
                 });
-    
+
                 if (collectedMessage.content === 'c') {
                     message.channel.send(bot.lang.songSelectCancelled);
-    
+
                     return;
                 }
-    
+
                 player.run(bot, message, [videos[Number(collectedMessage.content) - 1].url]);
                 collectedMessage.delete();
             });

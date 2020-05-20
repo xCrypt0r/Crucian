@@ -14,7 +14,7 @@ class Kick extends Command {
 
         if (args.length < 1) {
             message.reply(bot.lang.lackOfArguments);
-            
+
             return;
         }
 
@@ -39,7 +39,7 @@ class Kick extends Command {
             .then(() => {
                 message.channel.send(bot.lang.kickSuccess.random().format(user.username, reason));
             })
-            .catch(console.error);
+            .catch(bot.logger.error);
     }
 }
 

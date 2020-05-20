@@ -10,23 +10,23 @@ class Weather extends Command {
     async run(bot, message, args) {
         if (args.length < 1) {
             message.reply(bot.lang.lackOfArguments);
-    
+
             return;
         }
-    
+
         weather.find({ search: args.join(' '), degreeType: 'C' }, (err, res) => {
             if (err) {
-                console.error(err);
-    
+                bot.logger.error(err);
+
                 return;
             }
-    
+
             if (!res[0]) {
                 message.reply(bot.lang.noWeatherResults.random());
-    
+
                 return;
             }
-    
+
             let current = res[0].current,
                 location = res[0].location;
             let embed = new discord.MessageEmbed()
@@ -40,7 +40,7 @@ class Weather extends Command {
                 .addField('체감 온도', `${current.feelslike} Degrees`, true)
                 .addField('바람', current.winddisplay, true)
                 .addField('습도', `${current.humidity}%`, true);
-    
+
             message.channel.send(embed);
         });
     }

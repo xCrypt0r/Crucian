@@ -1,10 +1,12 @@
 const { Client, Collection } = require('discord.js');
+const Logger = require('../interfaces/Logger.js');
 const glob = require('glob');
 
 class Crucian extends Client {
     constructor(options = {}) {
         super(options);
 
+        this.logger = new Logger(this);
         this.config = require('../assets/json/config.json');
         this.lang = require('../assets/json/lang.json');
         this.commands = new Collection();
@@ -13,32 +15,32 @@ class Crucian extends Client {
         this.cooldown = new Set();
 
         this.on('ready', async () => {
-            console.log(`Logged in as ${this.user.tag}`);
+            this.logger.log(`Logged in as ${this.user.tag}`);
         });
         this.on('message', async message => {
             if (this.config.IGNORE_BOT_MESSAGES && message.author.bot) {
                 return;
             }
-        
+
             let prefix =  this.config.PREFIX;
-        
+
             if (message.content.startsWith(prefix)) {
                 let messageArray = message.content.trim().split(/\s+/),
                     cmd = messageArray[0].slice(prefix.length).toLowerCase(),
                     args = messageArray.slice(1),
                     handler = this.commands.get(cmd),
                     isOwner = message.author.id === process.env.OWNER_ID;
-        
+
                 if (handler) {
                     if (handler.isOwnerOnly && !isOwner) {
                         message.reply(this.lang.ownerOnlyCommand.format(handler.name.toUpperCase()));
-        
+
                         return;
                     }
-        
+
                     if (this.cooldown.has(handler)) {
                         message.reply(this.lang.commandInCooldown.format(handler.name.toUpperCase()));
-        
+
                         return;
                     }
 
@@ -47,12 +49,12 @@ class Crucian extends Client {
                     if (this.config.USE_DATABASE) {
                         handler.log(message);
                     }
-        
+
                     let cooltime = handler.cooltime;
-        
+
                     if (cooltime) {
                         this.cooldown.add(handler);
-        
+
                         setTimeout(() => {
                             this.cooldown.delete(handler);
                         }, cooltime);
@@ -70,17 +72,17 @@ class Crucian extends Client {
     async loadCommands() {
         glob('**/*.js', { cwd: 'commands' }, (err, handlers) => {
             if (err) {
-                console.error(err);
-        
+                this.logger.error(err);
+
                 return;
             }
-        
+
             if (handlers.length <= 0) {
-                console.error('Cannot find command handler.');
-        
+                this.logger.error('Cannot find command handler.');
+
                 return;
             }
-        
+
             handlers.forEach(file => {
                 let handler = new (require(`../commands/${file}`))(file);
 
@@ -89,14 +91,14 @@ class Crucian extends Client {
                 if (handler.aliases) {
                     handler.aliases.forEach(alias => {
                         if (this.commands.has(alias)) {
-                            console.error(`Bot already has ${alias} handler. It'll override existing handler.`);
+                            this.logger.error(`Bot already has ${alias} handler. It'll override existing handler.`);
                         }
 
                         this.commands.set(alias, handler);
                     });
                 }
 
-                console.log(`Handler: ${file} loaded.`);
+                this.logger.log(`Handler: ${file} loaded.`);
             });
         });
     }
@@ -104,11 +106,11 @@ class Crucian extends Client {
     async unloadCommands() {
         glob('**/*.js', { cwd: 'commands' }, (err, handlers) => {
             if (err) {
-                console.error(err);
-        
+                this.logger.error(err);
+
                 return;
             }
-        
+
             handlers.forEach(file => {
                 delete require.cache[require.resolve(`../commands/${file}`)];
             });
