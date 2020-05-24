@@ -9,6 +9,7 @@ package-lock.json
 
 *.yml
 
+.editorconfig
 .gitignore
 .gitattributes
 
