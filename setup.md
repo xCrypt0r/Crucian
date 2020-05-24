@@ -31,8 +31,7 @@ This takes about 5-10 minutes, so be patient
 ### Common settings
 1.  Edit [.env](https://github.com/SoBusted/Crucian/blob/master/.env) to set process environment variables  
 The OWNER_ID field should contain your **user ID** (example: 504338669268631562) not your discord id  
-Click [here](https://www.youtube.com/watch?v=1T0L4c9hWTo) to see how to get your **user ID**  
-If you want to use database(mysql) you should fill your mysql options
+Click [here](https://www.youtube.com/watch?v=1T0L4c9hWTo) to see how to get your **user ID**
 
 1.  Edit [assets/json/config.json](https://github.com/SoBusted/Crucian/blob/master/assets/json/config.json) according to your preference  
-You MUST set USE_DATABASE field to false if you don't want to use database(mysql)
+You MUST set USE_DATABASE field to false if you don't want to use database(sqlite3)
