@@ -1,6 +1,6 @@
 {
   "name": "crucian",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "My bot with simple structure based on discord.js",
   "main": "bot.js",
   "engines": {
@@ -26,7 +26,7 @@
     "cheerio": "^1.0.0-rc.3",
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
-    "ffmpeg-static": "^2.6.0",
+    "ffmpeg-static": "^4.2.2",
     "figlet": "^1.2.4",
     "g-i-s": "^2.1.5",
     "mathjs": "^6.2.2",
