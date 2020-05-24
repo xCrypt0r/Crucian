@@ -15,10 +15,11 @@ class Log extends Command {
             return;
         }
 
-        let params = user.id;
+        let params = [user.id, message.guild.id];
         let cmd = 'SELECT command, COUNT(command) AS count \
                    FROM log_commands \
                    WHERE user = ? \
+                   AND server = ? \
                    GROUP BY command \
                    ORDER BY command';
 
@@ -35,7 +36,7 @@ class Log extends Command {
 
             let usage = rows.map(row => bot.lang.commandUsage.format(row.command, row.count));
             let embedOptions = {
-                title: '커맨드 사용 횟수'
+                title: `${user.username}'s command usage`
             };
             let usage_chunks = usage.chunk(10).map(chunk => chunk.join('\n'));
 
