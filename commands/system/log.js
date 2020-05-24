@@ -16,13 +16,13 @@ class Log extends Command {
         }
 
         let params = user.id;
-        let cmd = 'SELECT name, COUNT(name) AS count \
+        let cmd = 'SELECT command, COUNT(command) AS count \
                    FROM log_commands \
                    WHERE user = ? \
-                   GROUP BY name \
-                   ORDER BY name';
+                   GROUP BY command \
+                   ORDER BY command';
 
-        db.query(cmd, params, (err, rows) => {
+        db.all(cmd, params, (err, rows) => {
             if (err) {
                 throw err;
             }
@@ -33,7 +33,7 @@ class Log extends Command {
                 return;
             }
 
-            let usage = rows.map(row => bot.lang.commandUsage.format(row.name, row.count));
+            let usage = rows.map(row => bot.lang.commandUsage.format(row.command, row.count));
             let embedOptions = {
                 title: '커맨드 사용 횟수'
             };

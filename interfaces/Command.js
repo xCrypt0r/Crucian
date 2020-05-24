@@ -12,12 +12,17 @@ class Command {
     }
 
     async log(message) {
-        let params = [this.name, message.author.id, moment().format('YYYY-MM-DD HH:mm:ss')];
-        let cmd = 'INSERT INTO log_commands (name, user, date) VALUES (?, ?, ?)';
+        let params = [
+            message.guild.id,
+            message.author.id,
+            this.name,
+            moment().format('YYYY-MM-DD HH:mm:ss')
+        ];
+        let cmd = 'INSERT INTO log_commands(server, user, command, date) VALUES(?, ?, ?, ?)';
 
-        db.query(cmd, params, err => {
+        db.run(cmd, params, err => {
             if (err) {
-                throw err;
+                bot.logger.error(err);
             }
         });
     }
