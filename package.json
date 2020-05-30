@@ -1,6 +1,6 @@
 {
   "name": "crucian",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "My bot with simple structure based on discord.js",
   "main": "bot.js",
   "engines": {
@@ -29,12 +29,14 @@
     "ffmpeg-static": "^4.2.2",
     "figlet": "^1.2.4",
     "g-i-s": "^2.1.5",
+    "glob": "^7.1.6",
     "mathjs": "^7.0.0",
     "moment": "^2.26.0",
     "moment-duration-format": "^2.3.2",
     "ms": "^2.1.2",
     "opusscript": "0.0.7",
     "request": "^2.88.0",
+    "semver": "^7.3.2",
     "sqlite3": "^4.2.0",
     "weather-js": "^2.0.0",
     "yt-search": "^1.1.2",
