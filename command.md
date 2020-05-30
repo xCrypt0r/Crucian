@@ -39,5 +39,6 @@
 |purge|Delete messages|
 |reboot|Restart crucian|
 |shutdown|Turn off crucian|
+|slowmode|Set slowmode|
 
 **For further information, use `help` command**

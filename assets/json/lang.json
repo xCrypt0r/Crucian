@@ -121,6 +121,8 @@
     "셔플 완료"
   ],
   "skipSuccess": "스킵했음",
+  "slowmodeEnabled": "슬로우모드 설정댐 (쿨타임: `{0}s`)",
+  "slowmodeDisabled": "슬로우모드 풀림",
   "somethingWentWrong": [
     "먼가 잘못댐",
     "오류났음"

@@ -301,6 +301,19 @@
         "isOwnerOnly": false,
         "usage": "skip"
     },
+    "slowmode": {
+        "aliases": [
+            "slow",
+            "slowmotion",
+            "계엄령",
+            "슬로우",
+            "슬로우모드"
+        ],
+        "cooltime": 1000,
+        "description": "Define a cooldown in a channel",
+        "isOwnerOnly": true,
+        "usage": "slowmode #{seconds}"
+    },
     "spotify": {
         "aliases": [
             "스포티파이"
