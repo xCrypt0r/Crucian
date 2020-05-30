@@ -1,4 +1,5 @@
 # Crucian
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cb1730ac35134c6aba6dab79fcdbd7c8)](https://app.codacy.com/manual/fireintheholl/Crucian?utm_source=github.com&utm_medium=referral&utm_content=SoBusted/Crucian&utm_campaign=Badge_Grade_Dashboard)
 [![Language](https://img.shields.io/badge/Language-Node.js-red?style=for-the-badge)](https://nodejs.org/en/about/)
 [![MIT License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](https://github.com/SoBusted/Crucian/blob/master/LICENSE)
 [![Repo Size](https://img.shields.io/github/languages/code-size/SoBusted/Crucian?style=for-the-badge&logo=github)](https://github.com/SoBusted/Crucian)
