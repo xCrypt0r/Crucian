@@ -10,7 +10,7 @@ module.exports = class extends Event {
             return;
         }
 
-        let prefix =  this.config.PREFIX;
+        let { prefix } = this;
 
         if (message.content.startsWith(prefix)) {
             let messageArray = message.content.trim().split(/\s+/),

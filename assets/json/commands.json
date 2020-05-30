@@ -170,6 +170,15 @@
         "isOwnerOnly": false,
         "usage": "play #{URL|keyword}"
     },
+    "prefix": {
+        "aliases": [
+            "pre",
+            "접두사"
+        ],
+        "description": "Change prefix",
+        "isOwnerOnly": false,
+        "usage": "prefix #{new_prefix}"
+    },
     "purge": {
         "aliases": [
             "clear",
