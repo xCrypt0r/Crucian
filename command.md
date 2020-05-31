@@ -41,5 +41,6 @@
 |reboot|Restart crucian|
 |shutdown|Turn off crucian|
 |slowmode|Set slowmode|
+|exec|Execute shell command|
 
 **For further information, use `help` command**

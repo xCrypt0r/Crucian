@@ -62,6 +62,16 @@
         "isOwnerOnly": false,
         "usage": "dequeue #{number}"
     },
+    "exec": {
+        "aliases": [
+            "run",
+            "shell",
+            "실행"
+        ],
+        "description": "Execute shell command",
+        "isOwnerOnly": true,
+        "usage": "exec #{command}"
+    },
     "help": {
         "aliases": [
             "도움",
