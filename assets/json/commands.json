@@ -77,9 +77,9 @@
             "도움",
             "도움말"
         ],
-        "description": "Informs how to use this bot",
+        "description": "Informs how to use command",
         "isOwnerOnly": false,
-        "usage": "help"
+        "usage": "help [#{command}]"
     },
     "image": {
         "aliases": [

@@ -6,16 +6,23 @@ class Help extends Command {
         super(file);
     }
 
-    async run(bot, message) {
-        glob('commands/*/*.js', (err, files) => {
+    async run(bot, message, args) {
+        if (args.length > 0) {
+            let commands = require('../../assets/json/commands.json'),
+                cmd = args.join('');
+
+            message.channel.send(bot.lang.commandManual.format(commands[cmd].usage));
+
+            return;
+        }
+
+        glob('commands/*/*.js', (err, handlers) => {
             if (err) {
                 bot.logger.error(err);
 
                 return;
             }
 
-            let rgx_checkJS = /\.js$/;
-            let handlers = files.filter(file => rgx_checkJS.test(file));
             let manual = [];
 
             handlers.forEach((file, i) => {

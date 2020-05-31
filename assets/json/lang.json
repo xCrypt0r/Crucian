@@ -19,6 +19,7 @@
     "`{0}`가 좋을듯"
   ],
   "commandInCooldown": "**__{0}__**은 아직 사용할 수 없음",
+  "commandManual": "> 사용법: {0}",
   "commandUsage": "**`{0}`**: {1}",
   "currentPrefix": "현재 접두사는 `{0}`임",
   "deleteEnd": [
