@@ -7,12 +7,18 @@
 [![Discord](https://img.shields.io/discord/374188444433252363?color=7289da&label=discord&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/35Y8ePX)
 
 **Crucian** is my discord bot with simple structure based on [discord.js](https://github.com/discordjs/discord.js)
--   Made by SoBusted
+-   Made by SoBusted(후니#9534)
 
 Click [**Here**](https://discordapp.com/api/oauth2/authorize?client_id=508679069571743746&permissions=8&scope=bot) to invite Crucian to your server
 
-## Commands
-Check [commands.md](https://github.com/SoBusted/Crucian/blob/master/command.md)
+## Requirements
+-   Node >= 12
 
-## How to run
+## Supported Languages
+-   Korean
+
+## Install
 Check [setup.md](https://github.com/SoBusted/Crucian/blob/master/setup.md)
+
+## Commands
+Check [command.md](https://github.com/SoBusted/Crucian/blob/master/command.md)
