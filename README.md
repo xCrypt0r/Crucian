@@ -18,7 +18,7 @@ Click [**Here**](https://discordapp.com/api/oauth2/authorize?client_id=508679069
 -   Korean
 
 ## Install
-Check [setup.md](https://github.com/SoBusted/Crucian/blob/master/setup.md)
+Check [setup.md](setup.md)
 
 ## Commands
-Check [command.md](https://github.com/SoBusted/Crucian/blob/master/command.md)
+Check [command.md](command.md)
