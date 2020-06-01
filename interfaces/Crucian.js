@@ -37,8 +37,7 @@ class Crucian extends Client {
     }
 
     async login(token) {
-        await this.loadCommands();
-        await super.login(token);
+        await Promise.all([this.loadCommands(), super.login(token)]);
     }
 
     async loadCommands() {
