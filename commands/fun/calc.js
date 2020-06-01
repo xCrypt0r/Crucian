@@ -18,13 +18,11 @@ class Calc extends Command {
     
         try {
             output = math.evaluate(input);
+            message.channel.send(bot.lang.calcResult.format(input, output));
         } catch (e) {
+            bot.logger.error(e);
             message.reply(bot.lang.invalidCalculation);
-    
-            return;
         }
-    
-        message.channel.send(bot.lang.calcResult.format(input, output));
     }
 }
 
