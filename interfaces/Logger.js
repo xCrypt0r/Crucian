@@ -11,12 +11,12 @@ const inspectOptions = {
 
 class Logger extends Console {
     static parse(data) {
-        return Array.isArray(data)
-            ? data.map(Logger.parse).join(', ')
-            : data !== null && typeof data === 'object'
-                ? '\n' + inspect(data, inspectOptions)
-                : data && types.isNativeError(data)
-                    ? data.stack || data.message || String(data)
+        return data && types.isNativeError(data)
+            ? data.message || data.stack || String(data)
+            : Array.isArray(data)
+                ? data.map(Logger.parse).join(', ')
+                : data !== null && typeof data === 'object'
+                    ? '\n' + inspect(data, inspectOptions)
                     : String(data);
     }
 
