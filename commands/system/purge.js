@@ -20,16 +20,15 @@ class Purge extends Command {
             return;
         }
 
-        message.channel.messages.fetch().then(fetchedMessages => {
-            let messagesToDelete = fetchedMessages
+        let fetchedMessages = await message.channel.messages.fetch(),
+            messagesToDelete = fetchedMessages
                 .array()
                 .filter(fetchedMessage => fetchedMessage.author.id === message.author.id)
                 .slice(0, limit + 1);
 
-            message.channel.bulkDelete(messagesToDelete).then(deletedMessages => {
-                message.reply(bot.lang.deleteEnd.random().format(deletedMessages.size - 1));
-            }).catch(bot.logger.error);
-        }).catch(bot.logger.error);
+        let deletedMessages = await message.channel.bulkDelete(messagesToDelete);
+
+        message.reply(bot.lang.deleteEnd.random().format(deletedMessages.size - 1));
     }
 }
 
