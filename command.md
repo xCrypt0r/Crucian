@@ -42,5 +42,6 @@
 |shutdown|Turn off crucian|
 |slowmode|Set slowmode|
 |exec|Execute shell command|
+|eval|Run javascript code|
 
 **For further information, use `help` command**

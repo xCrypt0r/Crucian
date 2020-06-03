@@ -62,6 +62,12 @@
         "isOwnerOnly": false,
         "usage": "dequeue #{number}"
     },
+    "eval": {
+        "aliases": [],
+        "description": "Run javascript code",
+        "isOwnerOnly": true,
+        "usage": "eval #{code}"
+    },
     "exec": {
         "aliases": [
             "run",
