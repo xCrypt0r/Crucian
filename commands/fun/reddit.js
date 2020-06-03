@@ -8,7 +8,7 @@ class Reddit extends Command {
         super(file);
     }
 
-    async run(bot, message, args) {
+    async run(message, args) {
         if (args.length < 1) {
             message.reply(bot.lang.lackOfArguments);
     

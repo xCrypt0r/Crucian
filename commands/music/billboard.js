@@ -8,7 +8,7 @@ class Billboard extends Command {
         super(file);
     }
 
-    async run(bot, message) {
+    async run(message) {
         let url = 'https://www.billboard.com/charts/hot-100';
 
         request.get(url, (err, res, body) => {

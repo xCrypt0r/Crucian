@@ -5,7 +5,7 @@ class Sanction extends Command {
         super(file);
     }
 
-    async run(bot, message) {
+    async run(message) {
         let reaction = bot.lang.sanctionReaction.random();
 
         message.channel.send(reaction);

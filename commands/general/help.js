@@ -6,7 +6,7 @@ class Help extends Command {
         super(file);
     }
 
-    async run(bot, message, args) {
+    async run(message, args) {
         if (args.length > 0) {
             let commands = require('../../assets/json/commands.json'),
                 cmd = args.join('');

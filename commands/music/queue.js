@@ -5,7 +5,7 @@ class Queue extends Command {
         super(file);
     }
 
-    async run(bot, message) {
+    async run(message) {
         let fetched = bot.active.get(message.guild.id);
     
         if (!fetched) {

@@ -5,7 +5,7 @@ class Kick extends Command {
         super(file);
     }
 
-    async run(bot, message, args) {
+    async run(message, args) {
         if (!message.member.hasPermission('KICK_MEMBERS')) {
             message.reply(bot.lang.lackOfPermission.random());
 

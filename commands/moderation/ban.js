@@ -5,7 +5,7 @@ class Ban extends Command {
         super(file);
     }
 
-    async run(bot, message, args) {
+    async run(message, args) {
         if (!message.member.hasPermission('BAN_MEMBERS')) {
             message.reply(bot.lang.lackOfPermission.random());
 

@@ -6,7 +6,7 @@ class Log extends Command {
         super(file);
     }
 
-    async run(bot, message) {
+    async run(message) {
         let user = message.mentions.users.first() || message.author;
 
         if (user.bot) {

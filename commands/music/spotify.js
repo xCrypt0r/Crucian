@@ -8,7 +8,7 @@ class Spotify extends Command {
         super(file);
     }
 
-    async run(bot, message) {
+    async run(message) {
         let url = 'https://spotifycharts.com/regional';
 
         request.get(url, (err, res, body) => {

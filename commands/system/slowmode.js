@@ -5,7 +5,7 @@ class Slowmode extends Command {
         super(file);
     }
 
-    async run(bot, message, args) {
+    async run(message, args) {
         if (!message.member.hasPermission('MANAGE_GUILD')) {
             message.reply(bot.lang.lackOfPermission.random());
 

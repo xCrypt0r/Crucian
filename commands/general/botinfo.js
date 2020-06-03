@@ -8,7 +8,7 @@ class Botinfo extends Command {
         super(file);
     }
 
-    async run(bot, message) {
+    async run(message) {
         let embed = new discord.MessageEmbed()
             .setDescription('Bot Information')
             .setColor(0x15f153)

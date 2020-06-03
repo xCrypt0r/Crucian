@@ -7,7 +7,7 @@ class Serverinfo extends Command {
         super(file);
     }
 
-    async run(bot, message) {
+    async run(message) {
         let guild = message.guild;
         let embed = new discord.MessageEmbed()
             .setTitle('Server Information')

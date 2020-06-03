@@ -7,7 +7,7 @@ class Translate extends Command {
         super(file);
     }
 
-    async run(bot, message, args) {
+    async run(message, args) {
         if (args.length < 2) {
             message.reply(bot.lang.lackOfArguments);
     

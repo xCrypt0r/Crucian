@@ -5,7 +5,7 @@ class Purge extends Command {
         super(file);
     }
 
-    async run(bot, message, args) {
+    async run(message, args) {
         let limit = Number(args[0]);
 
         if (!Number.isInteger(limit) || limit < 1) {

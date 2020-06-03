@@ -5,7 +5,7 @@ class Ping extends Command {
         super(file);
     }
 
-    async run(bot, message) {
+    async run(message) {
         let ping = bot.ws.ping.toFixed(1);
 
         message.reply(bot.lang.pingMessages.random().format(ping));

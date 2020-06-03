@@ -5,7 +5,7 @@ class Reboot extends Command {
         super(file);
     }
 
-    async run(bot, message) {
+    async run(message) {
         bot.destroy();
         bot.commands.clear();
         await Promise.all([bot.unloadCommands(), bot.login(process.env.TOKEN)]);

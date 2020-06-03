@@ -5,7 +5,7 @@ class Shutdown extends Command {
         super(file);
     }
 
-    async run(bot) {
+    async run() {
         bot.destroy();
     }
 }

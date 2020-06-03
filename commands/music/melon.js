@@ -7,7 +7,7 @@ class Melon extends Command {
         super(file);
     }
 
-    async run(bot, message) {
+    async run(message) {
         let url = 'https://www.melon.com/chart/';
         let headers = {
             'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'

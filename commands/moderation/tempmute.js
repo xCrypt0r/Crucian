@@ -6,7 +6,7 @@ class Tempmute extends Command {
         super(file);
     }
 
-    async run(bot, message, args) {
+    async run(message, args) {
         if (!message.member.hasPermission('MANAGE_ROLES')) {
             message.reply(bot.lang.lackOfPermission.random());
 

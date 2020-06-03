@@ -6,7 +6,7 @@ class Play extends Command {
         super(file);
     }
     
-    async run(bot, message, args) {
+    async run(message, args) {
         if (!message.member.voice.channel) {
             message.reply(bot.lang.notInVoiceChannel);
     

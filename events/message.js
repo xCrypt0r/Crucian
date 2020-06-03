@@ -32,7 +32,7 @@ module.exports = class extends Event {
                     return;
                 }
 
-                handler.run(this, message, args);
+                handler.run(message, args);
 
                 if (this.config.USE_DATABASE) {
                     handler.log(message);

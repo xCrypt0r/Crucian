@@ -5,7 +5,7 @@ class Timer extends Command {
         super(file);
     }
 
-    async run(bot, message, args) {
+    async run(message, args) {
         message.delete();
 
         if (args.length < 2) {

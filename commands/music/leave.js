@@ -5,7 +5,7 @@ class Leave extends Command {
         super(file);
     }
 
-    async run(bot, message) {
+    async run(message) {
         if (!message.guild.me.voice.channel) {
             message.reply(bot.lang.botNotInVoiceChannel);
     
