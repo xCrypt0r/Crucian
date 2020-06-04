@@ -17,7 +17,8 @@ Click [**Here**](https://discordapp.com/api/oauth2/authorize?client_id=508679069
 -   Node >= 12
 
 ## Supported Languages
--   Korean
+-   Korean(Default)
+-   English
 
 ## Install
 Check [setup.md](setup.md)

@@ -1,0 +1,138 @@
+{
+  "addedToQueue": "`{0}` is added to queue | User: `{1}`",
+  "alreadyPaused": [
+    "Music is already paused!",
+    "Hey! Music is already stopped!"
+  ],
+  "banSuccess": [
+    "**`{0}`** banned (reason: **`{1}`**)",
+    "**`{0}`** blocked (reason: **`{1}`**)"
+  ],
+  "botNotInVoiceChannel": "I'm already out of the voice channel",
+  "calcResult": "`{0}`is `{1}`",
+  "cantFindRole": "I cant find the role...",
+  "cantFindUser": "I cant find the user...",
+  "chooseEnd": [
+    "How about this one: `{0}`",
+    "Just try this: `{0}`",
+    "`{0}` looks good!"
+  ],
+  "commandInCooldown": "**__{0}__** is in cooldown!",
+  "commandManual": "> Manual: {0}",
+  "commandUsage": "**`{0}`**: {1}",
+  "currentPrefix": "Current prefix is `{0}`",
+  "deleteEnd": [
+    "{0} message(s) have been deleted!",
+    "{0} message(s) purged!"
+  ],
+  "deleteTooMuch": [
+    "You can't delete that much...",
+    "{0} is too much :("
+  ],
+  "dequeueSuccess": "Song No.{0} dequeued",
+  "displayQueue": ":musical_note: Queue",
+  "imageNotFound": [
+    "No images found...",
+    "There are no images matching that keyword"
+  ],
+  "invalidArguments": "Error! I've got Invalid arguments",
+  "invalidCalculation": "Please enter valid expression",
+  "invalidURL": [
+    "Error! I've got an invalid url",
+    "Please enter valid url :("
+  ],
+  "kickSuccess": [
+    "**`{0}`** kicked (reason: **`{1}`**)",
+    "**`{0}`** has been expelled from channel (reason: **`{1}`**)"
+  ],
+  "lackOfArguments": "Lack of arguments! Input more arguments",
+  "lackOfPermission": [
+    "You don't have permissions",
+    "You don't have enough to permissio use this command"
+  ],
+  "languageNotSupported": "`{0}`is not supported language...",
+  "leaveVoiceChannel": [
+    "Got to go",
+    "See ya"
+  ],
+  "messageTooLong": [
+    "Your message is too long...",
+    "Message is too long to send :("
+  ],
+  "muteSuccess": [
+    "`{0}` muted :D",
+    "`{0}` chat restricted"
+  ],
+  "noMusicPlaying": "There's no music playing",
+  "noRecord": "No record in database",
+  "notApplicableForBot": "It's not applicable for bot",
+  "notInNsfwChannel": [
+    "You're not in nsfw channel",
+    "Go to nsfw channel"
+  ],
+  "notInSameVoiceChannel": "You must in the same voice channel",
+  "notInVoiceChannel": "You are not in the voice channel",
+  "notPaused": "Music is playing now",
+  "noWeatherResults": [
+    "There's no weather information",
+    "Please enter valid region"
+  ],
+  "nowPlaying": "Now playing: `{0}` | Queued by: `{1}`",
+  "ownerOnlyCommand": "**__{0}__** is onwer-only command",
+  "pauseSuccess": [
+    "Paused: `{0}`", 
+    "Stopped: `{0}`"
+  ],
+  "pingMessages": [
+    "Ping: `{0}`ms",
+    "Ping is `{0}`ms"
+  ],
+  "prefixChanged": "Prefix changed to `{0}`",
+  "questionReaction": [
+    "idk",
+    "yep",
+    "nope"
+  ],
+  "rebootSuccess": "It's nice to see you again!",
+  "resultNotFound": [
+    "No results found",
+    "There are no results matching that keyword"
+  ],
+  "resumeSuccess": "`{0}` resumed",
+  "roleCreated": "Role created: `{0}`",
+  "sanctionReaction": [
+    ":(",
+    "I'm sorry...",
+    "It hurts",
+    "It's my fault...",
+    "Yah hit me more"
+  ],
+  "searchEnd": [
+    "Is this what you want?",
+    "Did you mean this one?",
+    "Is it right?"
+  ],
+  "selectSong": ":notes: Type number `1-{0}` or `c`(cancle)",
+  "setVolumeSuccess": "Volue set to {0}",
+  "shellMessage": ">>> $ {0}\n\n{1}",
+  "shuffleCompleted": [
+    "Queue shuffled!",
+    "Shuffle complete!"
+  ],
+  "skipSuccess": "Skipped successfully",
+  "slowmodeEnabled": "Slowmode on (cooldown: `{0}s`)",
+  "slowmodeDisabled": "Slowmode off",
+  "somethingWentWrong": [
+    "Something went wrong!",
+    "I've got an error..."
+  ],
+  "songInQueue": "`{0}. {1} | Queued by: {2}`",
+  "songSelectCancelled": "Song is canceled",
+  "tempmuteSuccess": "`{0}` muted for `{1}ms`",
+  "unbanSuccess": [
+    "**`{0}`** unbanned (reason: **`{1}`**)",
+    "**`{0}`** unblocked (reason: **`{1}`**)"
+  ],
+  "unmuteSuccess": "`{0}` unmuted",
+  "unplayableVideo": "This video is unplayable"
+}
