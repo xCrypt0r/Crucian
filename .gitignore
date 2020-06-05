@@ -7,3 +7,5 @@ package-lock.json
 *.pem
 
 *.sh
+
+**.log
