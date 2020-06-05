@@ -121,6 +121,17 @@
         "isOwnerOnly": false,
         "usage": "leave"
     },
+    "locale": {
+        "aliases": [
+            "lang",
+            "language",
+            "언어"
+        ],
+        "description": "Change locale",
+        "isOwnerOnly": false,
+        "usage": "locale #{lang}"
+
+    },
     "log": {
         "aliases": [
             "usage",

@@ -20,6 +20,7 @@
   "commandInCooldown": "**__{0}__** is in cooldown!",
   "commandManual": "> Manual: {0}",
   "commandUsage": "**`{0}`**: {1}",
+  "currentLocale": "Current locale is `{0}`",
   "currentPrefix": "Current prefix is `{0}`",
   "deleteEnd": [
     "{0} message(s) have been deleted!",
@@ -103,7 +104,7 @@
   "sanctionReaction": [
     ":(",
     "I'm sorry...",
-    "It hurts",
+    "Ouch T.T",
     "It's my fault...",
     "Yah hit me more"
   ],

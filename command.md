@@ -43,5 +43,6 @@
 |slowmode|Set slowmode|
 |exec|Execute shell command|
 |eval|Run javascript code|
+|locale|Change bot's language|
 
 **For further information, use `help` command**
