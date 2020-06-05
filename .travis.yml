@@ -7,7 +7,7 @@ before_script:
   - npm run prestart
 
 script:
-  - npm start
+  - npm start &
 
 after_success:
   - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
