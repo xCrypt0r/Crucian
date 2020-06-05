@@ -1,4 +1,4 @@
-const Command = require('../../interfaces/Command.js');
+const Command = require('../../structures/Command.js');
 const glob = require('glob');
 
 class Help extends Command {

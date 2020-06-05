@@ -1,4 +1,4 @@
-const Command = require('../../interfaces/Command.js');
+const Command = require('../../structures/Command.js');
 const ms = require('ms');
 
 class Tempmute extends Command {

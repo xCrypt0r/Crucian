@@ -1,4 +1,4 @@
-const Command = require('../../interfaces/Command.js');
+const Command = require('../../structures/Command.js');
 const db = require('../../lib/db.js');
 
 class Log extends Command {

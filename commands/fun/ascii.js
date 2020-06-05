@@ -1,4 +1,4 @@
-const Command = require('../../interfaces/Command.js');
+const Command = require('../../structures/Command.js');
 const figlet = require('figlet');
 
 class Ascii extends Command {

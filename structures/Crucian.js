@@ -1,5 +1,5 @@
 const { Client, Collection } = require('discord.js');
-const Logger = require('../interfaces/Logger.js');
+const Logger = require('../structures/Logger.js');
 const glob = require('glob');
 
 class Crucian extends Client {
