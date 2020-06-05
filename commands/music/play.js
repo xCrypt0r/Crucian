@@ -25,7 +25,7 @@ class Play extends Command {
         if (!validate) {
             let searcher = bot.commands.get('search');
     
-            searcher.run(bot, message, args);
+            searcher.run(message, args);
 
             return;
         }

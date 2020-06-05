@@ -13,7 +13,7 @@ class Search extends Command {
             return;
         }
 
-        search(args.join(' '), (err, res) => {
+        search(args.join(' '), (err, res) => {;
             if (err) {
                 bot.logger.error(err);
 
@@ -52,7 +52,7 @@ class Search extends Command {
                     return;
                 }
 
-                player.run(bot, message, [videos[Number(collectedMessage.content) - 1].url]);
+                player.run(message, [videos[Number(collectedMessage.content) - 1].url]);
                 collectedMessage.delete();
             });
         });

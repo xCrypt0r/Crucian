@@ -37,7 +37,7 @@ class Dequeue extends Command {
             case 1: {
                 let skip = bot.commands.get('skip');
     
-                skip.run(bot, message);
+                skip.run(message);
 
                 break;
             }
