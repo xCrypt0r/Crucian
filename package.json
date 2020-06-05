@@ -1,6 +1,6 @@
 {
   "name": "crucian",
-  "version": "1.6.5",
+  "version": "1.6.6",
   "description": "My bot with simple structure based on discord.js",
   "main": "bot.js",
   "engines": {

@@ -16,6 +16,10 @@ class Eval extends Command {
                 res = require('util').inspect(res, { depth: 0 });
             }
 
+            if (res.includes(process.env.TOKEN)) {
+                res = res.replace(process.env.TOKEN, 'TOKEN');
+            }
+
             message.channel.send(res, { split: true });
         } catch (e) {
             bot.logger.error(e);
