@@ -8,7 +8,8 @@
   },
   "scripts": {
     "prestart": "node lib/check-version.js",
-    "start": "node bot.js"
+    "start": "node bot.js",
+    "deploy": "pm2 start bot.js"
   },
   "repository": {
     "type": "git",
