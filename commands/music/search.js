@@ -13,7 +13,7 @@ class Search extends Command {
             return;
         }
 
-        search(args.join(' '), (err, res) => {;
+        search(args.join(' '), (err, res) => {
             if (err) {
                 bot.logger.error(err);
 

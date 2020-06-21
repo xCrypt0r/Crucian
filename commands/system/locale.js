@@ -14,7 +14,7 @@ class Locale extends Command {
         }
 
         let locale = args[0],
-            localePath = `../../assets/json/lang_${locale}`
+            localePath = `../../assets/json/lang_${locale}`;
  
         if (!fs.existsSync(localePath)) {
             bot.lang = require(localePath);
