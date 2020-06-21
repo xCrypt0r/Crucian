@@ -23,25 +23,26 @@ class Help extends Command {
                 return;
             }
 
-            let manual = [];
+            let { helpManual: help } = bot.lang,
+                manual = [];
 
             handlers.forEach((file, i) => {
                 let handler = new (require(`../../${file}`))(file);
 
                 manual.push([
-                    `${i + 1}. \`${handler.name}\``,
-                    `**Description**: ${handler.description}`,
-                    `**Usage**: \`${handler.usage}\``,
-                    `**Alias**: ${handler.aliases.join(', ')}`,
-                    `**Cooltime**: ${handler.cooltime || 0}`,
-                    `**IsOwnerOnly**: ${handler.isOwnerOnly}`
+                    help.name.format(i + 1, handler.name),
+                    help.description.format(handler.description),
+                    help.usage.format(handler.usage),
+                    help.alias.format(handler.aliases.join(', ')),
+                    help.cooldown.format(handler.cooltime || 0),
+                    help.isOwnerOnly.format(handler.isOwnerOnly)
                 ].join('\n'));
             });
 
             let manual_chunks = manual.chunk(5).map(chunk => chunk.join('\n\n'));
             let embedOptions = {
-                title: ':blue_book: **도움말**',
-                color: '#4ae342',
+                title: help.title,
+                color: bot.const.BOT_MANUAL_COLOR,
                 thumbnail: bot.user.avatarURL()
             };
 

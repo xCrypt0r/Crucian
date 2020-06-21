@@ -8,6 +8,27 @@
     "**`{0}`** banned (reason: **`{1}`**)",
     "**`{0}`** blocked (reason: **`{1}`**)"
   ],
+  "botInformation": {
+    "botName": {
+      "name": "Name"
+    },
+    "channels": {
+      "name": "Channels"
+    },
+    "discordVersion": {
+      "name": "Discord.js",
+      "value": "v{0}"
+    },
+    "servers": {
+      "name": "Servers"
+    },
+    "uptime": {
+      "name": "Uptime"
+    },
+    "users": {
+      "name": "Users"
+    }
+  },
   "botNotInVoiceChannel": "I'm already out of the voice channel",
   "calcResult": "`{0}`is `{1}`",
   "cantFindRole": "I cant find the role...",
@@ -32,6 +53,16 @@
   ],
   "dequeueSuccess": "Song No.{0} dequeued",
   "displayQueue": ":musical_note: Queue",
+  "helpManual": {
+    "activity": "{0}help to see commands",
+    "alias": "**Alias**: {0}",
+    "cooldown": "**Cooltime**: {0}",
+    "description": "**Description**: {0}",
+    "isOwnerOnly": "**IsOwnerOnly**: {0}",
+    "name": "{0}. `{1}`",
+    "title": ":blue_book: **Help**",
+    "usage": "**Usage**: `{0}`"
+  },
   "imageNotFound": [
     "No images found...",
     "There are no images matching that keyword"
@@ -95,6 +126,14 @@
     "nope"
   ],
   "rebootSuccess": "It's nice to see you again!",
+  "redditComments": {
+    "name": "comments",
+    "value": ":newspaper: {0} comments"
+  },
+  "redditUpvotes": {
+    "name": "upvotes",
+    "value": ":thumbsup: {0} people"
+  },
   "resultNotFound": [
     "No results found",
     "There are no results matching that keyword"
@@ -130,10 +169,34 @@
   "songInQueue": "`{0}. {1} | Queued by: {2}`",
   "songSelectCancelled": "Song is canceled",
   "tempmuteSuccess": "`{0}` muted for `{1}ms`",
+  "translateSupportedLanguages": "Click here to see supported languages",
   "unbanSuccess": [
     "**`{0}`** unbanned (reason: **`{1}`**)",
     "**`{0}`** unblocked (reason: **`{1}`**)"
   ],
   "unmuteSuccess": "`{0}` unmuted",
-  "unplayableVideo": "This video is unplayable"
+  "unplayableVideo": "This video is unplayable",
+  "weatherInformation": {
+    "feelslike": {
+      "name": "feelslike",
+      "value": "{0} {1}"
+    },
+    "humidity": {
+      "name": "humidity",
+      "value": "{0}%"
+    },
+    "skytext": "**${0}**",
+    "temperature": {
+      "name": "temperature",
+      "value": "{0} {1}"
+    },
+    "timezone": {
+      "name": "timezone",
+      "value": "UTC{0}"
+    },
+    "title": "weather in {0}",
+    "winddisplay": {
+      "name": "winds"
+    }
+  }
 }

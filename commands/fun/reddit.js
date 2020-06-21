@@ -66,21 +66,21 @@ class Reddit extends Command {
             .setTitle(article.title)
             .setURL(bot.const.REDDIT_ARTICLE_URL.format(article.permalink))
             .setAuthor(
-                `u/${article.author}`,
+                bot.const.REDDIT_AUTHOR_WITH_PREFIX.format(article.author),
                 icon.split('?')[0],
                 bot.const.REDDIT_AUTHOR_URL.format(article.author)
             )
             .setImage(image)
             .setTimestamp(timestamp)
             .addFields(
-                { 
-                    name: 'upvotes',
-                    value: `:thumbsup: ${article.ups} people`,
+                {
+                    name: bot.lang.redditUpvotes.name,
+                    value: bot.lang.redditUpvotes.value.format(article.ups),
                     inline: true
                 },
                 { 
-                    name: 'comments',
-                    value: `:newspaper: ${article.num_comments} comments`,
+                    name: bot.lang.redditComments.name,
+                    value: bot.lang.redditComments.name.format(article.num_comments),
                     inline: true 
                 }
             );

@@ -20,7 +20,7 @@ class Translate extends Command {
         translate(text, { to: language }).then(res => {
             let embed = new discord.MessageEmbed()
                 .setColor(0xf4b400)
-                .setTitle('Click here to see supported languages')
+                .setTitle(bot.lang.translateSupportedLanguages)
                 .setURL(bot.const.GOOGLE_SUPPORTED_LANGUAGES_URL)
                 .setThumbnail(bot.user.avatarURL())
                 .addField(translate.languages[res.from.language.iso], text)

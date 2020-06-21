@@ -28,18 +28,40 @@ class Weather extends Command {
             }
 
             let current = res[0].current,
-                location = res[0].location;
+                location = res[0].location,
+                { weatherInformation: info } = bot.lang;
             let embed = new discord.MessageEmbed()
-                .setDescription(`**${current.skytext}**`)
-                .setAuthor(`${current.observationpoint}의 날씨 정보`)
+                .setDescription(info.skytext.format(current.skytext))
+                .setAuthor(info.title.format(current.observationpoint))
                 .setThumbnail(current.imageUrl)
                 .setColor(0x00ae86)
-                .addField('시간대', `UTC${location.timezone}`, true)
-                .addField('온도 단위', location.degreetype, true)
-                .addField('온도', `${current.temperature} Degrees`, true)
-                .addField('체감 온도', `${current.feelslike} Degrees`, true)
-                .addField('바람', current.winddisplay, true)
-                .addField('습도', `${current.humidity}%`, true);
+                .addFields(
+                    {
+                        name: info.timezone.name,
+                        value: info.timezone.value.format(location.timezone),
+                        inline: true
+                    },
+                    {
+                        name: info.temperature.name,
+                        value: info.temperature.value.format(current.temperature, location.degreetype),
+                        inline: true
+                    },
+                    {
+                        name: info.feelslike.name,
+                        value: info.feelslike.value.format(current.feelslike, location.degreetype),
+                        inline: true
+                    },
+                    {
+                        name: info.winddisplay.name,
+                        value: current.winddisplay,
+                        inline: true
+                    },
+                    {
+                        name: info.humidity.name,
+                        value: info.humidity.value.format(current.humidity),
+                        inline: true
+                    }
+                );
 
             message.channel.send(embed);
         });

@@ -8,6 +8,27 @@
     "**`{0}`** 밴했음 (이유: **`{1}`**)",
     "**`{0}`** 차단함 (이유: **`{1}`**)"
   ],
+  "botInformation": {
+    "botName": {
+      "name": "이름"
+    },
+    "channels": {
+      "name": "채널"
+    },
+    "discordVersion": {
+      "name": "Discord.js",
+      "value": "v{0}"
+    },
+    "servers": {
+      "name": "서버"
+    },
+    "uptime": {
+      "name": "가동시간"
+    },
+    "users": {
+      "name": "유저"
+    }
+  },
   "botNotInVoiceChannel": "이미 나와있음",
   "calcResult": "`{0}`은 `{1}`임",
   "cantFindRole": "그런 역할은 없음",
@@ -34,6 +55,16 @@
   ],
   "dequeueSuccess": "{0}번 노래 목록에서 뻄",
   "displayQueue": ":musical_note: 대기열",
+  "helpManual": {
+    "activity": "명령어 목록을 보려면 {0}도움말 입력하셈",
+    "alias": "**별칭**: {0}",
+    "cooldown": "**쿨타임**: {0}",
+    "description": "**설명**: {0}",
+    "isOwnerOnly": "**관리자 전용**: {0}",
+    "name": "{0}. `{1}`",
+    "title": ":blue_book: **도움말**",
+    "usage": "**사용법**: `{0}`"
+  },
   "imageNotFound": [
     "사진이 없는뎅",
     "사진이 없음"
@@ -98,6 +129,14 @@
     "ㅇㅇ"
   ],
   "rebootSuccess": "재부팅 완료",
+  "redditComments": {
+    "name": "댓글",
+    "value": ":newspaper: {0}개"
+  },
+  "redditUpvotes": {
+    "name": "추천",
+    "value": ":thumbsup: {0}명"
+  },
   "resultNotFound": [
     "검색 결과가 없음",
     "제대로 검색한 거 맞음?"
@@ -135,10 +174,34 @@
   "songInQueue": "`{0}. {1} | 신청자: {2}`",
   "songSelectCancelled": "노래 선택이 취소댐",
   "tempmuteSuccess": "`{0}` `{1}ms` 동안 채금임",
+  "translateSupportedLanguages": "지원되는 언어 목록",
   "unbanSuccess": [
     "**`{0}`** 밴풀었음 (이유: **`{1}`**)",
     "**`{0}`** 차단해제함 (이유: **`{1}`**)"
   ],
   "unmuteSuccess": "`{0}` 채금 풀음",
-  "unplayableVideo": "재생할 수 없는 영상임"
+  "unplayableVideo": "재생할 수 없는 영상임",
+  "weatherInformation": {
+    "feelslike": {
+      "name": "체감 온도",
+      "value": "{0} {1}"
+    },
+    "humidity": {
+      "name": "습도",
+      "value": "{0}%"
+    },
+    "skytext": "**${0}**",
+    "temperature": {
+      "name": "온도",
+      "value": "{0} {1}"
+    },
+    "timezone": {
+      "name": "시간대",
+      "value": "UTC{0}"
+    },
+    "title": "{0}의 날씨 정보",
+    "winddisplay": {
+      "name": "바람"
+    }
+  }
 }
