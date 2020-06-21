@@ -15,17 +15,18 @@ class Reddit extends Command {
             return;
         }
 
-        let subreddit = args.join(''),
-            rgx_subreddit = /^[A-Za-z0-9][A-Za-z0-9_]{1,20}$/,
-            url = `https://www.reddit.com/r/${subreddit}/hot.json`;
+        let subreddit = args.join('');
 
-        if (!rgx_subreddit.test(subreddit)) {
+        if (!new RegExp(bot.const.SUBREDDIT_REGEXP).test(subreddit)) {
             message.reply(bot.lang.invalidArguments);
 
             return;
         }
 
-        let { body } = await request({ url: url, json: true });
+        let { body } = await request({
+            url: bot.const.REDDIT_HOT_URL.format(subreddit),
+            json: true
+        });
 
         if (body.error) {
             message.reply(bot.lang.somethingWentWrong.random());
@@ -48,27 +49,40 @@ class Reddit extends Command {
         }
         
         let timestamp = new Date(article.created * 1000),
-            headers = { 'User-Agent': 'reddit-oauth/1.1.1' },
-            userUrl = `https://www.reddit.com/user/${article.author}/about.json`,
-            { body: { data: { icon_img: icon } } } = await request({ url: userUrl, json: true, headers: headers }),
-            image = ['.jpg', '.png', '.svg', '.mp4', '.gif'].includes(article.url.slice(-4))
+            image = bot.const.MEDIA_EXTENSION.includes(article.url.slice(-4))
                 ? article.url
-                : article.thumbnail && !['self', 'spoiler'].includes(article.thumbnail)
+                : article.thumbnail && !bot.const.REDDIT_INVALID_THUMBNAIL.includes(article.thumbnail)
                     ? article.thumbnail
                     : article.preview
                         ? article.preview.images[0].source.url
                         : null;
-
+        let { body: { data: { icon_img: icon } } } = await request({
+            url: bot.const.REDDIT_USER_URL.format(article.author),
+            json: true,
+            headers: bot.const.REDDIT_HEADERS
+        });
         let embed = new discord.MessageEmbed()
             .setColor(0xff4301)
             .setTitle(article.title)
-            .setURL(`https://www.reddit.com${article.permalink}`)
-            .setAuthor(`u/${article.author}`, icon.split('?')[0], `https://reddit.com/user/${article.author}`)
+            .setURL(bot.const.REDDIT_ARTICLE_URL.format(article.permalink))
+            .setAuthor(
+                `u/${article.author}`,
+                icon.split('?')[0],
+                bot.const.REDDIT_AUTHOR_URL.format(article.author)
+            )
             .setImage(image)
             .setTimestamp(timestamp)
             .addFields(
-                { name: 'upvotes', value: `:thumbsup: ${article.ups} people`, inline: true },
-                { name: 'comments', value: `:newspaper: ${article.num_comments} comments`, inline: true }
+                { 
+                    name: 'upvotes',
+                    value: `:thumbsup: ${article.ups} people`,
+                    inline: true
+                },
+                { 
+                    name: 'comments',
+                    value: `:newspaper: ${article.num_comments} comments`,
+                    inline: true 
+                }
             );
 
         message.channel.send(embed);

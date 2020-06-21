@@ -9,9 +9,7 @@ class Billboard extends Command {
     }
 
     async run(message) {
-        let url = 'https://www.billboard.com/charts/hot-100';
-
-        request.get(url, (err, res, body) => {
+        request.get(bot.const.BILLBOARD_CHART_URL, (err, res, body) => {
             let $ = cheerio.load(body);
 
             let chart = [];

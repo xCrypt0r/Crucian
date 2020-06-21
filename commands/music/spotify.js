@@ -9,9 +9,7 @@ class Spotify extends Command {
     }
 
     async run(message) {
-        let url = 'https://spotifycharts.com/regional';
-
-        request.get(url, (err, res, body) => {
+        request.get(bot.const.SPOTIFY_CHART_URL, (err, res, body) => {
             let $ = cheerio.load(body);
 
             let chart = [];
