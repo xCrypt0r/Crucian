@@ -1,7 +1,7 @@
 const Command = require('../../structures/Command.js');
 const discord = require('discord.js');
-const request = require('request');
-const moment = require('moment');
+const { promisify } = require('util');
+const request = promisify(require('request'));
 
 class Reddit extends Command {
     constructor(file) {
@@ -15,8 +15,9 @@ class Reddit extends Command {
             return;
         }
 
-        let subreddit = args.join('');
-        let rgx_subreddit = /^[A-Za-z0-9][A-Za-z0-9_]{1,20}$/;
+        let subreddit = args.join(''),
+            rgx_subreddit = /^[A-Za-z0-9][A-Za-z0-9_]{1,20}$/,
+            url = `https://www.reddit.com/r/${subreddit}/hot.json`;
 
         if (!rgx_subreddit.test(subreddit)) {
             message.reply(bot.lang.invalidArguments);
@@ -24,44 +25,53 @@ class Reddit extends Command {
             return;
         }
 
-        request({
-            url: `https://www.reddit.com/r/${subreddit}/new.json`,
-            json: true
-        }, (err, res, body) => {
-            if (body.error) {
-                message.reply(bot.lang.somethingWentWrong.random());
+        let { body } = await request({ url: url, json: true });
 
-                return;
-            }
+        if (body.error) {
+            message.reply(bot.lang.somethingWentWrong.random());
 
-            if (body.data.dist === 0) {
-                message.reply(bot.lang.resultNotFound.random());
+            return;
+        }
 
-                return;
-            }
+        if (body.data.dist <= 0) {
+            message.reply(bot.lang.resultNotFound.random());
 
-            let article = body.data.children.random().data;
+            return;
+        }
 
-            if (!message.channel.nsfw && article.over_18) {
-                message.reply(bot.lang.notInNsfwChannel.random());
+        let article = body.data.children.random().data;
 
-                return;
-            }
+        if (!message.channel.nsfw && article.over_18) {
+            message.reply(bot.lang.notInNsfwChannel.random());
 
-            let embed = new discord.MessageEmbed()
-                .setColor(0xff4301)
-                .setTitle(article.title)
-                .setURL(`https://www.reddit.com${article.permalink}`)
-                .setThumbnail(bot.user.avatarURL())
-                .addField('Subreddit', article.subreddit, true)
-                .addField('Author', article.author, true)
-                .addField('Created At', moment(article.created * 1000).format('YYYY-MM-DD HH:mm:ss'), true)
-                .addField('Score', article.score, true);
+            return;
+        }
+        
+        let timestamp = new Date(article.created * 1000),
+            headers = { 'User-Agent': 'reddit-oauth/1.1.1' },
+            userUrl = `https://www.reddit.com/user/${article.author}/about.json`,
+            { body: { data: { icon_img: icon } } } = await request({ url: userUrl, json: true, headers: headers }),
+            image = ['.jpg', '.png', '.svg', '.mp4', '.gif'].includes(article.url.slice(-4))
+                ? article.url
+                : article.thumbnail && !['self', 'spoiler'].includes(article.thumbnail)
+                    ? article.thumbnail
+                    : article.preview
+                        ? article.preview.images[0].source.url
+                        : null;
 
-            message.channel.send(embed).then(() => {
-                message.channel.send(article.url);
-            });
-        });
+        let embed = new discord.MessageEmbed()
+            .setColor(0xff4301)
+            .setTitle(article.title)
+            .setURL(`https://www.reddit.com${article.permalink}`)
+            .setAuthor(`u/${article.author}`, icon.split('?')[0], `https://reddit.com/user/${article.author}`)
+            .setImage(image)
+            .setTimestamp(timestamp)
+            .addFields(
+                { name: 'upvotes', value: `:thumbsup: ${article.ups} people`, inline: true },
+                { name: 'comments', value: `:newspaper: ${article.num_comments} comments`, inline: true }
+            );
+
+        message.channel.send(embed);
     }
 }
 
