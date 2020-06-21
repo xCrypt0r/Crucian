@@ -14,7 +14,8 @@ class Prefix extends Command {
 
         args.length > 0 ? (
             bot.prefix = args[0],
-            message.channel.send(bot.lang.prefixChanged.format(bot.prefix))
+            message.channel.send(bot.lang.prefixChanged.format(bot.prefix)),
+            bot.user.setActivity(`${bot.prefix}help to see commands`)
         ) : (
             message.channel.send(bot.lang.currentPrefix.format(bot.prefix))
         );

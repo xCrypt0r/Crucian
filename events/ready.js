@@ -7,5 +7,6 @@ module.exports = class extends Event {
 
     async run() {
         this.logger.log(`Logged in as ${this.user.tag}`);
+        this.user.setActivity(`${this.prefix}help to see commands`);
     }
 };
