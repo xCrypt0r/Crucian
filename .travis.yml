@@ -20,4 +20,4 @@ after_failure:
   - ./send.sh failure $WEBHOOK_URL
 
 env:
-- TOKEN=$TOKEN
+  - TOKEN=$TOKEN
