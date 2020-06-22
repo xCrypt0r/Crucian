@@ -25,13 +25,13 @@ class Melon extends Command {
             }).get();
 
             for (let i = 0; i < 100; i++) {
-                chart.push(`\` ${i + 1}. ${artists[i]} - ${titles[i]} \``);
+                chart.push(bot.const.MELON_CHART_FORMAT.format(i + 1, artists[i], titles[i]);
             }
 
             let chart_chunks = chart.chunk(20).map(chunk => chunk.join('\n'));
             let today = new Date().toJSON().slice(0, 10).replace(/-/g, '');
             let embedOptions = {
-                title: `:musical_note: **melon_chart_${today}**`
+                title: bot.lang.melonChartTitle.format(today)
             };
 
             bot.tools.page(message, chart_chunks, embedOptions);

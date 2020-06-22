@@ -29,10 +29,10 @@ class Spotify extends Command {
             }
 
             let chart_chunks = chart.chunk(20).map(chunk => chunk.join('\n'));
-            let today = moment().format('YYYYMMDD');
+            let today = moment().format(bot.const.MUSIC_CHART_DATE_FORMAT);
             let embedOptions = {
-                title: `:musical_note: **spotify_chart_${today}**`,
-                color: 0x1ed761
+                title: bot.lang.spotifyChartTitle.format(today),
+                color: bot.const.SPOTIFY_CHART_COLOR
             };
 
             bot.tools.page(message, chart_chunks, embedOptions);

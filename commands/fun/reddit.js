@@ -80,7 +80,7 @@ class Reddit extends Command {
                 },
                 { 
                     name: bot.lang.redditComments.name,
-                    value: bot.lang.redditComments.name.format(article.num_comments),
+                    value: bot.lang.redditComments.value.format(article.num_comments),
                     inline: true 
                 }
             );

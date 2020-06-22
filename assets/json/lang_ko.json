@@ -8,6 +8,7 @@
     "**`{0}`** 밴했음 (이유: **`{1}`**)",
     "**`{0}`** 차단함 (이유: **`{1}`**)"
   ],
+  "billboardChartTitle": ":musical_note: **빌보드_차트_{0}**",
   "botInformation": {
     "botName": {
       "name": "이름"
@@ -90,6 +91,7 @@
     "ㅂㅂ",
     "붕어 가봄"
   ],
+  "melonChartTitle": ":musical_note: **멜론_차트_{0}**",
   "messageTooLong": [
     "메세지 길이를 좀 줄이셈",
     "메세지가 너무 길어서 안댐"
@@ -158,6 +160,35 @@
     "이건가"
   ],
   "selectSong": ":notes: 노래 검색 - 숫자 `1-{0}` 또는 `c`(취소)를 입력하셈",
+  "serverInformation": {
+    "bots": {
+      "name": "봇"
+    },
+    "createdAt": {
+      "name": "생성 일자"
+    },
+    "master": {
+      "name": "방장"
+    },
+    "members": {
+      "name": "멤버"
+    },
+    "region": {
+      "name": "지역"
+    },
+    "roles": {
+      "name": "역할"
+    },
+    "serverName": {
+      "name": "이름"
+    },
+    "textChannels": {
+      "name": "텍스트 채널"
+    },
+    "voiceChannels": {
+      "name": "보이스 채널"
+    }
+  },
   "setVolumeSuccess": "볼륨 {0}로 조절했음",
   "shellMessage": ">>> $ {0}\n\n{1}",
   "shuffleCompleted": [
@@ -173,6 +204,7 @@
   ],
   "songInQueue": "`{0}. {1} | 신청자: {2}`",
   "songSelectCancelled": "노래 선택이 취소댐",
+  "spotifyChartTitle": ":musical_note: **스포티파이_차트_{0}**",
   "tempmuteSuccess": "`{0}` `{1}ms` 동안 채금임",
   "translateSupportedLanguages": "지원되는 언어 목록",
   "unbanSuccess": [
@@ -181,6 +213,26 @@
   ],
   "unmuteSuccess": "`{0}` 채금 풀음",
   "unplayableVideo": "재생할 수 없는 영상임",
+  "userInformation": {
+    "commandUsage": {
+      "name": "{0}의 명령어 사용 횟수"
+    },
+    "createdAt": {
+      "name": "생성 일자"
+    },
+    "joinedAt": {
+      "name": "서버 참여 일자"
+    },
+    "roles": {
+      "name": "역할"
+    },
+    "status": {
+      "name": "상태"
+    },
+    "userName": {
+      "name": "이름"
+    }
+  },
   "weatherInformation": {
     "feelslike": {
       "name": "체감 온도",
@@ -190,7 +242,7 @@
       "name": "습도",
       "value": "{0}%"
     },
-    "skytext": "**${0}**",
+    "skytext": "**{0}**",
     "temperature": {
       "name": "온도",
       "value": "{0} {1}"

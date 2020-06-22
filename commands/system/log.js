@@ -36,7 +36,7 @@ class Log extends Command {
 
             let usage = rows.map(row => bot.lang.commandUsage.format(row.command, row.count));
             let embedOptions = {
-                title: `${user.username}'s command usage`
+                title: bot.lang.userInformation.commandUsage.format(user.username)
             };
             let usage_chunks = usage.chunk(10).map(chunk => chunk.join('\n'));
 

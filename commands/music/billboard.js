@@ -21,14 +21,14 @@ class Billboard extends Command {
             }).get();
 
             for (let i = 0; i < 100; i++) {
-                chart.push(`\` ${i + 1}. ${artists[i]} - ${titles[i]} \``);
+                chart.push(bot.const.BILLBOARD_CHART_FORMAT.format(i + 1, artists[i], titles[i]);
             }
 
             let chart_chunks = chart.chunk(20).map(chunk => chunk.join('\n'));
-            let today = moment().format('YYYYMMDD');
+            let today = moment().format(bot.const.MUSIC_CHART_DATE_FORMAT);
             let embedOptions = {
-                title: `:musical_note: **billboard_chart_${today}**`,
-                color: 0x00aaa9
+                title: bot.lang.billboardChartTitle.format(today),
+                color: bot.const.BILLBOARD_CHART_COLOR
             };
 
             bot.tools.page(message, chart_chunks, embedOptions);

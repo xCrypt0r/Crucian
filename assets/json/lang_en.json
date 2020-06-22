@@ -8,6 +8,7 @@
     "**`{0}`** banned (reason: **`{1}`**)",
     "**`{0}`** blocked (reason: **`{1}`**)"
   ],
+  "billboardChartTitle": ":musical_note: **billboard_chart_{0}**",
   "botInformation": {
     "botName": {
       "name": "Name"
@@ -87,6 +88,7 @@
     "Got to go",
     "See ya"
   ],
+  "melonChartTitle": ":musical_note: **melon_chart_{0}**",
   "messageTooLong": [
     "Your message is too long...",
     "Message is too long to send :("
@@ -153,6 +155,35 @@
     "Is it right?"
   ],
   "selectSong": ":notes: Type number `1-{0}` or `c`(cancle)",
+  "serverInformation": {
+    "bots": {
+      "name": "Bots"
+    },
+    "createdAt": {
+      "name": "Created At"
+    },
+    "master": {
+      "name": "Master"
+    },
+    "members": {
+      "name": "Members"
+    },
+    "region": {
+      "name": "Region"
+    },
+    "roles": {
+      "name": "Roles"
+    },
+    "serverName": {
+      "name": "Name"
+    },
+    "textChannels": {
+      "name": "TextChannels"
+    },
+    "voiceChannels": {
+      "name": "VoiceChannels"
+    }
+  },
   "setVolumeSuccess": "Volue set to {0}",
   "shellMessage": ">>> $ {0}\n\n{1}",
   "shuffleCompleted": [
@@ -168,6 +199,7 @@
   ],
   "songInQueue": "`{0}. {1} | Queued by: {2}`",
   "songSelectCancelled": "Song is canceled",
+  "spotifyChartTitle": ":musical_note: **spotify_chart_{0}**",
   "tempmuteSuccess": "`{0}` muted for `{1}ms`",
   "translateSupportedLanguages": "Click here to see supported languages",
   "unbanSuccess": [
@@ -176,6 +208,26 @@
   ],
   "unmuteSuccess": "`{0}` unmuted",
   "unplayableVideo": "This video is unplayable",
+  "userInformation": {
+    "commandUsage": {
+      "name": "{0}'s command usage"
+    },
+    "createdAt": {
+      "name": "Created At"
+    },
+    "joinedAt": {
+      "name": "Joined At"
+    },
+    "roles": {
+      "name": "Roles"
+    },
+    "status": {
+      "name": "Status"
+    },
+    "userName": {
+      "name": "Name"
+    }
+  },
   "weatherInformation": {
     "feelslike": {
       "name": "feelslike",
@@ -185,7 +237,7 @@
       "name": "humidity",
       "value": "{0}%"
     },
-    "skytext": "**${0}**",
+    "skytext": "**{0}**",
     "temperature": {
       "name": "temperature",
       "value": "{0} {1}"

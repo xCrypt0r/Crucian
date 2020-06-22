@@ -1,12 +1,17 @@
 {
+    "BILLBOARD_CHART_COLOR": "#00aaa9",
+    "BILLBOARD_CHART_FORMAT": "`{0}. {1} - {2}`",
     "BILLBOARD_CHART_URL": "https://www.billboard.com/charts/hot-100",
     "BOT_MANUAL_COLOR": "#4ae342",
     "BOT_UPTIME_FORMAT": "D [d] H [h] m [m] s [s]",
     "GOOGLE_SUPPORTED_LANGUAGES_URL": "https://cloud.google.com/translate/docs/languages",
+    "MEDIA_EXTENSION": [".jpg", ".png", ".svg", ".mp4", ".gif"],
+    "MELON_CHART_FORMAT": "`{0}. {1} - {2}`",
     "MELON_CHART_URL": "https://www.melon.com/chart/",
     "MELON_HEADERS": {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36"
     },
+    "MUSIC_CHART_DATE_FORMAT": "YYYYMMDD",
     "REDDIT_ARTICLE_URL": "https://www.reddit.com{0}",
     "REDDIT_AUTHOR_WITH_PREFIX": "u/{0}",
     "REDDIT_AUTHOR_URL": "https://reddit.com/user/{0}",
@@ -19,7 +24,10 @@
         "self",
         "spoiler"
     ],
-    "MEDIA_EXTENSION": [".jpg", ".png", ".svg", ".mp4", ".gif"],
+    "SERVER_CREATEDAT_FORMAT": "YYYY-MM-DD",
+    "SPOTIFY_CHART_COLOR": "#1ed761",
     "SPOTIFY_CHART_URL": "https://spotifycharts.com/regional",
-    "SUBREDDIT_REGEXP": "^[A-Za-z0-9][A-Za-z0-9_]{1,20}$"
+    "SUBREDDIT_REGEXP": "^[A-Za-z0-9][A-Za-z0-9_]{1,20}$",
+    "USER_CREATEDAT_FORMAT": "YYYY-MM-DD",
+    "USER_JOINEDAT_FORMAT": "YYYY-MM-DD"
 }
