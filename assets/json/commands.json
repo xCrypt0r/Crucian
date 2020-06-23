@@ -81,7 +81,8 @@
     "help": {
         "aliases": [
             "도움",
-            "도움말"
+            "도움말",
+            "헬프"
         ],
         "description": "Informs how to use command",
         "isOwnerOnly": false,
@@ -91,9 +92,11 @@
         "aliases": [
             "img",
             "photo",
+            "pic",
             "picture",
             "그림",
-            "사진"
+            "사진",
+            "이미지"
         ],
         "cooltime": 2000,
         "description": "Get image from google",
@@ -135,10 +138,11 @@
     "log": {
         "aliases": [
             "usage",
+            "기록",
             "로그"
         ],
         "cooltime": 3000,
-        "description": "Show log of given user",
+        "description": "Show command usage",
         "isOwnerOnly": false,
         "usage": "log #{mention}"
     },
@@ -406,6 +410,7 @@
     },
     "userinfo": {
         "aliases": [
+            "info",
             "유저정보",
             "정보"
         ],
