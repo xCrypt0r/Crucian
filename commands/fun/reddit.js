@@ -62,7 +62,7 @@ class Reddit extends Command {
             headers: bot.const.REDDIT_HEADERS
         });
         let embed = new discord.MessageEmbed()
-            .setColor(0xff4301)
+            .setColor(bot.const.REDDIT_EMBED_COLOR)
             .setTitle(article.title)
             .setURL(bot.const.REDDIT_ARTICLE_URL.format(article.permalink))
             .setAuthor(

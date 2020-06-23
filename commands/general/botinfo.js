@@ -11,7 +11,7 @@ class Botinfo extends Command {
     async run(message) {
         let { botInformation: info } = bot.lang;
         let embed = new discord.MessageEmbed()
-            .setColor(0x15f153)
+            .setColor(bot.const.BOT_EMBED_COLOR)
             .setThumbnail(bot.user.displayAvatarURL())
             .addFields(
                 {

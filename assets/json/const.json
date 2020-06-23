@@ -2,6 +2,7 @@
     "BILLBOARD_CHART_COLOR": "#00aaa9",
     "BILLBOARD_CHART_FORMAT": "`{0}. {1} - {2}`",
     "BILLBOARD_CHART_URL": "https://www.billboard.com/charts/hot-100",
+    "BOT_EMBED_COLOR": "#15f153",
     "BOT_MANUAL_COLOR": "#4ae342",
     "BOT_UPTIME_FORMAT": "D [d] H [h] m [m] s [s]",
     "GOOGLE_SUPPORTED_LANGUAGES_URL": "https://cloud.google.com/translate/docs/languages",
@@ -15,6 +16,7 @@
     "REDDIT_ARTICLE_URL": "https://www.reddit.com{0}",
     "REDDIT_AUTHOR_WITH_PREFIX": "u/{0}",
     "REDDIT_AUTHOR_URL": "https://reddit.com/user/{0}",
+    "REDDIT_EMBED_COLOR": "#ff4301",
     "REDDIT_HOT_URL": "https://www.reddit.com/r/{0}/hot.json",
     "REDDIT_USER_URL": "https://www.reddit.com/user/{0}/about.json",
     "REDDIT_HEADERS": {
@@ -25,9 +27,13 @@
         "spoiler"
     ],
     "SERVER_CREATEDAT_FORMAT": "YYYY-MM-DD",
+    "SERVER_EMBED_COLOR": "#0244f7",
     "SPOTIFY_CHART_COLOR": "#1ed761",
     "SPOTIFY_CHART_URL": "https://spotifycharts.com/regional",
     "SUBREDDIT_REGEXP": "^[A-Za-z0-9][A-Za-z0-9_]{1,20}$",
+    "TRANSLATE_EMBED_COLOR": "#f4b400",
     "USER_CREATEDAT_FORMAT": "YYYY-MM-DD",
-    "USER_JOINEDAT_FORMAT": "YYYY-MM-DD"
+    "USER_EMBED_COLOR": "#edd81c",
+    "USER_JOINEDAT_FORMAT": "YYYY-MM-DD",
+    "WEATHER_EMBED_COLOR": "#00ae86"
 }

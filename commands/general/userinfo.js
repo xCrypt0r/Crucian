@@ -19,7 +19,7 @@ class Userinfo extends Command {
         let { userInformation: info } = bot.lang,
             member = message.guild.member(user);
         let embed = new discord.MessageEmbed()
-            .setColor(0xedd81c)
+            .setColor(bot.const.USER_EMBED_COLOR)
             .setThumbnail(user.displayAvatarURL())
             .addFields(
                 {

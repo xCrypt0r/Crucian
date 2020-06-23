@@ -11,7 +11,7 @@ class Serverinfo extends Command {
         let { serverInformation: info } = bot.lang,
             guild = message.guild;
         let embed = new discord.MessageEmbed() 
-            .setColor(0x0244f7)
+            .setColor(bot.const.SERVER_EMBED_COLOR)
             .setThumbnail(guild.iconURL())
             .addFields(
                 {
