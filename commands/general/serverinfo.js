@@ -60,7 +60,6 @@ class Serverinfo extends Command {
                         .map(role => role.name)
                         .filter(roleName => !roleName.startsWith('@'))
                         .join(', ')
-                    )
                 }
             );
 

@@ -25,7 +25,7 @@ class Melon extends Command {
             }).get();
 
             for (let i = 0; i < 100; i++) {
-                chart.push(bot.const.MELON_CHART_FORMAT.format(i + 1, artists[i], titles[i]);
+                chart.push(bot.const.MELON_CHART_FORMAT.format(i + 1, artists[i], titles[i]));
             }
 
             let chart_chunks = chart.chunk(20).map(chunk => chunk.join('\n'));
