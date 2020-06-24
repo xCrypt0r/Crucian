@@ -9,7 +9,7 @@ class Spotify extends Command {
     }
 
     async run(message) {
-        request.get(bot.const.SPOTIFY_CHART_URL, (err, res, body) => {
+        request.get(bot.consts.SPOTIFY_CHART_URL, (err, res, body) => {
             let $ = cheerio.load(body);
 
             let chart = [];
@@ -29,10 +29,10 @@ class Spotify extends Command {
             }
 
             let chart_chunks = chart.chunk(20).map(chunk => chunk.join('\n'));
-            let today = moment().format(bot.const.MUSIC_CHART_DATE_FORMAT);
+            let today = moment().format(bot.consts.MUSIC_CHART_DATE_FORMAT);
             let embedOptions = {
                 title: bot.lang.spotifyChartTitle.format(today),
-                color: bot.const.SPOTIFY_CHART_COLOR
+                color: bot.consts.SPOTIFY_CHART_COLOR
             };
 
             bot.tools.page(message, chart_chunks, embedOptions);

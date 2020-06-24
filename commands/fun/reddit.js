@@ -17,14 +17,14 @@ class Reddit extends Command {
 
         let subreddit = args.join('');
 
-        if (!new RegExp(bot.const.SUBREDDIT_REGEXP).test(subreddit)) {
+        if (!new RegExp(bot.consts.SUBREDDIT_REGEXP).test(subreddit)) {
             message.reply(bot.lang.invalidArguments);
 
             return;
         }
 
         let { body } = await request({
-            url: bot.const.REDDIT_HOT_URL.format(subreddit),
+            url: bot.consts.REDDIT_HOT_URL.format(subreddit),
             json: true
         });
 
@@ -49,26 +49,26 @@ class Reddit extends Command {
         }
         
         let timestamp = new Date(article.created * 1000),
-            image = bot.const.MEDIA_EXTENSION.includes(article.url.slice(-4))
+            image = bot.consts.MEDIA_EXTENSION.includes(article.url.slice(-4))
                 ? article.url
-                : article.thumbnail && !bot.const.REDDIT_INVALID_THUMBNAIL.includes(article.thumbnail)
+                : article.thumbnail && !bot.consts.REDDIT_INVALID_THUMBNAIL.includes(article.thumbnail)
                     ? article.thumbnail
                     : article.preview
                         ? article.preview.images[0].source.url
                         : null;
         let { body: { data: { icon_img: icon } } } = await request({
-            url: bot.const.REDDIT_USER_URL.format(article.author),
+            url: bot.consts.REDDIT_USER_URL.format(article.author),
             json: true,
-            headers: bot.const.REDDIT_HEADERS
+            headers: bot.consts.REDDIT_HEADERS
         });
         let embed = new discord.MessageEmbed()
-            .setColor(bot.const.REDDIT_EMBED_COLOR)
+            .setColor(bot.consts.REDDIT_EMBED_COLOR)
             .setTitle(article.title)
-            .setURL(bot.const.REDDIT_ARTICLE_URL.format(article.permalink))
+            .setURL(bot.consts.REDDIT_ARTICLE_URL.format(article.permalink))
             .setAuthor(
-                bot.const.REDDIT_AUTHOR_WITH_PREFIX.format(article.author),
+                bot.consts.REDDIT_AUTHOR_WITH_PREFIX.format(article.author),
                 icon.split('?')[0],
-                bot.const.REDDIT_AUTHOR_URL.format(article.author)
+                bot.consts.REDDIT_AUTHOR_URL.format(article.author)
             )
             .setImage(image)
             .setTimestamp(timestamp)

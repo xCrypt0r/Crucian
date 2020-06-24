@@ -11,7 +11,7 @@ class Botinfo extends Command {
     async run(message) {
         let { botInformation: info } = bot.lang;
         let embed = new discord.MessageEmbed()
-            .setColor(bot.const.BOT_EMBED_COLOR)
+            .setColor(bot.consts.BOT_EMBED_COLOR)
             .setThumbnail(bot.user.displayAvatarURL())
             .addFields(
                 {
@@ -21,7 +21,7 @@ class Botinfo extends Command {
                 },
                 {
                     name: info.uptime.name,
-                    value: moment.duration(bot.uptime).format(bot.const.BOT_UPTIME_FORMAT),
+                    value: moment.duration(bot.uptime).format(bot.consts.BOT_UPTIME_FORMAT),
                     inline: true
                 },
                 {

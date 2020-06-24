@@ -9,7 +9,7 @@ class Billboard extends Command {
     }
 
     async run(message) {
-        request.get(bot.const.BILLBOARD_CHART_URL, (err, res, body) => {
+        request.get(bot.consts.BILLBOARD_CHART_URL, (err, res, body) => {
             let $ = cheerio.load(body);
 
             let chart = [];
@@ -21,14 +21,14 @@ class Billboard extends Command {
             }).get();
 
             for (let i = 0; i < 100; i++) {
-                chart.push(bot.const.BILLBOARD_CHART_FORMAT.format(i + 1, artists[i], titles[i]));
+                chart.push(bot.consts.BILLBOARD_CHART_FORMAT.format(i + 1, artists[i], titles[i]));
             }
 
             let chart_chunks = chart.chunk(20).map(chunk => chunk.join('\n'));
-            let today = moment().format(bot.const.MUSIC_CHART_DATE_FORMAT);
+            let today = moment().format(bot.consts.MUSIC_CHART_DATE_FORMAT);
             let embedOptions = {
                 title: bot.lang.billboardChartTitle.format(today),
-                color: bot.const.BILLBOARD_CHART_COLOR
+                color: bot.consts.BILLBOARD_CHART_COLOR
             };
 
             bot.tools.page(message, chart_chunks, embedOptions);

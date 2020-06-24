@@ -8,7 +8,7 @@ class Crucian extends Client {
 
         this.logger = new Logger(this);
         this.config = require('../assets/json/config.json');
-        this.const = require('../assets/json/const.json');
+        this.consts = require('../assets/json/consts.json');
         this.lang = require('../assets/json/lang_ko.json');
         this.tools = require('../lib/utils.js');
         this.prefix = this.config.PREFIX;

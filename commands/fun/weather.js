@@ -34,7 +34,7 @@ class Weather extends Command {
                 .setDescription(info.skytext.format(current.skytext))
                 .setAuthor(info.title.format(current.observationpoint))
                 .setThumbnail(current.imageUrl)
-                .setColor(bot.const.WEATHER_EMBED_COLOR)
+                .setColor(bot.consts.WEATHER_EMBED_COLOR)
                 .addFields(
                     {
                         name: info.timezone.name,

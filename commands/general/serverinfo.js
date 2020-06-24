@@ -11,7 +11,7 @@ class Serverinfo extends Command {
         let { serverInformation: info } = bot.lang,
             guild = message.guild;
         let embed = new discord.MessageEmbed() 
-            .setColor(bot.const.SERVER_EMBED_COLOR)
+            .setColor(bot.consts.SERVER_EMBED_COLOR)
             .setThumbnail(guild.iconURL())
             .addFields(
                 {
@@ -21,7 +21,7 @@ class Serverinfo extends Command {
                 },
                 {
                     name: info.createdAt.name,
-                    value: moment.utc(guild.createdAt).format(bot.const.SERVER_CREATEDAT_FORMAT),
+                    value: moment.utc(guild.createdAt).format(bot.consts.SERVER_CREATEDAT_FORMAT),
                     inline: true
                 },
                 {
