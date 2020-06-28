@@ -4,6 +4,8 @@ commands/test/
 
 package-lock.json
 
+.env
+
 *.pem
 
 *.sh

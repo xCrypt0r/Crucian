@@ -29,8 +29,8 @@ This takes about 5-10 minutes, so be patient
 1.  Run `sudo docker run crucian` to start bot
 
 ### Common settings
-1.  Edit [.env](.env) to set process environment variables  
-The OWNER_ID field should contain your **user ID** (example: 504338669268631562) not your discord id  
+1.  Edit [.env.example](.env.example) to set process environment variables and Rename this file to ".env"  
+The OWNER_ID field should contain your **user ID** (example: 504338669268631562)
 Click [here](https://www.youtube.com/watch?v=1T0L4c9hWTo) to see how to get your **user ID**
 
 1.  Edit [assets/json/config.json](assets/json/config.json) according to your preference  
