@@ -24,7 +24,7 @@ Click [**Here**](https://discordapp.com/api/oauth2/authorize?client_id=508679069
 Check [setup.md](setup.md)
 
 ## Commands
-Check [command.md](command.md)
+Check [commands.md](commands.md)
 
 ## Special Thanks To
 - [**@intelli-raccoon-dog**](https://github.com/intelli-raccoon-dog)
