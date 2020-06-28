@@ -1,6 +1,7 @@
 const Command = require('../../structures/Command.js');
 const { MessageEmbed } = require('discord.js');
-const weather = require('weather-js');
+const { promisify } = require('util');
+const weather = promisify(require('weather-js').find);
 
 class Weather extends Command {
     constructor(file) {
@@ -14,12 +15,11 @@ class Weather extends Command {
             return;
         }
 
-        weather.find({ search: args.join(' '), degreeType: 'C' }, (err, res) => {
-            if (err) {
-                bot.logger.error(err);
-
-                return;
-            }
+        try {
+            let res = await weather({ 
+                search: args.join(' '),
+                degreeType: 'C'
+            });
 
             if (!res[0]) {
                 message.reply(bot.lang.noWeatherResults.random());
@@ -64,7 +64,9 @@ class Weather extends Command {
                 );
 
             message.channel.send(embed);
-        });
+        } catch (e) {
+            bot.logger.error(e);
+        }
     }
 }
 

@@ -14,24 +14,35 @@ class Translate extends Command {
             return;
         }
         
-        let language = args.shift();
-        let text = args.join(' ');
+        let language = args.shift(),
+            text = args.join(' ');
 
-        translate(text, { to: language }).then(res => {
+        try {
+            let res = await translate(text, { to: language });
             let embed = new MessageEmbed()
                 .setColor(bot.consts.COLOR.TRANSLATE_EMBED)
                 .setTitle(bot.lang.translateSupportedLanguages)
                 .setURL(bot.consts.URL.GOOGLE_SUPPORTED_LANGUAGES)
                 .setThumbnail(bot.user.avatarURL())
-                .addField(translate.languages[res.from.language.iso], text)
-                .addField(translate.languages[language], res.text);
+                .addFields(
+                    {
+                        name: translate.languages[res.from.language.iso],
+                        value: text,
+                        inline: true
+                    },
+                    {
+                        name: translate.languages[language],
+                        value: res.text,
+                        inline: true
+                    }
+                );
 
             message.channel.send(embed);
-        }).catch(err => {
-            if (err.message.includes('not supported')) {
-                message.channel.send(bot.lang.languageNotSupported.format(language));
-            }
-        });
+        } catch (e) {
+            e.message.includes('not supported')
+                ? message.channel.send(bot.lang.languageNotSupported.format(language))
+                : bot.logger.error();
+        }
     }
 }
 
