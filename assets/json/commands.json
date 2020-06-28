@@ -17,7 +17,7 @@
         "cooltime": 5000,
         "description": "Ban user from server",
         "isOwnerOnly": false,
-        "usage": "ban #{mention} #{reason}"
+        "usage": "ban #{mention} [#{reason}]"
     },
     "billboard": {
         "aliases": [
@@ -25,7 +25,7 @@
             "빌보드"
         ],
         "cooltime": 10000,
-        "description": "Display billboad Top100 chart",
+        "description": "Show billboad Top100 chart",
         "isOwnerOnly": false,
         "usage": "billboard"
     },
@@ -64,6 +64,7 @@
     },
     "eval": {
         "aliases": [],
+        "cooltime": 2000,
         "description": "Run javascript code",
         "isOwnerOnly": true,
         "usage": "eval #{code}"
@@ -74,6 +75,7 @@
             "shell",
             "실행"
         ],
+        "cooltime": 2000,
         "description": "Execute shell command",
         "isOwnerOnly": true,
         "usage": "exec #{command}"
@@ -111,9 +113,9 @@
             "추방"
         ],
         "cooltime": 5000,
-        "description": "Kicks the mentioned user",
+        "description": "Kick user from server",
         "isOwnerOnly": false,
-        "usage": "kick #{mention} #{reason}"
+        "usage": "kick #{mention} [#{reason}]"
     },
     "leave": {
         "aliases": [
@@ -151,7 +153,7 @@
             "멜론"
         ],
         "cooltime": 10000,
-        "description": "Display melon Top100 chart",
+        "description": "Show melon Top100 chart",
         "isOwnerOnly": false,
         "usage": "melon"
     },
@@ -164,7 +166,7 @@
             "조용히해"
         ],
         "cooltime": 5000,
-        "description": "Mutes the mentioned user",
+        "description": "Mute user",
         "isOwnerOnly": false,
         "usage": "mute #{mention}"
     },
@@ -176,7 +178,7 @@
             "일시정지",
             "정지"
         ],
-        "description": "Pause currently playing music",
+        "description": "Pause now playing music",
         "isOwnerOnly": false,
         "usage": "pause"
     },
@@ -197,7 +199,7 @@
             "틀어"
         ],
         "cooltime": 2000,
-        "description": "Play music with given URL or keyword",
+        "description": "Play music",
         "isOwnerOnly": false,
         "usage": "play #{URL|keyword}"
     },
@@ -228,7 +230,7 @@
     "queue": {
         "aliases": [
             "q",
-            "목록",
+            "재생목록",
             "큐"
         ],
         "cooltime": 2000,
@@ -249,7 +251,7 @@
             "레딧"
         ],
         "cooltime": 2000,
-        "description": "Get hot post from reddit",
+        "description": "Get post from reddit",
         "isOwnerOnly": false,
         "usage": "reddit #{subreddit}"
     },
@@ -295,7 +297,7 @@
             "선택"
         ],
         "cooltime": 500,
-        "description": "Select one between multiple items",
+        "description": "Select one among multiple items",
         "isOwnerOnly": false,
         "usage": "select #{option1} #{option2} #{option3} ..."
     },
@@ -337,7 +339,7 @@
             "버려",
             "치워"
         ],
-        "description": "Skip the song currently playing",
+        "description": "Skip now playing music",
         "isOwnerOnly": false,
         "usage": "skip"
     },
@@ -350,7 +352,7 @@
             "슬로우모드"
         ],
         "cooltime": 1000,
-        "description": "Define a cooldown in a channel",
+        "description": "Define cooldown in a channel",
         "isOwnerOnly": true,
         "usage": "slowmode #{seconds}"
     },
@@ -359,14 +361,14 @@
             "스포티파이"
         ],
         "cooltime": 10000,
-        "description": "Display spotify Top200 chart",
+        "description": "Show spotify Top200 chart",
         "isOwnerOnly": false,
         "usage": "spotify"
     },
     "tempmute": {
         "aliases": [],
         "cooltime": 5000,
-        "description": "Mutes the mentioned user for given time (example: 3s, 2m, 1h)",
+        "description": "Mute user for given time (example: 3s, 2m, 1h)",
         "isOwnerOnly": false,
         "usage": "tempmute #{mention} #{time}"
     },
@@ -395,16 +397,16 @@
             "차단해제"
         ],
         "cooltime": 5000,
-        "description": "Ban user from server",
+        "description": "Unban user from server",
         "isOwnerOnly": false,
-        "usage": "unban #{id} #{reason}"
+        "usage": "unban #{id} [#{reason}]"
     },
     "unmute": {
         "aliases": [
             "채금해제"
         ],
         "cooltime": 5000,
-        "description": "Unmutes the mentioned user",
+        "description": "Unmute user",
         "isOwnerOnly": false,
         "usage": "unmute #{mention}"
     },
@@ -424,7 +426,7 @@
             "볼륨",
             "음량"
         ],
-        "description": "Adjust speaking volume (range: 0~200)",
+        "description": "Adjust music volume (range: 0~200)",
         "isOwnerOnly": false,
         "usage": "volume #{number}"
     },
