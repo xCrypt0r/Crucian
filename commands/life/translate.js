@@ -1,5 +1,5 @@
 const Command = require('../../structures/Command.js');
-const discord = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const translate = require('@vitalets/google-translate-api');
 
 class Translate extends Command {
@@ -18,7 +18,7 @@ class Translate extends Command {
         let text = args.join(' ');
 
         translate(text, { to: language }).then(res => {
-            let embed = new discord.MessageEmbed()
+            let embed = new MessageEmbed()
                 .setColor(bot.consts.COLOR.TRANSLATE_EMBED)
                 .setTitle(bot.lang.translateSupportedLanguages)
                 .setURL(bot.consts.URL.GOOGLE_SUPPORTED_LANGUAGES)

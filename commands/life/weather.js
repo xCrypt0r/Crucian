@@ -1,5 +1,5 @@
 const Command = require('../../structures/Command.js');
-const discord = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const weather = require('weather-js');
 
 class Weather extends Command {
@@ -30,7 +30,7 @@ class Weather extends Command {
             let current = res[0].current,
                 location = res[0].location,
                 { weatherInformation: info } = bot.lang;
-            let embed = new discord.MessageEmbed()
+            let embed = new MessageEmbed()
                 .setDescription(info.skytext.format(current.skytext))
                 .setAuthor(info.title.format(current.observationpoint))
                 .setThumbnail(current.imageUrl)

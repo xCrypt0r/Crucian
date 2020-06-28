@@ -1,5 +1,5 @@
 const Command = require('../../structures/Command.js');
-const discord = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const moment = require('moment');
 
 class Userinfo extends Command {
@@ -18,7 +18,7 @@ class Userinfo extends Command {
 
         let { userInformation: info } = bot.lang,
             member = message.guild.member(user);
-        let embed = new discord.MessageEmbed()
+        let embed = new MessageEmbed()
             .setColor(bot.consts.COLOR.USER_EMBED)
             .setThumbnail(user.displayAvatarURL())
             .addFields(

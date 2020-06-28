@@ -1,5 +1,5 @@
 const Command = require('../../structures/Command.js');
-const discord = require('discord.js');
+const { MessageEmbed, version } = require('discord.js');
 const moment = require('moment');
 require('moment-duration-format');
 
@@ -10,7 +10,7 @@ class Botinfo extends Command {
 
     async run(message) {
         let { botInformation: info } = bot.lang;
-        let embed = new discord.MessageEmbed()
+        let embed = new MessageEmbed()
             .setColor(bot.consts.COLOR.BOT_EMBED)
             .setThumbnail(bot.user.displayAvatarURL())
             .addFields(
@@ -41,7 +41,7 @@ class Botinfo extends Command {
                 },
                 {
                     name: info.discordVersion.name,
-                    value: info.discordVersion.value.format(discord.version),
+                    value: info.discordVersion.value.format(version),
                     inline: true
                 }
             );

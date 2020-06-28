@@ -1,5 +1,5 @@
 const Command = require('../../structures/Command.js');
-const discord = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const { promisify } = require('util');
 const request = promisify(require('request'));
 
@@ -61,7 +61,7 @@ class Reddit extends Command {
             json: true,
             headers: bot.consts.HEADER.REDDIT
         });
-        let embed = new discord.MessageEmbed()
+        let embed = new MessageEmbed()
             .setColor(bot.consts.COLOR.REDDIT_EMBED)
             .setTitle(article.title)
             .setURL(bot.consts.URL.REDDIT_ARTICLE.format(article.permalink))
