@@ -17,14 +17,14 @@ class Reddit extends Command {
 
         let subreddit = args.join('');
 
-        if (!new RegExp(bot.consts.SUBREDDIT_REGEXP).test(subreddit)) {
+        if (!new RegExp(bot.consts.REGEXP.SUBREDDIT).test(subreddit)) {
             message.reply(bot.lang.invalidArguments);
 
             return;
         }
 
         let { body } = await request({
-            url: bot.consts.REDDIT_HOT_URL.format(subreddit),
+            url: bot.consts.URL.REDDIT_HOT.format(subreddit),
             json: true
         });
 
@@ -57,18 +57,18 @@ class Reddit extends Command {
                         ? article.preview.images[0].source.url
                         : null;
         let { body: { data: { icon_img: icon } } } = await request({
-            url: bot.consts.REDDIT_USER_URL.format(article.author),
+            url: bot.consts.URL.REDDIT_USER.format(article.author),
             json: true,
-            headers: bot.consts.REDDIT_HEADERS
+            headers: bot.consts.HEADER.REDDIT
         });
         let embed = new discord.MessageEmbed()
-            .setColor(bot.consts.REDDIT_EMBED_COLOR)
+            .setColor(bot.consts.COLOR.REDDIT_EMBED)
             .setTitle(article.title)
-            .setURL(bot.consts.REDDIT_ARTICLE_URL.format(article.permalink))
+            .setURL(bot.consts.URL.REDDIT_ARTICLE.format(article.permalink))
             .setAuthor(
                 bot.consts.REDDIT_AUTHOR_WITH_PREFIX.format(article.author),
                 icon.split('?')[0],
-                bot.consts.REDDIT_AUTHOR_URL.format(article.author)
+                bot.consts.URL.REDDIT_AUTHOR.format(article.author)
             )
             .setImage(image)
             .setTimestamp(timestamp)

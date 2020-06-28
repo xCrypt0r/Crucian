@@ -42,7 +42,7 @@ class Help extends Command {
             let manual_chunks = manual.chunk(5).map(chunk => chunk.join('\n\n'));
             let embedOptions = {
                 title: help.title,
-                color: bot.consts.BOT_MANUAL_COLOR,
+                color: bot.consts.COLOR.BOT_MANUAL,
                 thumbnail: bot.user.avatarURL()
             };
 

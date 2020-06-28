@@ -11,8 +11,8 @@ class Melon extends Command {
         let instance = this;
 
         request.get({
-            url: bot.consts.MELON_CHART_URL,
-            headers: bot.consts.MELON_HEADERS
+            url: bot.consts.URL.MELON_CHART,
+            headers: bot.consts.HEADER.MELON
         }, (err, res, body) => {
             let $ = cheerio.load(body);
 
@@ -25,7 +25,7 @@ class Melon extends Command {
             }).get();
 
             for (let i = 0; i < 100; i++) {
-                chart.push(bot.consts.MELON_CHART_FORMAT.format(i + 1, artists[i], titles[i]));
+                chart.push(bot.consts.FORMAT.MELON_CHART.format(i + 1, artists[i], titles[i]));
             }
 
             let chart_chunks = chart.chunk(20).map(chunk => chunk.join('\n'));

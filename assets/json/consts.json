@@ -1,39 +1,49 @@
 {
-    "BILLBOARD_CHART_COLOR": "#00aaa9",
-    "BILLBOARD_CHART_FORMAT": "`{0}. {1} - {2}`",
-    "BILLBOARD_CHART_URL": "https://www.billboard.com/charts/hot-100",
-    "BOT_EMBED_COLOR": "#15f153",
-    "BOT_MANUAL_COLOR": "#4ae342",
-    "BOT_UPTIME_FORMAT": "D [d] H [h] m [m] s [s]",
-    "GOOGLE_SUPPORTED_LANGUAGES_URL": "https://cloud.google.com/translate/docs/languages",
+    "COLOR": {
+        "BILLBOARD_CHART": "#00aaa9",
+        "BOT_EMBED": "#15f153",
+        "BOT_MANUAL": "#4ae342",
+        "REDDIT_EMBED": "#ff4301",
+        "SERVER_EMBED": "#0244f7",
+        "SPOTIFY_CHART": "#1ed761",
+        "TRANSLATE_EMBED": "#f4b400",
+        "USER_EMBED": "#edd81c",
+        "WEATHER_EMBED": "#00ae86"
+    },
+    "FORMAT": {
+        "BILLBOARD_CHART": "`{0}. {1} - {2}`",
+        "BOT_UPTIME": "D [d] H [h] m [m] s [s]",
+        "MELON_CHART": "`{0}. {1} - {2}`",
+        "MUSIC_CHART_DATE": "YYYYMMDD",
+        "SERVER_CREATEDAT": "YYYY-MM-DD",
+        "USER_CREATEDAT": "YYYY-MM-DD",
+        "USER_JOINEDAT": "YYYY-MM-DD"
+    },
+    "HEADER": {
+        "MELON": {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36"
+        },
+        "REDDIT": {
+            "User-Agent": "reddit-oauth/1.1.1"
+        }
+    },
     "MEDIA_EXTENSION": [".jpg", ".png", ".svg", ".mp4", ".gif"],
-    "MELON_CHART_FORMAT": "`{0}. {1} - {2}`",
-    "MELON_CHART_URL": "https://www.melon.com/chart/",
-    "MELON_HEADERS": {
-        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36"
-    },
-    "MUSIC_CHART_DATE_FORMAT": "YYYYMMDD",
-    "REDDIT_ARTICLE_URL": "https://www.reddit.com{0}",
     "REDDIT_AUTHOR_WITH_PREFIX": "u/{0}",
-    "REDDIT_AUTHOR_URL": "https://reddit.com/user/{0}",
-    "REDDIT_EMBED_COLOR": "#ff4301",
-    "REDDIT_HOT_URL": "https://www.reddit.com/r/{0}/hot.json",
-    "REDDIT_USER_URL": "https://www.reddit.com/user/{0}/about.json",
-    "REDDIT_HEADERS": {
-        "User-Agent": "reddit-oauth/1.1.1"
-    },
     "REDDIT_INVALID_THUMBNAIL": [
         "self",
         "spoiler"
     ],
-    "SERVER_CREATEDAT_FORMAT": "YYYY-MM-DD",
-    "SERVER_EMBED_COLOR": "#0244f7",
-    "SPOTIFY_CHART_COLOR": "#1ed761",
-    "SPOTIFY_CHART_URL": "https://spotifycharts.com/regional",
-    "SUBREDDIT_REGEXP": "^[A-Za-z0-9][A-Za-z0-9_]{1,20}$",
-    "TRANSLATE_EMBED_COLOR": "#f4b400",
-    "USER_CREATEDAT_FORMAT": "YYYY-MM-DD",
-    "USER_EMBED_COLOR": "#edd81c",
-    "USER_JOINEDAT_FORMAT": "YYYY-MM-DD",
-    "WEATHER_EMBED_COLOR": "#00ae86"
+    "REGEXP": {
+        "SUBREDDIT": "^[A-Za-z0-9][A-Za-z0-9_]{1,20}$"
+    },
+    "URL": {
+        "BILLBOARD_CHART": "https://www.billboard.com/charts/hot-100",
+        "GOOGLE_SUPPORTED_LANGUAGES": "https://cloud.google.com/translate/docs/languages",
+        "MELON_CHART": "https://www.melon.com/chart/",
+        "REDDIT_ARTICLE": "https://www.reddit.com{0}",
+        "REDDIT_AUTHOR": "https://reddit.com/user/{0}",
+        "REDDIT_HOT": "https://www.reddit.com/r/{0}/hot.json",
+        "REDDIT_USER": "https://www.reddit.com/user/{0}/about.json",
+        "SPOTIFY_CHART": "https://spotifycharts.com/regional"
+    }
 }

@@ -19,7 +19,7 @@ class Userinfo extends Command {
         let { userInformation: info } = bot.lang,
             member = message.guild.member(user);
         let embed = new discord.MessageEmbed()
-            .setColor(bot.consts.USER_EMBED_COLOR)
+            .setColor(bot.consts.COLOR.USER_EMBED)
             .setThumbnail(user.displayAvatarURL())
             .addFields(
                 {
@@ -29,12 +29,12 @@ class Userinfo extends Command {
                 },
                 {
                     name: info.createdAt.name,
-                    value: moment.utc(user.createdAt).format(bot.consts.USER_CREATEDAT_FORMAT),
+                    value: moment.utc(user.createdAt).format(bot.consts.FORMAT.USER_CREATEDAT),
                     inline: true
                 },
                 {
                     name: info.joinedAt.name,
-                    value: moment.utc(member.joinedAt).format(bot.consts.USER_JOINEDAT_FORMAT),
+                    value: moment.utc(member.joinedAt).format(bot.consts.FORMAT.USER_JOINEDAT),
                     inline: true
                 },
                 {
