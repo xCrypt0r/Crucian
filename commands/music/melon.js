@@ -1,5 +1,6 @@
 const Command = require('../../structures/Command.js');
-const request = require('request');
+const { promisify } = require('util');
+const request = promisify(require('request'));
 const cheerio = require('cheerio');
 
 class Melon extends Command {
@@ -8,41 +9,37 @@ class Melon extends Command {
     }
 
     async run(message) {
-        let instance = this;
-
-        request.get({
+        let { body } = await request({
             url: bot.consts.URL.MELON_CHART,
             headers: bot.consts.HEADER.MELON
-        }, (err, res, body) => {
-            let $ = cheerio.load(body);
+        });
+        let $ = cheerio.load(body),
+            chart = [];
 
-            let chart = [];
-            let titles = $('.rank01').children('span').children('a').map(function() {
-                return instance.escapeMarkdown($(this).text());
+        let titles = $('.rank01').children('span').children('a').map(function() {
+                return $(this).text().escapeMarkdown();
+            }).get(),
+            artists = $('.rank02').children('span').map(function() {
+                return $(this).text().escapeMarkdown();
             }).get();
-            let artists = $('.rank02').children('span').map(function() {
-                return instance.escapeMarkdown($(this).text());
-            }).get();
 
-            for (let i = 0; i < 100; i++) {
-                chart.push(bot.consts.FORMAT.MELON_CHART.format(i + 1, artists[i], titles[i]));
-            }
+        for (let i = 0; i < 100; i++) {
+            chart.push(
+                bot.consts.FORMAT.MELON_CHART.format(
+                    i + 1,
+                    artists[i],
+                    titles[i]
+                )
+            );
+        }
 
-            let chart_chunks = chart.chunk(20).map(chunk => chunk.join('\n'));
-            let today = new Date().toJSON().slice(0, 10).replace(/-/g, '');
-            let embedOptions = {
+        let chartChunks = chart.chunk(20).map(chunk => chunk.join('\n')),
+            today = new Date().toJSON().slice(0, 10).replace(/-/g, ''),
+            embedOptions = {
                 title: bot.lang.melonChartTitle.format(today)
             };
 
-            bot.tools.page(message, chart_chunks, embedOptions);
-        });
-    }
-
-    escapeMarkdown(text) {
-        let unescaped = text.replace(/\\(\*|_|`|~|\\)/g, '');
-        let escaped = unescaped.replace(/(\*|_|`|~|\\)/g, '');
-    
-        return escaped;
+        bot.tools.page(message, chartChunks, embedOptions);
     }
 }
 

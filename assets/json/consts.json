@@ -16,6 +16,7 @@
         "MELON_CHART": "`{0}. {1} - {2}`",
         "MUSIC_CHART_DATE": "YYYYMMDD",
         "SERVER_CREATEDAT": "YYYY-MM-DD",
+        "SPOTIFY_CHART": "`{0}. {1} - {2} ({3})`",
         "USER_CREATEDAT": "YYYY-MM-DD",
         "USER_JOINEDAT": "YYYY-MM-DD"
     },
