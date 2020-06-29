@@ -6,12 +6,6 @@ class Select extends Command {
     }
 
     async run(message, args) {
-        if (args.length < 1) {
-            message.reply(bot.lang.lackOfArguments);
-    
-            return;
-        }
-    
         message.reply(bot.lang.chooseEnd.random().format(args.random()));
     }
 }

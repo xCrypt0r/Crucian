@@ -8,12 +8,6 @@ class Exec extends Command {
     }
 
     async run(message, args) {
-        if (args.length < 1) {
-            message.reply(bot.lang.lackOfArguments);
-
-            return;
-        }
-
         let cmd = args.join(' ');
 
         try {

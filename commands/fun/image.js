@@ -8,12 +8,6 @@ class Image extends Command {
     }
 
     async run(message, args) {
-        if (args.length < 1) {
-            message.reply(bot.lang.lackOfArguments);
-    
-            return;
-        }
-
         let images = await gis(args.join(' '));
 
         if (images.length < 1) {

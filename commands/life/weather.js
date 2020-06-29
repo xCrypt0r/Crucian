@@ -9,12 +9,6 @@ class Weather extends Command {
     }
 
     async run(message, args) {
-        if (args.length < 1) {
-            message.reply(bot.lang.lackOfArguments);
-
-            return;
-        }
-
         try {
             let res = await weather({ 
                 search: args.join(' '),

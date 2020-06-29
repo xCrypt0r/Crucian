@@ -6,6 +6,7 @@
         "cooltime": 1500,
         "description": "Make 3D ascii art with given string",
         "isOwnerOnly": false,
+        "minArgc": 1,
         "usage": "ascii #{string}"
     },
     "ban": {
@@ -17,6 +18,7 @@
         "cooltime": 5000,
         "description": "Ban user from server",
         "isOwnerOnly": false,
+        "minArgc": 1,
         "usage": "ban #{mention} [#{reason}]"
     },
     "billboard": {
@@ -27,6 +29,7 @@
         "cooltime": 10000,
         "description": "Show billboad Top100 chart",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "billboard"
     },
     "botinfo": {
@@ -35,6 +38,7 @@
         ],
         "description": "Show bot's information",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "botinfo"
     },
     "calc": {
@@ -50,6 +54,7 @@
         "cooltime": 1000,
         "description": "Calculate simple math questions",
         "isOwnerOnly": false,
+        "minArgc": 1,
         "usage": "calc #{formula}"
     },
     "dequeue": {
@@ -60,6 +65,7 @@
         "cooltime": 2000,
         "description": "Delete song in queue with given number (number 0 means clear all)",
         "isOwnerOnly": false,
+        "minArgc": 1,
         "usage": "dequeue #{number}"
     },
     "eval": {
@@ -67,6 +73,7 @@
         "cooltime": 2000,
         "description": "Run javascript code",
         "isOwnerOnly": true,
+        "minArgc": 1,
         "usage": "eval #{code}"
     },
     "exec": {
@@ -78,6 +85,7 @@
         "cooltime": 2000,
         "description": "Execute shell command",
         "isOwnerOnly": true,
+        "minArgc": 1,
         "usage": "exec #{command}"
     },
     "help": {
@@ -88,6 +96,7 @@
         ],
         "description": "Informs how to use command",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "help [#{command}]"
     },
     "image": {
@@ -103,6 +112,7 @@
         "cooltime": 2000,
         "description": "Get image from google",
         "isOwnerOnly": false,
+        "minArgc": 1,
         "usage": "image #{keyword}"
     },
     "kick": {
@@ -115,6 +125,7 @@
         "cooltime": 5000,
         "description": "Kick user from server",
         "isOwnerOnly": false,
+        "minArgc": 1,
         "usage": "kick #{mention} [#{reason}]"
     },
     "leave": {
@@ -124,6 +135,7 @@
         ],
         "description": "Leave voice channel",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "leave"
     },
     "locale": {
@@ -134,6 +146,7 @@
         ],
         "description": "Change locale",
         "isOwnerOnly": false,
+        "minArgc": 1,
         "usage": "locale #{lang}"
 
     },
@@ -146,6 +159,7 @@
         "cooltime": 3000,
         "description": "Show command usage",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "log #{mention}"
     },
     "melon": {
@@ -155,6 +169,7 @@
         "cooltime": 10000,
         "description": "Show melon Top100 chart",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "melon"
     },
     "mute": {
@@ -168,6 +183,7 @@
         "cooltime": 5000,
         "description": "Mute user",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "mute #{mention}"
     },
     "pause": {
@@ -180,6 +196,7 @@
         ],
         "description": "Pause now playing music",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "pause"
     },
     "ping": {
@@ -190,6 +207,7 @@
         ],
         "description": "Show latency and response times",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "ping"
     },
     "play": {
@@ -201,6 +219,7 @@
         "cooltime": 2000,
         "description": "Play music",
         "isOwnerOnly": false,
+        "minArgc": 1,
         "usage": "play #{URL|keyword}"
     },
     "prefix": {
@@ -210,6 +229,7 @@
         ],
         "description": "Change prefix",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "prefix #{new_prefix}"
     },
     "purge": {
@@ -225,6 +245,7 @@
         "cooltime": 5000,
         "description": "Purge messages",
         "isOwnerOnly": false,
+        "minArgc": 1,
         "usage": "purge #{limit}"
     },
     "queue": {
@@ -236,6 +257,7 @@
         "cooltime": 2000,
         "description": "Show songs in queue",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "queue"
     },
     "reboot": {
@@ -244,6 +266,7 @@
         ],
         "description": "Reboot bot",
         "isOwnerOnly": true,
+        "minArgc": 0,
         "usage": "reboot"
     },
     "reddit": {
@@ -253,6 +276,7 @@
         "cooltime": 2000,
         "description": "Get post from reddit",
         "isOwnerOnly": false,
+        "minArgc": 1,
         "usage": "reddit #{subreddit}"
     },
     "resume": {
@@ -261,6 +285,7 @@
         ],
         "description": "Resume paused music",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "resume"
     },
     "sanction": {
@@ -276,6 +301,7 @@
         ],
         "description": "Sanction bot",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "sanction"
     },
     "search": {
@@ -286,6 +312,7 @@
         "cooltime": 4000,
         "description": "Search music from youtube",
         "isOwnerOnly": false,
+        "minArgc": 1,
         "usage": "search #{keyword}"
     },
     "select": {
@@ -299,6 +326,7 @@
         "cooltime": 500,
         "description": "Select one among multiple items",
         "isOwnerOnly": false,
+        "minArgc": 1,
         "usage": "select #{option1} #{option2} #{option3} ..."
     },
     "serverinfo": {
@@ -307,6 +335,7 @@
         ],
         "description": "Show server's information",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "serverinfo"
     },
     "shuffle": {
@@ -320,6 +349,7 @@
         "cooltime": 2000,
         "description": "Shuffle songs in queue",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "shuffle"
     },
     "shutdown": {
@@ -330,6 +360,7 @@
         ],
         "description": "Shutdown bot",
         "isOwnerOnly": true,
+        "minArgc": 0,
         "usage": "shutdown"
     },
     "skip": {
@@ -341,6 +372,7 @@
         ],
         "description": "Skip now playing music",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "skip"
     },
     "slowmode": {
@@ -354,6 +386,7 @@
         "cooltime": 1000,
         "description": "Define cooldown in a channel",
         "isOwnerOnly": true,
+        "minArgc": 1,
         "usage": "slowmode #{seconds}"
     },
     "spotify": {
@@ -363,6 +396,7 @@
         "cooltime": 10000,
         "description": "Show spotify Top200 chart",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "spotify"
     },
     "tempmute": {
@@ -370,6 +404,7 @@
         "cooltime": 5000,
         "description": "Mute user for given time (example: 3s, 2m, 1h)",
         "isOwnerOnly": false,
+        "minArgc": 2,
         "usage": "tempmute #{mention} #{time}"
     },
     "timer": {
@@ -379,6 +414,7 @@
         "cooltime": 3000,
         "description": "Shade message for specific seconds",
         "isOwnerOnly": false,
+        "minArgc": 2,
         "usage": "timer #{message} #{seconds}"
     },
     "translate": {
@@ -388,6 +424,7 @@
         ],
         "description": "Translate message to another language",
         "isOwnerOnly": false,
+        "minArgc": 2,
         "usage": "translate #{language code} #{text}"
     },
     "unban": {
@@ -399,6 +436,7 @@
         "cooltime": 5000,
         "description": "Unban user from server",
         "isOwnerOnly": false,
+        "minArgc": 1,
         "usage": "unban #{id} [#{reason}]"
     },
     "unmute": {
@@ -408,6 +446,7 @@
         "cooltime": 5000,
         "description": "Unmute user",
         "isOwnerOnly": false,
+        "minArgc": 1,
         "usage": "unmute #{mention}"
     },
     "userinfo": {
@@ -418,6 +457,7 @@
         ],
         "description": "Show user's information",
         "isOwnerOnly": false,
+        "minArgc": 0,
         "usage": "userinfo #{mention}"
     },
     "volume": {
@@ -428,6 +468,7 @@
         ],
         "description": "Adjust music volume (range: 0~200)",
         "isOwnerOnly": false,
+        "minArgc": 1,
         "usage": "volume #{number}"
     },
     "weather": {
@@ -437,6 +478,7 @@
         "cooltime": 5000,
         "description": "Informs the current weather",
         "isOwnerOnly": false,
+        "minArgc": 1,
         "usage": "weather #{city}"
     }
 }

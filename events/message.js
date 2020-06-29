@@ -32,6 +32,12 @@ module.exports = class extends Event {
                     return;
                 }
 
+                if (args.length < handler.minArgc) {
+                    message.reply(this.lang.lackOfArguments);
+    
+                    return;
+                }
+
                 handler.run(message, args);
 
                 if (this.config.USE_DATABASE) {

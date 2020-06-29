@@ -12,12 +12,6 @@ class Play extends Command {
     
             return;
         }
-    
-        if (args.length < 1) {
-            message.reply(bot.lang.lackOfArguments);
-    
-            return;
-        }
         
         let url = args[0];
         let validate = await ytdl.validateURL(url);

@@ -7,12 +7,6 @@ class Search extends Command {
     }
 
     async run(message, args) {
-        if (args.length < 1) {
-            message.reply(bot.lang.lackOfArguments);
-
-            return;
-        }
-
         search(args.join(' '), (err, res) => {
             if (err) {
                 bot.logger.error(err);

@@ -12,12 +12,6 @@ class Unban extends Command {
             return;
         }
 
-        if (args.length < 1) {
-            message.reply(bot.lang.lackOfArguments);
-
-            return;
-        }
-
         let userID = args[0];
         let bannedMember = await bot.fetchUser(userID);
 

@@ -7,12 +7,6 @@ class Ascii extends Command {
     }
 
     async run(message, args) {
-        if (args.length < 1) {
-            message.reply(bot.lang.lackOfArguments);
-    
-            return;
-        }
-
         figlet.text(args.join(' '), {
             font: 'Standard',
             horizontalLayout: 'default',

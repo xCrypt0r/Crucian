@@ -12,12 +12,6 @@ class Unmute extends Command {
             return;
         }
 
-        if (args.length < 1) {
-            message.reply(bot.lang.lackOfArguments);
-            
-            return;
-        }
-
         let user = message.mentions.users.first();
 
         if (!user) {

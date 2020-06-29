@@ -7,12 +7,6 @@ class Calc extends Command {
     }
 
     async run(message, args) {
-        if (args.length < 1) {
-            message.reply(bot.lang.lackOfArguments);
-    
-            return;
-        }
-    
         let input = args.join(' '),
             output;
     

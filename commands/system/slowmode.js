@@ -12,12 +12,6 @@ class Slowmode extends Command {
             return;
         }
 
-        if (args.length < 1) {
-            message.reply(bot.lang.lackOfArguments);
-
-            return;
-        }
-
         let time = Number(args[0]);
         
         if (!Number.isInteger(time) || time < 0) {

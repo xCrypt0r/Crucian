@@ -6,12 +6,6 @@ class Dequeue extends Command {
     }
 
     async run(message, args) {
-        if (args.length < 1) {
-            message.reply(bot.lang.lackOfArguments);
-    
-            return;
-        }
-    
         let index = Number(args[0]);
         let fetched = bot.active.get(message.guild.id);
     

@@ -8,12 +8,6 @@ class Timer extends Command {
     async run(message, args) {
         message.delete();
 
-        if (args.length < 2) {
-            message.reply(bot.lang.lackOfArguments);
-
-            return;
-        }
-
         let count = Number(args.pop());
 
         if (!Number.isInteger(count) || count < 1) {

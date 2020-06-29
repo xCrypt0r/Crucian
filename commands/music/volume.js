@@ -6,12 +6,6 @@ class Volume extends Command {
     }
 
     async run(message, args) {
-        if (args.length < 1) {
-            message.reply(bot.lang.lackOfArguments);
-    
-            return;
-        }
-    
         let volume = Number(args[0]);
     
         if (!Number.isInteger(volume) || volume < 0 || volume > 200) {

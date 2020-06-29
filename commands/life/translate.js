@@ -7,13 +7,7 @@ class Translate extends Command {
         super(file);
     }
 
-    async run(message, args) {
-        if (args.length < 2) {
-            message.reply(bot.lang.lackOfArguments);
-    
-            return;
-        }
-        
+    async run(message, args) { 
         let language = args.shift(),
             text = args.join(' ');
 

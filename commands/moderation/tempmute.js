@@ -13,12 +13,6 @@ class Tempmute extends Command {
             return;
         }
 
-        if (args.length < 2) {
-            message.reply(bot.lang.lackOfArguments);
-            
-            return;
-        }
-
         let user = message.mentions.users.first();
         let muteTime = ms(args[1]);
 
