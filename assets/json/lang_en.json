@@ -78,7 +78,7 @@
     "**`{0}`** kicked (reason: **`{1}`**)",
     "**`{0}`** has been expelled from channel (reason: **`{1}`**)"
   ],
-  "lackOfArguments": "Lack of arguments! Input more arguments",
+  "lackOfArguments": "Lack of arguments! Input more arguments(required number of args: {0})",
   "lackOfPermission": [
     "You don't have permissions",
     "You don't have enough to permissio use this command"

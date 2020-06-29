@@ -33,7 +33,7 @@ module.exports = class extends Event {
                 }
 
                 if (args.length < handler.minArgc) {
-                    message.reply(this.lang.lackOfArguments);
+                    message.reply(this.lang.lackOfArguments.format(handler.minArgc));
     
                     return;
                 }
