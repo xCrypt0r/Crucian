@@ -113,6 +113,9 @@
   ],
   "nowPlaying": "Now playing: `{0}` | Queued by: `{1}`",
   "ownerOnlyCommand": "**__{0}__** is onwer-only command",
+  "page": {
+    "footer": "Page {0} of {1}"
+  },
   "pauseSuccess": [
     "Paused: `{0}`", 
     "Stopped: `{0}`"

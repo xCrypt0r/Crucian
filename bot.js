@@ -1,5 +1,6 @@
 require('dotenv').config();
 require('./lib/prototypes.js');
+require('./extenders/MessageReaction.js');
 
 const Crucian = require('./structures/Crucian.js');
 const bot = global.bot = new Crucian();
