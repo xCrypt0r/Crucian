@@ -1,5 +1,6 @@
 require('dotenv').config();
 require('./lib/prototypes.js');
+require('./extenders/Message.js');
 require('./extenders/MessageReaction.js');
 
 const Crucian = require('./structures/Crucian.js');
