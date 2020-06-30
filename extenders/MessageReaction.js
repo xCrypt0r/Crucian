@@ -10,5 +10,7 @@ module.exports = Structures.extend('MessageReaction', MessageReaction => class e
             .filter(user => !user.bot);
 
         users.forEach(user => this.users.remove(user));
+
+        return this;
     }
 });
