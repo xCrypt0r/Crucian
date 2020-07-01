@@ -12,15 +12,15 @@ class Mute extends Command {
             return;
         }
 
-        let user = message.mentions.users.first();
+        let member = message.mentions.members.first();
 
-        if (!user) {
+        if (!member) {
             message.reply(bot.lang.cantFindUser);
 
             return;
         }
 
-        if (message.guild.member(user).hasPermission('MANAGE_MESSAGES')) {
+        if (member.hasPermission('MANAGE_MESSAGES')) {
             message.reply(bot.lang.lackOfPermission.random());
 
             return;
@@ -30,23 +30,27 @@ class Mute extends Command {
 
         if (!mutedRole) {
             try {
-                mutedRole = await bot.tools.createRole(message, 'muted', {
+                mutedRole = await message.guild.createRole('muted', {
                     permissions: []
                 });
 
-                message.guild.channels.cache.forEach(async (channel) => {
+                message.guild.channels.cache.forEach(async channel => {
                     await channel.createOverwrite(mutedRole, {
                         SEND_MESSAGES: false,
                         ADD_REACTIONS: false
                     });
                 });
-            } catch (err) {
-                bot.logger.error(err);
+            } catch (e) {
+                bot.logger.error(e);
             }
         }
 
-        bot.tools.addRole(message, user, mutedRole);
-        message.channel.send(bot.lang.muteSuccess.random().format(user.username));
+        member.addRole(mutedRole);
+        message.channel.send(
+            bot.lang.muteSuccess.random().format(
+                member.user.username
+            )
+        );
     }
 }
 

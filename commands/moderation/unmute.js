@@ -12,15 +12,15 @@ class Unmute extends Command {
             return;
         }
 
-        let user = message.mentions.users.first();
+        let member = message.mentions.members.first();
 
-        if (!user) {
+        if (!member) {
             message.reply(bot.lang.cantFindUser);
 
             return;
         }
 
-        if (message.guild.member(user).hasPermission('MANAGE_MESSAGES')) {
+        if (member.hasPermission('MANAGE_MESSAGES')) {
             message.reply(bot.lang.lackOfPermission.random());
 
             return;
@@ -34,8 +34,12 @@ class Unmute extends Command {
             return;
         }
 
-        bot.tools.removeRole(message, user, mutedRole);
-        message.channel.send(bot.lang.unmuteSuccess.format(user.username));
+        member.removeRole(mutedRole);
+        message.channel.send(
+            bot.lang.unmuteSuccess.format(
+                member.user.username
+            )
+        );
     }
 }
 
