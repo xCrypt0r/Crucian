@@ -100,6 +100,7 @@
   "noMusicPlaying": "There's no music playing",
   "noRecord": "No record in database",
   "notApplicableForBot": "It's not applicable for bot",
+  "notApplicableForModerator": "It's not applicable for moderator",
   "notInNsfwChannel": [
     "You're not in nsfw channel",
     "Go to nsfw channel"

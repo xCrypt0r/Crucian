@@ -103,6 +103,7 @@
   "noMusicPlaying": "재생 중인 음악이 없음",
   "noRecord": "데이터베이스에 기록이 없음",
   "notApplicableForBot": "봇은 안댐",
+  "notApplicableForModerator": "관리자는 안댐",
   "notInNsfwChannel": [
     "nsfw 채널로 가셈",
     "후방주의 채널로 가셈"

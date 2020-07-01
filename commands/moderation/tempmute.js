@@ -13,8 +13,8 @@ class Tempmute extends Command {
             return;
         }
 
-        let user = message.mentions.users.first();
-        let muteTime = ms(args[1]);
+        let member = message.mentions.members.first(),
+            muteTime = ms(args[1]);
 
         if (!muteTime) {
             message.reply(bot.lang.invalidArguments);
@@ -22,14 +22,14 @@ class Tempmute extends Command {
             return;
         }
 
-        if (!user) {
+        if (!member) {
             message.reply(bot.lang.cantFindUser);
 
             return;
         }
 
-        if (message.guild.member(user).hasPermission('MANAGE_MESSAGES')) {
-            message.reply(bot.lang.lackOfPermission.random());
+        if (member.hasPermission('MANAGE_MESSAGES')) {
+            message.reply(bot.lang.notApplicableForModerator);
 
             return;
         }
@@ -42,12 +42,12 @@ class Tempmute extends Command {
             return;
         }
 
-        bot.tools.addRole(message, user, mutedRole);
-        message.channel.send(bot.lang.tempmuteSuccess.format(user.username, muteTime));
+        member.addRole(mutedRole);
+        message.channel.send(bot.lang.tempmuteSuccess.format(member.user.username, muteTime));
 
         setTimeout(() => {
-            bot.tools.removeRole(message, user, mutedRole);
-            message.channel.send(bot.lang.unmuteSuccess.format(user.username));
+            member.removeRole(mutedRole);
+            message.channel.send(bot.lang.unmuteSuccess.format(member.user.username));
         }, muteTime);
     }
 }
