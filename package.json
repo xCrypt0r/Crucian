@@ -1,6 +1,6 @@
 {
   "name": "crucian",
-  "version": "1.6.6",
+  "version": "1.7.0",
   "description": "My bot with simple structure based on discord.js",
   "main": "bot.js",
   "engines": {
@@ -40,7 +40,7 @@
     "semver": "^7.3.2",
     "sqlite3": "^4.2.0",
     "weather-js": "^2.0.0",
-    "yt-search": "^1.1.2",
+    "yt-search": "^2.0.1",
     "ytdl-core": "^2.1.5"
   },
   "devDependencies": {
