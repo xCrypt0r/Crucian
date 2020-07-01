@@ -12,8 +12,8 @@ class Unban extends Command {
             return;
         }
 
-        let userID = args[0];
-        let bannedMember = await bot.fetchUser(userID);
+        let userID = args[0],
+            bannedMember = await bot.users.fetch(userID);
 
         if (!bannedMember) {
             message.reply(bot.lang.cantFindUser);
@@ -23,7 +23,7 @@ class Unban extends Command {
 
         let reason = args.slice(1).join(' ');
 
-        message.guild
+        message.guild.members
             .unban(bannedMember, reason)
             .then(() => {
                 message.channel.send(bot.lang.unbanSuccess.random().format(bannedMember.username, reason));
