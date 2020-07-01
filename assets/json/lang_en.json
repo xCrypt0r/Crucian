@@ -157,7 +157,7 @@
     "Did you mean this one?",
     "Is it right?"
   ],
-  "selectSong": ":notes: Type number `1-{0}` or `c`(cancle)",
+  "selectSong": ":notes: Type number `1-{0}` or `c`(cancel)",
   "serverInformation": {
     "bots": {
       "name": "Bots"
