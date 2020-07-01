@@ -12,15 +12,15 @@ class Ban extends Command {
             return;
         }
 
-        let user = message.mentions.users.first();
+        let member = message.mentions.members.first();
 
-        if (!user) {
+        if (!member) {
             message.reply(bot.lang.cantFindUser);
 
             return;
         }
 
-        if (!message.guild.member(user).bannable) {
+        if (!member.bannable) {
             message.reply(bot.lang.lackOfPermission.random());
 
             return;
@@ -28,10 +28,10 @@ class Ban extends Command {
 
         let reason = args.slice(1).join(' ');
 
-        message.guild.member(user)
+        member
             .ban(reason)
             .then(() => {
-                message.channel.send(bot.lang.banSuccess.random().format(user.username, reason));
+                message.channel.send(bot.lang.banSuccess.random().format(member.user.username, reason));
             })
             .catch(bot.logger.error);
     }
