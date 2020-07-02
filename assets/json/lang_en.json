@@ -211,6 +211,7 @@
     "**`{0}`** unbanned (reason: **`{1}`**)",
     "**`{0}`** unblocked (reason: **`{1}`**)"
   ],
+  "unlockSuccess": ":white_check_mark: Unlock channel {0}",
   "unmuteSuccess": "`{0}` unmuted",
   "unplayableVideo": "This video is unplayable",
   "userInformation": {

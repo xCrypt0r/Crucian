@@ -451,6 +451,16 @@
         "minArgc": 1,
         "usage": "unban #{id} [#{reason}]"
     },
+    "unlock": {
+        "aliases": [
+            "잠금해제"
+        ],
+        "cooltime": 10000,
+        "description": "Unlock channel",
+        "isOwnerOnly": true,
+        "minArgc": 0,
+        "usage": "unlock"
+    },
     "unmute": {
         "aliases": [
             "채금해제"

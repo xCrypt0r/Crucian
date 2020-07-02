@@ -216,6 +216,7 @@
     "**`{0}`** 밴풀었음 (이유: **`{1}`**)",
     "**`{0}`** 차단해제함 (이유: **`{1}`**)"
   ],
+  "unlockSuccess": ":white_check_mark: 채널: {0}잠금해제",
   "unmuteSuccess": "`{0}` 채금 풀음",
   "unplayableVideo": "재생할 수 없는 영상임",
   "userInformation": {

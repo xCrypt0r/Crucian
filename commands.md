@@ -256,3 +256,9 @@
 ##### Cooldown: 1000
 ##### Alias: slow, slowmotion, 계엄령, 슬로우, 슬로우모드
 ---
+# unlock - System
+#### Unlock channel
+##### Usage: unlock
+##### Cooldown: 10000
+##### Alias: 잠금해제
+---
