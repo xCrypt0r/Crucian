@@ -220,6 +220,12 @@
 ##### Cooldown: 0
 ##### Alias: lang, language, 언어
 ---
+# lock - System
+#### Lockdown channel
+##### Usage: lock
+##### Cooldown: 10000
+##### Alias: lockdown, 계엄령, 락, 잠금
+---
 # log - System
 #### Show command usage
 ##### Usage: log #{mention}

@@ -150,6 +150,19 @@
         "usage": "locale #{lang}"
 
     },
+    "lock":  {
+        "aliases": [
+            "lockdown",
+            "계엄령",
+            "락",
+            "잠금"
+        ],
+        "cooltime": 10000,
+        "description": "Lockdown channel",
+        "isOwnerOnly": true,
+        "minArgc": 0,
+        "usage": "lock"
+    },
     "log": {
         "aliases": [
             "usage",
@@ -379,7 +392,6 @@
         "aliases": [
             "slow",
             "slowmotion",
-            "계엄령",
             "슬로우",
             "슬로우모드"
         ],

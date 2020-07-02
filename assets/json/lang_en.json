@@ -88,6 +88,7 @@
     "Got to go",
     "See ya"
   ],
+  "lockSuccess": ":white_check_mark: Locked down channel {0}",
   "melonChartTitle": ":musical_note: **melon_chart_{0}**",
   "messageTooLong": [
     "Your message is too long...",
