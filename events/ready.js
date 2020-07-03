@@ -1,4 +1,5 @@
 const Event = require('../structures/Event.js');
+const config = require('../assets/json/config.json');
 
 module.exports = class extends Event {
     constructor(file) {
@@ -7,6 +8,8 @@ module.exports = class extends Event {
 
     async run() {
         this.logger.log(`Logged in as ${this.user.tag}`);
-        this.user.setActivity(this.lang.helpManual.activity.format(this.prefix));
+        this.guilds.cache.forEach(guild => {
+            this.config.ensure(guild.id, config);
+        });
     }
 };

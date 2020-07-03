@@ -6,11 +6,13 @@ module.exports = class extends Event {
     }
 
     async run(message) {
-        if (this.config.IGNORE_BOT_MESSAGES && message.author.bot) {
+        let guild = message.guild;
+        
+        if (this.config.get(guild.id, 'IGNORE_BOT_MESSAGES') && message.author.bot) {
             return;
         }
 
-        let { prefix } = this;
+        let prefix = this.config.get(guild.id, 'PREFIX');
 
         if (message.content.startsWith(prefix)) {
             let messageArray = message.content.trim().split(/\s+/),
@@ -40,7 +42,7 @@ module.exports = class extends Event {
 
                 handler.run(message, args);
 
-                if (this.config.USE_DATABASE) {
+                if (this.config.get(guild.id, 'USE_DATABASE')) {
                     handler.log(message);
                 }
 

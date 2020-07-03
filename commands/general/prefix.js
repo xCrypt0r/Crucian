@@ -11,13 +11,15 @@ class Prefix extends Command {
 
             return;
         }
+        
+        let guild = message.guild,
+            prefix = args[0];
 
         args.length > 0 ? (
-            bot.prefix = args[0],
-            message.channel.send(bot.lang.prefixChanged.format(bot.prefix)),
-            bot.user.setActivity(bot.lang.helpManual.activity.format(bot.prefix))
+            bot.config.set(guild.id, prefix, 'PREFIX'),
+            message.channel.send(bot.lang.prefixChanged.format(prefix))
         ) : (
-            message.channel.send(bot.lang.currentPrefix.format(bot.prefix))
+            message.channel.send(bot.lang.currentPrefix.format(bot.config.get(guild.id, 'PREFIX')))
         );
     }
 }

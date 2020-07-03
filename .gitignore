@@ -1,6 +1,7 @@
 node_modules
 
 commands/test/
+data/
 
 package-lock.json
 

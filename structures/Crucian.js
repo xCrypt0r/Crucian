@@ -1,4 +1,5 @@
 const { Client, Collection } = require('discord.js');
+const Enmap = require('enmap');
 const Logger = require('../structures/Logger.js');
 const glob = require('glob');
 
@@ -7,11 +8,10 @@ class Crucian extends Client {
         super(options);
 
         this.logger = new Logger(this);
-        this.config = require('../assets/json/config.json');
+        this.config = new Enmap({ name: 'config' });
         this.consts = require('../assets/json/consts.json');
         this.lang = require('../assets/json/lang_ko.json');
         this.tools = require('../lib/utils.js');
-        this.prefix = this.config.PREFIX;
         this.commands = new Collection();
         this.active = new Map();
         this.cooldown = new Set();

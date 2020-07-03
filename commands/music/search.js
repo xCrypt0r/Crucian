@@ -14,16 +14,17 @@ class Search extends Command {
                 return;
             }
 
-            let videos = res.videos.slice(0, bot.config.YOUTUBE_SEARCH_LIMIT);
-            let videos_chunks = videos
-                .map((video, i) => `\`${Number(i) + 1}. ${video.title}\``)
-                .chunk(10)
-                .map(chunk => chunk.join('\n'));
+            let videos = res.videos.slice(0, bot.config.get(message.guild.id, 'YOUTUBE_SEARCH_LIMIT')),
+                videosChunks = videos
+                    .map((video, i) => `\`${Number(i) + 1}. ${video.title}\``)
+                    .chunk(10)
+                    .map(chunk => chunk.join('\n'));
             let embedOptions = {
                 title: bot.lang.selectSong.format(videos.length),
                 thumbnail: bot.user.avatarURL
             };
-            let messagePromise = bot.tools.page(message, videos_chunks, embedOptions);
+
+            let messagePromise = bot.tools.page(message, videosChunks, embedOptions);
 
             let filter = collectedMessage => message.author === collectedMessage.author
                 && (!isNaN(collectedMessage.content)
