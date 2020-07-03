@@ -14,7 +14,6 @@ class Locale extends Command {
             bot.lang = require(localePath);
 
             message.channel.send(bot.lang.currentLocale.format(locale));
-            bot.user.setActivity(bot.lang.helpManual.activity.format(bot.prefix));
         } else {
             message.channel.send(bot.lang.languageNotSupported.format(locale));
         }
