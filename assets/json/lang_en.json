@@ -81,7 +81,7 @@
   "lackOfArguments": "Lack of arguments! Input more arguments(required number of args: {0})",
   "lackOfPermission": [
     "You don't have permissions",
-    "You don't have enough to permissio use this command"
+    "You don't have enough to permission use this command"
   ],
   "languageNotSupported": "`{0}`is not supported language...",
   "leaveVoiceChannel": [
