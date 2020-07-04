@@ -1,6 +1,7 @@
 {
     "afk": {
         "aliases": [],
+        "category": "general",
         "cooldown": 2000,
         "description": "Set afk",
         "isOwnerOnly": false,
@@ -11,6 +12,7 @@
         "aliases": [
             "아스키"
         ],
+        "category": "fun",
         "cooldown": 1500,
         "description": "Make 3D ascii art with given string",
         "isOwnerOnly": false,
@@ -23,6 +25,7 @@
             "밴",
             "차단"
         ],
+        "category": "moderation",
         "cooldown": 5000,
         "description": "Ban user from server",
         "isOwnerOnly": false,
@@ -34,6 +37,7 @@
             "bb",
             "빌보드"
         ],
+        "category": "music",
         "cooldown": 10000,
         "description": "Show billboad Top100 chart",
         "isOwnerOnly": false,
@@ -44,6 +48,8 @@
         "aliases": [
             "봇정보"
         ],
+        "category": "general",
+        "cooldown": 0,
         "description": "Show bot's information",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -59,6 +65,7 @@
             "답",
             "풀어"
         ],
+        "category": "life",
         "cooldown": 1000,
         "description": "Calculate simple math questions",
         "isOwnerOnly": false,
@@ -70,6 +77,7 @@
             "dq",
             "빼"
         ],
+        "category": "music",
         "cooldown": 2000,
         "description": "Delete song in queue with given number (number 0 means clear all)",
         "isOwnerOnly": false,
@@ -78,6 +86,7 @@
     },
     "eval": {
         "aliases": [],
+        "category": "system",
         "cooldown": 2000,
         "description": "Run javascript code",
         "isOwnerOnly": true,
@@ -90,6 +99,7 @@
             "shell",
             "실행"
         ],
+        "category": "system",
         "cooldown": 2000,
         "description": "Execute shell command",
         "isOwnerOnly": true,
@@ -102,6 +112,8 @@
             "도움말",
             "헬프"
         ],
+        "category": "general",
+        "cooldown": 0,
         "description": "Informs how to use command",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -117,6 +129,7 @@
             "사진",
             "이미지"
         ],
+        "category": "fun",
         "cooldown": 2000,
         "description": "Get an image from google",
         "isOwnerOnly": false,
@@ -130,6 +143,7 @@
             "강퇴",
             "추방"
         ],
+        "category": "moderation",
         "cooldown": 5000,
         "description": "Kick user from server",
         "isOwnerOnly": false,
@@ -141,6 +155,8 @@
             "l",
             "나가"
         ],
+        "category": "music",
+        "cooldown": 0,
         "description": "Leave voice channel",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -152,6 +168,8 @@
             "language",
             "언어"
         ],
+        "category": "system",
+        "cooldown": 0,
         "description": "Change locale",
         "isOwnerOnly": false,
         "minArgc": 1,
@@ -165,6 +183,7 @@
             "락",
             "잠금"
         ],
+        "category": "system",
         "cooldown": 10000,
         "description": "Lockdown channel",
         "isOwnerOnly": true,
@@ -177,6 +196,7 @@
             "기록",
             "로그"
         ],
+        "category": "system",
         "cooldown": 3000,
         "description": "Show command usage",
         "isOwnerOnly": false,
@@ -187,6 +207,7 @@
         "aliases": [
             "멜론"
         ],
+        "category": "music",
         "cooldown": 10000,
         "description": "Show melon Top100 chart",
         "isOwnerOnly": false,
@@ -197,6 +218,7 @@
         "aliases": [
             "밈"
         ],
+        "category": "fun",
         "cooldown": 1000,
         "description": "Get a meme from reddit",
         "isOwnerOnly": false,
@@ -211,6 +233,7 @@
             "쉿",
             "조용히해"
         ],
+        "category": "moderation",
         "cooldown": 5000,
         "description": "Mute user",
         "isOwnerOnly": false,
@@ -225,6 +248,8 @@
             "일시정지",
             "정지"
         ],
+        "category": "music",
+        "cooldown": 0,
         "description": "Pause now playing music",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -236,6 +261,8 @@
             "퐁",
             "핑"
         ],
+        "category": "general",
+        "cooldown": 0,
         "description": "Show latency and response times",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -247,6 +274,7 @@
             "재생",
             "틀어"
         ],
+        "category": "music",
         "cooldown": 2000,
         "description": "Play music",
         "isOwnerOnly": false,
@@ -258,6 +286,8 @@
             "pre",
             "접두사"
         ],
+        "category": "general",
+        "cooldown": 0,
         "description": "Change prefix",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -273,6 +303,7 @@
             "삭제",
             "지워"
         ],
+        "category": "system",
         "cooldown": 5000,
         "description": "Purge messages",
         "isOwnerOnly": false,
@@ -285,6 +316,7 @@
             "재생목록",
             "큐"
         ],
+        "category": "music",
         "cooldown": 2000,
         "description": "Show songs in queue",
         "isOwnerOnly": false,
@@ -295,6 +327,8 @@
         "aliases": [
             "재부팅"
         ],
+        "category": "system",
+        "cooldown": 0,
         "description": "Reboot bot",
         "isOwnerOnly": true,
         "minArgc": 0,
@@ -304,6 +338,7 @@
         "aliases": [
             "레딧"
         ],
+        "category": "life",
         "cooldown": 2000,
         "description": "Get post from reddit",
         "isOwnerOnly": false,
@@ -318,6 +353,7 @@
             "remindme",
             "할일"
         ],
+        "category": "life",
         "cooldown": 1000,
         "description": "Set reminder",
         "isOwnerOnly": false,
@@ -328,6 +364,8 @@
         "aliases": [
             "다시틀어"
         ],
+        "category": "music",
+        "cooldown": 0,
         "description": "Resume paused music",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -344,6 +382,8 @@
             "처벌",
             "혼날래"
         ],
+        "category": "fun",
+        "cooldown": 0,
         "description": "Sanction bot",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -354,6 +394,7 @@
             "검색",
             "찾아"
         ],
+        "category": "music",
         "cooldown": 4000,
         "description": "Search music from youtube",
         "isOwnerOnly": false,
@@ -368,6 +409,7 @@
             "뽑아",
             "선택"
         ],
+        "category": "fun",
         "cooldown": 500,
         "description": "Select one among multiple items",
         "isOwnerOnly": false,
@@ -378,6 +420,8 @@
         "aliases": [
             "서버정보"
         ],
+        "category": "general",
+        "cooldown": 0,
         "description": "Show server's information",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -391,6 +435,7 @@
             "랜덤",
             "셔플"
         ],
+        "category": "music",
         "cooldown": 2000,
         "description": "Shuffle songs in queue",
         "isOwnerOnly": false,
@@ -403,6 +448,8 @@
             "꺼져",
             "끄기"
         ],
+        "category": "system",
+        "cooldown": 0,
         "description": "Shutdown bot",
         "isOwnerOnly": true,
         "minArgc": 0,
@@ -415,6 +462,8 @@
             "버려",
             "치워"
         ],
+        "category": "music",
+        "cooldown": 0,
         "description": "Skip now playing music",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -427,6 +476,7 @@
             "슬로우",
             "슬로우모드"
         ],
+        "category": "system",
         "cooldown": 1000,
         "description": "Define cooldown in a channel",
         "isOwnerOnly": true,
@@ -437,6 +487,7 @@
         "aliases": [
             "스포티파이"
         ],
+        "category": "music",
         "cooldown": 10000,
         "description": "Show spotify Top200 chart",
         "isOwnerOnly": false,
@@ -445,6 +496,7 @@
     },
     "tempmute": {
         "aliases": [],
+        "category": "moderation",
         "cooldown": 5000,
         "description": "Mute user for given time (example: 3s, 2m, 1h)",
         "isOwnerOnly": false,
@@ -455,6 +507,7 @@
         "aliases": [
             "타이머"
         ],
+        "category": "fun",
         "cooldown": 3000,
         "description": "Shade message for specific seconds",
         "isOwnerOnly": false,
@@ -466,6 +519,8 @@
             "tr",
             "번역"
         ],
+        "category": "life",
+        "cooldown": 0,
         "description": "Translate message to another language",
         "isOwnerOnly": false,
         "minArgc": 2,
@@ -477,6 +532,7 @@
             "밴해제",
             "차단해제"
         ],
+        "category": "moderation",
         "cooldown": 5000,
         "description": "Unban user from server",
         "isOwnerOnly": false,
@@ -487,6 +543,7 @@
         "aliases": [
             "잠금해제"
         ],
+        "category": "system",
         "cooldown": 10000,
         "description": "Unlock channel",
         "isOwnerOnly": true,
@@ -497,6 +554,7 @@
         "aliases": [
             "채금해제"
         ],
+        "category": "moderation",
         "cooldown": 5000,
         "description": "Unmute user",
         "isOwnerOnly": false,
@@ -509,6 +567,8 @@
             "유저정보",
             "정보"
         ],
+        "category": "general",
+        "cooldown": 0,
         "description": "Show user's information",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -520,6 +580,8 @@
             "볼륨",
             "음량"
         ],
+        "category": "music",
+        "cooldown": 0,
         "description": "Adjust music volume (range: 0~200)",
         "isOwnerOnly": false,
         "minArgc": 1,
@@ -529,6 +591,7 @@
         "aliases": [
             "날씨"
         ],
+        "category": "life",
         "cooldown": 5000,
         "description": "Informs the current weather",
         "isOwnerOnly": false,
