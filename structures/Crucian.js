@@ -21,7 +21,11 @@ class Crucian extends Client {
     }
 
     async login(token) {
-        await Promise.all([this.loadEvents(), this.loadCommands(), super.login(token)]);
+        await Promise.all([
+            this.loadEvents(),
+            this.loadCommands(),
+            super.login(token)
+        ]);
     }
 
     async loadCommands() {
@@ -82,33 +86,17 @@ class Crucian extends Client {
     }
 
     async unloadCommands() {
-        glob('**/*.js', { cwd: 'commands' }, (err, handlers) => {
-            if (err) {
-                this.logger.error(err);
-
-                return;
-            }
-
-            handlers.forEach(file => {
-                delete require.cache[require.resolve(`../commands/${file}`)];
-            });
+        this.commands.forEach(command => {
+            delete require.cache[require.resolve(`../commands/${command.name}`)];
         });
     }
     
     async unloadEvents() {
-        glob('*.js', { cwd: 'events' }, (err, events) => {
-            if (err) {
-                this.logger.error(err);
-
-                return;
-            }
-
-            events.forEach(file => {
-                let event = new (require(`../events/${file}`))(file);
-
-                this.removeAllListeners(event.name);
+        this
+            .eventNames()
+            .forEach(eventName => {
+                this.removeAllListeners(eventName);
             });
-        });
     }
 }
 

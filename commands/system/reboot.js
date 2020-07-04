@@ -8,7 +8,11 @@ class Reboot extends Command {
     async run(message) {
         bot.destroy();
         bot.commands.clear();
-        await Promise.all([bot.unloadEvents(), bot.unloadCommands(), bot.login(process.env.TOKEN)]);
+        await Promise.all([
+            bot.unloadEvents(),
+            bot.unloadCommands(),
+            bot.login(process.env.TOKEN)]
+        );
         message.channel.send(bot.lang.rebootSuccess);
     }
 }
