@@ -18,30 +18,10 @@ class Crucian extends Client {
         this.afk        = new Map();
         this.active     = new Map();
         this.cooldown   = new Set();
-
-        glob('*.js', { cwd: 'events' }, (err, events) => {
-            if (err) {
-                this.logger.error(err);
-
-                return;
-            }
-
-            if (events.length <= 0) {
-                this.logger.error('Cannot find event handler.');
-
-                return;
-            }
-
-            events.forEach(file => {
-                let event = new (require(`../events/${file}`))(file);
-
-                this.on(event.name, event.run.bind(this));
-            });
-        });
     }
 
     async login(token) {
-        await Promise.all([this.loadCommands(), super.login(token)]);
+        await Promise.all([this.loadEvents(), this.loadCommands(), super.login(token)]);
     }
 
     async loadCommands() {
@@ -77,6 +57,29 @@ class Crucian extends Client {
             });
         });
     }
+    
+    async loadEvents() {
+        glob('*.js', { cwd: 'events' }, (err, events) => {
+            if (err) {
+                this.logger.error(err);
+
+                return;
+            }
+
+            if (events.length <= 0) {
+                this.logger.error('Cannot find event handler.');
+
+                return;
+            }
+
+            events.forEach(file => {
+                let event = new (require(`../events/${file}`))(file);
+
+                this.on(event.name, event.run.bind(this));
+                this.logger.log(`Event: ${file} loaded.`);
+            });
+        });
+    }
 
     async unloadCommands() {
         glob('**/*.js', { cwd: 'commands' }, (err, handlers) => {
@@ -88,6 +91,22 @@ class Crucian extends Client {
 
             handlers.forEach(file => {
                 delete require.cache[require.resolve(`../commands/${file}`)];
+            });
+        });
+    }
+    
+    async unloadEvents() {
+        glob('*.js', { cwd: 'events' }, (err, events) => {
+            if (err) {
+                this.logger.error(err);
+
+                return;
+            }
+
+            events.forEach(file => {
+                let event = new (require(`../events/${file}`))(file);
+
+                this.removeAllListeners(event.name);
             });
         });
     }
