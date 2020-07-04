@@ -7,17 +7,17 @@ class Crucian extends Client {
     constructor(options = {}) {
         super(options);
 
-        this.logger = new Logger(this);
-        this.config = new Enmap({ name: 'config' });
-        this.usage = new Enmap({ name: 'usage' });
-        this.reminders = new Enmap({ name: 'reminders' });
-        this.consts = require('../assets/json/consts.json');
-        this.lang = require('../assets/json/lang_ko.json');
-        this.tools = require('../lib/utils.js');
-        this.commands = new Collection();
-        this.afk = new Map();
-        this.active = new Map();
-        this.cooldown = new Set();
+        this.consts     = require('../assets/json/consts.json');
+        this.lang       = require('../assets/json/lang_ko.json');
+        this.tools      = require('../lib/utils.js');
+        this.logger     = new Logger(this);
+        this.config     = new Enmap({ name: 'config' });
+        this.usage      = new Enmap({ name: 'usage' });
+        this.reminders  = new Enmap({ name: 'reminders' });
+        this.commands   = new Collection();
+        this.afk        = new Map();
+        this.active     = new Map();
+        this.cooldown   = new Set();
 
         glob('*.js', { cwd: 'events' }, (err, events) => {
             if (err) {
