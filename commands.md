@@ -28,6 +28,12 @@
 ##### Cooldown: 3000
 ##### Alias: 타이머
 ---
+# afk - General
+#### Set afk
+##### Usage: afk [#{reason}]
+##### Cooldown: 2000
+##### Alias: -
+---
 # botinfo - General
 #### Show bot's information
 ##### Usage: botinfo
@@ -254,7 +260,7 @@
 #### Define cooldown in a channel
 ##### Usage: slowmode #{seconds}
 ##### Cooldown: 1000
-##### Alias: slow, slowmotion, 계엄령, 슬로우, 슬로우모드
+##### Alias: slow, slowmotion, 슬로우, 슬로우모드
 ---
 # unlock - System
 #### Unlock channel
