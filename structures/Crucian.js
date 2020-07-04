@@ -87,8 +87,9 @@ class Crucian extends Client {
 
     async unloadCommands() {
         this.commands.forEach(command => {
-            delete require.cache[require.resolve(`../commands/${command.name}`)];
+            delete require.cache[require.resolve(`../commands/${command.category}/${command.name}`)];
         });
+        this.commands.clear();
     }
     
     async unloadEvents() {
