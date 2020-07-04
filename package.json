@@ -33,6 +33,7 @@
     "figlet": "^1.2.4",
     "g-i-s": "^2.1.5",
     "glob": "^7.1.6",
+    "imageapi.js": "^1.0.4",
     "mathjs": "^7.0.2",
     "moment": "^2.27.0",
     "moment-duration-format": "^2.3.2",

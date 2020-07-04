@@ -5,6 +5,7 @@
         "BOT_MANUAL": "#4ae342",
         "PAGE_DEFAULT": "#ff0000",
         "REDDIT_EMBED": "#ff4301",
+        "REDDIT_MEME": "RANDOM",
         "SERVER_EMBED": "#0244f7",
         "SPOTIFY_CHART": "#1ed761",
         "TRANSLATE_EMBED": "#f4b400",
@@ -35,6 +36,22 @@
         "self",
         "spoiler"
     ],
+    "REDDIT_MEME_SUBREDDIT": [
+        "2meirl4meirl",
+        "AdviceAnimals",
+        "AnimeFunny",
+        "MemeEconomy",
+        "MemesOfAnime",
+        "animememes",
+        "animemes",
+        "dankmeme",
+        "dankmemes",
+        "me_irl",
+        "meirl",
+        "meme",
+        "techsupportanimals",
+        "wholesomememes"
+    ],
     "REGEXP": {
         "SUBREDDIT": "^[A-Za-z0-9][A-Za-z0-9_]{1,20}$"
     },
@@ -45,6 +62,7 @@
         "REDDIT_ARTICLE": "https://www.reddit.com{0}",
         "REDDIT_AUTHOR": "https://reddit.com/user/{0}",
         "REDDIT_HOT": "https://www.reddit.com/r/{0}/hot.json",
+        "REDDIT_RANDOM": "https://www.reddit.com/r/{0}/random/.json",
         "REDDIT_USER": "https://www.reddit.com/user/{0}/about.json",
         "SPOTIFY_CHART": "https://spotifycharts.com/regional"
     }

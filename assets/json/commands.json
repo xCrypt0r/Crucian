@@ -118,7 +118,7 @@
             "이미지"
         ],
         "cooldown": 2000,
-        "description": "Get image from google",
+        "description": "Get an image from google",
         "isOwnerOnly": false,
         "minArgc": 1,
         "usage": "image #{keyword}"
@@ -192,6 +192,16 @@
         "isOwnerOnly": false,
         "minArgc": 0,
         "usage": "melon"
+    },
+    "meme": {
+        "aliases": [
+            "밈"
+        ],
+        "cooldown": 1000,
+        "description": "Get a meme from reddit",
+        "isOwnerOnly": false,
+        "minArgc": 0,
+        "usage": "meme"
     },
     "mute": {
         "aliases": [

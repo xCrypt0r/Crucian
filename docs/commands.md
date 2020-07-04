@@ -5,10 +5,16 @@
 ##### Alias: 아스키
 ---
 # image - Fun
-#### Get image from google
+#### Get an image from google
 ##### Usage: ascii #{string}
 ##### Cooldown: 2000
 ##### Alias: img, photo, pic, picture, 그림, 사진, 이미지
+---
+# meme - Fun
+#### Get a meme from reddit
+##### Usage: meme
+##### Cooldown: 1000
+##### Alias: 밈
 ---
 # sanction - Fun
 #### Sanction bot

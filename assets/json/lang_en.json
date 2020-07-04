@@ -92,6 +92,7 @@
   ],
   "lockSuccess": ":white_check_mark: Locked down channel {0}",
   "melonChartTitle": ":musical_note: **melon_chart_{0}**",
+  "memeTitle": "A meme from r/{0}",
   "messageTooLong": [
     "Your message is too long...",
     "Message is too long to send :("

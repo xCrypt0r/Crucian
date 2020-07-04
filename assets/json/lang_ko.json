@@ -95,6 +95,7 @@
   ],
   "lockSuccess": ":white_check_mark: 채널: {0}얼림",
   "melonChartTitle": ":musical_note: **멜론_차트_{0}**",
+  "memeTitle": "r/{0}에서 가져온 밈",
   "messageTooLong": [
     "메세지 길이를 좀 줄이셈",
     "메세지가 너무 길어서 안댐"
