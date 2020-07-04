@@ -45,7 +45,7 @@ class Tempmute extends Command {
         member.addRole(mutedRole);
         message.channel.send(bot.lang.tempmuteSuccess.format(member.user.username, muteTime));
 
-        setTimeout(() => {
+        bot.setTimeout(() => {
             member.removeRole(mutedRole);
             message.channel.send(bot.lang.unmuteSuccess.format(member.user.username));
         }, muteTime);

@@ -20,14 +20,14 @@ class Timer extends Command {
         let tick = 1000;
 
         message.channel.send(this.formatBomb(count)).then(msg => {
-            let timer = setInterval(() => {
+            let timer = bot.setInterval(() => {
                 if (count > 0) {
                     count--;
                     msg.edit(this.formatBomb(count));
                 } else {
                     clearInterval(timer);
                     msg.edit(':boom:');
-                    setTimeout(() => {
+                    bot.setTimeout(() => {
                         msg.edit(content);
                     }, tick);
                 }
