@@ -41,17 +41,13 @@ module.exports = class extends Event {
                 }
 
                 handler.run(message, args);
-
-                if (this.config.get(guild.id, 'USE_DATABASE')) {
-                    handler.log(message);
-                }
+                handler.log(message);
 
                 let cooldown = handler.cooldown;
 
                 if (cooldown) {
                     this.cooldown.add(handler);
-
-                    setTimeout(() => {
+                    this.setTimeout(() => {
                         this.cooldown.delete(handler);
                     }, cooldown);
                 }

@@ -1,6 +1,5 @@
 {
     "IGNORE_BOT_MESSAGES": true,
     "PREFIX": ">",
-    "YOUTUBE_SEARCH_LIMIT": 30,
-    "USE_DATABASE": true
+    "YOUTUBE_SEARCH_LIMIT": 30
 }

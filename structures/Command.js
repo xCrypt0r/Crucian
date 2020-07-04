@@ -1,5 +1,3 @@
-const db = require('../lib/db.js');
-const moment = require('moment');
 const path = require('path');
 const commands = require('../assets/json/commands.json');
 
@@ -12,18 +10,13 @@ class Command {
     }
 
     async log(message) {
-        let params = [
-            message.guild.id,
-            message.author.id,
-            this.name,
-            moment().format('YYYY-MM-DD HH:mm:ss')
-        ];
-        let cmd = 'INSERT INTO log_commands(server, user, command, date) VALUES(?, ?, ?, ?)';
+        let timestamp = message.createdTimestamp;
 
-        db.run(cmd, params, err => {
-            if (err) {
-                bot.logger.error(err);
-            }
+        bot.usage.set(`${message.member.fullId}-${timestamp}`, {
+            id: message.author.id,
+            guild: message.guild.id,
+            command: this.name,
+            timestamp
         });
     }
 }

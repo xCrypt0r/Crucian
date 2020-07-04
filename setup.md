@@ -34,4 +34,3 @@ The OWNER_ID field should contain your **user ID** (example: 504338669268631562)
 Click [here](https://www.youtube.com/watch?v=1T0L4c9hWTo) to see how to get your **user ID**
 
 1.  Edit [assets/json/config.json](assets/json/config.json) according to your preference  
-You MUST set USE_DATABASE field to false if you don't want to use database(sqlite3)

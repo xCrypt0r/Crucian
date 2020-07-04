@@ -1,5 +1,4 @@
 const Command = require('../../structures/Command.js');
-const db = require('../../lib/db.js');
 
 class Log extends Command {
     constructor(file) {
@@ -7,41 +6,34 @@ class Log extends Command {
     }
 
     async run(message) {
-        let user = message.mentions.users.first() || message.author;
+        let member = message.mentions.members.first() || message.member;
 
-        if (user.bot) {
+        if (member.user.bot) {
             message.reply(bot.lang.notApplicableForBot);
 
             return;
         }
 
-        let params = [user.id, message.guild.id];
-        let cmd = 'SELECT command, COUNT(command) AS count \
-                   FROM log_commands \
-                   WHERE user = ? \
-                   AND server = ? \
-                   GROUP BY command \
-                   ORDER BY command';
+        let res = [],
+            id = member.id,
+            guild = member.guild.id,
+            usage = bot.usage
+                .array()
+                .filter(u => u.id === id && u.guild === guild)
+                .reduce((acc, curr) => (acc[curr.command] = ++acc[curr.command] || 1, acc), {});
 
-        db.all(cmd, params, (err, rows) => {
-            if (err) {
-                throw err;
-            }
+        for (let [command, count] of Object.entries(usage)) {
+            res.push(bot.lang.commandUsage.format(command, count));
+        }
 
-            if (rows.length < 1) {
-                message.reply(bot.lang.noRecord);
-
-                return;
-            }
-
-            let usage = rows.map(row => bot.lang.commandUsage.format(row.command, row.count));
-            let embedOptions = {
-                title: bot.lang.userInformation.commandUsage.name.format(user.username)
+        let usageChunks = res
+                .chunk(10)
+                .map(chunk => chunk.join('\n')),
+            embedOptions = {
+                title: bot.lang.userInformation.commandUsage.name.format(member.user.username)
             };
-            let usage_chunks = usage.chunk(10).map(chunk => chunk.join('\n'));
 
-            bot.tools.page(message, usage_chunks, embedOptions);
-        });
+        bot.tools.page(message, usageChunks, embedOptions);
     }
 }
 
