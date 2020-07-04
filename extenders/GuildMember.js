@@ -13,7 +13,10 @@ module.exports = Structures.extend('GuildMember', GuildMember => class extends G
         return this;
     }
 
-    async removeRole(role) {
+    async removeRole(roleName) {
+        let role = this.guild.roles.cache
+            .find(role => role.name === roleName);
+
         await this.roles
             .remove(role)
             .catch(bot.logger.error);

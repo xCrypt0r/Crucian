@@ -26,15 +26,7 @@ class Unmute extends Command {
             return;
         }
 
-        let mutedRole = message.guild.roles.cache.find(role => role.name === 'muted');
-
-        if (!mutedRole) {
-            message.reply(bot.lang.cantFindRole);
-
-            return;
-        }
-
-        member.removeRole(mutedRole);
+        member.removeRole('muted');
         message.channel.send(
             bot.lang.unmuteSuccess.format(
                 member.user.username
