@@ -21,11 +21,11 @@ Click [**Here**](https://discordapp.com/api/oauth2/authorize?client_id=508679069
 -   English
 
 ## Install
-Check [setup.md](setup.md)  
+Check [setup.md](docs/setup.md)  
 If you have trouble hosting, come to [**my server**][my server]
 
 ## Commands
-Check [commands.md](commands.md)
+Check [commands.md](docs/commands.md)
 
 ## Special Thanks To
 - [**@intelli-raccoon-dog**](https://github.com/intelli-raccoon-dog)
