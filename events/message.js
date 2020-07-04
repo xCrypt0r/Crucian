@@ -46,14 +46,14 @@ module.exports = class extends Event {
                     handler.log(message);
                 }
 
-                let cooltime = handler.cooltime;
+                let cooldown = handler.cooldown;
 
-                if (cooltime) {
+                if (cooldown) {
                     this.cooldown.add(handler);
 
                     setTimeout(() => {
                         this.cooldown.delete(handler);
-                    }, cooltime);
+                    }, cooldown);
                 }
             }
         } else {

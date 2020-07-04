@@ -34,7 +34,7 @@ class Help extends Command {
                     help.description.format(handler.description),
                     help.usage.format(handler.usage),
                     help.alias.format(handler.aliases.join(', ')),
-                    help.cooldown.format(handler.cooltime || 0),
+                    help.cooldown.format(handler.cooldown || 0),
                     help.isOwnerOnly.format(handler.isOwnerOnly)
                 ].join('\n'));
             });

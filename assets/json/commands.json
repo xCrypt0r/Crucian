@@ -1,7 +1,7 @@
 {
     "afk": {
         "aliases": [],
-        "cooltime": 2000,
+        "cooldown": 2000,
         "description": "Set afk",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -11,7 +11,7 @@
         "aliases": [
             "아스키"
         ],
-        "cooltime": 1500,
+        "cooldown": 1500,
         "description": "Make 3D ascii art with given string",
         "isOwnerOnly": false,
         "minArgc": 1,
@@ -23,7 +23,7 @@
             "밴",
             "차단"
         ],
-        "cooltime": 5000,
+        "cooldown": 5000,
         "description": "Ban user from server",
         "isOwnerOnly": false,
         "minArgc": 1,
@@ -34,7 +34,7 @@
             "bb",
             "빌보드"
         ],
-        "cooltime": 10000,
+        "cooldown": 10000,
         "description": "Show billboad Top100 chart",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -59,7 +59,7 @@
             "답",
             "풀어"
         ],
-        "cooltime": 1000,
+        "cooldown": 1000,
         "description": "Calculate simple math questions",
         "isOwnerOnly": false,
         "minArgc": 1,
@@ -70,7 +70,7 @@
             "dq",
             "빼"
         ],
-        "cooltime": 2000,
+        "cooldown": 2000,
         "description": "Delete song in queue with given number (number 0 means clear all)",
         "isOwnerOnly": false,
         "minArgc": 1,
@@ -78,7 +78,7 @@
     },
     "eval": {
         "aliases": [],
-        "cooltime": 2000,
+        "cooldown": 2000,
         "description": "Run javascript code",
         "isOwnerOnly": true,
         "minArgc": 1,
@@ -90,7 +90,7 @@
             "shell",
             "실행"
         ],
-        "cooltime": 2000,
+        "cooldown": 2000,
         "description": "Execute shell command",
         "isOwnerOnly": true,
         "minArgc": 1,
@@ -117,7 +117,7 @@
             "사진",
             "이미지"
         ],
-        "cooltime": 2000,
+        "cooldown": 2000,
         "description": "Get image from google",
         "isOwnerOnly": false,
         "minArgc": 1,
@@ -130,7 +130,7 @@
             "강퇴",
             "추방"
         ],
-        "cooltime": 5000,
+        "cooldown": 5000,
         "description": "Kick user from server",
         "isOwnerOnly": false,
         "minArgc": 1,
@@ -165,7 +165,7 @@
             "락",
             "잠금"
         ],
-        "cooltime": 10000,
+        "cooldown": 10000,
         "description": "Lockdown channel",
         "isOwnerOnly": true,
         "minArgc": 0,
@@ -177,7 +177,7 @@
             "기록",
             "로그"
         ],
-        "cooltime": 3000,
+        "cooldown": 3000,
         "description": "Show command usage",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -187,7 +187,7 @@
         "aliases": [
             "멜론"
         ],
-        "cooltime": 10000,
+        "cooldown": 10000,
         "description": "Show melon Top100 chart",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -201,7 +201,7 @@
             "쉿",
             "조용히해"
         ],
-        "cooltime": 5000,
+        "cooldown": 5000,
         "description": "Mute user",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -237,7 +237,7 @@
             "재생",
             "틀어"
         ],
-        "cooltime": 2000,
+        "cooldown": 2000,
         "description": "Play music",
         "isOwnerOnly": false,
         "minArgc": 1,
@@ -263,7 +263,7 @@
             "삭제",
             "지워"
         ],
-        "cooltime": 5000,
+        "cooldown": 5000,
         "description": "Purge messages",
         "isOwnerOnly": false,
         "minArgc": 1,
@@ -275,7 +275,7 @@
             "재생목록",
             "큐"
         ],
-        "cooltime": 2000,
+        "cooldown": 2000,
         "description": "Show songs in queue",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -294,7 +294,7 @@
         "aliases": [
             "레딧"
         ],
-        "cooltime": 2000,
+        "cooldown": 2000,
         "description": "Get post from reddit",
         "isOwnerOnly": false,
         "minArgc": 1,
@@ -330,7 +330,7 @@
             "검색",
             "찾아"
         ],
-        "cooltime": 4000,
+        "cooldown": 4000,
         "description": "Search music from youtube",
         "isOwnerOnly": false,
         "minArgc": 1,
@@ -344,7 +344,7 @@
             "뽑아",
             "선택"
         ],
-        "cooltime": 500,
+        "cooldown": 500,
         "description": "Select one among multiple items",
         "isOwnerOnly": false,
         "minArgc": 1,
@@ -367,7 +367,7 @@
             "랜덤",
             "셔플"
         ],
-        "cooltime": 2000,
+        "cooldown": 2000,
         "description": "Shuffle songs in queue",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -403,7 +403,7 @@
             "슬로우",
             "슬로우모드"
         ],
-        "cooltime": 1000,
+        "cooldown": 1000,
         "description": "Define cooldown in a channel",
         "isOwnerOnly": true,
         "minArgc": 1,
@@ -413,7 +413,7 @@
         "aliases": [
             "스포티파이"
         ],
-        "cooltime": 10000,
+        "cooldown": 10000,
         "description": "Show spotify Top200 chart",
         "isOwnerOnly": false,
         "minArgc": 0,
@@ -421,7 +421,7 @@
     },
     "tempmute": {
         "aliases": [],
-        "cooltime": 5000,
+        "cooldown": 5000,
         "description": "Mute user for given time (example: 3s, 2m, 1h)",
         "isOwnerOnly": false,
         "minArgc": 2,
@@ -431,7 +431,7 @@
         "aliases": [
             "타이머"
         ],
-        "cooltime": 3000,
+        "cooldown": 3000,
         "description": "Shade message for specific seconds",
         "isOwnerOnly": false,
         "minArgc": 2,
@@ -453,7 +453,7 @@
             "밴해제",
             "차단해제"
         ],
-        "cooltime": 5000,
+        "cooldown": 5000,
         "description": "Unban user from server",
         "isOwnerOnly": false,
         "minArgc": 1,
@@ -463,7 +463,7 @@
         "aliases": [
             "잠금해제"
         ],
-        "cooltime": 10000,
+        "cooldown": 10000,
         "description": "Unlock channel",
         "isOwnerOnly": true,
         "minArgc": 0,
@@ -473,7 +473,7 @@
         "aliases": [
             "채금해제"
         ],
-        "cooltime": 5000,
+        "cooldown": 5000,
         "description": "Unmute user",
         "isOwnerOnly": false,
         "minArgc": 1,
@@ -505,7 +505,7 @@
         "aliases": [
             "날씨"
         ],
-        "cooltime": 5000,
+        "cooldown": 5000,
         "description": "Informs the current weather",
         "isOwnerOnly": false,
         "minArgc": 1,
