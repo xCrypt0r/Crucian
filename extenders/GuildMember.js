@@ -1,8 +1,13 @@
 const { Structures } = require('discord.js');
 
 module.exports = Structures.extend('GuildMember', GuildMember => class extends GuildMember {
-    constructor(...args) {
-        super(...args);
+    get fullId() {
+        return `${this.guild.id}-${this.id}`;
+    }
+    
+    get reminders() {
+        return this.client.reminders
+            .findAll('id', this.id) || [];
     }
 
     async addRole(role) {

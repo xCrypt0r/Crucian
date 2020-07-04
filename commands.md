@@ -82,6 +82,12 @@
 ##### Cooldown: 2000
 ##### Alias: 레딧
 ---
+# reminder - Life
+#### Set reminder
+##### Usage: reminder [#{text}]
+##### Cooldown: 1000
+##### Alias: remember, remind, reminders, remindme, 할일
+---
 # translate - Life
 #### Translate message to another language
 ##### Usage: translate #{language code} #{text}

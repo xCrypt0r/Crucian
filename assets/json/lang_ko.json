@@ -146,6 +146,9 @@
     "name": "추천",
     "value": ":thumbsup: {0}명"
   },
+  "reminderEmpty":"할 일 목록이 비어있음",
+  "reminderList": ":bookmark_tabs: **할 일 목록**\n\n {0}",
+  "reminderSet": "새로운 할 일: {0}",
   "resultNotFound": [
     "검색 결과가 없음",
     "제대로 검색한 거 맞음?"

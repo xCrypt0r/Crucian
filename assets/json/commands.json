@@ -300,6 +300,20 @@
         "minArgc": 1,
         "usage": "reddit #{subreddit}"
     },
+    "reminder": {
+        "aliases": [
+            "remember",
+            "remind",
+            "reminders",
+            "remindme",
+            "할일"
+        ],
+        "cooldown": 1000,
+        "description": "Set reminder",
+        "isOwnerOnly": false,
+        "minArgc": 0,
+        "usage": "reminder [#{text}]"
+    },
     "resume": {
         "aliases": [
             "다시틀어"

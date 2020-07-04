@@ -143,6 +143,9 @@
     "name": "upvotes",
     "value": ":thumbsup: {0} people"
   },
+  "reminderEmpty":"You don't have any reminders set",
+  "reminderList": ":bookmark_tabs: **Your Reminders**\n\n {0}",
+  "reminderSet": "New reminder set: {0}",
   "resultNotFound": [
     "No results found",
     "There are no results matching that keyword"
