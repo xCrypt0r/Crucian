@@ -1,5 +1,7 @@
 {
   "addedToQueue": "`{0}` 이 목록에 추가댐 | 신청자: `{1}`",
+  "afkSet": "AFK로 설정댐 (이유: {0})",
+  "afkUnset": "AFK 해제댐",
   "alreadyPaused": [
     "이미 일시정지댐", 
     "이미 멈춰져 있잖"
@@ -239,6 +241,7 @@
       "name": "이름"
     }
   },
+  "userIsInAfk": "{0}는(은) 지금 AFK상태임 (이유: {1})",
   "weatherInformation": {
     "feelslike": {
       "name": "체감 온도",

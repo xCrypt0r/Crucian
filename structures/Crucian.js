@@ -13,6 +13,7 @@ class Crucian extends Client {
         this.lang = require('../assets/json/lang_ko.json');
         this.tools = require('../lib/utils.js');
         this.commands = new Collection();
+        this.afk = new Map();
         this.active = new Map();
         this.cooldown = new Set();
 

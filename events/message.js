@@ -56,6 +56,14 @@ module.exports = class extends Event {
                     }, cooltime);
                 }
             }
+        } else {
+            for (let [id, reason] of bot.afk) {
+                let member = message.guild.members.cache.get(id);
+                
+                if (message.mentions.has(member)) {
+                    message.reply(bot.lang.userIsInAfk.format(member.user.tag, reason));
+                }
+            }
         }
     }
 };

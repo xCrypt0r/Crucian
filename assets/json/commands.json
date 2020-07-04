@@ -1,4 +1,12 @@
 {
+    "afk": {
+        "aliases": [],
+        "cooltime": 2000,
+        "description": "Set afk",
+        "isOwnerOnly": false,
+        "minArgc": 0,
+        "usage": "afk [#{reason}]"
+    },
     "ascii": {
         "aliases": [
             "아스키"
