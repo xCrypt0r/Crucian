@@ -26,7 +26,7 @@ class Slot extends Command {
         }
         
         let member = message.member,
-            times = 10 + 0.05 * bet,
+            times = 10 + 0.5 * bet,
             results = machine.play(),
             winnings = Math.ceil(times * results.totalPoints),
             hasWon = results.winCount > 0,

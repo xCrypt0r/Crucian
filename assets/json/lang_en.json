@@ -225,8 +225,8 @@
     "balance": {
       "name": "balance"
     },
-    "hasLost": "\n\nWow... {0} won!\n\nYou have won ${1}",
-    "hasWon": "\n\n{0} has lost!\n\nYou have lost ${1}",
+    "hasLost": "\n\n{0} has lost!\n\nYou have lost ${1}",
+    "hasWon": "\n\nWow... {0} won!\n\nYou have won ${1}",
     "title": "**Slot Machine**"
   },
   "slowmodeEnabled": "Slowmode on (cooldown: `{0}s`)",
