@@ -4,7 +4,7 @@ module.exports = Structures.extend('Message', Message => class extends Message {
     constructor(...args) {
         super(...args);
         
-        if (this.hasEmbeds) {
+        if (this.hasEmbeds && !this.webhookID) {
             this.addCloseEmoji();
         }
     }
