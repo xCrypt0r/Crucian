@@ -13,6 +13,7 @@ class Crucian extends Client {
         this.logger     = new Logger(this);
         this.config     = new Enmap({ name: 'config' });
         this.usage      = new Enmap({ name: 'usage' });
+        this.warnings   = new Enmap({ name: 'warnings' });
         this.reminders  = new Enmap({ name: 'reminders' });
         this.commands   = new Collection();
         this.afk        = new Map();

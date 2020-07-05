@@ -142,6 +142,12 @@
 ##### Cooldown: 5000
 ##### Alias: 채금해제
 ---
+# warn - Moderation
+#### Warn user
+##### Usage: warn #{mention} [#{reason}]
+##### Cooldown: 3000
+##### Alias: warning, 경고
+---
 # billboard - Music
 #### Show billboad Top100 chart
 ##### Usage: billboard

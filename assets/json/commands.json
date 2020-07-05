@@ -587,6 +587,18 @@
         "minArgc": 1,
         "usage": "volume #{number}"
     },
+    "warn": {
+        "aliases": [
+            "warning",
+            "경고"
+        ],
+        "category": "life",
+        "cooldown": 3000,
+        "description": "Warn user",
+        "isOwnerOnly": false,
+        "minArgc": 1,
+        "usage": "warn #{mention} [#{reason}]"
+    },
     "weather": {
         "aliases": [
             "날씨"

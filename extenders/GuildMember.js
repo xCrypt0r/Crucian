@@ -5,6 +5,10 @@ module.exports = Structures.extend('GuildMember', GuildMember => class extends G
         return `${this.guild.id}-${this.id}`;
     }
     
+    get warnings() {
+        return this.client.warnings.get(this.fullId) || 0;
+    }
+    
     get reminders() {
         return this.client.reminders
             .findAll('id', this.id) || [];

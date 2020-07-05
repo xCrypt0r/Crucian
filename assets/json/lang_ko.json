@@ -246,6 +246,7 @@
     }
   },
   "userIsInAfk": "{0}는(은) 지금 AFK상태임 (이유: {1})",
+  "warning": "경고! 이유: {0}\n{1} {2}회째 경고임. 3회 경고받으면 강퇴당함",
   "weatherInformation": {
     "feelslike": {
       "name": "체감 온도",

@@ -241,6 +241,7 @@
     }
   },
   "userIsInAfk": "{0} is currently afk for reason: {1}",
+  "warning": "Warning! reason: {0}\n{1} You received warning {2} times. After the 3rd warning, you'll be kicked",
   "weatherInformation": {
     "feelslike": {
       "name": "feelslike",
