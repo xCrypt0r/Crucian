@@ -10,6 +10,12 @@
 ##### Cooldown: 0
 ##### Alias: 일당
 ---
+# slot - Economy
+#### Play slot game
+##### Usage: slot #{money}
+##### Cooldown: 1000
+##### Alias: pachinko, slotmachine, slots, 빠찡꼬, 빠찡코, 슬롯, 슬롯머신, 파칭코
+---
 # ascii - Fun
 #### Make ascii art
 ##### Usage: ascii #{string}

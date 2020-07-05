@@ -11,6 +11,7 @@
         "SharedArrayBuffer": "readonly",
         "bot": false
     },
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaVersion": 2018
     },

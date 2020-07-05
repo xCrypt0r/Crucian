@@ -117,6 +117,7 @@
   "noRecord": "No record in database",
   "notApplicableForBot": "It's not applicable for bot",
   "notApplicableForModerator": "It's not applicable for moderator",
+  "notEnoughMoney": "You don't have enough money. You have: ${0}",
   "notInNsfwChannel": [
     "You're not in nsfw channel",
     "Go to nsfw channel"
@@ -214,6 +215,20 @@
     "Shuffle complete!"
   ],
   "skipSuccess": "Skipped successfully",
+  "slotMachine": {
+    "bet": {
+      "name": "bet"
+    },
+    "result": {
+      "name": "result"
+    },
+    "balance": {
+      "name": "balance"
+    },
+    "hasLost": "\n\nWow... {0} won!\n\nYou have won ${1}",
+    "hasWon": "\n\n{0} has lost!\n\nYou have lost ${1}",
+    "title": "**Slot Machine**"
+  },
   "slowmodeEnabled": "Slowmode on (cooldown: `{0}s`)",
   "slowmodeDisabled": "Slowmode off",
   "somethingWentWrong": [

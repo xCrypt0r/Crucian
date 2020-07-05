@@ -17,6 +17,14 @@ module.exports = Structures.extend('GuildMember', GuildMember => class extends G
         return this.client.reminders
             .findAll('id', this.id) || [];
     }
+    
+    giveMoney(money) {
+        return this.client.economy.math(this.fullId, 'add', money, 'money');
+    }
+    
+    takeMoney(money) {
+        return this.client.economy.math(this.fullId, 'sub', money, 'money');
+    }
 
     async addRole(role) {
         await this.roles

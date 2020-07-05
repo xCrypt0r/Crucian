@@ -494,6 +494,24 @@
         "minArgc": 0,
         "usage": "skip"
     },
+    "slot": {
+        "aliases": [
+            "pachinko",
+            "slotmachine",
+            "slots",
+            "빠찡꼬",
+            "빠찡코",
+            "슬롯",
+            "슬롯머신",
+            "파칭코"
+        ],
+        "category": "economy",
+        "cooldown": 1000,
+        "description": "Play slot game",
+        "isOwnerOnly": false,
+        "minArgc": 1,
+        "usage": "slot #{money}"
+    },
     "slowmode": {
         "aliases": [
             "slow",

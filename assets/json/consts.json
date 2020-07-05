@@ -8,6 +8,7 @@
         "REDDIT_EMBED": "#ff4301",
         "REDDIT_MEME": "RANDOM",
         "SERVER_EMBED": "#0244f7",
+        "SLOT_EMBED": "RANDOM",
         "SPOTIFY_CHART": "#1ed761",
         "TRANSLATE_EMBED": "#f4b400",
         "USER_EMBED": "#edd81c",
@@ -57,6 +58,7 @@
     "REGEXP": {
         "SUBREDDIT": "^[A-Za-z0-9][A-Za-z0-9_]{1,20}$"
     },
+    "SLOTMACHINE_SIZE": 3,
     "URL": {
         "BILLBOARD_CHART": "https://www.billboard.com/charts/hot-100",
         "GOOGLE_SUPPORTED_LANGUAGES": "https://cloud.google.com/translate/docs/languages",
