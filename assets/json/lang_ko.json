@@ -230,8 +230,8 @@
     "balance": {
       "name": "보유 머니"
     },
-    "hasLost": "\n\n{0} 돈 땄음\n\n${1} 땄음",
-    "hasWon": "\n\n{0} 돈 잃음\n\n ${1} 잃음",
+    "hasLost": "\n\n{0} 돈 잃음\n\n ${1} 잃음",
+    "hasWon": "\n\n{0} 돈 땄음\n\n ${1} 땄음",
     "title": "**슬롯머신**"
   },
   "slowmodeEnabled": "슬로우모드 설정댐 (쿨타임: `{0}s`)",
