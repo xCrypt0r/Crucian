@@ -13,6 +13,12 @@
 
 Click [**Here**](https://discordapp.com/api/oauth2/authorize?client_id=508679069571743746&permissions=8&scope=bot) to invite Crucian to your server
 
+## Features
+-  Eoconomy
+-  Music
+-  Moderation
+-  Fun
+
 ## Requirements
 -   Node >= 12
 
