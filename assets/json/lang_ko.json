@@ -1,6 +1,6 @@
 {
   "addedToQueue": "`{0}` 이 목록에 추가댐 | 신청자: `{1}`",
-  "afkSet": "AFK로 설정댐 (이유: **`{0}`*8)",
+  "afkSet": "AFK로 설정댐 (이유: **`{0}`**)",
   "afkUnset": "AFK 해제댐",
   "alreadyPaused": [
     "이미 일시정지댐", 
