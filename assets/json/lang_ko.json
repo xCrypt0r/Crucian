@@ -1,6 +1,6 @@
 {
   "addedToQueue": "`{0}` 이 목록에 추가댐 | 신청자: `{1}`",
-  "afkSet": "AFK로 설정댐 (이유: {0})",
+  "afkSet": "AFK로 설정댐 (이유: **`{0}`*8)",
   "afkUnset": "AFK 해제댐",
   "alreadyPaused": [
     "이미 일시정지댐", 
@@ -245,8 +245,8 @@
       "name": "이름"
     }
   },
-  "userIsInAfk": "{0}는(은) 지금 AFK상태임 (이유: {1})",
-  "warning": "경고! 이유: {0}\n{1} {2}회째 경고임. 3회 경고받으면 강퇴당함",
+  "userIsInAfk": "{0}는(은) 지금 AFK상태임 (이유: **`{1}`**)",
+  "warning": "경고! 이유: **`{0}`**\n{1} {2}회째 경고임. 3회 경고받으면 강퇴당함",
   "weatherInformation": {
     "feelslike": {
       "name": "체감 온도",

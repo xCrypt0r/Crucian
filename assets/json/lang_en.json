@@ -1,6 +1,6 @@
 {
   "addedToQueue": "`{0}` is added to queue | User: `{1}`",
-  "afkSet": "You have been set to AFK for reason: {0}",
+  "afkSet": "You have been set to AFK for reason: **`{0}`**",
   "afkUnset": "I removed your AFK",
   "alreadyPaused": [
     "Music is already paused!",
@@ -34,8 +34,8 @@
   },
   "botNotInVoiceChannel": "I'm already out of the voice channel",
   "calcResult": "`{0}`is `{1}`",
-  "cantFindRole": "I cant find the role...",
-  "cantFindUser": "I cant find the user...",
+  "cantFindRole": "I can't find the role...",
+  "cantFindUser": "I can't find the user...",
   "chooseEnd": [
     "How about this one: `{0}`",
     "Just try this: `{0}`",
@@ -240,8 +240,8 @@
       "name": "Name"
     }
   },
-  "userIsInAfk": "{0} is currently afk for reason: {1}",
-  "warning": "Warning! reason: {0}\n{1} You received warning {2} times. After the 3rd warning, you'll be kicked",
+  "userIsInAfk": "{0} is currently afk for reason: **`{1}`**",
+  "warning": "Warning! reason: **`{0}`**\n{1} You received warning {2} times. After the 3rd warning, you'll be kicked",
   "weatherInformation": {
     "feelslike": {
       "name": "feelslike",
