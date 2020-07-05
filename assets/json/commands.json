@@ -19,6 +19,20 @@
         "minArgc": 1,
         "usage": "ascii #{string}"
     },
+    "balance": {
+        "aliases": [
+            "bal",
+            "money",
+            "머니",
+            "잔고"
+        ],
+        "category": "economy",
+        "cooldown": 0,
+        "description": "Show user's balance",
+        "isOwnerOnly": false,
+        "minArgc": 0,
+        "usage": "balance"
+    },
     "ban": {
         "aliases": [
             "block",

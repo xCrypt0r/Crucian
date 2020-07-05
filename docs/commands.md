@@ -1,3 +1,9 @@
+# balance - Economy
+#### Show user's balance
+##### Usage: balance
+##### Cooldown: 0
+##### Alias: bal, money, 머니, 잔고
+---
 # daily - Economy
 #### Get daily rewards
 ##### Usage: daily

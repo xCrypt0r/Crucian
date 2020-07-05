@@ -108,6 +108,7 @@
     "Your message is too long...",
     "Message is too long to send :("
   ],
+  "moneyInPocket": "You have {0} coins",
   "muteSuccess": [
     "`{0}` muted :D",
     "`{0}` chat restricted"
