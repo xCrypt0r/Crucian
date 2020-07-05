@@ -6,7 +6,7 @@ class Warn extends Command {
     }
 
     async run(message, args) {
-        if (!message.member.hasPermission('MANAGE_MEMBERS')) {
+        if (!message.member.hasPermission('MANAGE_GUILD')) {
             message.reply(bot.lang.lackOfPermission.random());
 
             return;
@@ -20,7 +20,7 @@ class Warn extends Command {
             return;
         }
 
-        if (!member.manageable) {
+        if (!member.manageable || member.hasPermission('MANAGE_MESSAGES')) {
             message.reply(bot.lang.lackOfPermission.random());
 
             return;

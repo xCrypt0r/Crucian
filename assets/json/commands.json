@@ -592,7 +592,7 @@
             "warning",
             "경고"
         ],
-        "category": "life",
+        "category": "moderation",
         "cooldown": 3000,
         "description": "Warn user",
         "isOwnerOnly": false,
