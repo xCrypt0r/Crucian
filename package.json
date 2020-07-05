@@ -1,6 +1,6 @@
 {
   "name": "crucian",
-  "version": "1.8.2",
+  "version": "1.9.0",
   "description": "My bot with simple structure based on discord.js",
   "main": "bot.js",
   "engines": {
@@ -39,6 +39,7 @@
     "moment-duration-format": "^2.3.2",
     "ms": "^2.1.2",
     "opusscript": "0.0.7",
+    "pretty-ms": "^7.0.0",
     "request": "^2.88.0",
     "semver": "^7.3.2",
     "weather-js": "^2.0.0",

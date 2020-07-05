@@ -2,6 +2,7 @@
   "addedToQueue": "`{0}` 이 목록에 추가댐 | 신청자: `{1}`",
   "afkSet": "AFK로 설정댐 (이유: **`{0}`**)",
   "afkUnset": "AFK 해제댐",
+  "alreadyGotDaily": "이미 일일 보상을 받음. **{0}**뒤에 받으러 오셈",
   "alreadyPaused": [
     "이미 일시정지댐", 
     "이미 멈춰져 있잖"
@@ -47,6 +48,15 @@
   "commandUsage": "**`{0}`**: {1}",
   "currentLocale": "현재 언어는 `{0}`",
   "currentPrefix": "현재 접두사는 `{0}`임",
+  "dailyRewards": {
+    "balance": {
+      "name": "보유 머니"
+    },
+    "collected": {
+      "name": "획득"
+    },
+    "title": "**일일 보상**"
+  },
   "deleteEnd": [
     "메시지 {0}개 삭제 끝",
     "{0}개 다 삭제함"

@@ -2,6 +2,7 @@
   "addedToQueue": "`{0}` is added to queue | User: `{1}`",
   "afkSet": "You have been set to AFK for reason: **`{0}`**",
   "afkUnset": "I removed your AFK",
+  "alreadyGotDaily": "You already got your daily rewards, you can get another daily in **{0}**",
   "alreadyPaused": [
     "Music is already paused!",
     "Hey! Music is already stopped!"
@@ -46,6 +47,15 @@
   "commandUsage": "**`{0}`**: {1}",
   "currentLocale": "Current locale is `{0}`",
   "currentPrefix": "Current prefix is `{0}`",
+  "dailyRewards": {
+    "balance": {
+      "name": "Balance"
+    },
+    "collected": {
+      "name": "Collected"
+    },
+    "title": "**Daily Rewards**"
+  },
   "deleteEnd": [
     "{0} message(s) have been deleted!",
     "{0} message(s) purged!"

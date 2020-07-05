@@ -1,3 +1,9 @@
+# daily - Economy
+#### Get daily rewards
+##### Usage: daily
+##### Cooldown: 0
+##### Alias: 일당
+---
 # ascii - Fun
 #### Make ascii art
 ##### Usage: ascii #{string}

@@ -5,6 +5,10 @@ module.exports = Structures.extend('GuildMember', GuildMember => class extends G
         return `${this.guild.id}-${this.id}`;
     }
     
+    get economy() {
+        return this.client.economy.get(this.fullId) || { money: 0, daily: Date.now() - bot.consts.DAY_TO_MILLISECOND };
+    }
+
     get warnings() {
         return this.client.warnings.get(this.fullId) || 0;
     }

@@ -72,6 +72,17 @@
         "minArgc": 1,
         "usage": "calc #{formula}"
     },
+    "daily": {
+        "aliases": [
+            "일당"
+        ],
+        "category": "economy",
+        "cooldown": 0,
+        "description": "Get daily rewards",
+        "isOwnerOnly": false,
+        "minArgc": 0,
+        "usage": "daily"
+    },
     "dequeue": {
         "aliases": [
             "dq",

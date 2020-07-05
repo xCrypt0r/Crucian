@@ -3,6 +3,7 @@
         "BILLBOARD_CHART": "#00aaa9",
         "BOT_EMBED": "#15f153",
         "BOT_MANUAL": "#4ae342",
+        "DAILY_EMBED": "RANDOM",
         "PAGE_DEFAULT": "#ff0000",
         "REDDIT_EMBED": "#ff4301",
         "REDDIT_MEME": "RANDOM",
@@ -12,6 +13,7 @@
         "USER_EMBED": "#edd81c",
         "WEATHER_EMBED": "#00ae86"
     },
+    "DAY_TO_MILLISECOND": 86400000,
     "FORMAT": {
         "BILLBOARD_CHART": "`{0}. {1} - {2}`",
         "BOT_UPTIME": "D [d] H [h] m [m] s [s]",
