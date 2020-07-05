@@ -59,7 +59,8 @@
   "helpManual": {
     "activity": "{0}help to see commands",
     "alias": "**Alias**: {0}",
-    "cooldown": "**Cooltime**: {0}",
+    "category": "**Category**: {0}",
+    "cooldown": "**Cooltime**: {0}ms",
     "description": "**Description**: {0}",
     "isOwnerOnly": "**IsOwnerOnly**: {0}",
     "name": "{0}. `{1}`",

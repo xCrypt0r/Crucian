@@ -61,7 +61,8 @@
   "helpManual": {
     "activity": "명령어 목록을 보려면 {0}도움말 입력하셈",
     "alias": "**별칭**: {0}",
-    "cooldown": "**쿨타임**: {0}",
+    "category": "**분류**: {0}",
+    "cooldown": "**쿨타임**: {0}ms",
     "description": "**설명**: {0}",
     "isOwnerOnly": "**관리자 전용**: {0}",
     "name": "{0}. `{1}`",
