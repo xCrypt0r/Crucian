@@ -1,7 +1,7 @@
 const { Client, Collection } = require('discord.js');
 const Enmap = require('enmap');
 const Logger = require('../structures/Logger.js');
-const glob = require('glob');
+const glob = require('fast-glob');
 
 class Crucian extends Client {
     constructor(options = {}) {
@@ -30,59 +30,47 @@ class Crucian extends Client {
     }
 
     async loadCommands() {
-        glob('**/*.js', { cwd: 'commands' }, (err, handlers) => {
-            if (err) {
-                this.logger.error(err);
+        let handlers = await glob('**/*.js', { cwd: 'commands' });
+        
+        if (handlers.length <= 0) {
+            this.logger.error('Cannot find command handler.');
 
-                return;
+            return;
+        }
+        
+        handlers.forEach(file => {
+            let handler = new (require(`../commands/${file}`))(file);
+
+            this.commands.set(handler.name, handler);
+
+            if (handler.aliases) {
+                handler.aliases.forEach(alias => {
+                    if (this.commands.has(alias)) {
+                        this.logger.error(`Bot already has ${alias} handler. It'll override existing handler.`);
+                    }
+
+                    this.commands.set(alias, handler);
+                });
             }
 
-            if (handlers.length <= 0) {
-                this.logger.error('Cannot find command handler.');
-
-                return;
-            }
-
-            handlers.forEach(file => {
-                let handler = new (require(`../commands/${file}`))(file);
-
-                this.commands.set(handler.name, handler);
-
-                if (handler.aliases) {
-                    handler.aliases.forEach(alias => {
-                        if (this.commands.has(alias)) {
-                            this.logger.error(`Bot already has ${alias} handler. It'll override existing handler.`);
-                        }
-
-                        this.commands.set(alias, handler);
-                    });
-                }
-
-                this.logger.log(`Handler: ${file} loaded.`);
-            });
+            this.logger.log(`Handler: ${file} loaded.`);
         });
     }
     
     async loadEvents() {
-        glob('*.js', { cwd: 'events' }, (err, events) => {
-            if (err) {
-                this.logger.error(err);
+        let events = await glob('*.js', { cwd: 'events' });
 
-                return;
-            }
+        if (events.length <= 0) {
+            this.logger.error('Cannot find event handler.');
 
-            if (events.length <= 0) {
-                this.logger.error('Cannot find event handler.');
+            return;
+        }
 
-                return;
-            }
+        events.forEach(file => {
+            let event = new (require(`../events/${file}`))(file);
 
-            events.forEach(file => {
-                let event = new (require(`../events/${file}`))(file);
-
-                this.on(event.name, event.run.bind(this));
-                this.logger.log(`Event: ${file} loaded.`);
-            });
+            this.on(event.name, event.run.bind(this));
+            this.logger.log(`Event: ${file} loaded.`);
         });
     }
 
