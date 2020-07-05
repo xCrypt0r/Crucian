@@ -4,9 +4,13 @@ module.exports = Structures.extend('Message', Message => class extends Message {
     constructor(...args) {
         super(...args);
         
-        if (this.embeds.length) {
+        if (this.hasEmbeds) {
             this.addCloseEmoji();
         }
+    }
+
+    get hasEmbeds() {
+        return this.embeds.length > 0;
     }
     
     addCloseEmoji() {
