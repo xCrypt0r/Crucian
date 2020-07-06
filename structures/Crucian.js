@@ -11,14 +11,12 @@ class Crucian extends Client {
         this.lang       = require('../assets/json/lang_ko.json');
         this.tools      = require('../lib/utils.js');
         this.logger     = new Logger(this);
-        this.config     = new Enmap({ name: 'config', ensureProps: true });
-        this.usage      = new Enmap({ name: 'usage', ensureProps: true });
-        this.info       = new Enmap({ name: 'info', ensureProps: true });
-        this.reminders  = new Enmap({ name: 'reminders', ensureProps: true });
         this.commands   = new Collection();
         this.afk        = new Map();
         this.active     = new Map();
         this.cooldown   = new Set();
+        
+        Object.assign(this, Enmap.multi(['config', 'usage', 'info', 'reminders'], { ensureProps: true }));
     }
 
     async login(token) {
