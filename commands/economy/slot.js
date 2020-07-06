@@ -13,7 +13,7 @@ class Slot extends Command {
         let bet = Number(args[0]),
             { money } = message.member.economy;
         
-        if (!Number.isInteger(bet)) {
+        if (!Number.isInteger(bet) || bet <= 0) {
             message.reply(bot.lang.invalidArguments);
 
             return;
