@@ -16,10 +16,10 @@ class Prefix extends Command {
             prefix = args[0];
 
         args.length > 0 ? (
-            bot.config.set(guild.id, prefix, 'PREFIX'),
+            bot.config.set(guild.id, prefix, 'prefix'),
             message.channel.send(bot.lang.prefixChanged.format(prefix))
         ) : (
-            message.channel.send(bot.lang.currentPrefix.format(bot.config.get(guild.id, 'PREFIX')))
+            message.channel.send(bot.lang.currentPrefix.format(bot.config.get(guild.id, 'prefix')))
         );
     }
 }

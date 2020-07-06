@@ -8,11 +8,11 @@ module.exports = class extends Event {
     async run(message) {
         let guild = message.guild;
         
-        if (this.config.get(guild.id, 'IGNORE_BOT_MESSAGES') && message.author.bot) {
+        if (this.config.get(guild.id, 'ignoreBotMessages') && message.author.bot) {
             return;
         }
 
-        let prefix = this.config.get(guild.id, 'PREFIX');
+        let { prefix } = this.config.get(guild.id);
 
         if (message.content.startsWith(prefix)) {
             let messageArray = message.content.trim().split(/\s+/),

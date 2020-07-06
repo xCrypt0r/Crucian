@@ -14,7 +14,7 @@ class Search extends Command {
                 return;
             }
 
-            let videos = res.videos.slice(0, bot.config.get(message.guild.id, 'YOUTUBE_SEARCH_LIMIT')),
+            let videos = res.videos.slice(0, bot.config.get(message.guild.id, 'youtubeSearchLimit')),
                 videosChunks = videos
                     .map((video, i) => `\`${Number(i) + 1}. ${video.title}\``)
                     .chunk(10)
