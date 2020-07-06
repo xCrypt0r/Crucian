@@ -12,7 +12,7 @@ class Daily extends Command {
 
     async run(message) {
         let member = message.member,
-            { money, daily } = member.economy;
+            { money, daily } = member.info;
         
         if (Daily.timeout > Date.now() - daily) {
             let time = ms(Daily.timeout - (Date.now() - daily), {
@@ -39,7 +39,7 @@ class Daily extends Command {
                     }
                 );
 
-            bot.economy.set(member.fullId, {
+            bot.info.set(member.fullId, {
                 money: money + Daily.amount,
                 daily: Date.now()
             });

@@ -11,11 +11,10 @@ class Crucian extends Client {
         this.lang       = require('../assets/json/lang_ko.json');
         this.tools      = require('../lib/utils.js');
         this.logger     = new Logger(this);
-        this.config     = new Enmap({ name: 'config' });
-        this.usage      = new Enmap({ name: 'usage' });
-        this.economy    = new Enmap({ name: 'economy' });
-        this.warnings   = new Enmap({ name: 'warnings' });
-        this.reminders  = new Enmap({ name: 'reminders' });
+        this.config     = new Enmap({ name: 'config', ensureProps: true });
+        this.usage      = new Enmap({ name: 'usage', ensureProps: true });
+        this.info       = new Enmap({ name: 'info', ensureProps: true });
+        this.reminders  = new Enmap({ name: 'reminders', ensureProps: true });
         this.commands   = new Collection();
         this.afk        = new Map();
         this.active     = new Map();

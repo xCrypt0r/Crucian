@@ -5,12 +5,8 @@ module.exports = Structures.extend('GuildMember', GuildMember => class extends G
         return `${this.guild.id}-${this.id}`;
     }
     
-    get economy() {
-        return this.client.economy.get(this.fullId) || { money: 0, daily: Date.now() - bot.consts.DAY_TO_MILLISECOND };
-    }
-
-    get warnings() {
-        return this.client.warnings.get(this.fullId) || 0;
+    get info() {
+        return this.client.info.get(this.fullId);
     }
     
     get reminders() {
@@ -19,11 +15,11 @@ module.exports = Structures.extend('GuildMember', GuildMember => class extends G
     }
     
     giveMoney(money) {
-        return this.client.economy.math(this.fullId, 'add', money, 'money');
+        return this.client.info.math(this.fullId, 'add', money, 'money');
     }
     
     takeMoney(money) {
-        return this.client.economy.math(this.fullId, 'sub', money, 'money');
+        return this.client.info.math(this.fullId, 'sub', money, 'money');
     }
 
     async addRole(role) {

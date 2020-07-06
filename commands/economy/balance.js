@@ -6,7 +6,7 @@ class Daily extends Command {
     }
 
     async run(message) {
-        let { money } = message.member.economy;
+        let { money } = message.member.info;
         
         message.reply(bot.lang.moneyInPocket.format(money));
     }

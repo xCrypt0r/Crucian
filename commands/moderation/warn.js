@@ -27,7 +27,7 @@ class Warn extends Command {
         }
         
         let reason = args.slice(1).join(' '),
-            warnings = member.warnings;
+            { warnings } = member.info;
         
         if (++warnings >= 3) {
             member
@@ -37,7 +37,7 @@ class Warn extends Command {
                 })
                 .catch(bot.logger.error);
         } else {
-            bot.warnings.set(member.fullId, warnings);
+            bot.warnings.set(member.fullId, warnings, 'warnings');
             message.channel.send(bot.lang.warning.format(reason, member, warnings));
         }
     }

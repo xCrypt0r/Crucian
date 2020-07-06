@@ -11,7 +11,7 @@ class Slot extends Command {
 
     async run(message, args) {
         let bet = Number(args[0]),
-            { money } = message.member.economy;
+            { money } = message.member.info;
         
         if (!Number.isInteger(bet) || bet <= 0) {
             message.reply(bot.lang.invalidArguments);
@@ -59,7 +59,7 @@ class Slot extends Command {
             },
             {
                 name: slot.balance.name,
-                value: member.economy.money,
+                value: member.info.money,
                 inline: true
             }
         );
