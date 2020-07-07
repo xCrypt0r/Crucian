@@ -13,6 +13,6 @@ module.exports = {
             slot: 0,
             warnings: 0,
             reminders: []
-        }
+        };
     }
 };

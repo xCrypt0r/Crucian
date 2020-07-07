@@ -26,7 +26,7 @@ class Leaderboard extends Command {
         let embedOptions = {
             title: bot.lang.leaderboardTitle,
             color: bot.consts.COLOR.LEADERBOARD_EMBED
-        }
+        };
 
         bot.tools.page(message, leaderboardChunks, embedOptions);
     }
