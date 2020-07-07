@@ -4,6 +4,7 @@
         "BOT_EMBED": "#15f153",
         "BOT_MANUAL": "#4ae342",
         "DAILY_EMBED": "RANDOM",
+        "LEADERBOARD_EMBED": "#e60b63",
         "PAGE_DEFAULT": "#ff0000",
         "REDDIT_EMBED": "#ff4301",
         "REDDIT_MEME": "RANDOM",
@@ -18,6 +19,7 @@
     "FORMAT": {
         "BILLBOARD_CHART": "`{0}. {1} - {2}`",
         "BOT_UPTIME": "D [d] H [h] m [m] s [s]",
+        "LEADERBOARD_CHART": "{0}. {1}: **`{2}`**",
         "MELON_CHART": "`{0}. {1} - {2}`",
         "MUSIC_CHART_DATE": "YYYYMMDD",
         "SERVER_CREATEDAT": "YYYY-MM-DD",

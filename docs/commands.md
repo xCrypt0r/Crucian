@@ -10,6 +10,12 @@
 ##### Cooldown: 0
 ##### Alias: 일당
 ---
+# leaderboard - Economy
+#### Post leaderboard
+##### Usage: leaderboard
+##### Cooldown: 1000
+##### Alias: rank, 랭킹, 리더보드, 순위
+---
 # slot - Economy
 #### Play slot game
 ##### Usage: slot #{money}

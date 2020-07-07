@@ -97,6 +97,7 @@
     "You don't have enough to permission use this command"
   ],
   "languageNotSupported": "`{0}`is not supported language...",
+  "leaderboardTitle": ":bar_chart: Leaderboard",
   "leaveVoiceChannel": [
     "Got to go",
     "See ya"

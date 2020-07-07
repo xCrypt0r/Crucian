@@ -175,6 +175,20 @@
         "minArgc": 1,
         "usage": "kick #{mention} [#{reason}]"
     },
+    "leaderboard": {
+        "aliases": [
+            "rank",
+            "랭킹",
+            "리더보드",
+            "순위"
+        ],
+        "category": "economy",
+        "cooldown": 1000,
+        "description": "Post leaderboard",
+        "isOwnerOnly": false,
+        "minArgc": 0,
+        "usage": "leaderboard"
+    },
     "leave": {
         "aliases": [
             "l",
