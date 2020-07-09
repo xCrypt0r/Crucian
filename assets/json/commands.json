@@ -279,6 +279,18 @@
         "minArgc": 0,
         "usage": "mute #{mention}"
     },
+    "nowplaying": {
+        "aliases": [
+            "np",
+            "재생중"
+        ],
+        "category": "music",
+        "cooldown": 0,
+        "description": "Show now playing music",
+        "isOwnerOnly": false,
+        "minArgc": 0,
+        "usage": "nowplaying"
+    },
     "pause": {
         "aliases": [
             "stop",

@@ -196,6 +196,12 @@
 ##### Cooldown: 10000
 ##### Alias: 멜론
 ---
+# nowplaying - Music
+#### Show now playing music
+##### Usage: nowplaying
+##### Cooldown: 0
+##### Alias: np, 재생중
+---
 # pause - Music
 #### Pause now playing music
 ##### Usage: pause
