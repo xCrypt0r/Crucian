@@ -1,318 +1,339 @@
-# balance - Economy
+<details>
+    <summary>Economy</summary>
+
+# balance
 #### Show user's balance
 ##### Usage: balance
 ##### Cooldown: 0
 ##### Alias: bal, money, 머니, 잔고
 ---
-# daily - Economy
+# daily
 #### Get daily rewards
 ##### Usage: daily
 ##### Cooldown: 0
 ##### Alias: 일당
 ---
-# leaderboard - Economy
+# leaderboard
 #### Post leaderboard
 ##### Usage: leaderboard
 ##### Cooldown: 1000
 ##### Alias: rank, 랭킹, 리더보드, 순위
 ---
-# slot - Economy
+# slot
 #### Play slot game
 ##### Usage: slot #{money}
 ##### Cooldown: 1000
 ##### Alias: pachinko, slotmachine, slots, 빠찡꼬, 빠찡코, 슬롯, 슬롯머신, 파칭코
----
-# ascii - Fun
+</details>
+<details>
+    <summary>Fun</summary>
+
+# ascii
 #### Make ascii art
 ##### Usage: ascii #{string}
 ##### Cooldown: 0
 ##### Alias: 아스키
 ---
-# image - Fun
+# image
 #### Get an image from google
 ##### Usage: ascii #{string}
 ##### Cooldown: 2000
 ##### Alias: img, photo, pic, picture, 그림, 사진, 이미지
 ---
-# meme - Fun
+# meme
 #### Get a meme from reddit
 ##### Usage: meme
 ##### Cooldown: 1000
 ##### Alias: 밈
 ---
-# sanction - Fun
+# sanction
 #### Sanction bot
 ##### Usage: sanction
 ##### Cooldown: 0
 ##### Alias: 돌았냐, 뒤질래, 디질래, 맞을래, 제재, 죽을래, 처벌, 혼날래
 ---
-# select - Fun
+# select
 #### Select one among multiple items
 ##### Usage: select #{option1} #{option2} #{option3} ...
 ##### Cooldown: 500
 ##### Alias: choice, choose, 골라, 뽑아, 선택
 ---
-# timer - Fun
+# timer
 #### Shade message for specific seconds
 ##### Usage: timer #{message} #{seconds}
 ##### Cooldown: 3000
 ##### Alias: 타이머
----
-# afk - General
+</details>
+<details>
+    <summary>General</summary>
+
+# afk
 #### Set afk
 ##### Usage: afk [#{reason}]
 ##### Cooldown: 2000
 ##### Alias: -
 ---
-# botinfo - General
+# botinfo
 #### Show bot's information
 ##### Usage: botinfo
 ##### Cooldown: 0
 ##### Alias: 봇정보
 ---
-# help - General
+# help
 #### Informs how to use command
 ##### Usage: help [#{command}]
 ##### Cooldown: 0
 ##### Alias: 도움, 도움말, 헬프
 ---
-# ping - General
+# ping
 #### Show latency and response times
 ##### Usage: ping
 ##### Cooldown: 0
 ##### Alias: pong, 퐁, 핑
 ---
-# prefix - General
+# prefix
 #### Change prefix
 ##### Usage: prefix #{new_prefix}
 ##### Cooldown: 0
 ##### Alias: pre, 접두사
 ---
-# serverinfo - General
+# serverinfo
 #### Show server's information
 ##### Usage: serverinfo
 ##### Cooldown: 0
 ##### Alias: 서버정보
 ---
-# userinfo - General
+# userinfo
 #### Show user's information
 ##### Usage: userinfo #{mention}
 ##### Cooldown: 0
 ##### Alias: info, 유저정보, 정보
----
-# calc - Life
+</details>
+<details>
+    <summary>Life</summary>
+
+# calc
 #### Calculate simple math questions
 ##### Usage: calc #{formula}
 ##### Cooldown: 1000
 ##### Alias: answer, calculate, solve, 계산, 계산기, 답, 풀어
 ---
-# reddit - Life
+# reddit
 #### Get post from reddit
 ##### Usage: reddit #{subreddit}
 ##### Cooldown: 2000
 ##### Alias: 레딧
 ---
-# reminder - Life
+# reminder
 #### Set reminder
 ##### Usage: reminder [#{text}]
 ##### Cooldown: 1000
 ##### Alias: remember, remind, reminders, remindme, 할일
 ---
-# translate - Life
+# translate
 #### Translate message to another language
 ##### Usage: translate #{language code} #{text}
 ##### Cooldown: 0
 ##### Alias: tr, 번역
 ---
-# weather - Life
+# weather
 #### Informs the current weather
 ##### Usage: weather #{city}
 ##### Cooldown: 5000
 ##### Alias: 날씨
----
-# ban - Moderation
+</details>
+<details>
+    <summary>Moderation</summary>
+
+# ban
 #### Ban user from server
 ##### Usage: ban #{mention} [#{reason}]
 ##### Cooldown: 5000
 ##### Alias: block, 밴, 차단
 ---
-# kick - Moderation
+# kick
 #### Kick user from server
 ##### Usage: kick #{mention} [#{reason}]
 ##### Cooldown: 5000
 ##### Alias: banish, expel, 강퇴, 추방
 ---
-# mute - Moderation
+# mute
 #### Mute user
 ##### Usage: mute #{mention}
 ##### Cooldown: 5000
 ##### Alias: bequite, shutup, 닥쳐, 쉿, 조용히해
 ---
-# tempmute - Moderation
+# tempmute
 #### Mute user for given time (example: 3s, 2m, 1h)
 ##### Usage: tempmute #{mention} #{time}
 ##### Cooldown: 5000
 ##### Alias: -
 ---
-# unban - Moderation
+# unban
 #### Unban user from server
 ##### Usage: unban #{id} [#{reason}]
 ##### Cooldown: 5000
 ##### Alias: unblock, 밴해제, 차단해제
 ---
-# unmute - Moderation
+# unmute
 #### Unmute user
 ##### Usage: unmute #{mention}
 ##### Cooldown: 5000
 ##### Alias: 채금해제
 ---
-# warn - Moderation
+# warn
 #### Warn user
 ##### Usage: warn #{mention} [#{reason}]
 ##### Cooldown: 3000
 ##### Alias: warning, 경고
----
-# billboard - Music
+</details>
+<details>
+    <summary>Music</summary>
+
+# billboard
 #### Show billboad Top100 chart
 ##### Usage: billboard
 ##### Cooldown: 10000
 ##### Alias: bb, 빌보드
 ---
-# dequeue - Music
+# dequeue
 #### Delete song in queue with given number (number 0 means clear all)
 ##### Usage: dequeue #{number}
 ##### Cooldown: 2000
 ##### Alias: dq, 빼
 ---
-# leave - Music
+# leave
 #### Leave voice channel
 ##### Usage: leave
 ##### Cooldown: 0
 ##### Alias: l, 나가
 ---
-# melon - Music
+# melon
 #### Show melon Top100 chart
 ##### Usage: melon
 ##### Cooldown: 10000
 ##### Alias: 멜론
 ---
-# nowplaying - Music
+# nowplaying
 #### Show now playing music
 ##### Usage: nowplaying
 ##### Cooldown: 0
 ##### Alias: np, 재생중
 ---
-# pause - Music
+# pause
 #### Pause now playing music
 ##### Usage: pause
 ##### Cooldown: 0
 ##### Alias: stop, 멈춰, 스탑, 일시정지, 정지
 ---
-# play - Music
+# play
 #### Play music
 ##### Usage: play #{URL|keyword}
 ##### Cooldown: 2000
 ##### Alias: p, 재생, 틀어
 ---
-# queue - Music
+# queue
 #### Show songs in queue
 ##### Usage: queue
 ##### Cooldown: 2000
 ##### Alias: q, 재생목록, 큐
 ---
-# resume - Music
+# resume
 #### Resume paused music
 ##### Usage: resume
 ##### Cooldown: 0
 ##### Alias: 다시틀어
 ---
-# search - Music
+# search
 #### Search music from youtube
 ##### Usage: search #{keyword}
 ##### Cooldown: 4000
 ##### Alias: 검색, 찾아
 ---
-# shuffle - Music
+# shuffle
 #### Shuffle songs in queue
 ##### Usage: shuffle
 ##### Cooldown: 2000
 ##### Alias: random, randomize, sh, 랜덤, 셔플
 ---
-# skip - Music
+# skip
 #### Skip now playing music
 ##### Usage: skip
 ##### Cooldown: 0
 ##### Alias: s, 넘겨, 버려, 치워
 ---
-# spotify - Music
+# spotify
 #### Show spotify Top200 chart
 ##### Usage: spotify
 ##### Cooldown: 10000
 ##### Alias: 스포티파이
 ---
-# volume - Music
+# volume
 #### Adjust music volume (range: 0~200)
 ##### Usage: volume #{number}
 ##### Cooldown: 0
 ##### Alias: v, 볼륨, 음량
----
-# eval - System
+</details>
+<details>
+    <summary>System</summary>
+
+# eval
 #### Run javascript code
 ##### Usage: eval #{code}
 ##### Cooldown: 2000
 ##### Alias: -
 ---
-# exec - System
+# exec
 #### Execute shell command
 ##### Usage: exec #{command}
 ##### Cooldown: 2000
 ##### Alias: run, shell, 실행
 ---
-# locale - System
+# locale
 #### Change locale
 ##### Usage: locale #{lang}
 ##### Cooldown: 0
 ##### Alias: lang, language, 언어
 ---
-# lock - System
+# lock
 #### Lockdown channel
 ##### Usage: lock
 ##### Cooldown: 10000
 ##### Alias: lockdown, 계엄령, 락, 잠금
 ---
-# log - System
+# log
 #### Show command usage
 ##### Usage: log #{mention}
 ##### Cooldown: 3000
 ##### Alias: usage, 기록, 로그
 ---
-# purge - System
+# purge
 #### Purge messages
 ##### Usage: purge #{limit}
 ##### Cooldown: 5000
 ##### Alias: clear, del, delete, remove, rm, 삭제, 지워
 ---
-# reboot - System
+# reboot
 #### Reboot bot
 ##### Usage: Reboot
 ##### Cooldown: 0
 ##### Alias: 재부팅
 ---
-# shutdown - System
+# shutdown
 #### Shutdown bot
 ##### Usage: shutdown
 ##### Cooldown: 0
 ##### Alias: turnoff, 꺼져, 끄기
 ---
-# slowmode - System
+# slowmode
 #### Define cooldown in a channel
 ##### Usage: slowmode #{seconds}
 ##### Cooldown: 1000
 ##### Alias: slow, slowmotion, 슬로우, 슬로우모드
 ---
-# unlock - System
+# unlock
 #### Unlock channel
 ##### Usage: unlock
 ##### Cooldown: 10000
 ##### Alias: 잠금해제
----
+</details>
