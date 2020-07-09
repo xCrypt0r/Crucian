@@ -131,7 +131,7 @@
     "Please enter valid region"
   ],
   "nowPlaying": "Now playing: `{0}` | Queued by: `{1}`",
-  "ownerOnlyCommand": "**__{0}__** is onwer-only command",
+  "ownerOnlyCommand": "**__{0}__** is owner-only command",
   "page": {
     "footer": "Page {0} of {1}"
   },
