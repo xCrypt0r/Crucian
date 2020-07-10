@@ -16,7 +16,7 @@ class Crucian extends Client {
         this.active     = new Map();
         this.cooldown   = new Set();
         
-        Object.assign(this, Enmap.multi(['config', 'usage', 'info', 'reminders'], { ensureProps: true }));
+        Object.assign(this, Enmap.multi(['config', 'usage', 'info'], { ensureProps: true }));
     }
 
     async login(token) {

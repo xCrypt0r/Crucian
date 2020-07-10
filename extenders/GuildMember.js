@@ -9,11 +9,6 @@ module.exports = Structures.extend('GuildMember', GuildMember => class extends G
         return this.client.info.get(this.fullId);
     }
     
-    get reminders() {
-        return this.client.reminders
-            .findAll('id', this.id) || [];
-    }
-    
     giveMoney(money) {
         return this.client.info.math(this.fullId, 'add', money, 'money');
     }

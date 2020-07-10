@@ -8,7 +8,7 @@ class Reminder extends Command {
 
     async run(message, args) {
         if (!args.length) {
-            let reminders = message.member.reminders;
+            let { reminders } = message.member.info;
 
             if (!reminders.length) {
                 message.reply(bot.lang.reminderEmpty);
@@ -29,7 +29,7 @@ class Reminder extends Command {
             id = message.author.id,
             timestamp = message.createdTimestamp;
         
-        bot.reminders.set(`${id}-${timestamp}`, { id, todo, timestamp });
+        bot.info.push(message.member.fullId, { id, todo, timestamp }, 'reminders');
         
         message.reply(bot.lang.reminderSet.format(todo));
     }
