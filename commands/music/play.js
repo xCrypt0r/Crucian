@@ -1,5 +1,7 @@
 const Command = require('../../structures/Command.js');
 const ytdl = require('ytdl-core');
+const moment = require('moment');
+require('moment-duration-format');
 
 class Play extends Command {
     constructor(file) {
@@ -13,8 +15,8 @@ class Play extends Command {
             return;
         }
         
-        let url = args[0];
-        let validate = await ytdl.validateURL(url);
+        let url = args[0],
+            validate = await ytdl.validateURL(url);
     
         if (!validate) {
             let searcher = bot.commands.get('search');
@@ -25,7 +27,7 @@ class Play extends Command {
         }
 
         let unplayable = false;
-        let info = await ytdl.getInfo(url).catch(err => {
+        let info = await ytdl.getInfo(url).catch(e => {
             unplayable = true;
         });
 
@@ -46,27 +48,36 @@ class Play extends Command {
         }
     
         data.guildID = message.guild.id;
+        
+        let title = info.title,
+            duration = moment.duration(info.length_seconds, 'seconds').format(bot.consts.FORMAT.MUSIC_DURATION),
+            requester = message.author.tag;
+
         data.queue.push({
-            songTitle: info.title,
-            requester: message.author.tag,
-            url: url,
+            title,
+            duration,
+            requester,
+            url,
             announceChannel: message.channel.id
         });
     
-        if (!data.dispatcher) {
-            this.play(bot, data);
-        } else {
-            message.channel.send(bot.lang.addedToQueue.format(info.title, message.author.tag));
-        }
+        !data.dispatcher
+            ? this.play(bot, data)
+            : message.channel.send(bot.lang.addedToQueue.format(title, requester));
     
         bot.active.set(message.guild.id, data);
     }
 
     async play(bot, data) {
-        bot.channels.cache.get(data.queue[0].announceChannel)
-            .send(bot.lang.nowPlaying.format(data.queue[0].songTitle, data.queue[0].requester));
-        data.dispatcher = await data.connection.play(ytdl(data.queue[0].url, { filter: 'audioonly' }));
+        let { announceChannel, title, requester, duration, url } = data.queue[0];
+        
+        bot.channels.cache
+            .get(announceChannel)
+            .send(bot.lang.nowPlaying.format(title, requester, duration));
+
+        data.dispatcher = await data.connection.play(ytdl(url, { filter: 'audioonly' }));
         data.dispatcher.guildID = data.guildID;
+
         data.dispatcher.once('finish', () => {
             this.finish(bot, data);
         });
@@ -77,12 +88,12 @@ class Play extends Command {
 
         fetched.queue.shift();
 
-        if (fetched.queue.length > 0) {
-            bot.active.set(data.guildID, fetched);
-            this.play(bot, fetched);
-        } else {
-            bot.active.delete(data.guildID);
-        }
+        fetched.queue.length > 0 ? (
+            bot.active.set(data.guildID, fetched),
+            this.play(bot, fetched)
+        ) : (
+            bot.active.delete(data.guildID)
+        );
     }
 }
 

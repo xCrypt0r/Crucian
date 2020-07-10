@@ -130,7 +130,7 @@
     "There's no weather information",
     "Please enter valid region"
   ],
-  "nowPlaying": "Now playing: `{0}` | Queued by: `{1}`",
+  "nowPlaying": "Now playing: `{0}` | Queued by: `{1}` | Duration: `{2}`",
   "ownerOnlyCommand": "**__{0}__** is owner-only command",
   "page": {
     "footer": "Page {0} of {1}"

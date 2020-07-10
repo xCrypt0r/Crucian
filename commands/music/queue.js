@@ -15,15 +15,15 @@ class Queue extends Command {
         }
 
         let queue = fetched.queue.map((music, i) => {
-            return bot.lang.songInQueue.format(i + 1, music.songTitle, music.requester);
+            return bot.lang.songInQueue.format(i + 1, music.title, music.requester);
         });
-        let queue_chunks = queue.chunk(10).map(chunk => chunk.join('\n'));
+        let queueChunks = queue.chunk(10).map(chunk => chunk.join('\n'));
         let embedOptions = {
             title: bot.lang.displayQueue,
             thumbnail: bot.user.avatarURL
         };
 
-        bot.tools.page(message, queue_chunks, embedOptions);
+        bot.tools.page(message, queueChunks, embedOptions);
     }
 }
 

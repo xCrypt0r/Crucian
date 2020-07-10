@@ -14,9 +14,9 @@ class NowPlaying extends Command {
             return;
         }
         
-        let { songTitle: title, requester } = fetched.queue[0]; 
-        
-        message.reply(bot.lang.nowPlaying.format(title, requester));
+        let { title, requester, duration } = fetched.queue[0]; 
+
+        message.reply(bot.lang.nowPlaying.format(title, requester, duration));
     }
 }
 
