@@ -6,36 +6,38 @@ module.exports = class extends Event {
     }
 
     async run(message) {
-        let guild = message.guild;
+        let { guild, member, content } = message;
         
-        if (this.config.get(guild.id, 'ignoreBotMessages') && message.author.bot) {
+        if (this.config.get(guild.id, 'ignoreBotMessages') && member.user.bot) {
             return;
         }
 
         let { prefix } = this.config.get(guild.id);
 
-        if (message.content.startsWith(prefix)) {
-            let messageArray = message.content.trim().split(/\s+/),
+        if (content.startsWith(prefix)) {
+            let messageArray = content.trim().split(/\s+/),
                 cmd = messageArray[0].slice(prefix.length).toLowerCase(),
                 args = messageArray.slice(1),
                 handler = this.commands.get(cmd),
-                isOwner = message.author.id === process.env.OWNER_ID;
+                isOwner = member.id === process.env.OWNER_ID;
 
             if (handler) {
-                if (handler.isOwnerOnly && !isOwner) {
-                    message.reply(this.lang.ownerOnlyCommand.format(handler.name.toUpperCase()));
+                let { name: command, cooldown, isOwnerOnly, minArgc } = handler;
+                
+                if (isOwnerOnly && !isOwner) {
+                    message.reply(this.lang.ownerOnlyCommand.format(command.toUpperCase()));
 
                     return;
                 }
 
-                if (this.cooldown.has(handler)) {
-                    message.reply(this.lang.commandInCooldown.format(handler.name.toUpperCase()));
+                if (Object.prototype.hasOwnProperty.call(this.cooldown, command) && this.cooldown[command].has(member.fullId)) {
+                    message.reply(this.lang.commandInCooldown.format(command.toUpperCase()));
 
                     return;
                 }
 
-                if (args.length < handler.minArgc) {
-                    message.reply(this.lang.lackOfArguments.format(handler.minArgc));
+                if (args.length < minArgc) {
+                    message.reply(this.lang.lackOfArguments.format(minArgc));
     
                     return;
                 }
@@ -43,23 +45,23 @@ module.exports = class extends Event {
                 handler.run(message, args);
                 handler.log(message);
 
-                let cooldown = handler.cooldown;
-
                 if (cooldown) {
-                    this.cooldown.add(handler);
+                    this.cooldown[command] = this.cooldown[command] || new Set();
+                    
+                    this.cooldown[command].add(member.fullId);
                     this.setTimeout(() => {
-                        this.cooldown.delete(handler);
+                        this.cooldown[command].delete(member.fullId);
                     }, cooldown);
                 }
             }
         } else {
             let mentions = message.mentions;
 
-            for (let [id, reason] of bot.afk) {
-                let member = message.guild.members.cache.get(id);
+            for (let [id, reason] of this.afk) {
+                let member = guild.members.cache.get(id);
                 
                 if (mentions.roles.size === 0 && mentions.has(member)) {
-                    message.reply(bot.lang.userIsInAfk.format(member.user.tag, reason));
+                    message.reply(this.lang.userIsInAfk.format(member.user.tag, reason));
                 }
             }
         }

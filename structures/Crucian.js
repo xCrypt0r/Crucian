@@ -12,9 +12,9 @@ class Crucian extends Client {
         this.tools      = require('../lib/utils.js');
         this.logger     = new Logger(this);
         this.commands   = new Collection();
+        this.cooldown   = new Object();
         this.afk        = new Map();
         this.active     = new Map();
-        this.cooldown   = new Set();
         
         Object.assign(this, Enmap.multi(['config', 'usage', 'info'], { ensureProps: true }));
     }
