@@ -45,7 +45,7 @@
     "slot-machine": "^2.1.0",
     "weather-js": "^2.0.0",
     "yt-search": "^2.0.1",
-    "ytdl-core": "^2.1.7"
+    "ytdl-core": "^3.1.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
