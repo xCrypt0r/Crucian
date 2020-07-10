@@ -6,12 +6,18 @@ class Help extends Command {
     }
 
     async run(message, args) {
-        let commands = require('../../assets/json/commands.json');
+        let commands = bot.commands;
         
         if (args.length > 0) {
-            let cmd = args.join('');
+            let command = commands.get(args.join(''));
+            
+            if (!command) {
+                message.reply(bot.lang.invalidArguments);
+                
+                return;
+            }
 
-            message.channel.send(bot.lang.commandManual.format(commands[cmd].usage));
+            message.channel.send(bot.lang.commandManual.format(command.usage));
 
             return;
         }
@@ -20,7 +26,7 @@ class Help extends Command {
             manual = [],
             i = 0;
             
-        for (let [name, details] of Object.entries(commands)) {
+        for (let [name, details] of Array.from(commands)) {
             manual.push([
                 help.name.format(++i, name),
                 help.category.format(details.category),
