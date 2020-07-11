@@ -20,7 +20,7 @@ class Command {
         });
     }
 
-    cool(command, member, cooldown) {
+    async cool(command, member, cooldown) {
         if (cooldown) {
             bot.cooldown[command] = bot.cooldown[command] || new Set();
 
