@@ -150,6 +150,13 @@
 ##### Alias: answer, calculate, solve, 계산, 계산기, 답, 풀어
 ##### OwnerOnly: false
 ---
+# forget
+#### Remove reminder
+##### Usage: forget #{index}
+##### Cooldown: 1000
+##### Alias: 잊어
+##### OwnerOnly: false
+---
 # reddit
 #### Get post from reddit
 ##### Usage: reddit #{subreddit}

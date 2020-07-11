@@ -169,6 +169,7 @@
   },
   "reminderEmpty":"You don't have any reminders set",
   "reminderList": ":bookmark_tabs: **Your Reminders**\n\n {0}",
+  "reminderRemoved": "Reminder removed: {0}",
   "reminderSet": "New reminder set: {0}",
   "resultNotFound": [
     "No results found",

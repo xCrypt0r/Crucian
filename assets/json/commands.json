@@ -168,6 +168,17 @@
         "minArgc": 1,
         "usage": "exec #{command}"
     },
+    "forget": {
+        "aliases": [
+            "잊어"
+        ],
+        "category": "life",
+        "cooldown": 1000,
+        "description": "Remove reminder",
+        "isOwnerOnly": false,
+        "minArgc": 1,
+        "usage": "forget #{index}"
+    },
     "help": {
         "aliases": [
             "도움",

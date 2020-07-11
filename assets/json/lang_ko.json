@@ -172,6 +172,7 @@
   },
   "reminderEmpty":"할 일 목록이 비어있음",
   "reminderList": ":bookmark_tabs: **할 일 목록**\n\n {0}",
+  "reminderRemoved": "해결된 일: {0}",
   "reminderSet": "새로운 할 일: {0}",
   "resultNotFound": [
     "검색 결과가 없음",
