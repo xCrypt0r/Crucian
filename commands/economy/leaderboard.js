@@ -1,16 +1,33 @@
 const Command = require('../../structures/Command.js');
 
+/**
+ * Class to show leaderboard
+ *
+ * @class Leaderboard
+ * @extends {Command}
+ */
 class Leaderboard extends Command {
+    /**
+     * Creates an instance of Leaderboard
+     *
+     * @param {string} file
+     */
     constructor(file) {
         super(file);
     }
 
+    /**
+     * Show leaderboard
+     *
+     * @param {Message} message
+     * @param {string[]} args
+     */
     async run(message, args) {
         let guild = message.guild,
             ranks = bot.info
                 .findAll('guild', guild.id)
                 .sort((a, b) => b.money - a.money);
-            
+
         let leaderboard = [],
             i = 0;
 

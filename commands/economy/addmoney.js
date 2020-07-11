@@ -1,11 +1,28 @@
 const Command = require('../../structures/Command.js');
 const { MessageEmbed } = require('discord.js');
 
+/**
+ * Class to give money to members
+ *
+ * @class AddMoney
+ * @extends {Command}
+ */
 class AddMoney extends Command {
+    /**
+     * Creates an instance of AddMoney
+     *
+     * @param {string} file
+     */
     constructor(file) {
         super(file);
     }
 
+    /**
+     * Give money to a member
+     *
+     * @param {Message} message
+     * @param {string[]} args
+     */
     async run(message, args) {
         let amount = Number(args.pop());
 
