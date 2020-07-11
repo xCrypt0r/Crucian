@@ -25,9 +25,9 @@ class Reminder extends Command {
             let embedOptions = {
                 title: bot.lang.reminderTitle,
                 author: {
-            		name: member.user.tag,
-            		icon_url: member.user.displayAvatarURL(),
-            	}
+                    name: member.user.tag,
+                    icon_url: member.user.displayAvatarURL(),
+                }
             };
 
             bot.tools.page(message, reminderChunks, embedOptions);
