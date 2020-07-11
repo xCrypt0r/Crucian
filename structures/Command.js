@@ -19,6 +19,19 @@ class Command {
             timestamp
         });
     }
+
+    cool(command, member, cooldown) {
+        if (cooldown) {
+            bot.cooldown[command] = bot.cooldown[command] || new Set();
+
+            bot.cooldown[command].add(member.fullId);
+            bot.setTimeout(() => {
+                bot.cooldown[command].delete(member.fullId);
+            }, cooldown);
+        }
+
+        return this;
+    }
 }
 
 module.exports = Command;

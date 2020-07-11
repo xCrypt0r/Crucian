@@ -43,16 +43,8 @@ module.exports = class extends Event {
                 }
 
                 handler.run(message, args);
+                handler.cool(command, member, cooldown);
                 handler.log(message);
-
-                if (cooldown) {
-                    this.cooldown[command] = this.cooldown[command] || new Set();
-
-                    this.cooldown[command].add(member.fullId);
-                    this.setTimeout(() => {
-                        this.cooldown[command].delete(member.fullId);
-                    }, cooldown);
-                }
             }
         } else {
             let mentions = message.mentions;
