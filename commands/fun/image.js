@@ -3,11 +3,28 @@ const { MessageEmbed } = require('discord.js');
 const { promisify } = require('util');
 const gis = promisify(require('g-i-s'));
 
+/**
+ * Class to get an image
+ *
+ * @class Image
+ * @extends {Command}
+ */
 class Image extends Command {
+    /**
+     * Creates an instance of Image
+     *
+     * @param {string} file
+     */
     constructor(file) {
         super(file);
     }
 
+    /**
+     * Get an image and post to channel
+     *
+     * @param {Message} message
+     * @param {string[]} args
+     */
     async run(message, args) {
         let keyword = args.join(' '),
             images = await gis(keyword);
@@ -17,7 +34,7 @@ class Image extends Command {
 
             return;
         }
-        
+
         let embed = new MessageEmbed()
             .setTitle(keyword)
             .setImage(images.random().url);

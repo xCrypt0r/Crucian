@@ -1,11 +1,28 @@
 const Command = require('../../structures/Command.js');
 const figlet = require('figlet');
 
+/**
+ * Class to make ascii art
+ *
+ * @class Ascii
+ * @extends {Command}
+ */
 class Ascii extends Command {
+    /**
+     * Creates an instance of Ascii
+     *
+     * @param {string} file
+     */
     constructor(file) {
         super(file);
     }
 
+    /**
+     * Make ascii art
+     *
+     * @param {Message} message
+     * @param {string[]} args
+     */
     async run(message, args) {
         figlet.text(args.join(' '), {
             font: 'Standard',

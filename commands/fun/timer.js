@@ -1,10 +1,27 @@
 const Command = require('../../structures/Command.js');
 
+/**
+ * Class to hide message for a specified time
+ *
+ * @class Timer
+ * @extends {Command}
+ */
 class Timer extends Command {
+    /**
+     * Creates an instance of Timer
+     *
+     * @param {string} file
+     */
     constructor(file) {
         super(file);
     }
 
+    /**
+     * Hide message for a specified time and show it after the time
+     *
+     * @param {Message} message
+     * @param {string[]} args
+     */
     async run(message, args) {
         message.delete();
 
@@ -34,7 +51,13 @@ class Timer extends Command {
             }, tick);
         });
     }
-    
+
+    /**
+     * Function to format string in the form of a bomb
+     *
+     * @param {number} count
+     * @returns {string}
+     */
     formatBomb(count) {
         return `:bomb: ${'-'.repeat(count)} ${count}`;
     }

@@ -2,11 +2,27 @@ const Command = require('../../structures/Command.js');
 const { MessageEmbed } = require('discord.js');
 const api = require('imageapi.js');
 
+/**
+ * Class to get a meme
+ *
+ * @class Meme
+ * @extends {Command}
+ */
 class Meme extends Command {
+    /**
+     * Creates an instance of Meme
+     *
+     * @param {string} file
+     */
     constructor(file) {
         super(file);
     }
 
+    /**
+     * Get a meme and post to channel
+     *
+     * @param {Message} message
+     */
     async run(message) {
         let subreddit = bot.consts.REDDIT_MEME_SUBREDDIT.random(),
             image = await api(subreddit),
@@ -14,7 +30,7 @@ class Meme extends Command {
                 .setTitle(bot.lang.memeTitle.format(subreddit))
                 .setColor(bot.consts.COLOR.REDDIT_MEME)
                 .setImage(image);
-                
+
         message.channel.send(embed);
     }
 }
