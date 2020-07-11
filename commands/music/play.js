@@ -7,20 +7,20 @@ class Play extends Command {
     constructor(file) {
         super(file);
     }
-    
+
     async run(message, args) {
         if (!message.member.voice.channel) {
             message.reply(bot.lang.notInVoiceChannel);
-    
+
             return;
         }
-        
+
         let url = args[0],
             validate = await ytdl.validateURL(url);
-    
+
         if (!validate) {
             let searcher = bot.commands.get('search');
-    
+
             searcher.run(message, args);
 
             return;
@@ -33,24 +33,25 @@ class Play extends Command {
 
         if (unplayable) {
             message.reply(bot.lang.unplayableVideo);
-    
+
             return;
         }
-    
+
         let data = bot.active.get(message.guild.id) || {};
-    
+
         if (!data.connection) {
             data.connection = await message.member.voice.channel.join();
         }
-    
+
         if (!data.queue) {
             data.queue = [];
         }
-    
+
         data.guildID = message.guild.id;
-        
-        let title = info.title,
-            duration = moment.duration(info.length_seconds, 'seconds').format(bot.consts.FORMAT.MUSIC_DURATION),
+
+        let { videoDetails: details } = info,
+            title = details.title,
+            duration = moment.duration(details.lengthSeconds, 'seconds').format(bot.consts.FORMAT.MUSIC_DURATION),
             requester = message.author.tag;
 
         data.queue.push({
@@ -60,17 +61,17 @@ class Play extends Command {
             url,
             announceChannel: message.channel.id
         });
-    
+
         !data.dispatcher
             ? this.play(bot, data)
             : message.channel.send(bot.lang.addedToQueue.format(title, requester));
-    
+
         bot.active.set(message.guild.id, data);
     }
 
     async play(bot, data) {
         let { announceChannel, title, requester, duration, url } = data.queue[0];
-        
+
         bot.channels.cache
             .get(announceChannel)
             .send(bot.lang.nowPlaying.format(title, requester, duration));
