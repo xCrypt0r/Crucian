@@ -168,9 +168,10 @@
     "value": ":thumbsup: {0} people"
   },
   "reminderEmpty":"You don't have any reminders set",
-  "reminderList": ":bookmark_tabs: **Your Reminders**\n\n {0}",
+  "reminderItem": "{0} - {1}",
   "reminderRemoved": "Reminder removed: {0}",
   "reminderSet": "New reminder set: {0}",
+  "reminderTitle": ":bookmark_tabs: **Your Reminders**",
   "resultNotFound": [
     "No results found",
     "There are no results matching that keyword"

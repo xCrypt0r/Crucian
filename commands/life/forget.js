@@ -15,8 +15,17 @@ class Forget extends Command {
             return;
         }
 
-        let { reminders } = message.member.info,
-            forgot = reminders.splice(index - 1, 1)[0] || { todo: '' };
+        let { reminders } = message.member.info;
+
+        if (!reminders.length) {
+            message.reply(bot.lang.reminderEmpty);
+
+            return;
+        }
+
+        let forgot = reminders
+            .sort((a, b) => b.timestamp - a.timestamp)
+            .splice(index - 1, 1)[0] || { todo: '' };
 
         bot.info.set(message.member.fullId, reminders, 'reminders');
         message.reply(bot.lang.reminderRemoved.format(forgot.todo));

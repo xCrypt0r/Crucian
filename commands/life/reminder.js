@@ -8,29 +8,39 @@ class Reminder extends Command {
 
     async run(message, args) {
         if (!args.length) {
-            let { reminders } = message.member.info;
+            let member = message.member,
+                { reminders } = member.info;
 
             if (!reminders.length) {
                 message.reply(bot.lang.reminderEmpty);
-                
+
                 return;
             }
-            
-            let list = reminders
-                .map(reminder => `${reminder.todo} - ${moment(reminder.timestamp).fromNow()}`)
-                .join('\n');
-            
-            message.channel.send(bot.lang.reminderList.format(list), { split: true });
-            
+
+            reminders = reminders
+                .sort((a, b) => b.timestamp - a.timestamp)
+                .map(reminder => bot.lang.reminderItem.format(reminder.todo, moment(reminder.timestamp).fromNow()));
+
+            let reminderChunks = reminders.chunk(10).map(chunk => chunk.join('\n'));
+            let embedOptions = {
+                title: bot.lang.reminderTitle,
+                author: {
+            		name: member.user.tag,
+            		icon_url: member.user.displayAvatarURL(),
+            	}
+            };
+
+            bot.tools.page(message, reminderChunks, embedOptions);
+
             return;
         }
-        
+
         let todo = args.join(' '),
             id = message.author.id,
             timestamp = message.createdTimestamp;
-        
+
         bot.info.push(message.member.fullId, { id, todo, timestamp }, 'reminders');
-        
+
         message.reply(bot.lang.reminderSet.format(todo));
     }
 }
