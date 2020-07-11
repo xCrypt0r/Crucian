@@ -228,7 +228,7 @@
     }
   },
   "setVolumeSuccess": "볼륨 {0}로 조절했음",
-  "shellMessage": ">>> $ {0}\n\n{1}",
+  "shellMessage": "`$ {0}`\n\n{1}",
   "shuffleCompleted": [
     "다 섞음",
     "셔플 완료"

@@ -105,6 +105,13 @@
 ##### Alias: 봇정보
 ##### OwnerOnly: false
 ---
+# getlines
+#### Count lines of github code
+##### Usage: getlines [#{extension}]
+##### Cooldown: 2000
+##### Alias: countline, countlines, getline, lines, 코드줄수
+##### OwnerOnly: false
+---
 # help
 #### Informs how to use command
 ##### Usage: help [#{command}]

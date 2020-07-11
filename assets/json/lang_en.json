@@ -223,7 +223,7 @@
     }
   },
   "setVolumeSuccess": "Volue set to {0}",
-  "shellMessage": ">>> $ {0}\n\n{1}",
+  "shellMessage": "`$ {0}`\n\n{1}",
   "shuffleCompleted": [
     "Queue shuffled!",
     "Shuffle complete!"

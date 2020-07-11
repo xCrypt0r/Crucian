@@ -179,6 +179,21 @@
         "minArgc": 1,
         "usage": "forget #{index}"
     },
+    "getlines": {
+        "aliases": [
+            "countline",
+            "countlines",
+            "getline",
+            "lines",
+            "코드줄수"
+        ],
+        "category": "general",
+        "cooldown": 2000,
+        "description": "Count lines of github code",
+        "isOwnerOnly": false,
+        "minArgc": 0,
+        "usage": "getlines [#{extension}]"
+    },
     "help": {
         "aliases": [
             "도움",
