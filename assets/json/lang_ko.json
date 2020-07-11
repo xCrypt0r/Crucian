@@ -253,6 +253,8 @@
   "songInQueue": "`{0}. {1} | 신청자: {2}`",
   "songSelectCancelled": "노래 선택이 취소댐",
   "spotifyChartTitle": ":musical_note: **스포티파이_차트_{0}**",
+  "startLoop": "`{0}` 반복 시작함",
+  "stopLoop": "`{0}` 반복 끝",
   "tempmuteSuccess": "`{0}` `{1}ms` 동안 채금임",
   "translateSupportedLanguages": "지원되는 언어 목록",
   "unbanSuccess": [

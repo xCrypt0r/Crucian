@@ -248,6 +248,8 @@
   "songInQueue": "`{0}. {1} | Queued by: {2}`",
   "songSelectCancelled": "Song is canceled",
   "spotifyChartTitle": ":musical_note: **spotify_chart_{0}**",
+  "startLoop": "Start repeat: `{0}`",
+  "stopLoop": "Stop repeat: `{0}`",
   "tempmuteSuccess": "`{0}` muted for `{1}ms`",
   "translateSupportedLanguages": "Click here to see supported languages",
   "unbanSuccess": [

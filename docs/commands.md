@@ -9,7 +9,7 @@
 ---
 # balance
 #### Show user's balance
-##### Usage: balance
+##### Usage: balance [#{mention}]
 ##### Cooldown: 0
 ##### Alias: bal, money, 머니, 잔고
 ---
@@ -213,6 +213,12 @@
 ##### Usage: leave
 ##### Cooldown: 0
 ##### Alias: l, 나가
+---
+# loop
+#### Toggle loop state of nowplaying music
+##### Usage: loop
+##### Cooldown: 0
+##### Alias: repeat, 반복
 ---
 # melon
 #### Show melon Top100 chart

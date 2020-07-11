@@ -59,7 +59,8 @@ class Play extends Command {
             duration,
             requester,
             url,
-            announceChannel: message.channel.id
+            announceChannel: message.channel.id,
+            loop: false
         });
 
         !data.dispatcher
@@ -79,7 +80,7 @@ class Play extends Command {
         data.dispatcher = await data.connection.play(ytdl(url, { filter: 'audioonly' }));
         data.dispatcher.guildID = data.guildID;
 
-        data.dispatcher.once('finish', () => {
+        data.dispatcher.on('finish', () => {
             this.finish(bot, data);
         });
     }
@@ -87,7 +88,9 @@ class Play extends Command {
     async finish(bot, data) {
         let fetched = bot.active.get(data.guildID);
 
-        fetched.queue.shift();
+        if (!fetched.queue[0].loop) {
+            fetched.queue.shift();
+        }
 
         fetched.queue.length > 0 ? (
             bot.active.set(data.guildID, fetched),

@@ -20,9 +20,10 @@ class Skip extends Command {
             return;
         }
 
-        bot.active.set(message.guild.id, fetched);
-        message.channel.send(bot.lang.skipSuccess);
+        fetched.queue[0].loop = false;
+
         fetched.dispatcher.end();
+        message.channel.send(bot.lang.skipSuccess);
     }
 }
 

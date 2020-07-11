@@ -253,6 +253,18 @@
         "minArgc": 0,
         "usage": "log #{mention}"
     },
+    "loop": {
+        "aliases": [
+            "repeat",
+            "반복"
+        ],
+        "category": "music",
+        "cooldown": 0,
+        "description": "Toggle loop state of nowplaying music",
+        "isOwnerOnly": false,
+        "minArgc": 0,
+        "usage": "loop"
+    },
     "melon": {
         "aliases": [
             "멜론"
