@@ -1,6 +1,6 @@
 const Command = require('../../structures/Command.js');
 
-class Daily extends Command {
+class Balance extends Command {
     constructor(file) {
         super(file);
     }
@@ -13,4 +13,4 @@ class Daily extends Command {
     }
 }
 
-module.exports = Daily;
+module.exports = Balance;
