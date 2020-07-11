@@ -7,7 +7,7 @@ module.exports = class extends Event {
 
     async run(message) {
         let { guild, member, content } = message;
-        
+
         if (this.config.get(guild.id, 'ignoreBotMessages') && member.user.bot) {
             return;
         }
@@ -23,7 +23,7 @@ module.exports = class extends Event {
 
             if (handler) {
                 let { name: command, cooldown, isOwnerOnly, minArgc } = handler;
-                
+
                 if (isOwnerOnly && !isOwner) {
                     message.reply(this.lang.ownerOnlyCommand.format(command.toUpperCase()));
 
@@ -38,7 +38,7 @@ module.exports = class extends Event {
 
                 if (args.length < minArgc) {
                     message.reply(this.lang.lackOfArguments.format(minArgc));
-    
+
                     return;
                 }
 
@@ -47,7 +47,7 @@ module.exports = class extends Event {
 
                 if (cooldown) {
                     this.cooldown[command] = this.cooldown[command] || new Set();
-                    
+
                     this.cooldown[command].add(member.fullId);
                     this.setTimeout(() => {
                         this.cooldown[command].delete(member.fullId);
@@ -57,10 +57,14 @@ module.exports = class extends Event {
         } else {
             let mentions = message.mentions;
 
+            if (mentions.roles.size > 0) {
+                return;
+            }
+
             for (let [id, reason] of this.afk) {
                 let member = guild.members.cache.get(id);
-                
-                if (mentions.roles.size === 0 && mentions.has(member)) {
+
+                if (mentions.has(member)) {
                     message.reply(this.lang.userIsInAfk.format(member.user.tag, reason));
                 }
             }
