@@ -1,6 +1,12 @@
 <details>
     <summary>Economy</summary>
 
+# addmoney
+#### Give money to member
+##### Usage: addmoney [#{mention}] #{money}
+##### Cooldown: 10000
+##### Alias: 지급
+---
 # balance
 #### Show user's balance
 ##### Usage: balance

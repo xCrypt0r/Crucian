@@ -1,4 +1,15 @@
 {
+    "addmoney": {
+        "aliases": [
+            "지급"
+        ],
+        "category": "economy",
+        "cooldown": 10000,
+        "description": "Give money to member",
+        "isOwnerOnly": true,
+        "minArgc": 1,
+        "usage": "addmoney [#{mention}] #{money}"
+    },
     "afk": {
         "aliases": [],
         "category": "general",
