@@ -6,9 +6,10 @@ class Daily extends Command {
     }
 
     async run(message) {
-        let { money } = message.member.info;
-        
-        message.reply(bot.lang.moneyInPocket.format(money));
+        let member = message.mentions.members.first() || message.member,
+            { money } = member.info;
+
+        message.channel.send(bot.lang.moneyInPocket.format(member.user.tag, money));
     }
 }
 
