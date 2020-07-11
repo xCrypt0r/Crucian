@@ -209,6 +209,13 @@
 ##### Alias: bequite, shutup, 닥쳐, 쉿, 조용히해
 ##### OwnerOnly: false
 ---
+# removerole
+#### Remove role from a member
+##### Usage: removerole [#{mention}] #{role}
+##### Cooldown: 5000
+##### Alias: 역할제거
+##### OwnerOnly: true
+---
 # tempmute
 #### Mute user for given time (example: 3s, 2m, 1h)
 ##### Usage: tempmute #{mention} #{time}

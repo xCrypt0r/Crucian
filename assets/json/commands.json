@@ -460,6 +460,17 @@
         "minArgc": 0,
         "usage": "reminder [#{text}]"
     },
+    "removerole": {
+        "aliases": [
+            "역할제거"
+        ],
+        "category": "moderation",
+        "cooldown": 5000,
+        "description": "Remove role from a member",
+        "isOwnerOnly": true,
+        "minArgc": 1,
+        "usage": "removerole [#{mention}] #{role}"
+    },
     "resume": {
         "aliases": [
             "다시틀어"

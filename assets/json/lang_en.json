@@ -177,6 +177,7 @@
   "resumeSuccess": "`{0}` resumed",
   "roleAdded": "Role `{0}` added to user `{1}`",
   "roleCreated": "Role created: `{0}`",
+  "roleRemoved": "Role `{0}` removed from user `{1}`",
   "sanctionReaction": [
     ":(",
     "I'm sorry...",
