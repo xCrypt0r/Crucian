@@ -1,10 +1,19 @@
 {
   "addedToQueue": "`{0}` 이 목록에 추가댐 | 신청자: `{1}`",
+  "addMoney": {
+    "amount": {
+      "name": "금액"
+    },
+    "balance": {
+      "name": "보유 머니"
+    },
+    "title": "**머니 지급**"
+  },
   "afkSet": "AFK로 설정댐 (이유: **`{0}`**)",
   "afkUnset": "AFK 해제댐",
   "alreadyGotDaily": "이미 일일 보상을 받음. **{0}**뒤에 받으러 오셈",
   "alreadyPaused": [
-    "이미 일시정지댐", 
+    "이미 일시정지댐",
     "이미 멈춰져 있잖"
   ],
   "banSuccess": [
@@ -139,7 +148,7 @@
     "footer": "페이지: {0} / {1}"
   },
   "pauseSuccess": [
-    "`{0}` 멈춰놓음", 
+    "`{0}` 멈춰놓음",
     "`{0}` 일시정지했음"
   ],
   "pingMessages": [

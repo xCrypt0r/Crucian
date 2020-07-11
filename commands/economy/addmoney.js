@@ -1,4 +1,5 @@
 const Command = require('../../structures/Command.js');
+const { MessageEmbed } = require('discord.js');
 
 class AddMoney extends Command {
     constructor(file) {
@@ -23,7 +24,27 @@ class AddMoney extends Command {
         }
 
         member.giveMoney(amount);
-        message.reply(bot.lang.moneyInPocket.format(member.info.money));
+
+        let { addMoney: format } = bot.lang,
+            embed = new MessageEmbed()
+                .setTitle(format.title)
+                .setAuthor(message.author.tag, message.author.displayAvatarURL())
+                .setThumbnail(member.user.displayAvatarURL())
+                .setColor(bot.consts.COLOR.ADDMONEY_EMBED)
+                .addFields(
+                    {
+                        name: format.amount.name,
+                        value: amount,
+                        inline: true
+                    },
+                    {
+                        name: format.balance.name,
+                        value: member.info.money,
+                        inline: true
+                    }
+                );
+
+        message.channel.send(embed);
     }
 }
 

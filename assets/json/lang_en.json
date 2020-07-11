@@ -1,5 +1,14 @@
 {
   "addedToQueue": "`{0}` is added to queue | User: `{1}`",
+  "addMoney": {
+    "amount": {
+      "name": "Amount"
+    },
+    "balance": {
+      "name": "balance"
+    },
+    "title": "**Give Money**"
+  },
   "afkSet": "You have been set to AFK for reason: **`{0}`**",
   "afkUnset": "I removed your AFK",
   "alreadyGotDaily": "You already got your daily rewards, you can get another daily in **{0}**",
@@ -136,7 +145,7 @@
     "footer": "Page {0} of {1}"
   },
   "pauseSuccess": [
-    "Paused: `{0}`", 
+    "Paused: `{0}`",
     "Stopped: `{0}`"
   ],
   "pingMessages": [
