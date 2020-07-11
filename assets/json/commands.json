@@ -5,10 +5,21 @@
         ],
         "category": "economy",
         "cooldown": 10000,
-        "description": "Give money to member",
+        "description": "Give money to a member",
         "isOwnerOnly": true,
         "minArgc": 1,
         "usage": "addmoney [#{mention}] #{money}"
+    },
+    "addrole": {
+        "aliases": [
+            "역할추가"
+        ],
+        "category": "moderation",
+        "cooldown": 5000,
+        "description": "Add role to a member",
+        "isOwnerOnly": true,
+        "minArgc": 1,
+        "usage": "addrole [#{mention}] #{role}"
     },
     "afk": {
         "aliases": [],

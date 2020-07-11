@@ -178,6 +178,7 @@
     "제대로 검색한 거 맞음?"
   ],
   "resumeSuccess": "`{0}` 다시 틀었음",
+  "roleAdded": "역할 `{0}`을 `{1}`한테 추가함",
   "roleCreated": "`{0}` 역할 만듬",
   "sanctionReaction": [
     "ㅠㅠ",

@@ -157,6 +157,12 @@
 <details>
     <summary>Moderation</summary>
 
+# addrole
+#### Add role to a member
+##### Usage: addrole [#{mention}] #{role}
+##### Cooldown: 5000
+##### Alias: 역할추가
+---
 # ban
 #### Ban user from server
 ##### Usage: ban #{mention} [#{reason}]
