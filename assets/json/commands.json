@@ -30,6 +30,21 @@
         "minArgc": 1,
         "usage": "ascii #{string}"
     },
+    "avatar": {
+        "aliases": [
+            "profile",
+            "userimage",
+            "아바타",
+            "프로필",
+            "프사"
+        ],
+        "category": "general",
+        "cooldown": 1000,
+        "description": "Show user's avatar",
+        "isOwnerOnly": false,
+        "minArgc": 0,
+        "usage": "avatar [#{mention]"
+    },
     "balance": {
         "aliases": [
             "bal",

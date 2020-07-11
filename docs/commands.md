@@ -79,6 +79,12 @@
 ##### Cooldown: 2000
 ##### Alias: -
 ---
+# avatar
+#### Show user's avatar
+##### Usage: avatar [#{mention]
+##### Cooldown: 1000
+##### Alias: profile, userimage, 아바타, 프로필, 프사
+---
 # botinfo
 #### Show bot's information
 ##### Usage: botinfo
