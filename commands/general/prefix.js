@@ -1,17 +1,34 @@
 const Command = require('../../structures/Command.js');
 
+/**
+ * Class to set guild's custom prefix
+ *
+ * @class Prefix
+ * @extends {Command}
+ */
 class Prefix extends Command {
+    /**
+     * Creates an instance of Prefix
+     *
+     * @param {string} file
+     */
     constructor(file) {
         super(file);
     }
 
-    async run(message, args) {      
+    /**
+     * Set guild's custom prefix
+     *
+     * @param {Message} message
+     * @param {string[]} args
+     */
+    async run(message, args) {
         if (!message.member.hasPermission('MANAGE_GUILD')) {
             message.reply(bot.lang.lackOfPermission.random());
 
             return;
         }
-        
+
         let guild = message.guild,
             prefix = args[0];
 

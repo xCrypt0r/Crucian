@@ -1,19 +1,36 @@
 const Command = require('../../structures/Command.js');
 
+/**
+ * Class to show manual to members
+ *
+ * @class Help
+ * @extends {Command}
+ */
 class Help extends Command {
+    /**
+     * Creates an instance of Help
+     *
+     * @param {string} file
+     */
     constructor(file) {
         super(file);
     }
 
+    /**
+     * Show manual to members
+     *
+     * @param {Message} message
+     * @param {string[]} args
+     */
     async run(message, args) {
         let commands = bot.commands;
-        
+
         if (args.length > 0) {
             let command = commands.get(args.join(''));
-            
+
             if (!command) {
                 message.reply(bot.lang.invalidArguments);
-                
+
                 return;
             }
 
@@ -25,7 +42,7 @@ class Help extends Command {
         let { helpManual: help } = bot.lang,
             manual = [],
             i = 0;
-            
+
         for (let [name, details] of Array.from(commands)) {
             manual.push([
                 help.name.format(++i, name),

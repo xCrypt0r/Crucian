@@ -3,11 +3,27 @@ const { MessageEmbed, version } = require('discord.js');
 const moment = require('moment');
 require('moment-duration-format');
 
+/**
+ * Class to show Crucian's information
+ *
+ * @class Botinfo
+ * @extends {Command}
+ */
 class Botinfo extends Command {
+    /**
+     * Creates an instance of Botinfo
+     *
+     * @param {string} file
+     */
     constructor(file) {
         super(file);
     }
 
+    /**
+     * Show Crucian's information
+     *
+     * @param {Message} message
+     */
     async run(message) {
         let { botInformation: info } = bot.lang;
         let embed = new MessageEmbed()

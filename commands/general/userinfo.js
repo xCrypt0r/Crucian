@@ -2,11 +2,27 @@ const Command = require('../../structures/Command.js');
 const { MessageEmbed } = require('discord.js');
 const moment = require('moment');
 
-class Userinfo extends Command {
+/**
+ * Class to show user's information
+ *
+ * @class UserInfo
+ * @extends {Command}
+ */
+class UserInfo extends Command {
+    /**
+     * Creates an instance of UserInfo
+     *
+     * @param {string} file
+     */
     constructor(file) {
         super(file);
     }
 
+    /**
+     * Show user's information
+     *
+     * @param {Message} message
+     */
     async run(message) {
         let user = message.mentions.users.first() || message.author;
 
@@ -54,4 +70,4 @@ class Userinfo extends Command {
     }
 }
 
-module.exports = Userinfo;
+module.exports = UserInfo;

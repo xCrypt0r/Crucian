@@ -1,11 +1,27 @@
 const Command = require('../../structures/Command.js');
 const { MessageEmbed } = require('discord.js');
 
+/**
+ * Class to show avatar of a member
+ *
+ * @class Avatar
+ * @extends {Command}
+ */
 class Avatar extends Command {
+    /**
+     * Creates an instance of Avatar
+     *
+     * @param {string} file
+     */
     constructor(file) {
         super(file);
     }
 
+    /**
+     * Show avatar of a member
+     *
+     * @param {Message} message
+     */
     async run(message) {
         let user = message.mentions.users.first() || message.author;
 

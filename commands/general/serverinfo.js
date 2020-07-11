@@ -2,15 +2,31 @@ const Command = require('../../structures/Command.js');
 const { MessageEmbed } = require('discord.js');
 const moment = require('moment');
 
+/**
+ * Class to show server's information
+ *
+ * @class Serverinfo
+ * @extends {Command}
+ */
 class Serverinfo extends Command {
+    /**
+     * Creates an instance of Serverinfo
+     *
+     * @param {string} file
+     */
     constructor(file) {
         super(file);
     }
 
+    /**
+     * Show server's information
+     *
+     * @param {Message} message
+     */
     async run(message) {
         let { serverInformation: info } = bot.lang,
             guild = message.guild;
-        let embed = new MessageEmbed() 
+        let embed = new MessageEmbed()
             .setColor(bot.consts.COLOR.SERVER_EMBED)
             .setThumbnail(guild.iconURL())
             .addFields(
