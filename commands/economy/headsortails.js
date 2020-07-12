@@ -36,7 +36,6 @@ class HeadsOrTails extends Command {
 
                     await message.channel.send(this.form.hasWon.format(author.tag, this.times));
                     await message.channel.send(this.form.chooseContinue.format(this.calculateWinnings()));
-
                     this.continueGame(message);
                 } else {
                     message.channel.send(this.form.hasLost);
@@ -68,31 +67,33 @@ class HeadsOrTails extends Command {
     }
 
     async stopGame(message) {
-        let winnings = this.calculateWinnings(),
-            embed = new MessageEmbed()
-                .setTitle(this.form.title)
-                .setColor(bot.consts.COLOR.HEADS_OR_TAILS)
-                .setThumbnail(message.author.displayAvatarURL())
-                .setTimestamp()
-                .addFields(
-                    {
-                        name: this.form.winCount.name,
-                        value: this.times,
-                        inline: true
-                    },
-                    {
-                        name: this.form.collected.name,
-                        value: winnings,
-                        inline: true
-                    },
-                    {
-                        name: this.form.balance.name,
-                        value: message.member.info.money,
-                        inline: true
-                    }
-                );
+        let winnings = this.calculateWinnings();
 
         message.member.giveMoney(winnings);
+
+        let embed = new MessageEmbed()
+            .setTitle(this.form.title)
+            .setColor(bot.consts.COLOR.HEADS_OR_TAILS)
+            .setThumbnail(message.author.displayAvatarURL())
+            .setTimestamp()
+            .addFields(
+                {
+                    name: this.form.winCount.name,
+                    value: this.times,
+                    inline: true
+                },
+                {
+                    name: this.form.collected.name,
+                    value: winnings,
+                    inline: true
+                },
+                {
+                    name: this.form.balance.name,
+                    value: message.member.info.money,
+                    inline: true
+                }
+            );
+
         message.channel.send(embed);
     }
 
