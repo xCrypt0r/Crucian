@@ -15,9 +15,9 @@ module.exports = class extends Event {
         let { prefix } = this.config.get(guild.id);
 
         if (content.startsWith(prefix)) {
-            let messageArray = content.trim().split(/\s+/),
-                cmd = messageArray[0].slice(prefix.length).toLowerCase(),
-                args = messageArray.slice(1),
+            let argv = content.trim().split(/\s+/),
+                cmd = argv[0].slice(prefix.length).toLowerCase(),
+                args = argv.slice(1),
                 handler = this.commands.get(cmd),
                 isOwner = member.id === process.env.OWNER_ID;
 
