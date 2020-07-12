@@ -23,26 +23,19 @@ class Store extends Collection {
         return flake;
     }
 
-    delete(key) {
-        if (!this.has(key)) {
+    delete(name) {
+        if (!this.has(name)) {
             return false;
         }
 
-        return super.delete(key);
+        return super.delete(name);
     }
 
     load(file) {
         let filePath = path.join(this.dir, file);
 
         try {
-            let flake = this.set(new (require(filePath))(this.client, path.join(this.name, file))),
-                parent = Object.getPrototypeOf(flake.constructor).name;
-
-            if (parent === 'Command') {
-                this.client.removeAllListeners(flake.name);
-            } else if (parent === 'Event') {
-                delete require.cache[filePath];
-            }
+            let flake = this.set(new (require(filePath))(this.client, file));
 
             this.client.logger.log(`${this.name}${path.sep}${file} loaded`);
 

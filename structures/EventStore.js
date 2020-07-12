@@ -18,6 +18,12 @@ class EventStore extends Store {
 
         return super.delete(name);
     }
+
+    clear() {
+        for (let event of this.keys()) {
+            this.delete(event);
+        }
+    }
 }
 
 module.exports = EventStore;

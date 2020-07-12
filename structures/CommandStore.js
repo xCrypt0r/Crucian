@@ -1,5 +1,6 @@
 const Store = require('./Store.js');
 const { Collection } = require('discord.js');
+const path = require('path');
 
 class CommandStore extends Store {
     constructor(client) {
@@ -28,7 +29,16 @@ class CommandStore extends Store {
         return command;
     }
 
+    delete(command) {
+        delete require.cache[path.join(this.dir, command.file)];
+        super.delete(command.name);
+    }
+
     clear() {
+        for (let command of this.values()) {
+            this.delete(command);
+        }
+
         super.clear();
         this.aliases.clear();
     }
