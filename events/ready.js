@@ -12,7 +12,9 @@ module.exports = class extends Event {
             this.config.ensure(guild.id, config.guild);
 
             guild.members.cache.forEach(member => {
-                this.info.ensure(member.fullId, config.member(member));
+                if (!member.user.bot) {
+                    this.info.ensure(member.fullId, config.member(member));
+                }
             });
         });
     }
