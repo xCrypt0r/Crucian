@@ -8,6 +8,10 @@ module.exports = class extends Event {
     async run(message) {
         let { guild, member, content } = message;
 
+        if (guild === null) {
+            return;
+        }
+
         if (this.config.get(guild.id, 'ignoreBotMessages') && member.user.bot) {
             return;
         }
