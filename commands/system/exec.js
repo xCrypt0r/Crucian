@@ -13,6 +13,8 @@ class Exec extends Command {
         try {
             let { stdout: res } = await exec(cmd);
 
+            res = res.replace(new RegExp(process.env.TOKEN, 'g'), '[TOK3N]');
+
             message.channel.send(bot.lang.shellMessage.format(cmd, res), {
                 split: true
             });

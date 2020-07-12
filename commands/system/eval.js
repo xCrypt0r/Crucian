@@ -17,7 +17,7 @@ class Eval extends Command {
             }
 
             if (res.includes(process.env.TOKEN)) {
-                res = res.replace(new RegExp(process.env.TOKEN, 'g'), 'TOKEN');
+                res = res.replace(new RegExp(process.env.TOKEN, 'g'), '[TOK3N]');
             }
 
             message.channel.send(res, { split: true });
