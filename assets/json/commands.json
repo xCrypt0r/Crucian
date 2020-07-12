@@ -194,6 +194,19 @@
         "minArgc": 0,
         "usage": "getlines [#{extension}]"
     },
+    "headsortails": {
+        "aliases": [
+            "ht",
+            "앞뒤",
+            "앞면뒷면"
+        ],
+        "category": "economy",
+        "cooldown": 1000,
+        "description": "Play Heads Or Tails",
+        "isOwnerOnly": false,
+        "minArgc": 0,
+        "usage": "headsortails"
+    },
     "help": {
         "aliases": [
             "도움",

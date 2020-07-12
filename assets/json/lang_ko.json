@@ -77,6 +77,25 @@
   ],
   "dequeueSuccess": "{0}번 노래 목록에서 뻄",
   "displayQueue": ":musical_note: 대기열",
+  "headsOrTails": {
+    "balance": {
+      "name": "보유 머니"
+    },
+    "chooseContinue": "> 계속 할거임? 멈추면 `{0}` 코인 얻을 수 있음 (`ㅇ` 또는 `ㄴ` 입력하셈)",
+    "chooseHeadsOrTails": "> 앞면일 거 같음 뒷면일 거 같음? (`앞` 또는 `뒤`를 입력하셈)",
+    "collected": {
+      "name": "얻은 머니"
+    },
+    "hasLost": "> 틀림 ㅎㅎ",
+    "hasWon": "> 옹.. `{0}` 가(이) 맞힘 (`{1}`연승 중)",
+    "winCount": {
+      "name": "맞힌 횟수"
+    },
+    "selectOptions": ["앞", "뒤"],
+    "stopGame": "> `{0}`연승함! `{1}` 코인 얻음",
+    "timeout": "> 시간초과임 ㅠㅠ",
+    "title": "❓ 앞뒤 맞추기"
+  },
   "helpManual": {
     "activity": "명령어 목록을 보려면 {0}도움말 입력하셈",
     "alias": "**별칭**: {0}",

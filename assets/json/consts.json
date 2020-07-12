@@ -5,6 +5,7 @@
         "BOT_EMBED": "#15f153",
         "BOT_MANUAL": "#4ae342",
         "DAILY_EMBED": "RANDOM",
+        "HEADS_OR_TAILS": "RANDOM",
         "LEADERBOARD_EMBED": "#e60b63",
         "PAGE_DEFAULT": "#ff0000",
         "REDDIT_EMBED": "#ff4301",
@@ -37,7 +38,21 @@
             "User-Agent": "reddit-oauth/1.1.1"
         }
     },
+    "HEADS_OR_TAILS_DEFAULT_INCOME": 100,
+    "HEADS_OR_TAILS_SELECT_OPTIONS": {
+        "HEAD": ["h", "head", "ㅇ", "앞"],
+        "TAIL": ["t", "tail", "ㄷ", "뒤"]
+    },
     "MEDIA_EXTENSION": [".jpg", ".png", ".svg", ".mp4", ".gif"],
+    "OPTION": {
+        "HEADS_OR_TAILS": {
+            "max": 1,
+            "time": 20000,
+            "errors": [
+                "time"
+            ]
+        }
+    },
     "REDDIT_AUTHOR_WITH_PREFIX": "u/{0}",
     "REDDIT_INVALID_THUMBNAIL": [
         "self",
@@ -73,5 +88,9 @@
         "REDDIT_RANDOM": "https://www.reddit.com/r/{0}/random/.json",
         "REDDIT_USER": "https://www.reddit.com/user/{0}/about.json",
         "SPOTIFY_CHART": "https://spotifycharts.com/regional"
+    },
+    "YES_OR_NO_OPTIONS": {
+        "YES": ["y", "ya", "yep", "yes", "ㅇ", "네", "예", "응"],
+        "NO": ["n", "no", "nop", "nope", "ㄴ", "노"]
     }
 }

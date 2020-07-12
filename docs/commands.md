@@ -22,6 +22,13 @@
 ##### Alias: 일당
 ##### OwnerOnly: false
 ---
+# headsortails
+#### Play Heads Or Tails
+##### Usage: headsortails
+##### Cooldown: 1000
+##### Alias: ht, 앞뒤, 앞면뒷면
+##### OwnerOnly: false
+---
 # leaderboard
 #### Post leaderboard
 ##### Usage: leaderboard
@@ -33,7 +40,7 @@
 #### Play slot game
 ##### Usage: slot #{money}
 ##### Cooldown: 1000
-##### Alias: pachinko, slotmachine, slots, 빠찡꼬, 빠찡코, 슬롯, 슬롯머신, 파칭코
+##### Alias: slotmachine, slots, 슬롯, 슬롯머신
 ##### OwnerOnly: false
 </details>
 <details>

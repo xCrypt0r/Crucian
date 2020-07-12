@@ -75,6 +75,25 @@
   ],
   "dequeueSuccess": "Song No.{0} dequeued",
   "displayQueue": ":musical_note: Queue",
+  "headsOrTails": {
+    "balance": {
+      "name": "balance"
+    },
+    "chooseContinue": "> Continue? If you stop now, you can get `{0}` coins (type `y` or `n`)",
+    "chooseHeadsOrTails": "> Choose heads or tails (type `h` or `t`)",
+    "collected": {
+      "name": "collected"
+    },
+    "hasLost": "> You lost...",
+    "hasWon": "> Wow... `{0}` wins!! (Winning `{1}` time(s) in a row)",
+    "winCount": {
+      "name": "wins"
+    },
+    "selectOptions": ["h", "t"],
+    "stopGame": "> Winning `{0}` time(s) in a row! You got `{1}` coins",
+    "timeout": "> Time Over!",
+    "title": "❓ Heads Or Tails"
+  },
   "helpManual": {
     "activity": "{0}help to see commands",
     "alias": "**Alias**: {0}",
