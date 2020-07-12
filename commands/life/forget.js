@@ -2,8 +2,8 @@ const Command = require('../../structures/Command.js');
 const moment = require('moment');
 
 class Forget extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message, args) {

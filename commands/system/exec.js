@@ -3,8 +3,8 @@ const { promisify } = require('util');
 const exec = promisify(require('child_process').exec);
 
 class Exec extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message, args) {
@@ -14,7 +14,7 @@ class Exec extends Command {
             let { stdout: res } = await exec(cmd);
 
             message.channel.send(bot.lang.shellMessage.format(cmd, res), {
-                split: true 
+                split: true
             });
         } catch (e) {
             bot.logger.error(e.stderr || e.message);

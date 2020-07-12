@@ -1,8 +1,8 @@
 const Event = require('../structures/Event.js');
 
 module.exports = class extends Event {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(oldMessage, newMessage) {

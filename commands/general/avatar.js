@@ -2,8 +2,8 @@ const Command = require('../../structures/Command.js');
 const { MessageEmbed } = require('discord.js');
 
 class Avatar extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message) {

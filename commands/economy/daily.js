@@ -5,20 +5,20 @@ const ms = require('pretty-ms');
 class Daily extends Command {
     static timeout = bot.consts.DAY_TO_MILLISECOND;
     static amount = 500;
-    
-    constructor(file) {
-        super(file);
+
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message) {
         let member = message.member,
             { money, daily } = member.info;
-        
+
         if (Daily.timeout > Date.now() - daily) {
             let time = ms(Daily.timeout - (Date.now() - daily), {
                 secondsDecimalDigits: 0
             });
-            
+
             message.reply(bot.lang.alreadyGotDaily.format(time));
         } else {
             let { dailyRewards: format } = bot.lang;

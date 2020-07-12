@@ -2,13 +2,13 @@ const Command = require('../../structures/Command.js');
 
 
 class Resume extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message) {
         let fetched = bot.active.get(message.guild.id);
-    
+
         if (!fetched) {
             message.reply(bot.lang.noMusicPlaying);
 

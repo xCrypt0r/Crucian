@@ -2,9 +2,11 @@ const path = require('path');
 const commands = require('../assets/json/commands.json');
 
 class Command {
-    constructor(file) {
+    constructor(client, file) {
+        this.client = client;
         this.file = file;
         this.name = path.parse(file).name;
+        this.store = client.store;
 
         Object.assign(this, commands[this.name]);
     }
@@ -31,6 +33,10 @@ class Command {
         }
 
         return this;
+    }
+
+    reload() {
+        return this.store.load(this.file);
     }
 }
 

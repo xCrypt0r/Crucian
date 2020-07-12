@@ -5,8 +5,8 @@ const symbols = require('../../assets/js/slot-symbol.js');
 const machine = new SlotMachine(bot.consts.SLOTMACHINE_SIZE, Object.values(symbols));
 
 class Slot extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message, args) {

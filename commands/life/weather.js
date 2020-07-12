@@ -4,13 +4,13 @@ const { promisify } = require('util');
 const weather = promisify(require('weather-js').find);
 
 class Weather extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message, args) {
         try {
-            let res = await weather({ 
+            let res = await weather({
                 search: args.join(' '),
                 degreeType: 'C'
             });

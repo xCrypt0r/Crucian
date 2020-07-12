@@ -3,8 +3,8 @@ const { MessageEmbed } = require('discord.js');
 const api = require('imageapi.js');
 
 class Meme extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message) {
@@ -14,7 +14,7 @@ class Meme extends Command {
                 .setTitle(bot.lang.memeTitle.format(subreddit))
                 .setColor(bot.consts.COLOR.REDDIT_MEME)
                 .setImage(image);
-                
+
         message.channel.send(embed);
     }
 }

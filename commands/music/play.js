@@ -4,8 +4,8 @@ const moment = require('moment');
 require('moment-duration-format');
 
 class Play extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message, args) {

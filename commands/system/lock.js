@@ -1,8 +1,8 @@
 const Command = require('../../structures/Command.js');
 
 class Lock extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message, args) {
@@ -11,7 +11,7 @@ class Lock extends Command {
 
             return;
         }
-        
+
         let channel = message.channel;
 
         try {
@@ -24,7 +24,7 @@ class Lock extends Command {
         } catch (e) {
             bot.logger.error(e);
         }
-        
+
         message.channel.send(bot.lang.lockSuccess.format(channel.name));
     }
 }

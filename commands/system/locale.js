@@ -2,14 +2,14 @@ const Command = require('../../structures/Command.js');
 const fs = require('fs');
 
 class Locale extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message, args) {
         let locale = args[0],
             localePath = `../../assets/json/lang_${locale}`;
- 
+
         if (!fs.existsSync(localePath)) {
             bot.lang = require(localePath);
 

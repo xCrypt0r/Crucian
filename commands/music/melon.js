@@ -4,8 +4,8 @@ const request = promisify(require('request'));
 const cheerio = require('cheerio');
 
 class Melon extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message) {

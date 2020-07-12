@@ -3,14 +3,14 @@ const { MessageEmbed } = require('discord.js');
 const moment = require('moment');
 
 class Serverinfo extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message) {
         let { serverInformation: info } = bot.lang,
             guild = message.guild;
-        let embed = new MessageEmbed() 
+        let embed = new MessageEmbed()
             .setColor(bot.consts.COLOR.SERVER_EMBED)
             .setThumbnail(guild.iconURL())
             .addFields(

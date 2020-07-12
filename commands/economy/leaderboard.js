@@ -1,8 +1,8 @@
 const Command = require('../../structures/Command.js');
 
 class Leaderboard extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message, args) {
@@ -10,7 +10,7 @@ class Leaderboard extends Command {
             ranks = bot.info
                 .findAll('guild', guild.id)
                 .sort((a, b) => b.money - a.money);
-            
+
         let leaderboard = [],
             i = 0;
 

@@ -2,8 +2,8 @@ const Event = require('../structures/Event.js');
 const config = require('../assets/js/config.js');
 
 module.exports = class extends Event {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run() {

@@ -3,11 +3,11 @@ const { MessageEmbed } = require('discord.js');
 const translate = require('@vitalets/google-translate-api');
 
 class Translate extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
-    async run(message, args) { 
+    async run(message, args) {
         let language = args.shift(),
             text = args.join(' ');
 

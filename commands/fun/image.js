@@ -4,8 +4,8 @@ const { promisify } = require('util');
 const gis = promisify(require('g-i-s'));
 
 class Image extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message, args) {

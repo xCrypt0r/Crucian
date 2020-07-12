@@ -2,8 +2,8 @@ const Command = require('../../structures/Command.js');
 const figlet = require('figlet');
 
 class Ascii extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message, args) {

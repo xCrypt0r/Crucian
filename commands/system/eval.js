@@ -1,14 +1,14 @@
 const Command = require('../../structures/Command.js');
 
 class Eval extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message, args) {
         let code = args.join(' '),
             res;
-        
+
         try {
             res = await new Promise((resolve, reject) => resolve(eval(code)));
 

@@ -1,19 +1,19 @@
 const Command = require('../../structures/Command.js');
 
 class Help extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message, args) {
         let commands = bot.commands;
-        
+
         if (args.length > 0) {
             let command = commands.get(args.join(''));
-            
+
             if (!command) {
                 message.reply(bot.lang.invalidArguments);
-                
+
                 return;
             }
 
@@ -25,7 +25,7 @@ class Help extends Command {
         let { helpManual: help } = bot.lang,
             manual = [],
             i = 0;
-            
+
         for (let [name, details] of Array.from(commands)) {
             manual.push([
                 help.name.format(++i, name),

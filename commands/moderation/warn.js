@@ -1,8 +1,8 @@
 const Command = require('../../structures/Command.js');
 
 class Warn extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message, args) {
@@ -11,9 +11,9 @@ class Warn extends Command {
 
             return;
         }
-        
+
         let member = message.mentions.members.first();
-        
+
         if (!member) {
             message.reply(bot.lang.cantFindUser);
 
@@ -25,10 +25,10 @@ class Warn extends Command {
 
             return;
         }
-        
+
         let reason = args.slice(1).join(' '),
             { warnings } = member.info;
-        
+
         if (++warnings >= 3) {
             member
                 .kick(reason)

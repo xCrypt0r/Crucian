@@ -1,8 +1,8 @@
 const Command = require('../../structures/Command.js');
 
 class Balance extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message) {

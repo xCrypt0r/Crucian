@@ -4,8 +4,8 @@ const { promisify } = require('util');
 const request = promisify(require('request'));
 
 class Reddit extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message, args) {
@@ -41,7 +41,7 @@ class Reddit extends Command {
 
             return;
         }
-        
+
         let timestamp = new Date(article.created * 1000),
             image = bot.consts.MEDIA_EXTENSION.includes(article.url.slice(-4))
                 ? article.url
@@ -72,10 +72,10 @@ class Reddit extends Command {
                     value: bot.lang.redditUpvotes.value.format(article.ups),
                     inline: true
                 },
-                { 
+                {
                     name: bot.lang.redditComments.name,
                     value: bot.lang.redditComments.value.format(article.num_comments),
-                    inline: true 
+                    inline: true
                 }
             );
 

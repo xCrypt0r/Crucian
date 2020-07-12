@@ -2,8 +2,8 @@ const Command = require('../../structures/Command.js');
 const ms = require('ms');
 
 class Tempmute extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message, args) {

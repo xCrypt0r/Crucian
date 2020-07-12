@@ -1,8 +1,8 @@
 const Command = require('../../structures/Command.js');
 
 class Timer extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message, args) {
@@ -34,7 +34,7 @@ class Timer extends Command {
             }, tick);
         });
     }
-    
+
     formatBomb(count) {
         return `:bomb: ${'-'.repeat(count)} ${count}`;
     }

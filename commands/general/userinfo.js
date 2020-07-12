@@ -3,8 +3,8 @@ const { MessageEmbed } = require('discord.js');
 const moment = require('moment');
 
 class Userinfo extends Command {
-    constructor(file) {
-        super(file);
+    constructor(...args) {
+        super(...args);
     }
 
     async run(message) {
