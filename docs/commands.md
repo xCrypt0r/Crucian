@@ -12,7 +12,7 @@
 #### Show user's balance
 ##### Usage: balance [#{mention}]
 ##### Cooldown: 0
-##### Alias: bal, money, 머니, 잔고
+##### Alias: bal, money, 머니, 소지금, 잔고
 ##### OwnerOnly: false
 ---
 # daily
@@ -26,14 +26,14 @@
 #### Play Heads Or Tails
 ##### Usage: headsortails
 ##### Cooldown: 1000
-##### Alias: ht, 앞뒤, 앞면뒷면
+##### Alias: coinflip, flipcoin, ht, ㅇㄷ, 동전던지기, 앞뒤, 앞면뒷면
 ##### OwnerOnly: false
 ---
 # leaderboard
 #### Post leaderboard
 ##### Usage: leaderboard
 ##### Cooldown: 1000
-##### Alias: rank, 랭킹, 리더보드, 순위
+##### Alias: rank, 랭크, 랭킹, 리더보드, 순위
 ##### OwnerOnly: false
 ---
 # slot
@@ -64,7 +64,7 @@
 #### Get a meme from reddit
 ##### Usage: meme
 ##### Cooldown: 1000
-##### Alias: 밈
+##### Alias: 밈, 짤
 ##### OwnerOnly: false
 ---
 # sanction
@@ -95,7 +95,7 @@
 #### Set afk
 ##### Usage: afk [#{reason}]
 ##### Cooldown: 2000
-##### Alias: -
+##### Alias: 잠수
 ##### OwnerOnly: false
 ---
 # avatar
@@ -161,7 +161,7 @@
 #### Calculate simple math questions
 ##### Usage: calc #{formula}
 ##### Cooldown: 1000
-##### Alias: answer, calculate, solve, 계산, 계산기, 답, 풀어
+##### Alias: calculate, solve, 계산, 계산기, 풀어
 ##### OwnerOnly: false
 ---
 # forget
@@ -182,7 +182,7 @@
 #### Set reminder
 ##### Usage: reminder [#{text}]
 ##### Cooldown: 1000
-##### Alias: remember, remind, reminders, remindme, 할일
+##### Alias: remember, remind, reminders, remindme, todo, 할일
 ##### OwnerOnly: false
 ---
 # translate
@@ -227,7 +227,7 @@
 #### Mute user
 ##### Usage: mute #{mention}
 ##### Cooldown: 5000
-##### Alias: bequite, shutup, 닥쳐, 쉿, 조용히해
+##### Alias: bequite, shutup, 닥쳐, 쉿, 조용히해, 채금, 채팅금지
 ##### OwnerOnly: false
 ---
 # removerole
@@ -293,7 +293,7 @@
 #### Toggle loop state of nowplaying music
 ##### Usage: loop
 ##### Cooldown: 0
-##### Alias: repeat, 반복
+##### Alias: repeat, 반복, 반복재생
 ##### OwnerOnly: false
 ---
 # melon
@@ -342,7 +342,7 @@
 #### Search music from youtube
 ##### Usage: search #{keyword}
 ##### Cooldown: 4000
-##### Alias: 검색, 찾아
+##### Alias: 검색, 노래검색, 찾아
 ##### OwnerOnly: false
 ---
 # shuffle
@@ -356,7 +356,7 @@
 #### Skip now playing music
 ##### Usage: skip
 ##### Cooldown: 0
-##### Alias: s, 넘겨, 버려, 치워
+##### Alias: next, s, 넘겨
 ##### OwnerOnly: false
 ---
 # spotify
@@ -380,7 +380,7 @@
 #### Run javascript code
 ##### Usage: eval #{code}
 ##### Cooldown: 2000
-##### Alias: -
+##### Alias: javascript, js
 ##### OwnerOnly: true
 ---
 # exec

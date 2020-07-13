@@ -22,7 +22,9 @@
         "usage": "addrole [#{mention}] #{role}"
     },
     "afk": {
-        "aliases": [],
+        "aliases": [
+            "잠수"
+        ],
         "category": "general",
         "cooldown": 2000,
         "description": "Set afk",
@@ -61,6 +63,7 @@
             "bal",
             "money",
             "머니",
+            "소지금",
             "잔고"
         ],
         "category": "economy",
@@ -108,12 +111,10 @@
     },
     "calc": {
         "aliases": [
-            "answer",
             "calculate",
             "solve",
             "계산",
             "계산기",
-            "답",
             "풀어"
         ],
         "category": "life",
@@ -147,7 +148,10 @@
         "usage": "dequeue #{number}"
     },
     "eval": {
-        "aliases": [],
+        "aliases": [
+            "javascript",
+            "js"
+        ],
         "category": "system",
         "cooldown": 2000,
         "description": "Run javascript code",
@@ -196,7 +200,11 @@
     },
     "headsortails": {
         "aliases": [
+            "coinflip",
+            "flipcoin",
             "ht",
+            "ㅇㄷ",
+            "동전던지기",
             "앞뒤",
             "앞면뒷면"
         ],
@@ -254,6 +262,7 @@
     "leaderboard": {
         "aliases": [
             "rank",
+            "랭크",
             "랭킹",
             "리더보드",
             "순위"
@@ -268,7 +277,8 @@
     "leave": {
         "aliases": [
             "l",
-            "나가"
+            "나가",
+            "나와"
         ],
         "category": "music",
         "cooldown": 0,
@@ -296,6 +306,7 @@
             "lockdown",
             "계엄령",
             "락",
+            "얼음",
             "잠금"
         ],
         "category": "system",
@@ -321,7 +332,8 @@
     "loop": {
         "aliases": [
             "repeat",
-            "반복"
+            "반복",
+            "반복재생"
         ],
         "category": "music",
         "cooldown": 0,
@@ -343,7 +355,8 @@
     },
     "meme": {
         "aliases": [
-            "밈"
+            "밈",
+            "짤"
         ],
         "category": "fun",
         "cooldown": 1000,
@@ -358,7 +371,9 @@
             "shutup",
             "닥쳐",
             "쉿",
-            "조용히해"
+            "조용히해",
+            "채금",
+            "채팅금지"
         ],
         "category": "moderation",
         "cooldown": 5000,
@@ -490,6 +505,7 @@
             "remind",
             "reminders",
             "remindme",
+            "todo",
             "할일"
         ],
         "category": "life",
@@ -542,6 +558,7 @@
     "search": {
         "aliases": [
             "검색",
+            "노래검색",
             "찾아"
         ],
         "category": "music",
@@ -607,10 +624,9 @@
     },
     "skip": {
         "aliases": [
+            "next",
             "s",
-            "넘겨",
-            "버려",
-            "치워"
+            "넘겨"
         ],
         "category": "music",
         "cooldown": 0,
