@@ -7,13 +7,9 @@ module.exports = class extends Event {
     }
 
     async run(message) {
-        let { guild, member, content } = message;
+        let { guild, member, content, webhookID } = message;
 
-        if (guild === null) {
-            return;
-        }
-
-        if (member.user.bot) {
+        if (guild === null || webhookID || member.user.bot) {
             return;
         }
 
