@@ -140,6 +140,13 @@
 ##### Alias: pre, 접두사
 ##### OwnerOnly: false
 ---
+# say
+#### Send message to channel
+##### Usage: say [#{channel_mention}] #{message}
+##### Cooldown: 1000
+##### Alias: 말해
+##### OwnerOnly: false
+---
 # serverinfo
 #### Show server's information
 ##### Usage: serverinfo

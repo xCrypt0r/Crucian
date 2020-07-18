@@ -555,6 +555,17 @@
         "minArgc": 0,
         "usage": "sanction"
     },
+    "say": {
+        "aliases": [
+            "말해"
+        ],
+        "category": "general",
+        "cooldown": 1000,
+        "description": "Send message to channel",
+        "isOwnerOnly": false,
+        "minArgc": 1,
+        "usage": "say [#{channel_mention}] #{message}"
+    },
     "search": {
         "aliases": [
             "검색",
