@@ -23,8 +23,7 @@ module.exports = class extends Event {
             useUnifiedTopology: true
         });
 
-        this.logger.log('Connected to database');
-        this.logger.log(`Logged in as ${this.user.tag}`);
+        this.logger.log('Connected to database', `Logged in as ${this.user.tag}`);
         this.guilds.cache.forEach(guild => {
             guild.initialize();
             guild.members.cache

@@ -38,15 +38,21 @@ class Logger extends Console {
     }
 
     log(...data) {
-        this.writeLog(data, 'log');
+        for (let message of data) {
+            this.writeLog(message, 'log');
+        }
     }
 
     error(...data) {
-        this.writeLog(data, 'error');
+        for (let message of data) {
+            this.writeLog(message, 'error');
+        }
     }
 
     warn(...data) {
-        this.writeLog(data, 'warn');
+        for (let message of data) {
+            this.writeLog(message, 'warn');
+        }
     }
 }
 
