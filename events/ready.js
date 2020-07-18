@@ -20,7 +20,8 @@ module.exports = class extends Event {
         await connect(`mongodb://${user}:${pass}@${host}:${port}/${dababase}`, {
             useNewUrlParser: true,
             useFindAndModify: true,
-            useUnifiedTopology: true
+            useUnifiedTopology: true,
+            useCreateIndex: true
         });
 
         this.logger.log('Connected to database', `Logged in as ${this.user.tag}`);
