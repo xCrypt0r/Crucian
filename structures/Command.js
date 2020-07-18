@@ -1,3 +1,4 @@
+const LogModel = require('../models/Log.js');
 const path = require('path');
 const commands = require('../assets/json/commands.json');
 
@@ -12,14 +13,9 @@ class Command {
     }
 
     async log(message) {
-        let timestamp = message.createdTimestamp;
+        let newLog = new LogModel({ command: this.name, fullId: message.member.fullId });
 
-        bot.usage.set(`${message.member.fullId}-${timestamp}`, {
-            id: message.author.id,
-            guild: message.guild.id,
-            command: this.name,
-            timestamp
-        });
+        await newLog.save();
     }
 
     async cool(command, member, cooldown) {

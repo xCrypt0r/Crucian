@@ -11,20 +11,20 @@ class Slot extends Command {
 
     async run(message, args) {
         let bet = Number(args[0]),
-            { money } = message.member.info;
-        
+            { money } = await message.member.info;
+
         if (!Number.isInteger(bet) || bet <= 0) {
             message.reply(bot.lang.invalidArguments);
 
             return;
         }
-        
+
         if (money < bet) {
             message.reply(bot.lang.notEnoughMoney.format(money));
-            
+
             return;
         }
-        
+
         let member = message.member,
             times = 3 * bet,
             results = machine.play(),
@@ -37,7 +37,7 @@ class Slot extends Command {
                 .setThumbnail(message.author.displayAvatarURL())
                 .setDescription(results.visualize(false))
                 .setTimestamp();
-            
+
         hasWon > 0 ? (
             member.giveMoney(winnings),
             embed.description += slot.hasWon.format(member.displayName, winnings)
@@ -45,7 +45,7 @@ class Slot extends Command {
             member.takeMoney(bet),
             embed.description += slot.hasLost.format(member.displayName, bet)
         );
-        
+
         embed.addFields(
             {
                 name: slot.bet.name,
@@ -59,11 +59,11 @@ class Slot extends Command {
             },
             {
                 name: slot.balance.name,
-                value: member.info.money,
+                value: (await member.info).money,
                 inline: true
             }
         );
-          
+
         message.channel.send(embed);
     }
 }

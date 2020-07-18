@@ -1,4 +1,5 @@
 const Command = require('../../structures/Command.js');
+const MemberModel = require('../../models/Member.js');
 
 class Warn extends Command {
     constructor(...args) {
@@ -27,9 +28,11 @@ class Warn extends Command {
         }
 
         let reason = args.slice(1).join(' '),
-            { warnings } = member.info;
+            { warnings } = await member.info;
 
-        if (++warnings >= 3) {
+        warnings++;
+
+        if (warnings >= 3) {
             member
                 .kick(reason)
                 .then(() => {
@@ -37,7 +40,10 @@ class Warn extends Command {
                 })
                 .catch(bot.logger.error);
         } else {
-            bot.warnings.set(member.fullId, warnings, 'warnings');
+            await MemberModel.updateOne(
+                { fullId: member.fullId },
+                { $set: { warnings: warnings } }
+            );
             message.channel.send(bot.lang.warning.format(reason, member, warnings));
         }
     }

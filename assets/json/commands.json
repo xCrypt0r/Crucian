@@ -181,7 +181,7 @@
         "description": "Remove reminder",
         "isOwnerOnly": false,
         "minArgc": 1,
-        "usage": "forget #{index}"
+        "usage": "forget #{todo}"
     },
     "getlines": {
         "aliases": [

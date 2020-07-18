@@ -1,5 +1,5 @@
 const Event = require('../structures/Event.js');
-const config = require('../assets/js/config.js');
+const { connect } = require('mongoose');
 
 module.exports = class extends Event {
     constructor(...args) {
@@ -7,15 +7,29 @@ module.exports = class extends Event {
     }
 
     async run() {
+        let {
+            MONGO_USER: user,
+            MONGO_PASS: pass,
+            MONGO_HOST: host,
+            MONGO_PORT: port,
+            MONGO_DATABASE: dababase
+        } = process.env;
+
+        pass = encodeURIComponent(pass);
+
+        await connect(`mongodb://${user}:${pass}@${host}:${port}/${dababase}`, {
+            useNewUrlParser: true,
+            useFindAndModify: true,
+            useUnifiedTopology: true
+        });
+
+        this.logger.log('Connected to database');
         this.logger.log(`Logged in as ${this.user.tag}`);
         this.guilds.cache.forEach(guild => {
-            this.config.ensure(guild.id, config.guild);
-
-            guild.members.cache.forEach(member => {
-                if (!member.user.bot) {
-                    this.info.ensure(member.fullId, config.member(member));
-                }
-            });
+            guild.initialize();
+            guild.members.cache
+                .filter(member => !member.user.bot)
+                .forEach(member => member.initialize());
         });
     }
 };

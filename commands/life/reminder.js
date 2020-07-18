@@ -1,4 +1,5 @@
 const Command = require('../../structures/Command.js');
+const MemberModel = require('../../models/Member.js');
 const moment = require('moment');
 
 class Reminder extends Command {
@@ -7,9 +8,10 @@ class Reminder extends Command {
     }
 
     async run(message, args) {
+        let member = message.member;
+
         if (!args.length) {
-            let member = message.member,
-                { reminders } = member.info;
+            let { reminders } = await member.info;
 
             if (!reminders.length) {
                 message.reply(bot.lang.reminderEmpty);
@@ -36,10 +38,12 @@ class Reminder extends Command {
         }
 
         let todo = args.join(' '),
-            id = message.author.id,
             timestamp = message.createdTimestamp;
 
-        bot.info.push(message.member.fullId, { id, todo, timestamp }, 'reminders');
+        await MemberModel.updateOne(
+            { fullId: member.fullId },
+            { $push: { reminders: { todo, timestamp } } }
+        );
 
         message.reply(bot.lang.reminderSet.format(todo));
     }

@@ -1,4 +1,5 @@
 const Command = require('../../structures/Command.js');
+const GuildModel = require('../../models/Guild.js');
 
 class Prefix extends Command {
     constructor(...args) {
@@ -15,12 +16,19 @@ class Prefix extends Command {
         let guild = message.guild,
             prefix = args[0];
 
-        args.length > 0 ? (
-            bot.config.set(guild.id, prefix, 'prefix'),
-            message.channel.send(bot.lang.prefixChanged.format(prefix))
-        ) : (
-            message.channel.send(bot.lang.currentPrefix.format(bot.config.get(guild.id, 'prefix')))
-        );
+        if (args.length > 0) {
+            await GuildModel.updateOne(
+                { id: guild.id },
+                { $set: { prefix: prefix } },
+                { upsert: true }
+            );
+
+            message.channel.send(bot.lang.prefixChanged.format(prefix));
+        } else {
+            let doc = await GuildModel.findOne({ id: guild.id });
+
+            message.channel.send(bot.lang.currentPrefix.format(doc.prefix));
+        }
     }
 }
 

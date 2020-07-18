@@ -89,7 +89,7 @@ class HeadsOrTails extends Command {
                 },
                 {
                     name: this.form.balance.name,
-                    value: message.member.info.money,
+                    value: (await message.member.info).money,
                     inline: true
                 }
             );

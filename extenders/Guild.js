@@ -1,8 +1,23 @@
 const { Structures } = require('discord.js');
+const GuildModel = require('../models/Guild.js');
 
 module.exports = Structures.extend('Guild', Guild => class extends Guild {
     constructor(...args) {
         super(...args);
+    }
+
+    get prefix() {
+        return GuildModel
+            .findOne({ id: this.id })
+            .then(guild => guild.prefix);
+    }
+
+    async initialize() {
+        if (!await GuildModel.findOne({ id: this.id })) {
+            let newGuild = new GuildModel({ id: this.id });
+
+            await newGuild.save();
+        }
     }
 
     async createRole(name, options = {}) {

@@ -1,20 +1,38 @@
 const { Structures } = require('discord.js');
+const MemberModel = require('../models/Member.js');
 
 module.exports = Structures.extend('GuildMember', GuildMember => class extends GuildMember {
     get fullId() {
         return `${this.guild.id}-${this.id}`;
     }
-    
+
     get info() {
-        return this.client.info.get(this.fullId);
+        return MemberModel
+            .findOne({ fullId: this.fullId });
     }
-    
-    giveMoney(money) {
-        return this.client.info.math(this.fullId, 'add', money, 'money');
+
+    async initialize() {
+        if (!await MemberModel.findOne({ fullId: this.fullId })) {
+            let newMember = new MemberModel({ fullId: this.fullId, guildId: this.guild.id });
+
+            await newMember.save();
+        }
     }
-    
-    takeMoney(money) {
-        return this.client.info.math(this.fullId, 'sub', money, 'money');
+
+    async giveMoney(amount) {
+        return await MemberModel.findOneAndUpdate(
+            { fullId: this.fullId },
+            { $inc: { money: amount } },
+            { new: true }
+        );
+    }
+
+    async takeMoney(amount) {
+        return await MemberModel.findOneAndUpdate(
+            { fullId: this.fullId },
+            { $inc: { money: -amount } },
+            { new: true }
+        );
     }
 
     async addRole(role) {

@@ -23,9 +23,8 @@ class AddMoney extends Command {
             return;
         }
 
-        member.giveMoney(amount);
-
-        let { addMoney: format } = bot.lang,
+        let doc  = await member.giveMoney(amount),
+            { addMoney: format } = bot.lang,
             embed = new MessageEmbed()
                 .setTitle(format.title)
                 .setAuthor(message.author.tag, message.author.displayAvatarURL())
@@ -39,7 +38,7 @@ class AddMoney extends Command {
                     },
                     {
                         name: format.balance.name,
-                        value: member.info.money,
+                        value: doc.money,
                         inline: true
                     }
                 );

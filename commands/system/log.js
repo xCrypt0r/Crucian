@@ -1,4 +1,5 @@
 const Command = require('../../structures/Command.js');
+const LogModel = require('../../models/Log.js');
 
 class Log extends Command {
     constructor(...args) {
@@ -15,25 +16,20 @@ class Log extends Command {
         }
 
         let res = [],
-            id = member.id,
-            guild = member.guild.id,
-            usage = bot.usage
-                .array()
-                .filter(u => u.id === id && u.guild === guild)
-                .reduce((acc, curr) => (acc[curr.command] = ++acc[curr.command] || 1, acc), {});
+            logs = await LogModel.find({ fullId: member.fullId });
 
-        for (let [command, count] of Object.entries(usage)) {
+        logs = logs.reduce((acc, curr) => (acc[curr.command] = ++acc[curr.command] || 1, acc), {});
+
+        for (let [command, count] of Object.entries(logs)) {
             res.push(bot.lang.commandUsage.format(command, count));
         }
 
-        let usageChunks = res
-                .chunk(10)
-                .map(chunk => chunk.join('\n')),
+        let logChunks = res.chunk(10).map(chunk => chunk.join('\n')),
             embedOptions = {
                 title: bot.lang.userInformation.commandUsage.name.format(member.user.username)
             };
 
-        bot.tools.page(message, usageChunks, embedOptions);
+        bot.tools.page(message, logChunks, embedOptions);
     }
 }
 

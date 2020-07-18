@@ -166,7 +166,7 @@
 ---
 # forget
 #### Remove reminder
-##### Usage: forget #{index}
+##### Usage: forget #{todo}
 ##### Cooldown: 1000
 ##### Alias: 잊어
 ##### OwnerOnly: false

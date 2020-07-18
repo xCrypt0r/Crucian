@@ -1,4 +1,5 @@
 const Command = require('../../structures/Command.js');
+const MemberModel = require('../../models/Member.js');
 
 class Leaderboard extends Command {
     constructor(...args) {
@@ -7,17 +8,20 @@ class Leaderboard extends Command {
 
     async run(message, args) {
         let guild = message.guild,
-            ranks = bot.info
-                .findAll('guild', guild.id)
-                .sort((a, b) => b.money - a.money);
-
-        let leaderboard = [],
+            ranks = await MemberModel
+                .find({ guildId: guild.id })
+                .sort({ money: 'desc' })
+                .limit(10),
+            leaderboard = [],
             i = 0;
 
-        ranks.forEach(rank => {
-            let member = guild.members.cache.get(rank.id);
 
-            leaderboard.push(bot.consts.FORMAT.LEADERBOARD_CHART.format(++i, member.user.tag, rank.money));
+        ranks.forEach(rank => {
+            let member = guild.members.cache.get(rank.fullId.split('-')[1]);
+
+            if (member) {
+                leaderboard.push(bot.consts.FORMAT.LEADERBOARD_CHART.format(++i, member.user.tag, rank.money));
+            }
         });
 
         let leaderboardChunks = leaderboard

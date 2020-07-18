@@ -1,4 +1,5 @@
 const Command = require('../../structures/Command.js');
+const MemberModel = require('../../models/Member.js');
 const { MessageEmbed } = require('discord.js');
 const ms = require('pretty-ms');
 
@@ -12,7 +13,7 @@ class Daily extends Command {
 
     async run(message) {
         let member = message.member,
-            { money, daily } = member.info;
+            { money, daily } = await member.info;
 
         if (Daily.timeout > Date.now() - daily) {
             let time = ms(Daily.timeout - (Date.now() - daily), {
@@ -39,10 +40,13 @@ class Daily extends Command {
                     }
                 );
 
-            bot.info.set(member.fullId, {
-                money: money + Daily.amount,
-                daily: Date.now()
-            });
+            await MemberModel.updateOne(
+                { fullId: member.fullId },
+                {
+                    $set: { daily: new Date() },
+                    $inc: { money: Daily.amount }
+                }
+            );
             message.channel.send(embed);
         }
     }

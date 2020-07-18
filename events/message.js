@@ -1,4 +1,5 @@
 const Event = require('../structures/Event.js');
+const GuildModel = require('../models/Guild.js');
 
 module.exports = class extends Event {
     constructor(...args) {
@@ -12,11 +13,11 @@ module.exports = class extends Event {
             return;
         }
 
-        if (this.config.get(guild.id, 'ignoreBotMessages') && member.user.bot) {
+        if (member.user.bot) {
             return;
         }
 
-        let { prefix } = this.config.get(guild.id);
+        let prefix  = await guild.prefix;
 
         if (content.startsWith(prefix)) {
             let argv = content.trim().split(/\s+/),
