@@ -2,7 +2,7 @@
 
 # Crucian
 [![Language](https://img.shields.io/badge/Language-Node.js-red?style=for-the-badge&logo=node.js)][nodejs]
-[![MIT License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge&logo=github)](LICENSE)
+[![GPL License](https://img.shields.io/badge/License-GPL-blue?style=for-the-badge&logo=github)](LICENSE)
 [![Repo Size](https://img.shields.io/github/languages/code-size/SoBusted/Crucian?style=for-the-badge&label=SIZE&logo=github)](/../../)
 [![Codacy branch grade](https://img.shields.io/codacy/grade/a3f21df5a2c84e789dc94b0c66ce5aac/master?style=for-the-badge&label=QUALITY&logo=codacy)][codacy]
 [![Build Status](https://img.shields.io/travis/SoBusted/Crucian/master?style=for-the-badge&logo=travis)][travis]
@@ -27,7 +27,7 @@ Click [**Here**](https://discordapp.com/api/oauth2/authorize?client_id=508679069
 -   English
 
 ## Install
-Check [setup.md](docs/setup.md)  
+Check [setup.md](docs/setup.md)
 If you have trouble hosting, come to [**my server**][my server]
 
 ## Commands
