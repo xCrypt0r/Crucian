@@ -1,5 +1,4 @@
 const { Client, Collection } = require('discord.js');
-const Enmap = require('enmap');
 const Logger = require('../structures/Logger.js');
 const CommandStore = require('../structures/CommandStore.js');
 const EventStore = require('../structures/EventStore.js');
