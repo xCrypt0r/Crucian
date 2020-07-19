@@ -1,6 +1,6 @@
 {
   "name": "crucian",
-  "version": "1.9.2",
+  "version": "1.9.3",
   "description": "My bot with simple structure based on discord.js",
   "main": "bot.js",
   "engines": {
@@ -16,7 +16,7 @@
     "url": "https://github.com/SoBusted/Crucian.git"
   },
   "author": "SoBusted",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/SoBusted/Crucian/issues",
     "email": "fireintheholl@naver.com"
