@@ -1,6 +1,6 @@
 {
   "name": "crucian",
-  "version": "1.9.3",
+  "version": "2.0.0",
   "description": "My bot with simple structure based on discord.js",
   "main": "bot.js",
   "engines": {
@@ -8,8 +8,8 @@
   },
   "scripts": {
     "prestart": "node lib/check-version.js",
-    "start": "node bot.js",
-    "deploy": "pm2 start bot.js"
+    "start": "sudo node bot.js",
+    "deploy": "sudo pm2 kill && sudo pm2 start bot.js --watch"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,8 @@
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
     "enmap": "^5.3.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "fast-glob": "^3.2.4",
     "ffmpeg-static": "^4.2.5",
     "figlet": "^1.2.4",
@@ -40,7 +42,10 @@
     "mongoose": "^5.9.25",
     "ms": "^2.1.2",
     "opusscript": "0.0.7",
+    "passport": "^0.4.1",
+    "passport-discord": "^0.1.4",
     "pretty-ms": "^7.0.0",
+    "pug": "^3.0.0",
     "request": "^2.88.0",
     "semver": "^7.3.2",
     "slot-machine": "^2.1.0",

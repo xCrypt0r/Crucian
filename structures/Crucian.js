@@ -9,6 +9,7 @@ class Crucian extends Client {
     constructor(options = {}) {
         super(options);
 
+        this.dashboard  = require('../dashboard/app.js');
         this.consts     = require('../assets/json/consts.json');
         this.lang       = require('../assets/json/lang_ko.json');
         this.tools      = require('../lib/utils.js');

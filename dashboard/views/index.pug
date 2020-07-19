@@ -1,0 +1,17 @@
+extends layout
+
+block js
+    script(src="https://use.fontawesome.com/50c679dd24.js")
+
+block content
+    .navbar.navbar-fixed-top.navbar-inverse(role="navigation")
+        .container
+            .navbar-header
+                button.navbar-toggle(data-toggle="collapse", data-target=".navbar-collapse")
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand: i= TITLE
+            .navbar-collapse.collapse
+                ul.nav.navbar-nav.navbar-right
+                    li: a(href="#") ABOUT
