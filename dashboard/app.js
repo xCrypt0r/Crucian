@@ -41,6 +41,11 @@ module.exports.load = async bot => {
             resave: false,
             saveUninitialized: true
         }))
+        .use((req, res, next) => {
+            res.locals.session = req.session;
+
+            next();
+        })
         .use(passport.initialize())
         .use(passport.session())
         .set('views', path.join(__dirname, '/views'))

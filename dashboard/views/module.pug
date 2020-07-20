@@ -1,3 +1,8 @@
 -
     const TITLE = 'Crucian';
     const AUTHOR = 'SoBusted';
+    const SESSION = locals.session;
+
+    var user = SESSION.passport.user;
+    var tag = `${user.username}#${user.discriminator}`;
+    var avatar = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`;

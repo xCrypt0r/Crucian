@@ -8,10 +8,45 @@ html(lang="ko")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title= TITLE
         link(rel="stylesheet", href="css/style.css")
-        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
-        link(rel="stylesheet", href=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat")
+        link(rel="stylesheet", href="css/style.css")
+        script(src="https://use.fontawesome.com/releases/v5.0.10/js/all.js")
+        block css
         block js
     body
-        block content
-        script(src="https://code.jquery.com/jquery-3.5.1.min.js")
-        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+        nav.navbar.navbar-expand-md.navbar-light
+            buttn.navbar-toggler.ml-auto.mb-2.bg-light(type="button", data-toggle="collapse", data-target="#myNavbar")
+                span.navbar-toggler-icon
+            .collapse.navbar-collapse#myNavbar
+                .container-fluid
+                    .row
+                        .col-lg-3.sidebar.fixed-top
+                            a.navbar-brand.text-white.d-block.mx-auto.text-center.py-3.mb-4.bottom-border.font-weight-bold(href="/")= TITLE
+                            .bottom-border.pb-3
+                                img.rounded-circle.mr-3(src=avatar, width="50")
+                                a.text-white(href="#")= tag
+                            ul.navbar-nav.flex-column.mt-4
+                                li.nav-item
+                                    a.nav-link.text-white.p-3.mb-2.current.sidebar-link(href='#')
+                                        i.fas.fa-home.text-light.fa-lg.mr-3
+                                        | Dashboard
+                                li.nav-item
+                                    a.nav-link.text-white.p-3.mb-2.sidebar-link(href='#')
+                                        i.fas.fa-user.text-light.fa-lg.mr-3
+                                        | Profile
+                                li.nav-item
+                                    a.nav-link.text-white.p-3.mb-2.sidebar-link(href='#')
+                                        i.fas.fa-trophy.text-light.fa-lg.mr-3
+                                        | Leaderboard
+                                li.nav-item
+                                    a.nav-link.text-white.p-3.mb-2.sidebar-link(href='#')
+                                        i.fas.fa-cog.text-light.fa-lg.mr-3
+                                        | Settings
+                                li.nav-item
+                                    a.nav-link.text-white.p-3.mb-2.sidebar-link(href='#')
+                                        i.fas.fa-code.text-light.fa-lg.mr-3
+                                        | code
+        script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js")
