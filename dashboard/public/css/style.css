@@ -1,6 +1,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #eee;
+    user-select: none;
 }
 
 .sidebar {
@@ -32,4 +33,14 @@ body {
     border-radius: 7px;
     box-shadow: 2px 5px 20px #111;
     transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: static;
+        height: auto;
+    }
+    .top-navbar {
+        position: static;
+    }
 }

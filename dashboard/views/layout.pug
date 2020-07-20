@@ -8,7 +8,7 @@ html(lang="ko")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title= TITLE
         link(rel="stylesheet", href="css/style.css")
-        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat")
         link(rel="stylesheet", href="css/style.css")
         script(src="https://use.fontawesome.com/releases/v5.0.10/js/all.js")
@@ -21,14 +21,14 @@ html(lang="ko")
             .collapse.navbar-collapse#myNavbar
                 .container-fluid
                     .row
-                        .col-lg-3.sidebar.fixed-top
+                        .col-lg-3.sidebar.fixed-top.col-xl-2.col-md-4
                             a.navbar-brand.text-white.d-block.mx-auto.text-center.py-3.mb-4.bottom-border.font-weight-bold(href="/")= TITLE
                             .bottom-border.pb-3
                                 img.rounded-circle.mr-3(src=avatar, width="50")
-                                a.text-white(href="#")= tag
+                                a.text-white.text-decoration-none(href="#")= tag
                             ul.navbar-nav.flex-column.mt-4
                                 li.nav-item
-                                    a.nav-link.text-white.p-3.mb-2.current.sidebar-link(href='#')
+                                    a.nav-link.text-white.p-3.mb-2.current(href='#')
                                         i.fas.fa-home.text-light.fa-lg.mr-3
                                         | Dashboard
                                 li.nav-item
@@ -46,7 +46,9 @@ html(lang="ko")
                                 li.nav-item
                                     a.nav-link.text-white.p-3.mb-2.sidebar-link(href='#')
                                         i.fas.fa-code.text-light.fa-lg.mr-3
-                                        | code
+                                        | Code
+                        block title
+        block section
         script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js")
-        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
