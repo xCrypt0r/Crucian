@@ -7,7 +7,7 @@ class Forget extends Command {
     }
 
     async run(message, args) {
-        let todo = args[0],
+        let todo = args.join(' '),
             member = message.member,
             { reminders } = await member.info;
 
