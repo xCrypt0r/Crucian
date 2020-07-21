@@ -27,6 +27,7 @@ block section
                                     tr.text-muted
                                         th #
                                         th Name
+                                        th Alias
                                         th Description
                                         th Usage
                                         th Cooldown
@@ -37,7 +38,8 @@ block section
                                         tr
                                             th= ++i
                                             td= name
+                                            td= details.aliases.join(', ')
                                             td= details.description
                                             td= details.usage
-                                            td= details.cooldown > 0 ? ms(details.cooldown, { long: true }) : '-'
+                                            td= details.cooldown > 0 ? ms(details.cooldown) : '-'
 
