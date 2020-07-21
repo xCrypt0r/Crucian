@@ -14,3 +14,30 @@ block section
                                 img(src="https://imgur.com/QvReqZN.png", width="170")
                             .single-post-content-wrapper.p-3
                                 span.font-weight-bold Crucian is my discord bot with simple structure based on discord.js
+    hr
+    section
+        .container-fluid
+            .row.mb-5
+                .col-xl-10.col-lg-9.col-md-8.ml-auto
+                    .row
+                        .col-12
+                            h3.text-muted.text-center.mb-3 Commands
+                            table.table.table-dark.table-hover.text-center
+                                thead
+                                    tr.text-muted
+                                        th #
+                                        th Name
+                                        th Description
+                                        th Usage
+                                        th Cooldown
+                                tbody
+                                    - var i = 0;
+
+                                    - for (let [name, details] of Array.from(commands))
+                                        tr
+                                            th= ++i
+                                            td= name
+                                            td= details.description
+                                            td= details.usage
+                                            td= details.cooldown > 0 ? ms(details.cooldown, { long: true }) : '-'
+

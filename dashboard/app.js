@@ -42,7 +42,9 @@ module.exports.load = async bot => {
             saveUninitialized: true
         }))
         .use((req, res, next) => {
+            res.locals.ms = require('ms');
             res.locals.session = req.session;
+            res.locals.commands = bot.commands;
 
             next();
         })
