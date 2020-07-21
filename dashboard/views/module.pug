@@ -6,3 +6,9 @@
     var user = SESSION.passport.user;
     var tag = `${user.username}#${user.discriminator}`;
     var avatar = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`;
+
+mixin Title(title)
+    .col-xl-10.col-lg-9.col-md-8.ml-auto.bg-dark.fixed-top.py-2.top-navbar
+        .row.align-items-center
+            .col-md-4.py-2
+                h4.text-light.text-uppercase.mb-0.font-weight-bold= title
