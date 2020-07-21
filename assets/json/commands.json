@@ -648,14 +648,10 @@
     },
     "slot": {
         "aliases": [
-            "pachinko",
             "slotmachine",
             "slots",
-            "빠찡꼬",
-            "빠찡코",
             "슬롯",
-            "슬롯머신",
-            "파칭코"
+            "슬롯머신"
         ],
         "category": "economy",
         "cooldown": 1000,
