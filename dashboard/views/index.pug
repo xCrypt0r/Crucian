@@ -22,7 +22,7 @@ block section
                     .row
                         .col-12
                             h3.text-muted.text-center.mb-3 Commands
-                            table.table.table-dark.table-hover.text-center
+                            table.table.table-dark.table-hover.text-center#commands
                                 thead
                                     tr.text-muted
                                         th #
@@ -42,4 +42,9 @@ block section
                                             td= details.description
                                             td= details.usage
                                             td= details.cooldown > 0 ? ms(details.cooldown) : '-'
+                            .pagination-container
+                                nav
+                                    ul.pagination.justify-content-center
 
+block js
+    script(src="js/index.js")
