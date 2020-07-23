@@ -14,8 +14,8 @@ if (totalRows > maxRows) {
 
     for (let i = 1; i <= pageNum; i++) {
         let $pageItem = $('<li>').addClass('page-item').data('page', i).append(
-                $('<a>').addClass('page-link').attr('href', '#').text(i)
-            );
+            $('<a>').addClass('page-link').attr('href', '#').text(i)
+        );
 
         $pagination.append($pageItem);
     }
@@ -23,7 +23,7 @@ if (totalRows > maxRows) {
 
 $pagination.find('li:first-child').addClass('active');
 $pagination.find('li').on('click', function(e) {
-    let pageNum = $(this).attr('data-page'),
+    let pageNum = $(this).data('page'),
         trIndex = 0;
 
     $pagination.find('li').removeClass('active');
