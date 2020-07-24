@@ -2,6 +2,7 @@ node_modules
 
 commands/test/
 data/
+assets/json/config.json
 
 package-lock.json
 

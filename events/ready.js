@@ -23,7 +23,10 @@ module.exports = class extends Event {
             useUnifiedTopology: true,
             useCreateIndex: true
         });
-        await this.dashboard.load(this);
+
+        if (this.config.USE_DASHBOARD) {
+            await this.dashboard.load(this);
+        }
 
         this.logger.log('Connected to database', `Logged in as ${this.user.tag}`);
         this.guilds.cache.forEach(guild => {
