@@ -1,10 +1,11 @@
 engines:
   duplication:
     exclude_paths:
-      - 'commands/**/*.js'
+      - 'commands/**.js'
 
 exclude_paths:
   - '**.json'
   - '**.yml'
   - '**.md'
+  - 'dashboard/**.css'
   - 'Dockerfile'
