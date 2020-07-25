@@ -1,8 +1,7 @@
-const { Client, Collection } = require('discord.js');
+const { Client } = require('discord.js');
 const Logger = require('../structures/Logger.js');
 const CommandStore = require('../structures/CommandStore.js');
 const EventStore = require('../structures/EventStore.js');
-const glob = require('fast-glob');
 
 class Crucian extends Client {
     constructor(options = {}) {
