@@ -15,9 +15,9 @@
 mixin Title(title)
     .col-xl-10.col-lg-9.col-md-8.ml-auto.bg-dark.fixed-top.py-2.top-navbar
         .row.align-items-center
-            .col-md-4.py-2
+            .col-md-4.col-sm-8.col-10.py-2
                 h4.text-light.text-uppercase.mb-0.font-weight-bold= title
-            .col-md-8
+            .col-md-8.col-sm-4.col-2
                 if !isAuthenticated
                     ul.navbar-nav
                         li.nav-item.ml-auto

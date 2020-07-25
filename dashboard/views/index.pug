@@ -7,10 +7,10 @@ block section
     section
         .container-fluid
             .row
-                .col-lg-10.ml-auto
+                .col-xl-10.col-lg-9.col-md-8.pl-3.ml-auto
                     .row.pt-5.mt-3.mb-5
-                        .col-sm-6
-                            .image-wrapper.pr-3.float-left
+                        .col-sm-12
+                            .image-wrapper.px-3.float-left
                                 img(src="https://imgur.com/QvReqZN.png", width="170")
                             .single-post-content-wrapper.p-3
                                 span.font-weight-bold Crucian is my discord bot with simple structure based on discord.js
@@ -27,10 +27,10 @@ block section
                                     tr.text-muted
                                         th #
                                         th Name
-                                        th Alias
+                                        th.d-none.d-sm-table-cell Alias
                                         th Description
                                         th Usage
-                                        th Cooldown
+                                        th.d-none.d-sm-table-cell Cooldown
                                 tbody
                                     - var i = 0;
 
@@ -38,10 +38,10 @@ block section
                                         tr
                                             th= ++i
                                             td= name
-                                            td= details.aliases.join(', ')
+                                            td.d-none.d-sm-table-cell= details.aliases.join(', ')
                                             td= details.description
                                             td= details.usage
-                                            td= details.cooldown > 0 ? ms(details.cooldown) : '-'
+                                            td.d-none.d-sm-table-cell= details.cooldown > 0 ? ms(details.cooldown) : '-'
                             .pagination-container
                                 nav
                                     ul.pagination.justify-content-center
