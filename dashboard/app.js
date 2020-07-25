@@ -25,7 +25,7 @@ module.exports.load = async bot => {
     }, (accessToken, refreshToken, profile, done) => {
         let { username, discriminator, id } = profile;
 
-        bot.logger.log(`Dashboard: ${username}#${discriminator} logged in`);
+        bot.logger.log(`Dashboard: ${username}#${discriminator} (${id}) logged in`);
 
         process.nextTick(() => done(null, profile));
     }));
@@ -53,12 +53,6 @@ module.exports.load = async bot => {
         .set('views', path.join(__dirname, '/views'))
         .set('view engine', 'pug')
         .get('/', (req, res) => {
-            if (!req.isAuthenticated()) {
-                res.redirect('/auth');
-
-                return;
-            }
-
             res.render('index');
         })
         .get('/auth', passport.authenticate('discord', {

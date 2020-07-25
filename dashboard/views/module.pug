@@ -3,12 +3,23 @@
     const AUTHOR = 'SoBusted';
     const SESSION = locals.session;
 
-    var user = SESSION.passport.user;
+    var isAuthenticated = !!SESSION.passport;
+    var user = isAuthenticated ? SESSION.passport.user : {
+        username: 'GUEST',
+        discriminator: '9999',
+        avatar: 'https://discord.com/assets/1cbd08c76f8af6dddce02c5138971129.png'
+    };
     var tag = `${user.username}#${user.discriminator}`;
-    var avatar = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`;
+    var avatar = isAuthenticated ? `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}` : user.avatar;
 
 mixin Title(title)
     .col-xl-10.col-lg-9.col-md-8.ml-auto.bg-dark.fixed-top.py-2.top-navbar
         .row.align-items-center
             .col-md-4.py-2
                 h4.text-light.text-uppercase.mb-0.font-weight-bold= title
+            .col-md-8
+                if !isAuthenticated
+                    ul.navbar-nav
+                        li.nav-item.ml-auto
+                            a.nav-link(href="/auth")
+                                i.fas.fa-sign-in-alt.fa-lg
