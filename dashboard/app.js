@@ -1,34 +1,18 @@
+const express = require('express');
+const app = express();
+const session = require('express-session');
+const passport = require('passport');
+const path = require('path');
+const {
+    DASHBOARD_PORT: port = 80,
+    EXPRESS_SESSION_SECRET: sessionSecret
+} = process.env;
+
 module.exports.load = async bot => {
-    const express = require('express');
-    const app = express();
-    const session = require('express-session');
-    const passport = require('passport');
-    const Verification = require('passport-discord').Strategy;
-    const path = require('path');
-    const {
-        DASHBOARD_PORT: port = 80,
-        CRUCIAN_CLIENTID: clientID,
-        CRUCIAN_SECRET: clientSecret,
-        EXPRESS_SESSION_SECRET: sessionSecret
-    } = process.env;
-    const discordOAuthScopes = ['identify', 'email', 'guilds'];
-
-    passport.serializeUser((user, done) => done(null, user));
-
-    passport.deserializeUser((obj, done) => done(null, obj));
-
-    passport.use(new Verification({
-        clientID,
-        clientSecret,
-        scope: discordOAuthScopes,
-        session: true
-    }, (accessToken, refreshToken, profile, done) => {
-        let { username, discriminator, id } = profile;
-
-        bot.logger.log(`Dashboard: ${username}#${discriminator} (${id}) logged in`);
-
-        process.nextTick(() => done(null, profile));
-    }));
+    const routers = {
+        index: require('./routes/index.js'),
+        auth: require('./routes/auth.js')(bot)
+    };
 
     if (app.get('env') === 'development') {
         app.locals.pretty = true;
@@ -50,19 +34,10 @@ module.exports.load = async bot => {
         })
         .use(passport.initialize())
         .use(passport.session())
+        .use('/', routers.index)
+        .use('/auth', routers.auth)
         .set('views', path.join(__dirname, '/views'))
         .set('view engine', 'pug')
-        .get('/', (req, res) => {
-            res.render('index');
-        })
-        .get('/auth', passport.authenticate('discord', {
-            scope: discordOAuthScopes,
-            permissions: 8
-        }))
-        .get('/auth/callback', passport.authenticate('discord', {
-            failureRedirect: '/',
-            successRedirect: '/'
-        }))
         .listen(port, err => {
             if (err) {
                 bot.logger.error(err);
