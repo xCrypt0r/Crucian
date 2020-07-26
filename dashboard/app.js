@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const helmet = require('helmet');
 const session = require('express-session');
 const passport = require('passport');
 const path = require('path');
@@ -20,6 +21,7 @@ module.exports.load = async bot => {
 
     app
         .use(express.static(path.join(__dirname, '/public')))
+        .use(helmet())
         .use(session({
             secret: sessionSecret,
             resave: false,
