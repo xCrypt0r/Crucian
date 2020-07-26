@@ -1,7 +1,7 @@
 {
   "name": "crucian",
   "version": "2.0.1",
-  "author": "SoBusted",
+  "author": "xCrypt0r",
   "description": "My bot with simple structure based on discord.js",
   "main": "bot.js",
   "engines": {
@@ -14,13 +14,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SoBusted/Crucian.git"
+    "url": "https://github.com/xCrypt0r/Crucian.git"
   },
   "license": "GPL-3.0",
-  "hompage": "https://github.com/SoBusted/Crucian#readme",
+  "hompage": "https://github.com/xCrypt0r/Crucian#readme",
   "bugs": {
-    "url": "https://github.com/SoBusted/Crucian/issues",
-    "email": "fireintheholl@naver.com"
+    "url": "https://github.com/xCrypt0r/Crucian/issues",
+    "email": "legacy5877@gmail.com"
   },
   "dependencies": {
     "@vitalets/google-translate-api": "^3.0.0",

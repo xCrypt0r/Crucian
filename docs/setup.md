@@ -1,7 +1,7 @@
 ## How to run
 ### Local setup
 #### For Linux
-1.  Run `git clone https://github.com/SoBusted/Crucian.git` to clone this repository
+1.  Run `git clone https://github.com/xCrypt0r/Crucian.git` to clone this repository
 
 1.  Run `cd Crucian` to move to Crucian folder
 
@@ -15,7 +15,7 @@
 
 ### Heroku setup
 #### For Linux
-1.  Run `git clone https://github.com/SoBusted/Crucian.git` to clone this repository
+1.  Run `git clone https://github.com/xCrypt0r/Crucian.git` to clone this repository
 
 1.  Run `cd Crucian` to move to Crucian folder
 
@@ -25,7 +25,7 @@
 
 ### Docker setup
 #### For Linux
-1.  Run `git clone https://github.com/SoBusted/Crucian.git` to clone this repository
+1.  Run `git clone https://github.com/xCrypt0r/Crucian.git` to clone this repository
 
 1.  Run `cd Crucian` to move to Crucian folder
 
