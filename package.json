@@ -1,6 +1,6 @@
 {
   "name": "crucian",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "My bot with simple structure based on discord.js",
   "main": "bot.js",
   "engines": {
@@ -9,7 +9,7 @@
   "scripts": {
     "prestart": "node lib/check-version.js",
     "start": "sudo node bot.js",
-    "deploy": "sudo pm2 kill && sudo pm2 start bot.js --watch"
+    "deploy": "sudo pm2 kill && sudo pm2 start --name \"bot\" npm -- start --watch"
   },
   "repository": {
     "type": "git",
