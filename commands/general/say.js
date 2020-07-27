@@ -7,6 +7,8 @@ class Say extends Command {
     }
 
     async run(message, args) {
+        message.delete();
+
         if (message.mentions.channels.size > 0) {
             args.shift();
 
@@ -17,7 +19,7 @@ class Say extends Command {
             .setAuthor(message.author.tag, message.author.displayAvatarURL())
             .setDescription(args.join(' '));
 
-        message.channel.send(embed);
+        await message.channel.send(embed);
     }
 }
 
