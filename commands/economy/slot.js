@@ -39,10 +39,10 @@ class Slot extends Command {
                 .setTimestamp();
 
         hasWon > 0 ? (
-            member.giveMoney(winnings),
+            await member.giveMoney(winnings),
             embed.description += slot.hasWon.format(member.displayName, winnings)
         ) : (
-            member.takeMoney(bet),
+            await member.takeMoney(bet),
             embed.description += slot.hasLost.format(member.displayName, bet)
         );
 
