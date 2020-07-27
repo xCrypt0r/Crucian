@@ -2,8 +2,10 @@ const express = require('express');
 const app = express();
 const helmet = require('helmet');
 const session = require('express-session');
+const morgan = require('morgan');
 const passport = require('passport');
 const path = require('path');
+const fs = require('fs');
 const {
     DASHBOARD_HOST: host,
     DASHBOARD_PORT: port = 80,
@@ -52,6 +54,9 @@ module.exports.load = async bot => {
                     'fonts.gstatic.com'
                 ]
             }
+        }))
+        .use(morgan('combined', {
+            stream: fs.createWriteStream(__dirname + '/dashboard.log', { flags: 'w' })
         }))
         .use(session({
             secret: sessionSecret,

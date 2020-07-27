@@ -40,6 +40,7 @@
     "moment": "^2.27.0",
     "moment-duration-format": "^2.3.2",
     "mongoose": "^5.9.25",
+    "morgan": "^1.10.0",
     "ms": "^2.1.2",
     "opusscript": "0.0.7",
     "passport": "^0.4.1",
