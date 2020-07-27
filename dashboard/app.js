@@ -22,6 +22,34 @@ module.exports.load = async bot => {
     app
         .use(express.static(path.join(__dirname, '/public')))
         .use(helmet())
+        .use(helmet.contentSecurityPolicy({
+            directives: {
+                defaultSrc: [`'self'`],
+                scriptSrc: [
+                    `'self'`,
+                    'code.jquery.com',
+                    'cdnjs.cloudflare.com',
+                    'stackpath.bootstrapcdn.com',
+                    'use.fontawesome.com'
+                ],
+                styleSrc: [
+                   `'self'`,
+                    `'unsafe-inline'`,
+                    'maxcdn.bootstrapcdn.com',
+                    'fonts.googleapis.com'
+                ],
+                imgSrc: [
+                    `'self'`,
+                    'imgur.com',
+                    'i.imgur.com',
+                    'discord.com'
+                ],
+                fontSrc: [
+                    `'self'`,
+                    'fonts.gstatic.com'
+                ]
+            }
+        }))
         .use(session({
             secret: sessionSecret,
             resave: false,
