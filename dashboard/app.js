@@ -5,6 +5,7 @@ const session = require('express-session');
 const passport = require('passport');
 const path = require('path');
 const {
+    DASHBOARD_HOST: host,
     DASHBOARD_PORT: port = 80,
     EXPRESS_SESSION_SECRET: sessionSecret
 } = process.env;
@@ -33,7 +34,7 @@ module.exports.load = async bot => {
                     'use.fontawesome.com'
                 ],
                 styleSrc: [
-                   `'self'`,
+                    `'self'`,
                     `'unsafe-inline'`,
                     'maxcdn.bootstrapcdn.com',
                     'fonts.googleapis.com'
@@ -77,4 +78,6 @@ module.exports.load = async bot => {
 
             bot.logger.log('Connected to dashboard');
         });
+
+    bot.user.setActivity(host);
 };
