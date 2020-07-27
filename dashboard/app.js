@@ -43,7 +43,8 @@ module.exports.load = async bot => {
                     `'self'`,
                     'imgur.com',
                     'i.imgur.com',
-                    'discord.com'
+                    'discord.com',
+                    'cdn.discordapp.com'
                 ],
                 fontSrc: [
                     `'self'`,
