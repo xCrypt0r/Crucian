@@ -41,6 +41,7 @@ module.exports.load = async bot => {
                 ],
                 imgSrc: [
                     `'self'`,
+                    'data:image',
                     'imgur.com',
                     'i.imgur.com',
                     'discord.com',
