@@ -10,7 +10,7 @@
   "scripts": {
     "prestart": "node lib/check-version.js",
     "start": "sudo node bot.js",
-    "deploy": "sudo pm2 kill && sudo pm2 start --name \"bot\" npm -- start --watch"
+    "deploy": "sudo pm2 kill && sudo pm2 start ecosystem.yml"
   },
   "repository": {
     "type": "git",
