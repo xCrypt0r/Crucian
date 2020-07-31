@@ -9,9 +9,16 @@
 [![Discord](https://img.shields.io/discord/374188444433252363?color=7289da&label=discord&logo=discord&logoColor=white&style=for-the-badge)][my server]
 
 **Crucian** is my discord bot with simple structure based on [discord.js](https://github.com/discordjs/discord.js)
--   Made by [**@xCrypt0r**][my profile]
 
 Click [**Here**](https://discordapp.com/api/oauth2/authorize?client_id=508679069571743746&permissions=8&scope=bot) to invite Crucian to your server
+
+## Author
+Crucian © xCrypt0r  
+Authored and maintained by xCryptor  
+
+> GitHub [**@xCrypt0r**][my github]  
+> Twitter [**@CryptorX**][my twitter]  
+> Discord **xCrypt0r#9534**  
 
 ## Features
 -  Eoconomy
@@ -40,4 +47,6 @@ Check [commands.md](docs/commands.md)
 [codacy]: https://app.codacy.com/manual/fireintheholl/Crucian/dashboard
 [travis]: https://travis-ci.org/xCrypt0r/Crucian
 [my server]: https://discord.gg/35Y8ePX
-[my profile]: https://github.com/xCrypt0r
+[my github]: https://github.com/xCrypt0r
+[my twitter]: https://twitter.com/Crypt0rX
+
