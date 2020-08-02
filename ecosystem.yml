@@ -14,10 +14,11 @@ apps:
       - structures
       - bot.js
 
-    watch_delay: 1s
-
     ignore_watch:
+      - assets/json/config.json.example
       - dashboard/**.log
+
+    watch_delay: 1000
 
     watch_options:
       followSymlinks: false
@@ -26,4 +27,4 @@ apps:
 
     max_memory_restart: 200M
 
-    min_uptime: 5s
+    min_uptime: 5000
