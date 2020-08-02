@@ -10,8 +10,10 @@ class Slot extends Command {
     }
 
     async run(message, args) {
-        let bet = Number(args[0]),
+        let bet = args[0],
             { money } = await message.member.info;
+
+        bet = bet === 'max' ? money : Number(bet);
 
         if (!Number.isInteger(bet) || bet <= 0) {
             message.reply(bot.lang.invalidArguments);
