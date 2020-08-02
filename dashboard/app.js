@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const favicon = require('serve-favicon');
 const helmet = require('helmet');
 const session = require('express-session');
 const morgan = require('morgan');
@@ -55,6 +56,7 @@ module.exports.load = async bot => {
                 ]
             }
         }))
+        .use(favicon(__dirname + '/public/images/favicon.ico'))
         .use(morgan('combined', {
             stream: fs.createWriteStream(__dirname + '/dashboard.log', { flags: 'w' })
         }))

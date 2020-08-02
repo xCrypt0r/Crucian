@@ -1,6 +1,6 @@
 {
   "name": "crucian",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "author": "xCrypt0r",
   "description": "My bot with simple structure based on discord.js",
   "main": "bot.js",
@@ -49,6 +49,7 @@
     "pug": "^3.0.0",
     "request": "^2.88.0",
     "semver": "^7.3.2",
+    "serve-favicon": "^2.5.0",
     "slot-machine": "^2.1.0",
     "weather-js": "^2.0.0",
     "yt-search": "^2.0.1",
