@@ -34,7 +34,7 @@
     "ffmpeg-static": "^4.2.5",
     "figlet": "^1.2.4",
     "g-i-s": "^2.1.5",
-    "helmet": "^3.23.3",
+    "helmet": "^4.0.0",
     "imageapi.js": "^1.0.4",
     "jquery": "^3.5.1",
     "mathjs": "^7.0.2",
