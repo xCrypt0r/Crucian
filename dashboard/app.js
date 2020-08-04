@@ -26,20 +26,19 @@ module.exports.load = async bot => {
     app
         .use(express.static(path.join(__dirname, 'public')))
         .use('/jquery', express.static(path.join( __dirname, '..', 'node_modules', 'jquery', 'dist')))
+        .use('/bootstrap', express.static(path.join(__dirname, '..', 'node_modules', 'bootstrap', 'dist')))
+        .use('/popper', express.static(path.join(__dirname, '..', 'node_modules', 'popper.js', 'dist', 'umd')))
         .use(helmet())
         .use(helmet.contentSecurityPolicy({
             directives: {
                 defaultSrc: [`'self'`],
                 scriptSrc: [
                     `'self'`,
-                    'cdnjs.cloudflare.com',
-                    'stackpath.bootstrapcdn.com',
                     'use.fontawesome.com'
                 ],
                 styleSrc: [
                     `'self'`,
                     `'unsafe-inline'`,
-                    'maxcdn.bootstrapcdn.com',
                     'fonts.googleapis.com'
                 ],
                 imgSrc: [
@@ -53,7 +52,7 @@ module.exports.load = async bot => {
                 fontSrc: [
                     `'self'`,
                     'fonts.gstatic.com'
-                ]
+                ] 
             }
         }))
         .use(favicon(__dirname + '/public/images/favicon.ico'))
