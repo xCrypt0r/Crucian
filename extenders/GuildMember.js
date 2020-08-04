@@ -12,7 +12,7 @@ module.exports = Structures.extend('GuildMember', GuildMember => class extends G
     }
 
     async initialize() {
-        if (!await MemberModel.findOne({ fullId: this.fullId })) {
+        if (!await MemberModel.findOne({ fullId: this.fullId }) && !this.user.bot) {
             let newMember = new MemberModel({ fullId: this.fullId, guildId: this.guild.id });
 
             await newMember.save();
