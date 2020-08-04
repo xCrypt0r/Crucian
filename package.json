@@ -36,6 +36,7 @@
     "g-i-s": "^2.1.5",
     "helmet": "^3.23.3",
     "imageapi.js": "^1.0.4",
+    "jquery": "^3.5.1",
     "mathjs": "^7.0.2",
     "moment": "^2.27.0",
     "moment-duration-format": "^2.3.2",

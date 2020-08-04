@@ -24,14 +24,14 @@ module.exports.load = async bot => {
     }
 
     app
-        .use(express.static(path.join(__dirname, '/public')))
+        .use(express.static(path.join(__dirname, 'public')))
+        .use('/jquery', express.static(path.join( __dirname, '..', 'node_modules', 'jquery', 'dist')))
         .use(helmet())
         .use(helmet.contentSecurityPolicy({
             directives: {
                 defaultSrc: [`'self'`],
                 scriptSrc: [
                     `'self'`,
-                    'code.jquery.com',
                     'cdnjs.cloudflare.com',
                     'stackpath.bootstrapcdn.com',
                     'use.fontawesome.com'
@@ -44,7 +44,7 @@ module.exports.load = async bot => {
                 ],
                 imgSrc: [
                     `'self'`,
-                    'data:image',
+                    'data:',
                     'imgur.com',
                     'i.imgur.com',
                     'discord.com',
