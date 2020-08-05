@@ -50,3 +50,4 @@ Check [commands.md](docs/commands.md)
 [my github]: https://github.com/xCrypt0r
 [my twitter]: https://twitter.com/Crypt0rX
 
+[![Run on Repl.it](https://repl.it/badge/github/xCrypt0r/Crucian)](https://repl.it/github/xCrypt0r/Crucian)
