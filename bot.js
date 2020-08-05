@@ -14,5 +14,5 @@ process.on('unhandledRejection', bot.logger.error);
 
 process.on('uncaughtException', err => {
     bot.logger.error(err);
-    process.exit(1);
+    throw new Error('Something went wrong');
 });
