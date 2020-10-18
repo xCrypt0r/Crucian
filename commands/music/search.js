@@ -23,15 +23,17 @@ class Search extends Command {
                 title: bot.lang.selectSong.format(videos.length),
                 thumbnail: bot.user.avatarURL
             };
-
             let messagePromise = bot.tools.page(message, videosChunks, embedOptions);
-
-            let filter = collectedMessage => message.author === collectedMessage.author
-                && (!isNaN(collectedMessage.content)
-                && collectedMessage.content < videos.length + 1
-                && collectedMessage.content > 0
-                || collectedMessage.content === 'c');
+            let filter = ({ author, content }) => message.author === author
+                && (!isNaN(content)
+                && content < videos.length + 1
+                && content > 0
+                || content === 'c');
             let collector = message.channel.createMessageCollector(filter);
+
+            messagePromise.then(message => {
+                message.collectors.push(collector);
+            });
 
             collector.videos = videos;
             collector.once('collect', collectedMessage => {

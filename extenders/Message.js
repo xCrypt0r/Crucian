@@ -4,6 +4,8 @@ module.exports = Structures.extend('Message', Message => class extends Message {
     constructor(...args) {
         super(...args);
 
+        this.collectors = [];
+
         if (this.hasEmbeds && this.author.id === bot.user.id) {
             this.addCloseEmoji();
         }
@@ -21,6 +23,7 @@ module.exports = Structures.extend('Message', Message => class extends Message {
 
         close.on('collect', (reaction, user) => {
             if (!user.bot) {
+                this.collectors.forEach(collector => collector.stop());
                 this.delete();
             }
         });
