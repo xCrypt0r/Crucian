@@ -27,7 +27,7 @@ class Pause extends Command {
         }
 
         fetched.dispatcher.pause();
-        message.reply(bot.lang.pauseSuccess.random().format(fetched.queue[0].songTitle));
+        message.reply(bot.lang.pauseSuccess.random().format(fetched.queue[0].title));
     }
 }
 

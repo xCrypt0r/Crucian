@@ -28,7 +28,7 @@ class Resume extends Command {
         }
 
         fetched.dispatcher.resume();
-        message.reply(bot.lang.resumeSuccess.format(fetched.queue[0].songTitle));
+        message.reply(bot.lang.resumeSuccess.format(fetched.queue[0].title));
     }
 }
 
