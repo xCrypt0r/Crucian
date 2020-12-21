@@ -21,7 +21,7 @@ Authored and maintained by xCryptor
 > Discord **xCrypt0r#9534**  
 
 ## Features
--  Eoconomy
+-  Economy
 -  Music
 -  Moderation
 -  Fun
