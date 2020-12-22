@@ -122,9 +122,9 @@
   "lackOfArguments": "Lack of arguments! Input more arguments(required number of args: {0})",
   "lackOfPermission": [
     "You don't have permissions",
-    "You don't have enough to permission use this command"
+    "You don't have enough permissions to use this command"
   ],
-  "languageNotSupported": "`{0}`is not supported language...",
+  "languageNotSupported": "`{0}`is not a supported language...",
   "leaderboardTitle": ":bar_chart: Leaderboard",
   "leaveVoiceChannel": [
     "Got to go",
@@ -279,7 +279,7 @@
     "**`{0}`** unbanned (reason: **`{1}`**)",
     "**`{0}`** unblocked (reason: **`{1}`**)"
   ],
-  "unlockSuccess": ":white_check_mark: Unlock channel {0}",
+  "unlockSuccess": ":white_check_mark: Unlocked channel {0}",
   "unmuteSuccess": "`{0}` unmuted",
   "unplayableVideo": "This video is unplayable",
   "userInformation": {
