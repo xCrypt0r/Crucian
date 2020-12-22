@@ -122,9 +122,9 @@
   "lackOfArguments": "Lack of arguments! Input more arguments(required number of args: {0})",
   "lackOfPermission": [
     "You don't have permissions",
-    "You don't have enough to permission use this command"
+    "You don't have enough permissions to use this command"
   ],
-  "languageNotSupported": "`{0}`is not supported language...",
+  "languageNotSupported": "`{0}`is not a supported language...",
   "leaderboardTitle": ":bar_chart: Leaderboard",
   "leaveVoiceChannel": [
     "Got to go",
@@ -151,15 +151,15 @@
     "You're not in nsfw channel",
     "Go to nsfw channel"
   ],
-  "notInSameVoiceChannel": "You must in the same voice channel",
+  "notInSameVoiceChannel": "You must be in the same voice channel",
   "notInVoiceChannel": "You are not in the voice channel",
   "notPaused": "Music is playing now",
   "noWeatherResults": [
     "There's no weather information",
-    "Please enter valid region"
+    "Please enter a valid region"
   ],
   "nowPlaying": "Now playing: `{0}` | Queued by: `{1}` | Duration: `{2}`",
-  "ownerOnlyCommand": "**__{0}__** is owner-only command",
+  "ownerOnlyCommand": "**__{0}__** is an owner-only command",
   "page": {
     "footer": "Page {0} of {1}"
   },
@@ -279,7 +279,7 @@
     "**`{0}`** unbanned (reason: **`{1}`**)",
     "**`{0}`** unblocked (reason: **`{1}`**)"
   ],
-  "unlockSuccess": ":white_check_mark: Unlock channel {0}",
+  "unlockSuccess": ":white_check_mark: Unlocked channel {0}",
   "unmuteSuccess": "`{0}` unmuted",
   "unplayableVideo": "This video is unplayable",
   "userInformation": {
@@ -303,7 +303,7 @@
     }
   },
   "userIsInAfk": "{0} is currently afk for reason: **`{1}`**",
-  "warning": "Warning! reason: **`{0}`**\n{1} You received warning {2} times. After the 3rd warning, you'll be kicked",
+  "warning": "Warning! reason: **`{0}`**\n{1} You have received a warning {2} times. After the 3rd warning, you'll be kicked",
   "weatherInformation": {
     "feelslike": {
       "name": "feelslike",
