@@ -151,15 +151,15 @@
     "You're not in nsfw channel",
     "Go to nsfw channel"
   ],
-  "notInSameVoiceChannel": "You must in the same voice channel",
+  "notInSameVoiceChannel": "You must be in the same voice channel",
   "notInVoiceChannel": "You are not in the voice channel",
   "notPaused": "Music is playing now",
   "noWeatherResults": [
     "There's no weather information",
-    "Please enter valid region"
+    "Please enter a valid region"
   ],
   "nowPlaying": "Now playing: `{0}` | Queued by: `{1}` | Duration: `{2}`",
-  "ownerOnlyCommand": "**__{0}__** is owner-only command",
+  "ownerOnlyCommand": "**__{0}__** is an owner-only command",
   "page": {
     "footer": "Page {0} of {1}"
   },
@@ -303,7 +303,7 @@
     }
   },
   "userIsInAfk": "{0} is currently afk for reason: **`{1}`**",
-  "warning": "Warning! reason: **`{0}`**\n{1} You received warning {2} times. After the 3rd warning, you'll be kicked",
+  "warning": "Warning! reason: **`{0}`**\n{1} You have received a warning {2} times. After the 3rd warning, you'll be kicked",
   "weatherInformation": {
     "feelslike": {
       "name": "feelslike",
