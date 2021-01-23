@@ -38,7 +38,7 @@
     "helmet": "^4.0.0",
     "imageapi.js": "^1.0.4",
     "jquery": "^3.5.1",
-    "mathjs": "^8.1.0",
+    "mathjs": "^9.0.0",
     "moment": "^2.27.0",
     "moment-duration-format": "^2.3.2",
     "mongoose": "^5.9.25",
