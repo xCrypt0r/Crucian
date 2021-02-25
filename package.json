@@ -44,7 +44,7 @@
     "mongoose": "^5.9.25",
     "morgan": "^1.10.0",
     "ms": "^2.1.2",
-    "opusscript": "0.0.7",
+    "opusscript": "0.0.8",
     "passport": "^0.4.1",
     "passport-discord": "^0.1.4",
     "popper.js": "^1.16.1",
