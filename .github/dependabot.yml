@@ -1,0 +1,14 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  assignees:
+  - SoBusted
+  ignore:
+  - dependency-name: "@vitalets/google-translate-api"
+    versions:
+    - 5.0.0
+    - 5.1.0
