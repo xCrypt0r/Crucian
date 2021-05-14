@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@vitalets/google-translate-api": "^4.0.0",
-    "bootstrap": "^4.5.0",
+    "bootstrap": "^5.0.1",
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.3",
     "discord.js": "^12.2.0",
