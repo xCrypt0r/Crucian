@@ -17,8 +17,7 @@ Crucian © xCrypt0r
 Authored and maintained by xCryptor  
 
 > GitHub [**@xCrypt0r**][my github]  
-> Twitter [**@CryptorX**][my twitter]  
-> Discord **xCrypt0r#9534**  
+> Discord **xCrypt0r#5695**  
 
 ## Features
 -  Economy
@@ -48,5 +47,3 @@ Check [commands.md](docs/commands.md)
 [travis]: https://travis-ci.org/xCrypt0r/Crucian
 [my server]: https://discord.gg/35Y8ePX
 [my github]: https://github.com/xCrypt0r
-[my twitter]: https://twitter.com/Crypt0rX
-
