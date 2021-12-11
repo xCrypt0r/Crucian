@@ -27,6 +27,7 @@ Authored and maintained by xCryptor
 
 ## Requirements
 -   Node >= 12
+-   MongoDB Database
 
 ## Supported Languages
 -   Korean(Default)
